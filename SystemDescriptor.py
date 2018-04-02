@@ -181,10 +181,18 @@ def generate_system(recursive_arxml, recursive_dico, simple_arxml, simple_dico, 
     NSMAP = {None: 'http://autosar.org/schema/r4.0',
              "xsi": 'http://www.w3.org/2001/XMLSchema-instance'}
     attr_qname = etree.QName("http://www.w3.org/2001/XMLSchema-instance", "schemaLocation")
-    interfaces = final_interfaces = m_interfaces = []
-    types = final_types = m_types = []
-    data_constr = final_data_constr = m_data_constr = []
-    arxml_interfaces = arxml_types = arxml_data_constr = []
+    interfaces = []
+    final_interfaces = []
+    m_interfaces = []
+    types = []
+    final_types = []
+    m_types = []
+    data_constr = []
+    final_data_constr = []
+    m_data_constr = []
+    arxml_interfaces = []
+    arxml_types = []
+    arxml_data_constr = []
     system_signals = []
     provided_ports = []
     client_server_signal_group_mapping = []
@@ -1179,7 +1187,15 @@ def generate_system(recursive_arxml, recursive_dico, simple_arxml, simple_dico, 
                         m_interfaces.append(interfaces[index2])
                     else:
                         m_interfaces.append(interfaces[index1])
-    [final_interfaces.append(elem) for elem in m_interfaces if elem not in final_interfaces]
+    for elem in m_interfaces:
+        if len(final_interfaces) != 0 :
+            for elem_final in final_interfaces:
+                if elem['DATA'].find("{http://autosar.org/schema/r4.0}SHORT-NAME").text == elem_final['DATA'].find("{http://autosar.org/schema/r4.0}SHORT-NAME").text:
+                    pass
+                else:
+                    final_interfaces.append(elem)
+        else:
+            final_interfaces.append(elem)
     logger.info('=================Interfaces without PPorts/PRPorts=================')
     for interface in final_interfaces:
         found = False
@@ -1211,7 +1227,15 @@ def generate_system(recursive_arxml, recursive_dico, simple_arxml, simple_dico, 
                         m_types.append(types[index2])
                     else:
                         m_types.append(types[index1])
-    [final_types.append(elem) for elem in m_types if elem not in final_types]
+    for elem in m_types:
+        if len(final_types) != 0 :
+            for elem_final in final_types:
+                if elem['DATA'].find("{http://autosar.org/schema/r4.0}SHORT-NAME").text == elem_final['DATA'].find("{http://autosar.org/schema/r4.0}SHORT-NAME").text:
+                    pass
+                else:
+                    final_types.append(elem)
+        else:
+            final_data_constr.append(elem)
     for index1 in range(len(data_constr)):
         for index2 in range(len(data_constr)):
             if index1 != index2:
@@ -1226,7 +1250,15 @@ def generate_system(recursive_arxml, recursive_dico, simple_arxml, simple_dico, 
                         m_data_constr.append(data_constr[index2])
                     else:
                         m_data_constr.append(data_constr[index1])
-    [final_data_constr.append(elem) for elem in m_data_constr if elem not in final_data_constr]
+    for elem in m_data_constr:
+        if len(final_data_constr) != 0 :
+            for elem_final in final_data_constr:
+                if elem['DATA'].find("{http://autosar.org/schema/r4.0}SHORT-NAME").text == elem_final['DATA'].find("{http://autosar.org/schema/r4.0}SHORT-NAME").text:
+                    pass
+                else:
+                    final_data_constr.append(elem)
+        else:
+            final_data_constr.append(elem)
     for elem_dico in final_interfaces[:]:
         for elem_arxml in arxml_interfaces:
             if elem_dico['DATA'].find("{http://autosar.org/schema/r4.0}SHORT-NAME").text == elem_arxml.find("{http://autosar.org/schema/r4.0}SHORT-NAME").text:
