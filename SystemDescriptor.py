@@ -1188,7 +1188,7 @@ def generate_system(recursive_arxml, recursive_dico, simple_arxml, simple_dico, 
                     else:
                         m_interfaces.append(interfaces[index1])
     for elem in m_interfaces:
-        if len(final_interfaces) != 0 :
+        if len(final_interfaces) != 0:
             for elem_final in final_interfaces:
                 if elem['DATA'].find("{http://autosar.org/schema/r4.0}SHORT-NAME").text == elem_final['DATA'].find("{http://autosar.org/schema/r4.0}SHORT-NAME").text:
                     pass
@@ -1228,7 +1228,7 @@ def generate_system(recursive_arxml, recursive_dico, simple_arxml, simple_dico, 
                     else:
                         m_types.append(types[index1])
     for elem in m_types:
-        if len(final_types) != 0 :
+        if len(final_types) != 0:
             for elem_final in final_types:
                 if elem['DATA'].find("{http://autosar.org/schema/r4.0}SHORT-NAME").text == elem_final['DATA'].find("{http://autosar.org/schema/r4.0}SHORT-NAME").text:
                     pass
@@ -1251,7 +1251,7 @@ def generate_system(recursive_arxml, recursive_dico, simple_arxml, simple_dico, 
                     else:
                         m_data_constr.append(data_constr[index1])
     for elem in m_data_constr:
-        if len(final_data_constr) != 0 :
+        if len(final_data_constr) != 0:
             for elem_final in final_data_constr:
                 if elem['DATA'].find("{http://autosar.org/schema/r4.0}SHORT-NAME").text == elem_final['DATA'].find("{http://autosar.org/schema/r4.0}SHORT-NAME").text:
                     pass
