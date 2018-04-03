@@ -1235,7 +1235,7 @@ def generate_system(recursive_arxml, recursive_dico, simple_arxml, simple_dico, 
                 else:
                     final_types.append(elem)
         else:
-            final_data_constr.append(elem)
+            final_types.append(elem)
     for index1 in range(len(data_constr)):
         for index2 in range(len(data_constr)):
             if index1 != index2:
