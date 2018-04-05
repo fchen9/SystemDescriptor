@@ -218,6 +218,8 @@ def generate_system(recursive_arxml, recursive_dico, simple_arxml, simple_dico, 
     system_version = []
     root_software_composition = []
     fibex_elements = []
+    compu_methods = []
+    arxml_compu_methods = []
     for each_path in recursive_dico:
         for directory, directories, files in os.walk(each_path):
             for file in files:
@@ -267,6 +269,12 @@ def generate_system(recursive_arxml, recursive_dico, simple_arxml, simple_dico, 
                         objElem['PACKAGE'] = elem.getparent().getprevious().text
                         objElem['DATA'] = elem
                         types.append(objElem)
+                    computational_methods = root.findall(".//{http://autosar.org/schema/r4.0}COMPU-METHOD")
+                    for elem in computational_methods:
+                        objElem = {}
+                        objElem['PACKAGE'] = elem.getparent().getprevious().text
+                        objElem['DATA'] = elem
+                        compu_methods.append(objElem)
                     data_constraints = root.findall(".//{http://autosar.org/schema/r4.0}DATA-CONSTR")
                     for elem in data_constraints:
                         objElem = {}
@@ -505,6 +513,12 @@ def generate_system(recursive_arxml, recursive_dico, simple_arxml, simple_dico, 
                     objElem['PACKAGE'] = elem.getparent().getprevious().text
                     objElem['DATA'] = elem
                     types.append(objElem)
+                computational_methods = root.findall(".//{http://autosar.org/schema/r4.0}COMPU-METHOD")
+                for elem in computational_methods:
+                    objElem = {}
+                    objElem['PACKAGE'] = elem.getparent().getprevious().text
+                    objElem['DATA'] = elem
+                    compu_methods.append(objElem)
                 data_constraints = root.findall(".//{http://autosar.org/schema/r4.0}DATA-CONSTR")
                 for elem in data_constraints:
                     objElem = {}
@@ -726,6 +740,8 @@ def generate_system(recursive_arxml, recursive_dico, simple_arxml, simple_dico, 
                     arxml_interfaces = arxml_interfaces + mode_switch_interface
                     data_types = root.findall(".//{http://autosar.org/schema/r4.0}IMPLEMENTATION-DATA-TYPE")
                     arxml_types = arxml_types + data_types
+                    computational_methods = root.findall(".//{http://autosar.org/schema/r4.0}COMPU-METHOD")
+                    arxml_compu_methods = arxml_compu_methods + computational_methods
                     data_constraints = root.findall(".//{http://autosar.org/schema/r4.0}DATA-CONSTR")
                     arxml_data_constr = arxml_data_constr + data_constraints
                     signals = root.findall(".//{http://autosar.org/schema/r4.0}SYSTEM-SIGNAL")
@@ -966,6 +982,8 @@ def generate_system(recursive_arxml, recursive_dico, simple_arxml, simple_dico, 
                 arxml_interfaces = arxml_interfaces + mode_switch_interface
                 data_types = root.findall(".//{http://autosar.org/schema/r4.0}IMPLEMENTATION-DATA-TYPE")
                 arxml_types = arxml_types + data_types
+                computational_methods = root.findall(".//{http://autosar.org/schema/r4.0}COMPU-METHOD")
+                arxml_compu_methods = arxml_compu_methods + computational_methods
                 data_constraints = root.findall(".//{http://autosar.org/schema/r4.0}DATA-CONSTR")
                 arxml_data_constr = arxml_data_constr + data_constraints
                 signals = root.findall(".//{http://autosar.org/schema/r4.0}SYSTEM-SIGNAL")
@@ -1284,6 +1302,11 @@ def generate_system(recursive_arxml, recursive_dico, simple_arxml, simple_dico, 
             if elem_dico['DATA'].find("{http://autosar.org/schema/r4.0}SHORT-NAME").text == elem_arxml.find("{http://autosar.org/schema/r4.0}SHORT-NAME").text:
                 final_types.remove(elem_dico)
     final_types = sorted(final_types, key=lambda x: x['PACKAGE'])
+    for elem_dico in compu_methods[:]:
+        for elem_arxml in arxml_compu_methods:
+            if elem_dico['DATA'].find("{http://autosar.org/schema/r4.0}SHORT-NAME").text == elem_arxml.find("{http://autosar.org/schema/r4.0}SHORT-NAME").text:
+                compu_methods.remove(elem_dico)
+    compu_methods = sorted(compu_methods, key=lambda x: x['PACKAGE'])
     for elem_dico in final_data_constr[:]:
         for elem_arxml in arxml_data_constr:
             if elem_dico['DATA'].find("{http://autosar.org/schema/r4.0}SHORT-NAME").text == elem_arxml.find("{http://autosar.org/schema/r4.0}SHORT-NAME").text:
@@ -1548,6 +1571,15 @@ def generate_system(recursive_arxml, recursive_dico, simple_arxml, simple_dico, 
         else:
             elements.append(elem['DATA'])
     for elem in final_types:
+        if package != elem['PACKAGE']:
+            package = elem['PACKAGE']
+            compo = etree.SubElement(packages, 'AR-PACKAGE')
+            short_name = etree.SubElement(compo, 'SHORT-NAME').text = elem['PACKAGE']
+            elements = etree.SubElement(compo, 'ELEMENTS')
+            elements.append(elem['DATA'])
+        else:
+            elements.append(elem['DATA'])
+    for elem in compu_methods:
         if package != elem['PACKAGE']:
             package = elem['PACKAGE']
             compo = etree.SubElement(packages, 'AR-PACKAGE')
