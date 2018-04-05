@@ -1194,6 +1194,7 @@ def generate_system(recursive_arxml, recursive_dico, simple_arxml, simple_dico, 
                     pass
                 else:
                     final_interfaces.append(elem)
+                    break
         else:
             final_interfaces.append(elem)
     logger.info('=================Interfaces without PPorts/PRPorts=================')
@@ -1234,6 +1235,7 @@ def generate_system(recursive_arxml, recursive_dico, simple_arxml, simple_dico, 
                     pass
                 else:
                     final_types.append(elem)
+                    break
         else:
             final_data_constr.append(elem)
     for index1 in range(len(data_constr)):
@@ -1257,6 +1259,7 @@ def generate_system(recursive_arxml, recursive_dico, simple_arxml, simple_dico, 
                     pass
                 else:
                     final_data_constr.append(elem)
+                    break
         else:
             final_data_constr.append(elem)
     for elem_dico in final_interfaces[:]:
@@ -1566,24 +1569,14 @@ def generate_system(recursive_arxml, recursive_dico, simple_arxml, simple_dico, 
             for elem2 in final_root_software_composition:
                 if elem2['ROOT'] == package:
                     temp_root.append(elem2)
-            [system_list.append(elem['SYSTEM']) for elem in temp_fibex if elem['SYSTEM'] not in system_list]
             [system_list.append(elem['SYSTEM']) for elem in temp_root if elem['SYSTEM'] not in system_list]
+            [system_list.append(elem['SYSTEM']) for elem in temp_fibex if elem['SYSTEM'] not in system_list]
             for sysname in system_list:
                 system_tag = etree.SubElement(elements_tag, 'SYSTEM')
                 short_name_system = etree.SubElement(system_tag, 'SHORT-NAME').text = sysname
-                rsc = etree.SubElement(system_tag, 'ROOT-SOFTWARE-COMPOSITIONS')
-                for elem_root in temp_root:
-                    if sysname == elem_root['SYSTEM']:
-                        rsc.append(elem_root['DATA'])
                 for elem_fibex in temp_fibex:
                     if sysname == elem_fibex['SYSTEM']:
                         system_tag.append(elem_fibex['DATA'])
-                for elem_version in final_system_version:
-                    if elem_version['ROOT'] == package:
-                        if elem_version['SYSTEM'] == sysname:
-                            version = etree.Element('SYSTEM-VERSION', nsmap=NSMAP)
-                            version.text = elem_version['DATA']
-                            system_tag.append(version)
                 mappings_tag = etree.SubElement(system_tag, 'MAPPINGS')
                 for elem in data_mappings_name:
                     system_mapping_tag = etree.SubElement(mappings_tag, 'SYSTEM-MAPPING')
@@ -1650,6 +1643,16 @@ def generate_system(recursive_arxml, recursive_dico, simple_arxml, simple_dico, 
                     for element in final_swc_ecu_mappings:
                         if element['NAME'] == elem and element['ROOT'] == package and element['SYSTEM'] == sysname:
                             sw_mappings_tag.append(element['DATA'])
+                rsc = etree.SubElement(system_tag, 'ROOT-SOFTWARE-COMPOSITIONS')
+                for elem_root in temp_root:
+                    if sysname == elem_root['SYSTEM']:
+                        rsc.append(elem_root['DATA'])
+                for elem_version in final_system_version:
+                    if elem_version['ROOT'] == package:
+                        if elem_version['SYSTEM'] == sysname:
+                            version = etree.Element('SYSTEM-VERSION', nsmap=NSMAP)
+                            version.text = elem_version['DATA']
+                            system_tag.append(version)
     package = ""
     for elem in final_software_composition:
         if package != elem['ROOT']:
@@ -1675,7 +1678,7 @@ def generate_system(recursive_arxml, recursive_dico, simple_arxml, simple_dico, 
                     components_tag.append(element['DATA'])
     pretty_xml = new_prettify(rootSystem)
     output = etree.ElementTree(etree.fromstring(pretty_xml))
-    output.write(output_path + '/SystemGenerated.arxml', encoding="UTF-8", xml_declaration=True, method="xml")
+    output.write(output_path + '/SystemGenerated.arxml', encoding='UTF-8', xml_declaration=True, method="xml")
     logger.info('=================Output file information=================')
     validate_xsd(xsd_path, output_path + '/SystemGenerated.arxml', logger)
 
