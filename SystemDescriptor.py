@@ -18,6 +18,13 @@ def new_prettify(elem):
     return '\n'.join([line for line in reparsed.toprettyxml(indent=' '*4).split('\n') if line.strip()])
 
 
+def remove_duplicates(L):
+    found = set()
+    for item in L:
+        if item['DATA'].find("{http://autosar.org/schema/r4.0}SHORT-NAME").text not in found:
+            yield item
+            found.add(item['DATA'].find("{http://autosar.org/schema/r4.0}SHORT-NAME").text)
+
 # check compatibility between interfaces or types
 def check_compatibility(recursive_arxml, recursive_dico, simple_arxml, simple_dico, xsd_path, logger):
     # parse all input files to get all interfaces and types
@@ -1209,16 +1216,7 @@ def generate_system(recursive_arxml, recursive_dico, simple_arxml, simple_dico, 
                         m_interfaces.append(interfaces[index1])
         if found == False:
             m_interfaces.append(interfaces[index1])
-    for elem in m_interfaces:
-        if len(final_interfaces) != 0:
-            for elem_final in final_interfaces:
-                if elem['DATA'].find("{http://autosar.org/schema/r4.0}SHORT-NAME").text == elem_final['DATA'].find("{http://autosar.org/schema/r4.0}SHORT-NAME").text:
-                    pass
-                else:
-                    final_interfaces.append(elem)
-                    break
-        else:
-            final_interfaces.append(elem)
+    final_interfaces = list(remove_duplicates(m_interfaces))
     logger.info('=================Interfaces without PPorts/PRPorts=================')
     for interface in final_interfaces:
         found = False
@@ -1254,16 +1252,7 @@ def generate_system(recursive_arxml, recursive_dico, simple_arxml, simple_dico, 
                         m_types.append(types[index1])
         if found == False:
             m_types.append(types[index1])
-    for elem in m_types:
-        if len(final_types) != 0:
-            for elem_final in final_types:
-                if elem['DATA'].find("{http://autosar.org/schema/r4.0}SHORT-NAME").text == elem_final['DATA'].find("{http://autosar.org/schema/r4.0}SHORT-NAME").text:
-                    pass
-                else:
-                    final_types.append(elem)
-                    break
-        else:
-            final_types.append(elem)
+    final_types = list(remove_duplicates(m_types))
     for index1 in range(len(data_constr)):
         found = False
         for index2 in range(len(data_constr)):
@@ -1282,16 +1271,8 @@ def generate_system(recursive_arxml, recursive_dico, simple_arxml, simple_dico, 
                         m_data_constr.append(data_constr[index1])
         if found == False:
             m_data_constr.append(m_data_constr[index1])
-    for elem in m_data_constr:
-        if len(final_data_constr) != 0:
-            for elem_final in final_data_constr:
-                if elem['DATA'].find("{http://autosar.org/schema/r4.0}SHORT-NAME").text == elem_final['DATA'].find("{http://autosar.org/schema/r4.0}SHORT-NAME").text:
-                    pass
-                else:
-                    final_data_constr.append(elem)
-                    break
-        else:
-            final_data_constr.append(elem)
+    final_data_constr = list(remove_duplicates(m_data_constr))
+    compu_methods = list(remove_duplicates(compu_methods))
     for elem_dico in final_interfaces[:]:
         for elem_arxml in arxml_interfaces:
             if elem_dico['DATA'].find("{http://autosar.org/schema/r4.0}SHORT-NAME").text == elem_arxml.find("{http://autosar.org/schema/r4.0}SHORT-NAME").text:
@@ -1429,7 +1410,8 @@ def generate_system(recursive_arxml, recursive_dico, simple_arxml, simple_dico, 
                 component_irefs = etree.SubElement(element, 'COMPONENT-IREFS')
                 for i in range(len(temp)):
                     tag = temp[i]['DATA'].find('.//{http://autosar.org/schema/r4.0}COMPONENT-IREF')
-                    component_irefs.append(tag)
+                    for instance in range(len(tag)):
+                        component_irefs.append(tag[instance])
                 component_implementation_ref = etree.SubElement(element, 'COMPONENT-IMPLEMENTATION-REF')
                 component_implementation_ref.attrib['DEST'] = "SWC-IMPLEMENTATION"
                 component_implementation_ref.text = temp[i]['DATA'].find('.//{http://autosar.org/schema/r4.0}COMPONENT-IMPLEMENTATION-REF').text
@@ -1477,8 +1459,9 @@ def generate_system(recursive_arxml, recursive_dico, simple_arxml, simple_dico, 
                 short_name = etree.SubElement(element, 'SHORT-NAME').text = elem['DATA'].find('.//{http://autosar.org/schema/r4.0}SHORT-NAME').text
                 component_irefs = etree.SubElement(element, 'COMPONENT-IREFS')
                 for i in range(len(temp)):
-                    tag = temp[i]['DATA'].find('.//{http://autosar.org/schema/r4.0}COMPONENT-IREF')
-                    component_irefs.append(tag)
+                    tag = temp[i]['DATA'].findall('.//{http://autosar.org/schema/r4.0}COMPONENT-IREF')
+                    for instance in range(len(tag)):
+                        component_irefs.append(tag[instance])
                 instance_ref = etree.SubElement(element, 'ECU-INSTANCE-REF')
                 instance_ref.attrib['DEST'] = "ECU-INSTANCE"
                 instance_ref.text = temp[i]['DATA'].find('.//{http://autosar.org/schema/r4.0}ECU-INSTANCE-REF').text
@@ -1498,20 +1481,23 @@ def generate_system(recursive_arxml, recursive_dico, simple_arxml, simple_dico, 
     system_version = sorted(system_version, key=lambda x: x['SYSTEM'])
     final_system_version = []
     temp_system_version = []
-    for elem in system_version[:]:
-        version = elem['DATA']
-        for elem2 in system_version[:]:
-            if elem['ROOT'] == elem2['ROOT']:
-                if elem['SYSTEM'] == elem2['SYSTEM']:
-                    if version != elem['DATA']:
-                        logger.error('Multiple <SYSTEM-VERSION> values: ' + version + ' <-> ' + elem.text)
-                        try:
-                            os.remove(output_path + '/SystemGenerated.arxml')
-                        except OSError:
-                            pass
-                        return
-                    else:
-                        temp_system_version.append(elem)
+    for elem in range(len(system_version)):
+        version = system_version[elem]['DATA']
+        for elem2 in range(len(system_version)):
+            if elem != elem2:
+                if system_version[elem]['ROOT'] == system_version[elem2]['ROOT']:
+                    if system_version[elem]['SYSTEM'] == system_version[elem2]['SYSTEM']:
+                        if version != system_version[elem2]['DATA']:
+                            logger.error(
+                                'Multiple <SYSTEM-VERSION> values: ' + version + ' <-> ' + system_version[elem2]['DATA'] + " for " +
+                                system_version[elem]['ROOT'] + '/' + system_version[elem]['SYSTEM'])
+                            try:
+                                os.remove(output_path + '/SystemGenerated.arxml')
+                            except OSError:
+                                pass
+                            return
+                        else:
+                            temp_system_version.append(system_version[elem])
     [final_system_version.append(elem) for elem in temp_system_version if elem not in final_system_version]
     # <ROOT-SOFTWARE-COMPOSITIONS>
     root_software_composition = sorted(root_software_composition, key=lambda x: x['SYSTEM'])
@@ -1615,6 +1601,24 @@ def generate_system(recursive_arxml, recursive_dico, simple_arxml, simple_dico, 
                     temp_root.append(elem2)
             [system_list.append(elem['SYSTEM']) for elem in temp_root if elem['SYSTEM'] not in system_list]
             [system_list.append(elem['SYSTEM']) for elem in temp_fibex if elem['SYSTEM'] not in system_list]
+            [system_list.append(elem['SYSTEM']) for elem in client_server_signal_group_mapping if elem['SYSTEM'] not in system_list]
+            [system_list.append(elem['SYSTEM']) for elem in client_server_signal_mapping if elem['SYSTEM'] not in system_list]
+            [system_list.append(elem['SYSTEM']) for elem in sender_receiver_composite_element if elem['SYSTEM'] not in system_list]
+            [system_list.append(elem['SYSTEM']) for elem in sender_receiver_signal_group_mapping if elem['SYSTEM'] not in system_list]
+            [system_list.append(elem['SYSTEM']) for elem in sender_receiver_signal_mapping if elem['SYSTEM'] not in system_list]
+            [system_list.append(elem['SYSTEM']) for elem in trigger_signal_mapping if elem['SYSTEM'] not in system_list]
+            [system_list.append(elem['SYSTEM']) for elem in swc_ecu_mapping if elem['SYSTEM'] not in system_list]
+            [system_list.append(elem['SYSTEM']) for elem in component_clustering if elem['SYSTEM'] not in system_list]
+            [system_list.append(elem['SYSTEM']) for elem in component_separation if elem['SYSTEM'] not in system_list]
+            [system_list.append(elem['SYSTEM']) for elem in sw_ecu_mapping_constraint if elem['SYSTEM'] not in system_list]
+            [system_list.append(elem['SYSTEM']) for elem in pnc_mapping if elem['SYSTEM'] not in system_list]
+            [system_list.append(elem['SYSTEM']) for elem in ecu_resource_estimation if elem['SYSTEM'] not in system_list]
+            [system_list.append(elem['SYSTEM']) for elem in common_signal_path if elem['SYSTEM'] not in system_list]
+            [system_list.append(elem['SYSTEM']) for elem in forbidden_signal_path if elem['SYSTEM'] not in system_list]
+            [system_list.append(elem['SYSTEM']) for elem in permissible_signal_path if elem['SYSTEM'] not in system_list]
+            [system_list.append(elem['SYSTEM']) for elem in separate_signal_path if elem['SYSTEM'] not in system_list]
+            [system_list.append(elem['SYSTEM']) for elem in final_swc_ecu_mappings if elem['SYSTEM'] not in system_list]
+            [system_list.append(elem['SYSTEM']) for elem in final_sw_impl_mapping if elem['SYSTEM'] not in system_list]
             for sysname in system_list:
                 system_tag = etree.SubElement(elements_tag, 'SYSTEM')
                 short_name_system = etree.SubElement(system_tag, 'SHORT-NAME').text = sysname
@@ -1727,165 +1731,165 @@ def generate_system(recursive_arxml, recursive_dico, simple_arxml, simple_dico, 
     validate_xsd(xsd_path, output_path + '/SystemGenerated.arxml', logger)
 
 
-def generate_stub(recursive_arxml, recursive_dico, simple_arxml, simple_dico, output_path, logger):
-    NSMAP = {None: 'http://autosar.org/schema/r4.0',
-             "xsi": 'http://www.w3.org/2001/XMLSchema-instance'}
-    attr_qname = etree.QName("http://www.w3.org/2001/XMLSchema-instance", "schemaLocation")
-    provided_ports = []
-    requested_ports = []
-    created_pports = []
-    created_operations = []
-    created_runnables = []
-    client_server_interfaces = []
-    for each_path in recursive_arxml:
-        for directory, directories, files in os.walk(each_path):
-            for file in files:
-                if file.endswith('.arxml'):
-                    fullname = os.path.join(directory, file)
-                    tree = etree.parse(fullname)
-                    root = tree.getroot()
-                    PPort = root.findall(".//{http://autosar.org/schema/r4.0}P-PORT-PROTOTYPE")
-                    for elem in PPort:
-                        if elem.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text[3:5] == "CS":
-                            provided_ports.append(elem)
-                    PRPort = root.findall(".//{http://autosar.org/schema/r4.0}PR-PORT-PROTOTYPE")
-                    for elem in PRPort:
-                        if elem.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text[4:6] == "CS":
-                            provided_ports.append(elem)
-                    RPort = root.findall(".//{http://autosar.org/schema/r4.0}R-PORT-PROTOTYPE")
-                    for elem in RPort:
-                        if elem.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text[3:5] == "CS":
-                            requested_ports.append(elem)
-                    CSInterface = root.findall(".//{http://autosar.org/schema/r4.0}CLIENT-SERVER-INTERFACE")
-                    for elem in CSInterface:
-                        objData = {}
-                        objData['PACKAGE'] = elem.elem.getparent().getparent().getchildren()[0].text
-                        objData['NAME'] = elem.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text
-                        objData['OPERATION'] = elem.find(".//{http://autosar.org/schema/r4.0}CLIENT-SERVER-OPERATION").getchildren()[0].text
-                        client_server_interfaces.append(objData)
-    for each_path in simple_arxml:
-        for file in os.listdir(each_path):
-            if file.endswith('.arxml'):
-                fullname = os.path.join(each_path, file)
-                tree = etree.parse(fullname)
-                root = tree.getroot()
-                PPort = root.findall(".//{http://autosar.org/schema/r4.0}P-PORT-PROTOTYPE")
-                for elem in PPort:
-                    if elem.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text[3:5] == "CS":
-                        provided_ports.append(elem)
-                PRPort = root.findall(".//{http://autosar.org/schema/r4.0}PR-PORT-PROTOTYPE")
-                for elem in PRPort:
-                    if elem.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text[4:6] == "CS":
-                        provided_ports.append(elem)
-                RPort = root.findall(".//{http://autosar.org/schema/r4.0}R-PORT-PROTOTYPE")
-                for elem in RPort:
-                    if elem.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text[3:5] == "CS":
-                        requested_ports.append(elem)
-                CSInterface = root.findall(".//{http://autosar.org/schema/r4.0}CLIENT-SERVER-INTERFACE")
-                for elem in CSInterface:
-                    objData = {}
-                    objData['PACKAGE'] = elem.elem.getparent().getparent().getchildren()[0].text
-                    objData['NAME'] = elem.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text
-                    objData['OPERATION'] = elem.find(".//{http://autosar.org/schema/r4.0}CLIENT-SERVER-OPERATION").getchildren()[0].text
-                    client_server_interfaces.append(objData)
-    for each_path in simple_dico:
-        for file in os.listdir(each_path):
-            if file.endswith('.dico'):
-                fullname = os.path.join(each_path, file)
-                tree = etree.parse(fullname)
-                root = tree.getroot()
-                for elem in CSInterface:
-                    objData = {}
-                    objData['PACKAGE'] = elem.elem.getparent().getparent().getchildren()[0].text
-                    objData['NAME'] = elem.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text
-                    objData['OPERATION'] = elem.find(".//{http://autosar.org/schema/r4.0}CLIENT-SERVER-OPERATION").getchildren()[0].text
-                    client_server_interfaces.append(objData)
-    for each_path in recursive_dico:
-        for directory, directories, files in os.walk(each_path):
-            for file in files:
-                if file.endswith('.dico'):
-                    fullname = os.path.join(directory, file)
-                    tree = etree.parse(fullname)
-                    root = tree.getroot()
-                    for elem in CSInterface:
-                        objData = {}
-                        objData['PACKAGE'] = elem.elem.getparent().getparent().getchildren()[0].text
-                        objData['NAME'] = elem.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text
-                        objData['OPERATION'] = elem.find(".//{http://autosar.org/schema/r4.0}CLIENT-SERVER-OPERATION").getchildren()[0].text
-                        client_server_interfaces.append(objData)
-
-    for elemR in requested_ports[:]:
-        for elemP in provided_ports:
-            if elemP.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text[:2] == "PP":
-                if elemR.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text[3:] == elemP.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text[3:]:
-                    requested_ports.remove(elemR)
-            else:
-                if elemR.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text[3:] == elemP.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text[4:]:
-                    requested_ports.remove(elemR)
-    # for elem in requested_ports:
-    #     print(elem.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text)
-    for elem in requested_ports:
-        pport = etree.Element('P-PORT-PROTOTYPE', nsmap=NSMAP)
-        short_name = etree.SubElement(pport, 'SHORT-NAME').text = 'PP_'+ elem.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text[3:]
-        provided_com = etree.SubElement(pport, 'PROVIDED-COM-SPECS')
-        queued_com_spec = etree.SubElement(provided_com, 'QUEUED-SENDER-COM-SPEC')
-        provided_interface = etree.SubElement(pport, 'PROVIDED-INTERFACE-TREF')
-        provided_interface.attrib['DEST'] = "CLIENT-SERVER-INTERFACE"
-        provided_interface.text = elem.find(".//{http://autosar.org/schema/r4.0}REQUIRED-INTERFACE-TREF").text
-        created_pports.append(pport)
-    for elem in created_pports:
-        for interface in client_server_interfaces:
-            if elem.find(".//SHORT-NAME").text[3:] == interface['NAME']:
-                operation = etree.Element('OPERATION-INVOKED-ELEMENT', nsmap=NSMAP)
-                short_name = etree.SubElement(operation, 'SHORT-NAME').text = elem.find(".//SHORT-NAME").text+'_'+interface['NAME']
-                start_on_event = etree.SubElement(operation, 'START-ON-EVENT-REF')
-                start_on_event.attrib['DEST'] = "RUNNABLE-ENTITY"
-                start_on_event.text = "/RootP_Stub/ASWC_StubCS/"+'/'+interface['OPERATION']
-                operation_iref = etree.SubElement(operation, 'OPERATON-IREF')
-                context_provided = etree.SubElement(operation_iref, 'CONTEXT-P-PORT-REF')
-                context_provided.attrib['DEST'] = "P-PORT-PROTOTYPE"
-                context_provided.text = "/RootP_Stub/ASWC_StubCS/"+elem.find(".//SHORT-NAME").text
-                target_provided = etree.SubElement(operation_iref, 'TARGET-PROVIDED-OPERATION-REF')
-                target_provided.attrib['DEST'] = "CLIENT-SERVER-OPERATION"
-                target_provided.text = '/'+interface['ROOT']+'/'+interface['NAME']+'/'+interface['OPERATION']
-                runnable = etree.Element('RUNNABLE-ENTITY', nsmap=NSMAP)
-                short_name = etree.SubElement(runnable, 'SHORT-NAME').text = interface['OPERATION']
-                start_interval = etree.SubElement(runnable, 'MINIMUM-START-INTERVAL').text = "0"
-                concurrently = etree.SubElement(runnable, 'CAN-BE-INVLOKED-CONCURRENTLY').text = "false"
-                data_read_access = etree.SubElement(runnable, 'DATA-READ-ACCESS')
-                data_receive_point = etree.SubElement(runnable, 'DATA-RECEIVE-POINT-BY-VALUES')
-                data_send_points = etree.SubElement(runnable, 'DATA-SEND-POINTS')
-                data_write_access = etree.SubElement(runnable, 'DATA-WRITE-ACCESS')
-                read_local_variables = etree.SubElement(runnable, 'READ-LOCAL-VARIABLES')
-                server_call_points = etree.SubElement(runnable, 'SERVER-CALL-POINTS')
-                symbol = etree.SubElement(runnable, 'SYMBOL').text = interface['OPERATION']
-                written_local_variables = etree.SubElement(runnable, 'WRITTEN-LOCAL-VARIABLES')
-                created_operations.append(operation)
-                created_runnables.append(runnable)
-
-    rootStub = etree.Element('AUTOSAR', {attr_qname: 'http://autosar.org/schema/r4.0 AUTOSAR_4-2-2_STRICT_COMPACT.xsd'}, nsmap=NSMAP)
-    packages = etree.SubElement(rootStub, 'AR-PACKAGES')
-    package = etree.SubElement(packages, 'AR-PACKAGE')
-    short_name = etree.SubElement(package, 'SHORT-NAME').text = 'RootP_Stub'
-    elements = etree.SubElement(package, 'ELEMENTS')
-    aswc = etree.SubElement(elements, 'APPLICATION-SW-COMPONENT-TYPE')
-    short_name = etree.SubElement(aswc, 'SHORT-NAME').text = "ASWC_StubCS"
-    ports = etree.SubElement(aswc, "PORTS")
-    for elem in created_pports:
-        ports.append(elem)
-    internal_behavior = etree.SubElement(aswc, 'INTERNAL-BEHAVIORS')
-    swc_internal_behavior = etree.SubElement(internal_behavior, 'SWC-INTERNAL-BEHAVIOR')
-    short_name = etree.SubElement(swc_internal_behavior, 'SHORT-NAME').text = 'IB_StubCS'
-    events = etree.SubElement(swc_internal_behavior, 'EVENTS')
-    for elem in created_operations:
-        events.append(elem)
-    runnables = etree.SubElement(swc_internal_behavior, 'RUNNABLES')
-    for elem in created_runnables:
-        runnables.append(elem)
-
-    pretty_xml = new_prettify(rootStub)
-    output = etree.ElementTree(etree.fromstring(pretty_xml))
-    output.write(output_path + '/ASWC_StubCS.arxml', encoding="UTF-8", xml_declaration=True, method="xml")
+# def generate_stub(recursive_arxml, recursive_dico, simple_arxml, simple_dico, output_path, logger):
+#     NSMAP = {None: 'http://autosar.org/schema/r4.0',
+#              "xsi": 'http://www.w3.org/2001/XMLSchema-instance'}
+#     attr_qname = etree.QName("http://www.w3.org/2001/XMLSchema-instance", "schemaLocation")
+#     provided_ports = []
+#     requested_ports = []
+#     created_pports = []
+#     created_operations = []
+#     created_runnables = []
+#     client_server_interfaces = []
+#     for each_path in recursive_arxml:
+#         for directory, directories, files in os.walk(each_path):
+#             for file in files:
+#                 if file.endswith('.arxml'):
+#                     fullname = os.path.join(directory, file)
+#                     tree = etree.parse(fullname)
+#                     root = tree.getroot()
+#                     PPort = root.findall(".//{http://autosar.org/schema/r4.0}P-PORT-PROTOTYPE")
+#                     for elem in PPort:
+#                         if elem.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text[3:5] == "CS":
+#                             provided_ports.append(elem)
+#                     PRPort = root.findall(".//{http://autosar.org/schema/r4.0}PR-PORT-PROTOTYPE")
+#                     for elem in PRPort:
+#                         if elem.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text[4:6] == "CS":
+#                             provided_ports.append(elem)
+#                     RPort = root.findall(".//{http://autosar.org/schema/r4.0}R-PORT-PROTOTYPE")
+#                     for elem in RPort:
+#                         if elem.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text[3:5] == "CS":
+#                             requested_ports.append(elem)
+#                     CSInterface = root.findall(".//{http://autosar.org/schema/r4.0}CLIENT-SERVER-INTERFACE")
+#                     for elem in CSInterface:
+#                         objData = {}
+#                         objData['PACKAGE'] = elem.elem.getparent().getparent().getchildren()[0].text
+#                         objData['NAME'] = elem.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text
+#                         objData['OPERATION'] = elem.find(".//{http://autosar.org/schema/r4.0}CLIENT-SERVER-OPERATION").getchildren()[0].text
+#                         client_server_interfaces.append(objData)
+#     for each_path in simple_arxml:
+#         for file in os.listdir(each_path):
+#             if file.endswith('.arxml'):
+#                 fullname = os.path.join(each_path, file)
+#                 tree = etree.parse(fullname)
+#                 root = tree.getroot()
+#                 PPort = root.findall(".//{http://autosar.org/schema/r4.0}P-PORT-PROTOTYPE")
+#                 for elem in PPort:
+#                     if elem.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text[3:5] == "CS":
+#                         provided_ports.append(elem)
+#                 PRPort = root.findall(".//{http://autosar.org/schema/r4.0}PR-PORT-PROTOTYPE")
+#                 for elem in PRPort:
+#                     if elem.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text[4:6] == "CS":
+#                         provided_ports.append(elem)
+#                 RPort = root.findall(".//{http://autosar.org/schema/r4.0}R-PORT-PROTOTYPE")
+#                 for elem in RPort:
+#                     if elem.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text[3:5] == "CS":
+#                         requested_ports.append(elem)
+#                 CSInterface = root.findall(".//{http://autosar.org/schema/r4.0}CLIENT-SERVER-INTERFACE")
+#                 for elem in CSInterface:
+#                     objData = {}
+#                     objData['PACKAGE'] = elem.elem.getparent().getparent().getchildren()[0].text
+#                     objData['NAME'] = elem.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text
+#                     objData['OPERATION'] = elem.find(".//{http://autosar.org/schema/r4.0}CLIENT-SERVER-OPERATION").getchildren()[0].text
+#                     client_server_interfaces.append(objData)
+#     for each_path in simple_dico:
+#         for file in os.listdir(each_path):
+#             if file.endswith('.dico'):
+#                 fullname = os.path.join(each_path, file)
+#                 tree = etree.parse(fullname)
+#                 root = tree.getroot()
+#                 for elem in CSInterface:
+#                     objData = {}
+#                     objData['PACKAGE'] = elem.elem.getparent().getparent().getchildren()[0].text
+#                     objData['NAME'] = elem.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text
+#                     objData['OPERATION'] = elem.find(".//{http://autosar.org/schema/r4.0}CLIENT-SERVER-OPERATION").getchildren()[0].text
+#                     client_server_interfaces.append(objData)
+#     for each_path in recursive_dico:
+#         for directory, directories, files in os.walk(each_path):
+#             for file in files:
+#                 if file.endswith('.dico'):
+#                     fullname = os.path.join(directory, file)
+#                     tree = etree.parse(fullname)
+#                     root = tree.getroot()
+#                     for elem in CSInterface:
+#                         objData = {}
+#                         objData['PACKAGE'] = elem.elem.getparent().getparent().getchildren()[0].text
+#                         objData['NAME'] = elem.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text
+#                         objData['OPERATION'] = elem.find(".//{http://autosar.org/schema/r4.0}CLIENT-SERVER-OPERATION").getchildren()[0].text
+#                         client_server_interfaces.append(objData)
+#
+#     for elemR in requested_ports[:]:
+#         for elemP in provided_ports:
+#             if elemP.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text[:2] == "PP":
+#                 if elemR.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text[3:] == elemP.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text[3:]:
+#                     requested_ports.remove(elemR)
+#             else:
+#                 if elemR.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text[3:] == elemP.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text[4:]:
+#                     requested_ports.remove(elemR)
+#     # for elem in requested_ports:
+#     #     print(elem.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text)
+#     for elem in requested_ports:
+#         pport = etree.Element('P-PORT-PROTOTYPE', nsmap=NSMAP)
+#         short_name = etree.SubElement(pport, 'SHORT-NAME').text = 'PP_'+ elem.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text[3:]
+#         provided_com = etree.SubElement(pport, 'PROVIDED-COM-SPECS')
+#         queued_com_spec = etree.SubElement(provided_com, 'QUEUED-SENDER-COM-SPEC')
+#         provided_interface = etree.SubElement(pport, 'PROVIDED-INTERFACE-TREF')
+#         provided_interface.attrib['DEST'] = "CLIENT-SERVER-INTERFACE"
+#         provided_interface.text = elem.find(".//{http://autosar.org/schema/r4.0}REQUIRED-INTERFACE-TREF").text
+#         created_pports.append(pport)
+#     for elem in created_pports:
+#         for interface in client_server_interfaces:
+#             if elem.find(".//SHORT-NAME").text[3:] == interface['NAME']:
+#                 operation = etree.Element('OPERATION-INVOKED-ELEMENT', nsmap=NSMAP)
+#                 short_name = etree.SubElement(operation, 'SHORT-NAME').text = elem.find(".//SHORT-NAME").text+'_'+interface['NAME']
+#                 start_on_event = etree.SubElement(operation, 'START-ON-EVENT-REF')
+#                 start_on_event.attrib['DEST'] = "RUNNABLE-ENTITY"
+#                 start_on_event.text = "/RootP_Stub/ASWC_StubCS/"+'/'+interface['OPERATION']
+#                 operation_iref = etree.SubElement(operation, 'OPERATON-IREF')
+#                 context_provided = etree.SubElement(operation_iref, 'CONTEXT-P-PORT-REF')
+#                 context_provided.attrib['DEST'] = "P-PORT-PROTOTYPE"
+#                 context_provided.text = "/RootP_Stub/ASWC_StubCS/"+elem.find(".//SHORT-NAME").text
+#                 target_provided = etree.SubElement(operation_iref, 'TARGET-PROVIDED-OPERATION-REF')
+#                 target_provided.attrib['DEST'] = "CLIENT-SERVER-OPERATION"
+#                 target_provided.text = '/'+interface['ROOT']+'/'+interface['NAME']+'/'+interface['OPERATION']
+#                 runnable = etree.Element('RUNNABLE-ENTITY', nsmap=NSMAP)
+#                 short_name = etree.SubElement(runnable, 'SHORT-NAME').text = interface['OPERATION']
+#                 start_interval = etree.SubElement(runnable, 'MINIMUM-START-INTERVAL').text = "0"
+#                 concurrently = etree.SubElement(runnable, 'CAN-BE-INVLOKED-CONCURRENTLY').text = "false"
+#                 data_read_access = etree.SubElement(runnable, 'DATA-READ-ACCESS')
+#                 data_receive_point = etree.SubElement(runnable, 'DATA-RECEIVE-POINT-BY-VALUES')
+#                 data_send_points = etree.SubElement(runnable, 'DATA-SEND-POINTS')
+#                 data_write_access = etree.SubElement(runnable, 'DATA-WRITE-ACCESS')
+#                 read_local_variables = etree.SubElement(runnable, 'READ-LOCAL-VARIABLES')
+#                 server_call_points = etree.SubElement(runnable, 'SERVER-CALL-POINTS')
+#                 symbol = etree.SubElement(runnable, 'SYMBOL').text = interface['OPERATION']
+#                 written_local_variables = etree.SubElement(runnable, 'WRITTEN-LOCAL-VARIABLES')
+#                 created_operations.append(operation)
+#                 created_runnables.append(runnable)
+#
+#     rootStub = etree.Element('AUTOSAR', {attr_qname: 'http://autosar.org/schema/r4.0 AUTOSAR_4-2-2_STRICT_COMPACT.xsd'}, nsmap=NSMAP)
+#     packages = etree.SubElement(rootStub, 'AR-PACKAGES')
+#     package = etree.SubElement(packages, 'AR-PACKAGE')
+#     short_name = etree.SubElement(package, 'SHORT-NAME').text = 'RootP_Stub'
+#     elements = etree.SubElement(package, 'ELEMENTS')
+#     aswc = etree.SubElement(elements, 'APPLICATION-SW-COMPONENT-TYPE')
+#     short_name = etree.SubElement(aswc, 'SHORT-NAME').text = "ASWC_StubCS"
+#     ports = etree.SubElement(aswc, "PORTS")
+#     for elem in created_pports:
+#         ports.append(elem)
+#     internal_behavior = etree.SubElement(aswc, 'INTERNAL-BEHAVIORS')
+#     swc_internal_behavior = etree.SubElement(internal_behavior, 'SWC-INTERNAL-BEHAVIOR')
+#     short_name = etree.SubElement(swc_internal_behavior, 'SHORT-NAME').text = 'IB_StubCS'
+#     events = etree.SubElement(swc_internal_behavior, 'EVENTS')
+#     for elem in created_operations:
+#         events.append(elem)
+#     runnables = etree.SubElement(swc_internal_behavior, 'RUNNABLES')
+#     for elem in created_runnables:
+#         runnables.append(elem)
+#
+#     pretty_xml = new_prettify(rootStub)
+#     output = etree.ElementTree(etree.fromstring(pretty_xml))
+#     output.write(output_path + '/ASWC_StubCS.arxml', encoding="UTF-8", xml_declaration=True, method="xml")
 
 
 def main():
