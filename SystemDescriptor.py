@@ -1498,20 +1498,21 @@ def generate_system(recursive_arxml, recursive_dico, simple_arxml, simple_dico, 
     system_version = sorted(system_version, key=lambda x: x['SYSTEM'])
     final_system_version = []
     temp_system_version = []
-    for elem in system_version[:]:
-        version = elem['DATA']
-        for elem2 in system_version[:]:
-            if elem['ROOT'] == elem2['ROOT']:
-                if elem['SYSTEM'] == elem2['SYSTEM']:
-                    if version != elem['DATA']:
-                        logger.error('Multiple <SYSTEM-VERSION> values: ' + version + ' <-> ' + elem.text)
-                        try:
-                            os.remove(output_path + '/SystemGenerated.arxml')
-                        except OSError:
-                            pass
-                        return
-                    else:
-                        temp_system_version.append(elem)
+    for elem in range(len(system_version)):
+        version = system_version[elem]['DATA']
+        for elem2 in range(len(system_version)):
+            if elem != elem2:
+                if system_version[elem]['ROOT'] == system_version[elem2]['ROOT']:
+                    if system_version[elem]['SYSTEM'] == system_version[elem2]['SYSTEM']:
+                        if version != system_version[elem2]['DATA']:
+                            logger.error('Multiple <SYSTEM-VERSION> values: ' + version + ' <-> ' + system_version[elem2]['DATA'] + " for " + system_version[elem]['ROOT']+'/'+system_version[elem]['SYSTEM'])
+                            try:
+                                os.remove(output_path + '/SystemGenerated.arxml')
+                            except OSError:
+                                pass
+                            return
+                        else:
+                            temp_system_version.append(system_version[elem])
     [final_system_version.append(elem) for elem in temp_system_version if elem not in final_system_version]
     # <ROOT-SOFTWARE-COMPOSITIONS>
     root_software_composition = sorted(root_software_composition, key=lambda x: x['SYSTEM'])

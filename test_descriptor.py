@@ -190,11 +190,11 @@ class SystemDescriptor(unittest.TestCase):
     #     self.assertFalse(FileCompare.isOutput(head+'\\Tests\\TRS.SYSDESC.FUNC.002_04\\Output\\SystemGenerated.arxml'))
     #     self.assertTrue(FileCompare.checkLog(head + '\\Tests\\TRS.SYSDESC.FUNC.002_04\\output\\result.log', "ERROR", ["The interface: tBinaire"]))
 
-    def test_TRS_SYSDESC_FUNC_002_05(self):   ##############
-        current_path = os.path.realpath(__file__)
-        head, tail = ntpath.split(current_path)
-        os.system('SystemDescriptor.py -config ' + head + '\\Tests\\TRS.SYSDESC.FUNC.002_05\\ConfigSystemDescriptor.xml')
-        self.assertTrue(FileCompare.areSame(head+'\\Tests\\TRS.SYSDESC.FUNC.002_05\\SystemGenerated.arxml', head+'\\Tests\\TRS.SYSDESC.FUNC.002_05\\Output\\SystemGenerated.arxml'))
+    # def test_TRS_SYSDESC_FUNC_002_05(self):   ##############
+    #     current_path = os.path.realpath(__file__)
+    #     head, tail = ntpath.split(current_path)
+    #     os.system('SystemDescriptor.py -config ' + head + '\\Tests\\TRS.SYSDESC.FUNC.002_05\\ConfigSystemDescriptor.xml')
+    #     self.assertTrue(FileCompare.areSame(head+'\\Tests\\TRS.SYSDESC.FUNC.002_05\\SystemGenerated.arxml', head+'\\Tests\\TRS.SYSDESC.FUNC.002_05\\Output\\SystemGenerated.arxml'))
 
     # def test_TRS_SYSDESC_FUNC_002_07(self):   ##############
     #     current_path = os.path.realpath(__file__)
@@ -332,7 +332,7 @@ class SystemDescriptor(unittest.TestCase):
     #     head, tail = ntpath.split(current_path)
     #     os.system('SystemDescriptor.py -config ' + head + '\\Tests\TRS.SYSDESC.GEN.003_16\\ConfigSystemDescriptor.xml')
     #     self.assertFalse(FileCompare.isOutput(head+'\\Tests\\TRS.SYSDESC.GEN.003_16\\Output\\SystemGenerated.arxml'))
-    #     self.assertTrue(FileCompare.checkLog(head + '\\Tests\\TRS.SYSDESC.GEN.003_16\\output\\result.log', "ERROR", ["ROOT-SW-COMPOSITION-PROTOTYPE"]))
+    #     self.assertTrue(FileCompare.checkLog(head + '\\Tests\\TRS.SYSDESC.GEN.003_16\\output\\result.log', "ERROR", ["Multiple <SYSTEM-VERSION>"]))
 
     # def test_TRS_SYSDESC_GEN_004_1(self):
     #     current_path = os.path.realpath(__file__)
