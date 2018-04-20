@@ -1,0 +1,2068 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 autosar_4-2-1.xsd">
+    <AR-PACKAGES>
+        <AR-PACKAGE>
+            <SHORT-NAME>RootP_IntDcm</SHORT-NAME>
+            <ELEMENTS>
+                <APPLICATION-SW-COMPONENT-TYPE>
+                    <SHORT-NAME>Aswc_IntDcm</SHORT-NAME>
+                    <PORTS>
+                        <!-- 14 Provided Ports sur des interfaces de type Client Server -->
+                        <P-PORT-PROTOTYPE UUID="532b1ab2-9904-3fe4-fd24-059a40040e21">
+                            <SHORT-NAME>PP_DataServices_DcmDspData_DID_AutonomieCalculee</SHORT-NAME>
+                            <PROVIDED-COM-SPECS>
+                                <SERVER-COM-SPEC>
+                                    <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_Dcm/PortInterfaces/DataServices_DcmDspData_DID_AutonomieCalculee/ReadData</OPERATION-REF>
+                                    <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                                </SERVER-COM-SPEC>
+                            </PROVIDED-COM-SPECS>
+                            <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/AUTOSAR_Dcm/PortInterfaces/DataServices_DcmDspData_DID_AutonomieCalculee</PROVIDED-INTERFACE-TREF>
+                        </P-PORT-PROTOTYPE>
+                        <P-PORT-PROTOTYPE UUID="60ec2d51-83e6-1038-4542-ea5d71dd11b9">
+                            <SHORT-NAME>PP_DataServices_DcmDspData_DID_AutonomieGPL</SHORT-NAME>
+                            <PROVIDED-COM-SPECS>
+                                <SERVER-COM-SPEC>
+                                    <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_Dcm/PortInterfaces/DataServices_DcmDspData_DID_AutonomieGPL/ReadData</OPERATION-REF>
+                                    <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                                </SERVER-COM-SPEC>
+                            </PROVIDED-COM-SPECS>
+                            <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/AUTOSAR_Dcm/PortInterfaces/DataServices_DcmDspData_DID_AutonomieGPL</PROVIDED-INTERFACE-TREF>
+                        </P-PORT-PROTOTYPE>
+                        <P-PORT-PROTOTYPE UUID="b02ff26f-d9c9-bd41-8bab-a5c1389877f9">
+                            <SHORT-NAME>PP_DataServices_DcmDspData_DID_ConsoInstantanee</SHORT-NAME>
+                            <PROVIDED-COM-SPECS>
+                                <SERVER-COM-SPEC>
+                                    <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_Dcm/PortInterfaces/DataServices_DcmDspData_DID_ConsoInstantanee/ReadData</OPERATION-REF>
+                                    <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                                </SERVER-COM-SPEC>
+                            </PROVIDED-COM-SPECS>
+                            <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/AUTOSAR_Dcm/PortInterfaces/DataServices_DcmDspData_DID_ConsoInstantanee</PROVIDED-INTERFACE-TREF>
+                        </P-PORT-PROTOTYPE>
+                        <P-PORT-PROTOTYPE UUID="acb6e454-cb52-a7b7-b1cf-f17a4ae44604">
+                            <SHORT-NAME>PP_DataServices_DcmDspData_DID_ConsoMoyenneHY1</SHORT-NAME>
+                            <PROVIDED-COM-SPECS>
+                                <SERVER-COM-SPEC>
+                                    <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_Dcm/PortInterfaces/DataServices_DcmDspData_DID_ConsoMoyenneHY1/ReadData</OPERATION-REF>
+                                    <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                                </SERVER-COM-SPEC>
+                            </PROVIDED-COM-SPECS>
+                            <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/AUTOSAR_Dcm/PortInterfaces/DataServices_DcmDspData_DID_ConsoMoyenneHY1</PROVIDED-INTERFACE-TREF>
+                        </P-PORT-PROTOTYPE>
+                        <P-PORT-PROTOTYPE UUID="ae276a0b-6065-9716-6ac6-315fe42d5679">
+                            <SHORT-NAME>PP_DataServices_DcmDspData_DID_ConsoMoyenneHY2</SHORT-NAME>
+                            <PROVIDED-COM-SPECS>
+                                <SERVER-COM-SPEC>
+                                    <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_Dcm/PortInterfaces/DataServices_DcmDspData_DID_ConsoMoyenneHY2/ReadData</OPERATION-REF>
+                                    <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                                </SERVER-COM-SPEC>
+                            </PROVIDED-COM-SPECS>
+                            <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/AUTOSAR_Dcm/PortInterfaces/DataServices_DcmDspData_DID_ConsoMoyenneHY2</PROVIDED-INTERFACE-TREF>
+                        </P-PORT-PROTOTYPE>
+                        <P-PORT-PROTOTYPE UUID="ae702fdd-496b-ad96-1c26-cc00678eb75d">
+                            <SHORT-NAME>PP_DataServices_DcmDspData_DID_ConsoMoyenneHY3</SHORT-NAME>
+                            <PROVIDED-COM-SPECS>
+                                <SERVER-COM-SPEC>
+                                    <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_Dcm/PortInterfaces/DataServices_DcmDspData_DID_ConsoMoyenneHY3/ReadData</OPERATION-REF>
+                                    <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                                </SERVER-COM-SPEC>
+                            </PROVIDED-COM-SPECS>
+                            <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/AUTOSAR_Dcm/PortInterfaces/DataServices_DcmDspData_DID_ConsoMoyenneHY3</PROVIDED-INTERFACE-TREF>
+                        </P-PORT-PROTOTYPE>
+                        <P-PORT-PROTOTYPE UUID="fa30ff56-0452-03e5-21bb-b9efa91a8ecf">
+                            <SHORT-NAME>PP_DataServices_DcmDspData_DID_ConsoMoyenneHY4</SHORT-NAME>
+                            <PROVIDED-COM-SPECS>
+                                <SERVER-COM-SPEC>
+                                    <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_Dcm/PortInterfaces/DataServices_DcmDspData_DID_ConsoMoyenneHY4/ReadData</OPERATION-REF>
+                                    <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                                </SERVER-COM-SPEC>
+                            </PROVIDED-COM-SPECS>
+                            <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/AUTOSAR_Dcm/PortInterfaces/DataServices_DcmDspData_DID_ConsoMoyenneHY4</PROVIDED-INTERFACE-TREF>
+                        </P-PORT-PROTOTYPE>
+                        <P-PORT-PROTOTYPE UUID="b54103f9-3f5e-0cb7-45e6-820752344804">
+                            <SHORT-NAME>PP_DataServices_DcmDspData_DID_ConsoMoyenneHY5</SHORT-NAME>
+                            <PROVIDED-COM-SPECS>
+                                <SERVER-COM-SPEC>
+                                    <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_Dcm/PortInterfaces/DataServices_DcmDspData_DID_ConsoMoyenneHY5/ReadData</OPERATION-REF>
+                                    <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                                </SERVER-COM-SPEC>
+                            </PROVIDED-COM-SPECS>
+                            <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/AUTOSAR_Dcm/PortInterfaces/DataServices_DcmDspData_DID_ConsoMoyenneHY5</PROVIDED-INTERFACE-TREF>
+                        </P-PORT-PROTOTYPE>
+                        <P-PORT-PROTOTYPE UUID="05e01b6a-4be7-95ab-2fc8-4f68e480ddc9">
+                            <SHORT-NAME>PP_DataServices_DcmDspData_DID_ConsoMoyenneHY6</SHORT-NAME>
+                            <PROVIDED-COM-SPECS>
+                                <SERVER-COM-SPEC>
+                                    <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_Dcm/PortInterfaces/DataServices_DcmDspData_DID_ConsoMoyenneHY6/ReadData</OPERATION-REF>
+                                    <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                                </SERVER-COM-SPEC>
+                            </PROVIDED-COM-SPECS>
+                            <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/AUTOSAR_Dcm/PortInterfaces/DataServices_DcmDspData_DID_ConsoMoyenneHY6</PROVIDED-INTERFACE-TREF>
+                        </P-PORT-PROTOTYPE>
+                        <P-PORT-PROTOTYPE UUID="3e661359-a4e7-5e2c-39d3-979821388b40">
+                            <SHORT-NAME>PP_DataServices_DcmDspData_DID_ConsoMoyTrajet1</SHORT-NAME>
+                            <PROVIDED-COM-SPECS>
+                                <SERVER-COM-SPEC>
+                                    <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_Dcm/PortInterfaces/DataServices_DcmDspData_DID_ConsoMoyTrajet1/ReadData</OPERATION-REF>
+                                    <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                                </SERVER-COM-SPEC>
+                            </PROVIDED-COM-SPECS>
+                            <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/AUTOSAR_Dcm/PortInterfaces/DataServices_DcmDspData_DID_ConsoMoyTrajet1</PROVIDED-INTERFACE-TREF>
+                        </P-PORT-PROTOTYPE>
+                        <P-PORT-PROTOTYPE UUID="1f0d5702-7789-0325-789e-5ea8b5858c87">
+                            <SHORT-NAME>PP_DataServices_DcmDspData_DID_ConsoMoyTrajet2</SHORT-NAME>
+                            <PROVIDED-COM-SPECS>
+                                <SERVER-COM-SPEC>
+                                    <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_Dcm/PortInterfaces/DataServices_DcmDspData_DID_ConsoMoyTrajet2/ReadData</OPERATION-REF>
+                                    <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                                </SERVER-COM-SPEC>
+                            </PROVIDED-COM-SPECS>
+                            <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/AUTOSAR_Dcm/PortInterfaces/DataServices_DcmDspData_DID_ConsoMoyTrajet2</PROVIDED-INTERFACE-TREF>
+                        </P-PORT-PROTOTYPE>
+                        <P-PORT-PROTOTYPE UUID="99fdec8e-1ef0-7cd1-a032-0f17911ae761">
+                            <SHORT-NAME>PP_DataServices_DcmDspData_DID_ConsoRapide</SHORT-NAME>
+                            <PROVIDED-COM-SPECS>
+                                <SERVER-COM-SPEC>
+                                    <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_Dcm/PortInterfaces/DataServices_DcmDspData_DID_ConsoRapide/ReadData</OPERATION-REF>
+                                    <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                                </SERVER-COM-SPEC>
+                            </PROVIDED-COM-SPECS>
+                            <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/AUTOSAR_Dcm/PortInterfaces/DataServices_DcmDspData_DID_ConsoRapide</PROVIDED-INTERFACE-TREF>
+                        </P-PORT-PROTOTYPE>
+                        <P-PORT-PROTOTYPE UUID="b8deeef4-8b66-d65e-7bf6-49107cad6d72">
+                            <SHORT-NAME>PP_DataServices_DcmDspData_DID_PRESENCE_GAZ</SHORT-NAME>
+                            <PROVIDED-COM-SPECS>
+                                <SERVER-COM-SPEC>
+                                    <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_Dcm/PortInterfaces/DataServices_DcmDspData_DID_PRESENCE_GAZ/ReadData</OPERATION-REF>
+                                    <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                                </SERVER-COM-SPEC>
+                                <SERVER-COM-SPEC>
+                                    <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_Dcm/PortInterfaces/DataServices_DcmDspData_DID_PRESENCE_GAZ/WriteData</OPERATION-REF>
+                                    <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                                </SERVER-COM-SPEC>
+                            </PROVIDED-COM-SPECS>
+                            <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/AUTOSAR_Dcm/PortInterfaces/DataServices_DcmDspData_DID_PRESENCE_GAZ</PROVIDED-INTERFACE-TREF>
+                        </P-PORT-PROTOTYPE>
+                        <P-PORT-PROTOTYPE UUID="a7cda14b-71e9-88c8-976c-6d6781dff0e2">
+                            <SHORT-NAME>PP_DataServices_DcmDspData_DID_PRESENCE_ODB</SHORT-NAME>
+                            <PROVIDED-COM-SPECS>
+                                <SERVER-COM-SPEC>
+                                    <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_Dcm/PortInterfaces/DataServices_DcmDspData_DID_PRESENCE_ODB/ReadData</OPERATION-REF>
+                                    <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                                </SERVER-COM-SPEC>
+                                <SERVER-COM-SPEC>
+                                    <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_Dcm/PortInterfaces/DataServices_DcmDspData_DID_PRESENCE_ODB/WriteData</OPERATION-REF>
+                                    <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                                </SERVER-COM-SPEC>
+                            </PROVIDED-COM-SPECS>
+                            <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/AUTOSAR_Dcm/PortInterfaces/DataServices_DcmDspData_DID_PRESENCE_ODB</PROVIDED-INTERFACE-TREF>
+                        </P-PORT-PROTOTYPE>
+                        <!-- 2 Provided Ports sur des interfaces de type Sender Receiver -->
+                        <PR-PORT-PROTOTYPE UUID="6030c7bb-3b8f-5b75-4c6b-1444b2151639">
+                            <SHORT-NAME>PP_SR_CFG_PRESENCE_GAZ</SHORT-NAME>
+                            <REQUIRED-COM-SPECS>
+                            </REQUIRED-COM-SPECS>
+                            <PROVIDED-REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/RootP_SR_Param/SR_CFG_PRESENCE_GAZ</PROVIDED-REQUIRED-INTERFACE-TREF>
+                        </PR-PORT-PROTOTYPE>
+                        <PR-PORT-PROTOTYPE UUID="d002b535-4d09-d56f-d586-ac14624f1455">
+                            <SHORT-NAME>PP_SR_CFG_PRESENCE_ODB</SHORT-NAME>
+                            <REQUIRED-COM-SPECS>
+                            </REQUIRED-COM-SPECS>
+                            <PROVIDED-REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/RootP_SR_Param/SR_CFG_PRESENCE_ODB</PROVIDED-REQUIRED-INTERFACE-TREF>
+                        </PR-PORT-PROTOTYPE>
+                        <!-- 14 Required Ports sur des interfaces de type Sender Receiver -->
+                        <R-PORT-PROTOTYPE UUID="2c4ebf18-eddc-4765-df14-6bbee13af7ff">
+                            <SHORT-NAME>RP_SR_Autonomie</SHORT-NAME>
+                            <REQUIRED-COM-SPECS>
+                            </REQUIRED-COM-SPECS>
+                            <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/RootP_SR_Data/SR_Autonomie</REQUIRED-INTERFACE-TREF>
+                        </R-PORT-PROTOTYPE>
+                        <R-PORT-PROTOTYPE UUID="f30429c8-52ad-aefc-0551-22c980015f18">
+                            <SHORT-NAME>RP_SR_AutonomieGPL</SHORT-NAME>
+                            <REQUIRED-COM-SPECS>
+                            </REQUIRED-COM-SPECS>
+                            <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/RootP_SR_Data/SR_AutonomieGPL</REQUIRED-INTERFACE-TREF>
+                        </R-PORT-PROTOTYPE>
+                        <R-PORT-PROTOTYPE UUID="97af3f4a-2d9d-fe28-f280-863334843cdf">
+                            <SHORT-NAME>RP_SR_ConsoInst</SHORT-NAME>
+                            <REQUIRED-COM-SPECS>
+                            </REQUIRED-COM-SPECS>
+                            <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/RootP_SR_Data/SR_ConsoInst</REQUIRED-INTERFACE-TREF>
+                        </R-PORT-PROTOTYPE>
+                        <R-PORT-PROTOTYPE UUID="1b56195e-12b8-abf8-434c-e5a4023128d8">
+                            <SHORT-NAME>RP_SR_ConsoMoyenneHY1</SHORT-NAME>
+                            <REQUIRED-COM-SPECS>
+                            </REQUIRED-COM-SPECS>
+                            <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/RootP_SR_Data/SR_ConsoMoyenneHY1</REQUIRED-INTERFACE-TREF>
+                        </R-PORT-PROTOTYPE>
+                        <R-PORT-PROTOTYPE UUID="2d41c530-141f-4945-0cc8-d584b5155f37">
+                            <SHORT-NAME>RP_SR_ConsoMoyenneHY2</SHORT-NAME>
+                            <REQUIRED-COM-SPECS>
+                            </REQUIRED-COM-SPECS>
+                            <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/RootP_SR_Data/SR_ConsoMoyenneHY2</REQUIRED-INTERFACE-TREF>
+                        </R-PORT-PROTOTYPE>
+                        <R-PORT-PROTOTYPE UUID="f9cef8cf-6ef3-bb97-aef1-1103580cf0d6">
+                            <SHORT-NAME>RP_SR_ConsoMoyenneHY3</SHORT-NAME>
+                            <REQUIRED-COM-SPECS>
+                            </REQUIRED-COM-SPECS>
+                            <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/RootP_SR_Data/SR_ConsoMoyenneHY3</REQUIRED-INTERFACE-TREF>
+                        </R-PORT-PROTOTYPE>
+                        <R-PORT-PROTOTYPE UUID="ffd6520e-ba4a-d586-97d5-d4a33feefe4d">
+                            <SHORT-NAME>RP_SR_ConsoMoyenneHY4</SHORT-NAME>
+                            <REQUIRED-COM-SPECS>
+                            </REQUIRED-COM-SPECS>
+                            <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/RootP_SR_Data/SR_ConsoMoyenneHY4</REQUIRED-INTERFACE-TREF>
+                        </R-PORT-PROTOTYPE>
+                        <R-PORT-PROTOTYPE UUID="12969262-2df5-4445-4539-a863dd483df7">
+                            <SHORT-NAME>RP_SR_ConsoMoyenneHY5</SHORT-NAME>
+                            <REQUIRED-COM-SPECS>
+                            </REQUIRED-COM-SPECS>
+                            <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/RootP_SR_Data/SR_ConsoMoyenneHY5</REQUIRED-INTERFACE-TREF>
+                        </R-PORT-PROTOTYPE>
+                        <R-PORT-PROTOTYPE UUID="eaa06670-eb57-7af6-f53e-a0ec0eaf2433">
+                            <SHORT-NAME>RP_SR_ConsoMoyenneHY6</SHORT-NAME>
+                            <REQUIRED-COM-SPECS>
+                            </REQUIRED-COM-SPECS>
+                            <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/RootP_SR_Data/SR_ConsoMoyenneHY6</REQUIRED-INTERFACE-TREF>
+                        </R-PORT-PROTOTYPE>
+                        <R-PORT-PROTOTYPE UUID="37cd9efc-0f7f-7bf3-99d4-989685878cd4">
+                            <SHORT-NAME>RP_SR_ConsoMoyenneT1</SHORT-NAME>
+                            <REQUIRED-COM-SPECS>
+                            </REQUIRED-COM-SPECS>
+                            <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/RootP_SR_Data/SR_ConsoMoyenneT1</REQUIRED-INTERFACE-TREF>
+                        </R-PORT-PROTOTYPE>
+                        <R-PORT-PROTOTYPE UUID="699069e2-1c66-ac06-83ad-80a6ce699f4d">
+                            <SHORT-NAME>RP_SR_ConsoMoyenneT2</SHORT-NAME>
+                            <REQUIRED-COM-SPECS>
+                            </REQUIRED-COM-SPECS>
+                            <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/RootP_SR_Data/SR_ConsoMoyenneT2</REQUIRED-INTERFACE-TREF>
+                        </R-PORT-PROTOTYPE>
+                        <R-PORT-PROTOTYPE UUID="1c441432-1269-79bc-4c8b-302eda7837cf">
+                            <SHORT-NAME>RP_SR_SAV_ConsoLisse</SHORT-NAME>
+                            <REQUIRED-COM-SPECS>
+                            </REQUIRED-COM-SPECS>
+                            <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/RootP_SR_Data/SR_SAV_ConsoLisse</REQUIRED-INTERFACE-TREF>
+                        </R-PORT-PROTOTYPE>
+                        <R-PORT-PROTOTYPE UUID="d456bea6-f442-a851-7663-6951378e99e5">
+                            <SHORT-NAME>RP_SR_CFG_PRESENCE_GAZ</SHORT-NAME>
+                            <REQUIRED-COM-SPECS>
+                            </REQUIRED-COM-SPECS>
+                            <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/RootP_SR_Param/SR_CFG_PRESENCE_GAZ</REQUIRED-INTERFACE-TREF>
+                        </R-PORT-PROTOTYPE>
+                        <R-PORT-PROTOTYPE UUID="e6d42360-06e4-6f9e-c384-0abab1c57680">
+                            <SHORT-NAME>RP_SR_CFG_PRESENCE_ODB</SHORT-NAME>
+                            <REQUIRED-COM-SPECS>
+                            </REQUIRED-COM-SPECS>
+                            <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/RootP_SR_Param/SR_CFG_PRESENCE_ODB</REQUIRED-INTERFACE-TREF>
+                        </R-PORT-PROTOTYPE>
+						<R-PORT-PROTOTYPE UUID="e6d42360-06e4-6f9e-c384-0abab1c57680">
+                            <SHORT-NAME>RP_CS_CFG_PRESENCE_ODB2</SHORT-NAME>
+                            <REQUIRED-COM-SPECS>
+                            </REQUIRED-COM-SPECS>
+                            <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/RootP_CS_Param/CS_CFG_PRESENCE_ODB2</REQUIRED-INTERFACE-TREF>
+                        </R-PORT-PROTOTYPE>
+                        <!-- Required Port Mode Switch Event -->
+                        <R-PORT-PROTOTYPE UUID="a7b87a89-16f6-a273-bbb7-7c2102ee1aab">
+                            <SHORT-NAME>Aswc_IntDcm_MSI</SHORT-NAME>
+                            <REQUIRED-INTERFACE-TREF DEST="MODE-SWITCH-INTERFACE">/RootP_Mode/RootP_RteMode</REQUIRED-INTERFACE-TREF>
+                        </R-PORT-PROTOTYPE>
+                    </PORTS>
+                    <INTERNAL-BEHAVIORS>
+                        <SWC-INTERNAL-BEHAVIOR UUID="4fda2846-3d0e-3774-6645-777b0b16207d">
+                            <SHORT-NAME>IB_Aswc_IntDcm</SHORT-NAME>
+                            <DATA-TYPE-MAPPING-REFS>
+                                <DATA-TYPE-MAPPING-REF DEST="DATA-TYPE-MAPPING-SET">/RootP_Mode/ApplicationModeMapping</DATA-TYPE-MAPPING-REF>
+                            </DATA-TYPE-MAPPING-REFS>
+                            <AR-TYPED-PER-INSTANCE-MEMORYS />
+                            <EVENTS>
+                                <OPERATION-INVOKED-EVENT UUID="47dc8817-ef8e-c659-f31f-d19cc16958ea">
+                                    <SHORT-NAME>DataServices_DcmDspData_DID_AutonomieCalculee_ReadData_OIE</SHORT-NAME>
+                                    <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/RootP_IntDcm/Aswc_IntDcm/IB_Aswc_IntDcm/RUNS_DID_AutonomieCalculee_Get</START-ON-EVENT-REF>
+                                    <OPERATION-IREF>
+                                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/PP_DataServices_DcmDspData_DID_AutonomieCalculee</CONTEXT-P-PORT-REF>
+                                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_Dcm/PortInterfaces/DataServices_DcmDspData_DID_AutonomieCalculee/ReadData</TARGET-PROVIDED-OPERATION-REF>
+                                    </OPERATION-IREF>
+                                </OPERATION-INVOKED-EVENT>
+                                <OPERATION-INVOKED-EVENT UUID="5a1c5a6b-434c-327a-5d69-840d7160a814">
+                                    <SHORT-NAME>DataServices_DcmDspData_DID_AutonomieGPL_ReadData_OIE</SHORT-NAME>
+                                    <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/RootP_IntDcm/Aswc_IntDcm/IB_Aswc_IntDcm/RUNS_DID_AutonomieGPL_Get</START-ON-EVENT-REF>
+                                    <OPERATION-IREF>
+                                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/PP_DataServices_DcmDspData_DID_AutonomieGPL</CONTEXT-P-PORT-REF>
+                                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_Dcm/PortInterfaces/DataServices_DcmDspData_DID_AutonomieGPL/ReadData</TARGET-PROVIDED-OPERATION-REF>
+                                    </OPERATION-IREF>
+                                </OPERATION-INVOKED-EVENT>
+                                <OPERATION-INVOKED-EVENT UUID="b9d8d912-61a2-7230-c1fb-deb2dc9d7067">
+                                    <SHORT-NAME>DataServices_DcmDspData_DID_ConsoInstantanee_ReadData_OIE</SHORT-NAME>
+                                    <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/RootP_IntDcm/Aswc_IntDcm/IB_Aswc_IntDcm/RUNS_DID_ConsoInstantanee_Get</START-ON-EVENT-REF>
+                                    <OPERATION-IREF>
+                                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/PP_DataServices_DcmDspData_DID_ConsoInstantanee</CONTEXT-P-PORT-REF>
+                                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_Dcm/PortInterfaces/DataServices_DcmDspData_DID_ConsoInstantanee/ReadData</TARGET-PROVIDED-OPERATION-REF>
+                                    </OPERATION-IREF>
+                                </OPERATION-INVOKED-EVENT>
+                                <OPERATION-INVOKED-EVENT UUID="721e60d1-7901-d091-7fe0-eb841a2492ae">
+                                    <SHORT-NAME>DataServices_DcmDspData_DID_ConsoMoyenneHY1_ReadData_OIE</SHORT-NAME>
+                                    <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/RootP_IntDcm/Aswc_IntDcm/IB_Aswc_IntDcm/RUNS_DID_ConsoMoyenneHY1_Get</START-ON-EVENT-REF>
+                                    <OPERATION-IREF>
+                                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/PP_DataServices_DcmDspData_DID_ConsoMoyenneHY1</CONTEXT-P-PORT-REF>
+                                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_Dcm/PortInterfaces/DataServices_DcmDspData_DID_ConsoMoyenneHY1/ReadData</TARGET-PROVIDED-OPERATION-REF>
+                                    </OPERATION-IREF>
+                                </OPERATION-INVOKED-EVENT>
+                                <OPERATION-INVOKED-EVENT UUID="1f0809a9-b59a-91c9-2e62-ca20265452fe">
+                                    <SHORT-NAME>DataServices_DcmDspData_DID_ConsoMoyenneHY2_ReadData_OIE</SHORT-NAME>
+                                    <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/RootP_IntDcm/Aswc_IntDcm/IB_Aswc_IntDcm/RUNS_DID_ConsoMoyenneHY2_Get</START-ON-EVENT-REF>
+                                    <OPERATION-IREF>
+                                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/PP_DataServices_DcmDspData_DID_ConsoMoyenneHY2</CONTEXT-P-PORT-REF>
+                                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_Dcm/PortInterfaces/DataServices_DcmDspData_DID_ConsoMoyenneHY2/ReadData</TARGET-PROVIDED-OPERATION-REF>
+                                    </OPERATION-IREF>
+                                </OPERATION-INVOKED-EVENT>
+                                <OPERATION-INVOKED-EVENT UUID="e18e7de6-7f27-a7cb-8eec-a5bd5f45db7a">
+                                    <SHORT-NAME>DataServices_DcmDspData_DID_ConsoMoyenneHY3_ReadData_OIE</SHORT-NAME>
+                                    <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/RootP_IntDcm/Aswc_IntDcm/IB_Aswc_IntDcm/RUNS_DID_ConsoMoyenneHY3_Get</START-ON-EVENT-REF>
+                                    <OPERATION-IREF>
+                                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/PP_DataServices_DcmDspData_DID_ConsoMoyenneHY3</CONTEXT-P-PORT-REF>
+                                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_Dcm/PortInterfaces/DataServices_DcmDspData_DID_ConsoMoyenneHY3/ReadData</TARGET-PROVIDED-OPERATION-REF>
+                                    </OPERATION-IREF>
+                                </OPERATION-INVOKED-EVENT>
+                                <OPERATION-INVOKED-EVENT UUID="7a89843f-0abc-19fe-d519-34c31cfd6ce4">
+                                    <SHORT-NAME>DataServices_DcmDspData_DID_ConsoMoyenneHY4_ReadData_OIE</SHORT-NAME>
+                                    <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/RootP_IntDcm/Aswc_IntDcm/IB_Aswc_IntDcm/RUNS_DID_ConsoMoyenneHY4_Get</START-ON-EVENT-REF>
+                                    <OPERATION-IREF>
+                                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/PP_DataServices_DcmDspData_DID_ConsoMoyenneHY4</CONTEXT-P-PORT-REF>
+                                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_Dcm/PortInterfaces/DataServices_DcmDspData_DID_ConsoMoyenneHY4/ReadData</TARGET-PROVIDED-OPERATION-REF>
+                                    </OPERATION-IREF>
+                                </OPERATION-INVOKED-EVENT>
+                                <OPERATION-INVOKED-EVENT UUID="8305ee4d-79a2-3071-4ad3-b85e649e7ec2">
+                                    <SHORT-NAME>DataServices_DcmDspData_DID_ConsoMoyenneHY5_ReadData_OIE</SHORT-NAME>
+                                    <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/RootP_IntDcm/Aswc_IntDcm/IB_Aswc_IntDcm/RUNS_DID_ConsoMoyenneHY5_Get</START-ON-EVENT-REF>
+                                    <OPERATION-IREF>
+                                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/PP_DataServices_DcmDspData_DID_ConsoMoyenneHY5</CONTEXT-P-PORT-REF>
+                                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_Dcm/PortInterfaces/DataServices_DcmDspData_DID_ConsoMoyenneHY5/ReadData</TARGET-PROVIDED-OPERATION-REF>
+                                    </OPERATION-IREF>
+                                </OPERATION-INVOKED-EVENT>
+                                <OPERATION-INVOKED-EVENT UUID="e7ae736f-036b-9785-db18-93e2e93c5bf7">
+                                    <SHORT-NAME>DataServices_DcmDspData_DID_ConsoMoyenneHY6_ReadData_OIE</SHORT-NAME>
+                                    <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/RootP_IntDcm/Aswc_IntDcm/IB_Aswc_IntDcm/RUNS_DID_ConsoMoyenneHY6_Get</START-ON-EVENT-REF>
+                                    <OPERATION-IREF>
+                                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/PP_DataServices_DcmDspData_DID_ConsoMoyenneHY6</CONTEXT-P-PORT-REF>
+                                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_Dcm/PortInterfaces/DataServices_DcmDspData_DID_ConsoMoyenneHY6/ReadData</TARGET-PROVIDED-OPERATION-REF>
+                                    </OPERATION-IREF>
+                                </OPERATION-INVOKED-EVENT>
+                                <OPERATION-INVOKED-EVENT UUID="3d9d2c35-8b0e-dae8-3840-1a5b053d3246">
+                                    <SHORT-NAME>DataServices_DcmDspData_DID_ConsoMoyTrajet1_ReadData_OIE</SHORT-NAME>
+                                    <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/RootP_IntDcm/Aswc_IntDcm/IB_Aswc_IntDcm/RUNS_DID_ConsoMoyTrajet1_Get</START-ON-EVENT-REF>
+                                    <OPERATION-IREF>
+                                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/PP_DataServices_DcmDspData_DID_ConsoMoyTrajet1</CONTEXT-P-PORT-REF>
+                                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_Dcm/PortInterfaces/DataServices_DcmDspData_DID_ConsoMoyTrajet1/ReadData</TARGET-PROVIDED-OPERATION-REF>
+                                    </OPERATION-IREF>
+                                </OPERATION-INVOKED-EVENT>
+                                <OPERATION-INVOKED-EVENT UUID="cb1a6a23-782a-8ed9-74fe-acbb8a82836a">
+                                    <SHORT-NAME>DataServices_DcmDspData_DID_ConsoMoyTrajet2_ReadData_OIE</SHORT-NAME>
+                                    <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/RootP_IntDcm/Aswc_IntDcm/IB_Aswc_IntDcm/RUNS_DID_ConsoMoyTrajet2_Get</START-ON-EVENT-REF>
+                                    <OPERATION-IREF>
+                                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/PP_DataServices_DcmDspData_DID_ConsoMoyTrajet2</CONTEXT-P-PORT-REF>
+                                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_Dcm/PortInterfaces/DataServices_DcmDspData_DID_ConsoMoyTrajet2/ReadData</TARGET-PROVIDED-OPERATION-REF>
+                                    </OPERATION-IREF>
+                                </OPERATION-INVOKED-EVENT>
+                                <OPERATION-INVOKED-EVENT UUID="958a4f0b-f4c8-2d1a-5101-16e58f4d801f">
+                                    <SHORT-NAME>DataServices_DcmDspData_DID_ConsoRapide_ReadData_OIE</SHORT-NAME>
+                                    <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/RootP_IntDcm/Aswc_IntDcm/IB_Aswc_IntDcm/RUNS_DID_ConsoRapide_Get</START-ON-EVENT-REF>
+                                    <OPERATION-IREF>
+                                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/PP_DataServices_DcmDspData_DID_ConsoRapide</CONTEXT-P-PORT-REF>
+                                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_Dcm/PortInterfaces/DataServices_DcmDspData_DID_ConsoRapide/ReadData</TARGET-PROVIDED-OPERATION-REF>
+                                    </OPERATION-IREF>
+                                </OPERATION-INVOKED-EVENT>
+                                <OPERATION-INVOKED-EVENT UUID="07b95b25-7110-040a-3ae2-298198146140">
+                                    <SHORT-NAME>DataServices_DcmDspData_DID_PRESENCE_GAZ_ReadData_OIE</SHORT-NAME>
+                                    <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/RootP_IntDcm/Aswc_IntDcm/IB_Aswc_IntDcm/RUNS_DID_PRESENCE_GAZ_Get</START-ON-EVENT-REF>
+                                    <OPERATION-IREF>
+                                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/PP_DataServices_DcmDspData_DID_PRESENCE_GAZ</CONTEXT-P-PORT-REF>
+                                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_Dcm/PortInterfaces/DataServices_DcmDspData_DID_PRESENCE_GAZ/ReadData</TARGET-PROVIDED-OPERATION-REF>
+                                    </OPERATION-IREF>
+                                </OPERATION-INVOKED-EVENT>
+                                <OPERATION-INVOKED-EVENT UUID="124df6b0-ff80-4134-c520-d73940b86f4b">
+                                    <SHORT-NAME>DataServices_DcmDspData_DID_PRESENCE_GAZ_WriteData_OIE</SHORT-NAME>
+                                    <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/RootP_IntDcm/Aswc_IntDcm/IB_Aswc_IntDcm/RUNS_DID_PRESENCE_GAZ_Set</START-ON-EVENT-REF>
+                                    <OPERATION-IREF>
+                                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/PP_DataServices_DcmDspData_DID_PRESENCE_GAZ</CONTEXT-P-PORT-REF>
+                                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_Dcm/PortInterfaces/DataServices_DcmDspData_DID_PRESENCE_GAZ/WriteData</TARGET-PROVIDED-OPERATION-REF>
+                                    </OPERATION-IREF>
+                                </OPERATION-INVOKED-EVENT>
+                                <OPERATION-INVOKED-EVENT UUID="8eb92f58-d86f-1372-74f7-d37a4abaa7c5">
+                                    <SHORT-NAME>DataServices_DcmDspData_DID_PRESENCE_ODB_ReadData_OIE</SHORT-NAME>
+                                    <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/RootP_IntDcm/Aswc_IntDcm/IB_Aswc_IntDcm/RUNS_DID_PRESENCE_ODB_Get</START-ON-EVENT-REF>
+                                    <OPERATION-IREF>
+                                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/PP_DataServices_DcmDspData_DID_PRESENCE_ODB</CONTEXT-P-PORT-REF>
+                                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_Dcm/PortInterfaces/DataServices_DcmDspData_DID_PRESENCE_ODB/ReadData</TARGET-PROVIDED-OPERATION-REF>
+                                    </OPERATION-IREF>
+                                </OPERATION-INVOKED-EVENT>
+                                <OPERATION-INVOKED-EVENT UUID="4ee38cb9-3977-8c4b-f426-b1c022e233de">
+                                    <SHORT-NAME>DataServices_DcmDspData_DID_PRESENCE_ODB_WriteData_OIE</SHORT-NAME>
+                                    <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/RootP_IntDcm/Aswc_IntDcm/IB_Aswc_IntDcm/RUNS_DID_PRESENCE_ODB_Set</START-ON-EVENT-REF>
+                                    <OPERATION-IREF>
+                                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/PP_DataServices_DcmDspData_DID_PRESENCE_ODB</CONTEXT-P-PORT-REF>
+                                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_Dcm/PortInterfaces/DataServices_DcmDspData_DID_PRESENCE_ODB/WriteData</TARGET-PROVIDED-OPERATION-REF>
+                                    </OPERATION-IREF>
+                                </OPERATION-INVOKED-EVENT>
+                                <SWC-MODE-SWITCH-EVENT UUID="45421c86-d925-6e24-3952-3f3ea6aabd9f">
+                                    <SHORT-NAME>RUNPI_Aswc_IntDcm_ENTRY</SHORT-NAME>
+                                    <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/RootP_IntDcm/Aswc_IntDcm/IB_Aswc_IntDcm/RUNPI_Aswc_IntDcm</START-ON-EVENT-REF>
+                                    <ACTIVATION>ON-ENTRY</ACTIVATION>
+                                    <MODE-IREFS>
+                                        <MODE-IREF>
+                                            <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/Aswc_IntDcm_MSI</CONTEXT-PORT-REF>
+                                            <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/RootP_Mode/RootP_RteMode/RteMode</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                                            <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/RootP_Mode/ApplicationModeGroup/APP_WAKEUP</TARGET-MODE-DECLARATION-REF>
+                                        </MODE-IREF>
+                                    </MODE-IREFS>
+                                </SWC-MODE-SWITCH-EVENT>
+                            </EVENTS>
+                            <EXPLICIT-INTER-RUNNABLE-VARIABLES />
+                            <HANDLE-TERMINATION-AND-RESTART>NO-SUPPORT</HANDLE-TERMINATION-AND-RESTART>
+                            <IMPLICIT-INTER-RUNNABLE-VARIABLES />
+                            <RUNNABLES>
+                                <RUNNABLE-ENTITY UUID="ab6ee151-70aa-c945-9ddd-3ef5510ae07d">
+                                    <SHORT-NAME>RUNS_DID_AutonomieCalculee_Get</SHORT-NAME>
+                                    <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                                    <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                                    <DATA-READ-ACCESSS>
+                                        <!-- 1 data-element externes lecture -->
+                                        <VARIABLE-ACCESS UUID="7cec58be-88b1-f764-039f-582ad0a463bf">
+                                            <SHORT-NAME>dra_Autonomie</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/RP_SR_Autonomie</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/RootP_SR_Data/SR_Autonomie/Autonomie</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                    </DATA-READ-ACCESSS>
+                                    <DATA-RECEIVE-POINT-BY-VALUES />
+                                    <DATA-SEND-POINTS />
+                                    <DATA-WRITE-ACCESSS />
+                                    <READ-LOCAL-VARIABLES />
+                                    <SERVER-CALL-POINTS />
+                                    <SYMBOL>RUNS_DID_AutonomieCalculee_Get</SYMBOL>
+                                    <WRITTEN-LOCAL-VARIABLES />
+                                </RUNNABLE-ENTITY>
+                                <RUNNABLE-ENTITY UUID="c3f70e46-f321-e385-7dca-3dbe01347a77">
+                                    <SHORT-NAME>RUNS_DID_AutonomieGPL_Get</SHORT-NAME>
+                                    <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                                    <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                                    <DATA-READ-ACCESSS>
+                                        <!-- 2 data-element externes lecture -->
+                                        <VARIABLE-ACCESS UUID="75d62aa6-1917-948f-11cc-3fee8e3098b9">
+                                            <SHORT-NAME>dra_Autonomie</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/RP_SR_Autonomie</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/RootP_SR_Data/SR_Autonomie/Autonomie</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                        <VARIABLE-ACCESS UUID="5d03bd56-a215-dd97-590e-53edbb428df4">
+                                            <SHORT-NAME>dra_AutonomieGPL</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/RP_SR_AutonomieGPL</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/RootP_SR_Data/SR_AutonomieGPL/AutonomieGPL</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                    </DATA-READ-ACCESSS>
+                                    <DATA-RECEIVE-POINT-BY-VALUES />
+                                    <DATA-SEND-POINTS />
+                                    <DATA-WRITE-ACCESSS />
+                                    <READ-LOCAL-VARIABLES />
+                                    <SERVER-CALL-POINTS />
+                                    <SYMBOL>RUNS_DID_AutonomieGPL_Get</SYMBOL>
+                                    <WRITTEN-LOCAL-VARIABLES />
+                                </RUNNABLE-ENTITY>
+                                <RUNNABLE-ENTITY UUID="5abdddd3-8836-722f-dc47-b643edf9cd78">
+                                    <SHORT-NAME>RUNS_DID_ConsoInstantanee_Get</SHORT-NAME>
+                                    <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                                    <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                                    <DATA-READ-ACCESSS>
+                                        <!-- 3 data-element externes lecture -->
+                                        <VARIABLE-ACCESS UUID="4968e762-19a5-4235-b9b1-03208ac8af1d">
+                                            <SHORT-NAME>dra_Autonomie</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/RP_SR_Autonomie</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/RootP_SR_Data/SR_Autonomie/Autonomie</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                        <VARIABLE-ACCESS UUID="ee0cc7cc-a18f-97aa-c22c-489b1da3257f">
+                                            <SHORT-NAME>dra_AutonomieGPL</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/RP_SR_AutonomieGPL</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/RootP_SR_Data/SR_AutonomieGPL/AutonomieGPL</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                        <VARIABLE-ACCESS UUID="68bd3b76-4d12-41d4-51c4-ccaef634aef0">
+                                            <SHORT-NAME>dra_ConsoInst</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/RP_SR_ConsoInst</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/RootP_SR_Data/SR_ConsoInst/ConsoInst</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                    </DATA-READ-ACCESSS>
+                                    <DATA-RECEIVE-POINT-BY-VALUES />
+                                    <DATA-SEND-POINTS />
+                                    <DATA-WRITE-ACCESSS />
+                                    <READ-LOCAL-VARIABLES />
+                                    <SERVER-CALL-POINTS />
+                                    <SYMBOL>RUNS_DID_ConsoInstantanee_Get</SYMBOL>
+                                    <WRITTEN-LOCAL-VARIABLES />
+                                </RUNNABLE-ENTITY>
+                                <RUNNABLE-ENTITY UUID="2981775a-6fd3-5c3c-e16d-5d3a9bce860e">
+                                    <SHORT-NAME>RUNS_DID_ConsoMoyenneHY1_Get</SHORT-NAME>
+                                    <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                                    <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                                    <DATA-READ-ACCESSS>
+                                        <!-- 4 data-element externes lecture -->
+                                        <VARIABLE-ACCESS UUID="968e794a-4db1-d685-50cf-25a10435032d">
+                                            <SHORT-NAME>dra_Autonomie</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/RP_SR_Autonomie</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/RootP_SR_Data/SR_Autonomie/Autonomie</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                        <VARIABLE-ACCESS UUID="7df5603b-51e8-3daa-cfbc-288c82573bce">
+                                            <SHORT-NAME>dra_AutonomieGPL</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/RP_SR_AutonomieGPL</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/RootP_SR_Data/SR_AutonomieGPL/AutonomieGPL</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                        <VARIABLE-ACCESS UUID="691cdb6b-cc2a-b769-5006-dd5e0247cccd">
+                                            <SHORT-NAME>dra_ConsoInst</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/RP_SR_ConsoInst</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/RootP_SR_Data/SR_ConsoInst/ConsoInst</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                        <VARIABLE-ACCESS UUID="d2770f42-813e-5041-5073-eeef25347ab9">
+                                            <SHORT-NAME>dra_ConsoMoyenneHY1</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/RP_SR_ConsoMoyenneHY1</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/RootP_SR_Data/SR_ConsoMoyenneHY1/ConsoMoyenneHY1</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                    </DATA-READ-ACCESSS>
+                                    <DATA-RECEIVE-POINT-BY-VALUES />
+                                    <DATA-SEND-POINTS />
+                                    <DATA-WRITE-ACCESSS />
+                                    <READ-LOCAL-VARIABLES />
+                                    <SERVER-CALL-POINTS />
+                                    <SYMBOL>RUNS_DID_ConsoMoyenneHY1_Get</SYMBOL>
+                                    <WRITTEN-LOCAL-VARIABLES />
+                                </RUNNABLE-ENTITY>
+                                <RUNNABLE-ENTITY UUID="ff645811-0cea-467b-8c69-fbecee38aa20">
+                                    <SHORT-NAME>RUNS_DID_ConsoMoyenneHY2_Get</SHORT-NAME>
+                                    <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                                    <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                                    <DATA-READ-ACCESSS>
+                                        <!-- 5 data-element externes lecture -->
+                                        <VARIABLE-ACCESS UUID="264b55ed-d5a1-9953-2ea9-86a4110fdf18">
+                                            <SHORT-NAME>dra_Autonomie</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/RP_SR_Autonomie</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/RootP_SR_Data/SR_Autonomie/Autonomie</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                        <VARIABLE-ACCESS UUID="55ae8a07-746c-93e3-e8cf-d5e2114bb9c6">
+                                            <SHORT-NAME>dra_AutonomieGPL</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/RP_SR_AutonomieGPL</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/RootP_SR_Data/SR_AutonomieGPL/AutonomieGPL</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                        <VARIABLE-ACCESS UUID="e2845e9d-a70c-98c7-14ae-36af5d2aec82">
+                                            <SHORT-NAME>dra_ConsoInst</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/RP_SR_ConsoInst</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/RootP_SR_Data/SR_ConsoInst/ConsoInst</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                        <VARIABLE-ACCESS UUID="4d1d38d6-548a-ec31-2aa6-6b8e39711987">
+                                            <SHORT-NAME>dra_ConsoMoyenneHY1</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/RP_SR_ConsoMoyenneHY1</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/RootP_SR_Data/SR_ConsoMoyenneHY1/ConsoMoyenneHY1</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                        <VARIABLE-ACCESS UUID="4e98dc8e-2000-f7af-9286-dbd8f912668a">
+                                            <SHORT-NAME>dra_ConsoMoyenneHY2</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/RP_SR_ConsoMoyenneHY2</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/RootP_SR_Data/SR_ConsoMoyenneHY2/ConsoMoyenneHY2</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                    </DATA-READ-ACCESSS>
+                                    <DATA-RECEIVE-POINT-BY-VALUES />
+                                    <DATA-SEND-POINTS />
+                                    <DATA-WRITE-ACCESSS />
+                                    <READ-LOCAL-VARIABLES />
+                                    <SERVER-CALL-POINTS />
+                                    <SYMBOL>RUNS_DID_ConsoMoyenneHY2_Get</SYMBOL>
+                                    <WRITTEN-LOCAL-VARIABLES />
+                                </RUNNABLE-ENTITY>
+                                <RUNNABLE-ENTITY UUID="292aacb2-33c4-1b9c-4461-60759303416d">
+                                    <SHORT-NAME>RUNS_DID_ConsoMoyenneHY3_Get</SHORT-NAME>
+                                    <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                                    <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                                    <DATA-READ-ACCESSS>
+                                        <!-- 6 data-element externes lecture -->
+                                        <VARIABLE-ACCESS UUID="0e0b7733-6bc5-97aa-bb12-2daa73d42743">
+                                            <SHORT-NAME>dra_Autonomie</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/RP_SR_Autonomie</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/RootP_SR_Data/SR_Autonomie/Autonomie</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                        <VARIABLE-ACCESS UUID="c214fb36-ed43-ef11-32f6-2df36c8a88f1">
+                                            <SHORT-NAME>dra_AutonomieGPL</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/RP_SR_AutonomieGPL</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/RootP_SR_Data/SR_AutonomieGPL/AutonomieGPL</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                        <VARIABLE-ACCESS UUID="4797b681-3cb4-c9ed-3900-9773223d274a">
+                                            <SHORT-NAME>dra_ConsoInst</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/RP_SR_ConsoInst</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/RootP_SR_Data/SR_ConsoInst/ConsoInst</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                        <VARIABLE-ACCESS UUID="d12bfcd0-00ec-6371-9ab4-7450a357bd7d">
+                                            <SHORT-NAME>dra_ConsoMoyenneHY1</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/RP_SR_ConsoMoyenneHY1</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/RootP_SR_Data/SR_ConsoMoyenneHY1/ConsoMoyenneHY1</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                        <VARIABLE-ACCESS UUID="e463432c-1959-1f54-9469-6e4ceb6d3afe">
+                                            <SHORT-NAME>dra_ConsoMoyenneHY2</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/RP_SR_ConsoMoyenneHY2</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/RootP_SR_Data/SR_ConsoMoyenneHY2/ConsoMoyenneHY2</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                        <VARIABLE-ACCESS UUID="bd8f062b-fb6f-0ee7-bf0f-e543c3644527">
+                                            <SHORT-NAME>dra_ConsoMoyenneHY3</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/RP_SR_ConsoMoyenneHY3</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/RootP_SR_Data/SR_ConsoMoyenneHY3/ConsoMoyenneHY3</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                    </DATA-READ-ACCESSS>
+                                    <DATA-RECEIVE-POINT-BY-VALUES />
+                                    <DATA-SEND-POINTS />
+                                    <DATA-WRITE-ACCESSS />
+                                    <READ-LOCAL-VARIABLES />
+                                    <SERVER-CALL-POINTS />
+                                    <SYMBOL>RUNS_DID_ConsoMoyenneHY3_Get</SYMBOL>
+                                    <WRITTEN-LOCAL-VARIABLES />
+                                </RUNNABLE-ENTITY>
+                                <RUNNABLE-ENTITY UUID="cf3109d2-db30-0335-d84f-73f632a8eb21">
+                                    <SHORT-NAME>RUNS_DID_ConsoMoyenneHY4_Get</SHORT-NAME>
+                                    <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                                    <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                                    <DATA-READ-ACCESSS>
+                                        <!-- 7 data-element externes lecture -->
+                                        <VARIABLE-ACCESS UUID="7901ee01-c257-3c22-c9de-b66c0b71ee21">
+                                            <SHORT-NAME>dra_Autonomie</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/RP_SR_Autonomie</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/RootP_SR_Data/SR_Autonomie/Autonomie</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                        <VARIABLE-ACCESS UUID="8976a24b-0974-738c-61b6-6058d134ac9c">
+                                            <SHORT-NAME>dra_AutonomieGPL</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/RP_SR_AutonomieGPL</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/RootP_SR_Data/SR_AutonomieGPL/AutonomieGPL</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                        <VARIABLE-ACCESS UUID="9611aabb-aac3-aca5-7461-128146e950d6">
+                                            <SHORT-NAME>dra_ConsoInst</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/RP_SR_ConsoInst</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/RootP_SR_Data/SR_ConsoInst/ConsoInst</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                        <VARIABLE-ACCESS UUID="98c02c54-6d27-ec01-4d0c-c39d42a1788b">
+                                            <SHORT-NAME>dra_ConsoMoyenneHY1</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/RP_SR_ConsoMoyenneHY1</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/RootP_SR_Data/SR_ConsoMoyenneHY1/ConsoMoyenneHY1</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                        <VARIABLE-ACCESS UUID="f90d2a2b-3114-6f8a-e993-abc4de9239e1">
+                                            <SHORT-NAME>dra_ConsoMoyenneHY2</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/RP_SR_ConsoMoyenneHY2</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/RootP_SR_Data/SR_ConsoMoyenneHY2/ConsoMoyenneHY2</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                        <VARIABLE-ACCESS UUID="7dcae5f9-5254-2e7b-387a-87d3a1ad56ea">
+                                            <SHORT-NAME>dra_ConsoMoyenneHY3</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/RP_SR_ConsoMoyenneHY3</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/RootP_SR_Data/SR_ConsoMoyenneHY3/ConsoMoyenneHY3</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                        <VARIABLE-ACCESS UUID="cef0bdf3-927a-bb75-f454-11d18699dd9c">
+                                            <SHORT-NAME>dra_ConsoMoyenneHY4</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/RP_SR_ConsoMoyenneHY4</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/RootP_SR_Data/SR_ConsoMoyenneHY4/ConsoMoyenneHY4</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                    </DATA-READ-ACCESSS>
+                                    <DATA-RECEIVE-POINT-BY-VALUES />
+                                    <DATA-SEND-POINTS />
+                                    <DATA-WRITE-ACCESSS />
+                                    <READ-LOCAL-VARIABLES />
+                                    <SERVER-CALL-POINTS />
+                                    <SYMBOL>RUNS_DID_ConsoMoyenneHY4_Get</SYMBOL>
+                                    <WRITTEN-LOCAL-VARIABLES />
+                                </RUNNABLE-ENTITY>
+                                <RUNNABLE-ENTITY UUID="e7acc243-6668-7274-e1db-e32f326aabb0">
+                                    <SHORT-NAME>RUNS_DID_ConsoMoyenneHY5_Get</SHORT-NAME>
+                                    <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                                    <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                                    <DATA-READ-ACCESSS>
+                                        <!-- 8 data-element externes lecture -->
+                                        <VARIABLE-ACCESS UUID="ddbdecf2-6a7b-4647-4e39-e8000e4bf081">
+                                            <SHORT-NAME>dra_Autonomie</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/RP_SR_Autonomie</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/RootP_SR_Data/SR_Autonomie/Autonomie</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                        <VARIABLE-ACCESS UUID="63ffbcec-921d-2759-5610-8d0773afa8b5">
+                                            <SHORT-NAME>dra_AutonomieGPL</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/RP_SR_AutonomieGPL</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/RootP_SR_Data/SR_AutonomieGPL/AutonomieGPL</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                        <VARIABLE-ACCESS UUID="394dc3f6-8dcf-8b78-65dc-ffb06815e7c0">
+                                            <SHORT-NAME>dra_ConsoInst</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/RP_SR_ConsoInst</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/RootP_SR_Data/SR_ConsoInst/ConsoInst</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                        <VARIABLE-ACCESS UUID="7fdd08f6-01f4-c18a-6342-b138973751ee">
+                                            <SHORT-NAME>dra_ConsoMoyenneHY1</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/RP_SR_ConsoMoyenneHY1</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/RootP_SR_Data/SR_ConsoMoyenneHY1/ConsoMoyenneHY1</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                        <VARIABLE-ACCESS UUID="de5c01da-fd9e-0aee-f0ae-7a853419dc56">
+                                            <SHORT-NAME>dra_ConsoMoyenneHY2</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/RP_SR_ConsoMoyenneHY2</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/RootP_SR_Data/SR_ConsoMoyenneHY2/ConsoMoyenneHY2</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                        <VARIABLE-ACCESS UUID="2030ba49-db2f-69f8-4c02-690539f51e65">
+                                            <SHORT-NAME>dra_ConsoMoyenneHY3</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/RP_SR_ConsoMoyenneHY3</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/RootP_SR_Data/SR_ConsoMoyenneHY3/ConsoMoyenneHY3</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                        <VARIABLE-ACCESS UUID="c4dd472b-7f90-bdae-0001-6a0be1dff195">
+                                            <SHORT-NAME>dra_ConsoMoyenneHY4</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/RP_SR_ConsoMoyenneHY4</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/RootP_SR_Data/SR_ConsoMoyenneHY4/ConsoMoyenneHY4</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                        <VARIABLE-ACCESS UUID="2c965183-1b1d-92d7-16f1-969aeeac0961">
+                                            <SHORT-NAME>dra_ConsoMoyenneHY5</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/RP_SR_ConsoMoyenneHY5</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/RootP_SR_Data/SR_ConsoMoyenneHY5/ConsoMoyenneHY5</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                    </DATA-READ-ACCESSS>
+                                    <DATA-RECEIVE-POINT-BY-VALUES />
+                                    <DATA-SEND-POINTS />
+                                    <DATA-WRITE-ACCESSS />
+                                    <READ-LOCAL-VARIABLES />
+                                    <SERVER-CALL-POINTS />
+                                    <SYMBOL>RUNS_DID_ConsoMoyenneHY5_Get</SYMBOL>
+                                    <WRITTEN-LOCAL-VARIABLES />
+                                </RUNNABLE-ENTITY>
+                                <RUNNABLE-ENTITY UUID="7e9c83d5-3899-996c-275c-42aa7adec8e3">
+                                    <SHORT-NAME>RUNS_DID_ConsoMoyenneHY6_Get</SHORT-NAME>
+                                    <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                                    <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                                    <DATA-READ-ACCESSS>
+                                        <!-- 9 data-element externes lecture -->
+                                        <VARIABLE-ACCESS UUID="3d777b66-36a8-aa1a-dcf3-fa0ff99a5899">
+                                            <SHORT-NAME>dra_Autonomie</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/RP_SR_Autonomie</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/RootP_SR_Data/SR_Autonomie/Autonomie</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                        <VARIABLE-ACCESS UUID="38deb3a7-2945-a0e0-04c8-68ce62fc8dfd">
+                                            <SHORT-NAME>dra_AutonomieGPL</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/RP_SR_AutonomieGPL</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/RootP_SR_Data/SR_AutonomieGPL/AutonomieGPL</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                        <VARIABLE-ACCESS UUID="ce6d82dd-65c0-0208-6799-1dc1f7d52074">
+                                            <SHORT-NAME>dra_ConsoInst</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/RP_SR_ConsoInst</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/RootP_SR_Data/SR_ConsoInst/ConsoInst</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                        <VARIABLE-ACCESS UUID="a5ebc43f-6add-c66e-f2fb-8fd1252e6afd">
+                                            <SHORT-NAME>dra_ConsoMoyenneHY1</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/RP_SR_ConsoMoyenneHY1</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/RootP_SR_Data/SR_ConsoMoyenneHY1/ConsoMoyenneHY1</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                        <VARIABLE-ACCESS UUID="6c9a554c-fb12-99ca-4e27-b8baa0e3ba0d">
+                                            <SHORT-NAME>dra_ConsoMoyenneHY2</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/RP_SR_ConsoMoyenneHY2</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/RootP_SR_Data/SR_ConsoMoyenneHY2/ConsoMoyenneHY2</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                        <VARIABLE-ACCESS UUID="d22b7c8d-68ed-8a4b-a569-2c8ec2656597">
+                                            <SHORT-NAME>dra_ConsoMoyenneHY3</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/RP_SR_ConsoMoyenneHY3</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/RootP_SR_Data/SR_ConsoMoyenneHY3/ConsoMoyenneHY3</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                        <VARIABLE-ACCESS UUID="5d9f4839-d9a4-a9eb-dde0-90f8d5d30055">
+                                            <SHORT-NAME>dra_ConsoMoyenneHY4</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/RP_SR_ConsoMoyenneHY4</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/RootP_SR_Data/SR_ConsoMoyenneHY4/ConsoMoyenneHY4</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                        <VARIABLE-ACCESS UUID="1b8e7298-0d3f-7ba9-0e10-30150609d82a">
+                                            <SHORT-NAME>dra_ConsoMoyenneHY5</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/RP_SR_ConsoMoyenneHY5</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/RootP_SR_Data/SR_ConsoMoyenneHY5/ConsoMoyenneHY5</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                        <VARIABLE-ACCESS UUID="c290b6f8-b6fd-fdcc-b1e7-a67559b12c51">
+                                            <SHORT-NAME>dra_ConsoMoyenneHY6</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/RP_SR_ConsoMoyenneHY6</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/RootP_SR_Data/SR_ConsoMoyenneHY6/ConsoMoyenneHY6</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                    </DATA-READ-ACCESSS>
+                                    <DATA-RECEIVE-POINT-BY-VALUES />
+                                    <DATA-SEND-POINTS />
+                                    <DATA-WRITE-ACCESSS />
+                                    <READ-LOCAL-VARIABLES />
+                                    <SERVER-CALL-POINTS />
+                                    <SYMBOL>RUNS_DID_ConsoMoyenneHY6_Get</SYMBOL>
+                                    <WRITTEN-LOCAL-VARIABLES />
+                                </RUNNABLE-ENTITY>
+                                <RUNNABLE-ENTITY UUID="952f5daa-a26d-7083-cee8-3eee34eee6f4">
+                                    <SHORT-NAME>RUNS_DID_ConsoMoyTrajet1_Get</SHORT-NAME>
+                                    <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                                    <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                                    <DATA-READ-ACCESSS>
+                                        <!-- 10 data-element externes lecture -->
+                                        <VARIABLE-ACCESS UUID="620b5551-5dde-622c-0c02-8463d640cafe">
+                                            <SHORT-NAME>dra_Autonomie</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/RP_SR_Autonomie</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/RootP_SR_Data/SR_Autonomie/Autonomie</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                        <VARIABLE-ACCESS UUID="024e19d3-153f-5a96-974a-f73f7ca43ecc">
+                                            <SHORT-NAME>dra_AutonomieGPL</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/RP_SR_AutonomieGPL</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/RootP_SR_Data/SR_AutonomieGPL/AutonomieGPL</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                        <VARIABLE-ACCESS UUID="3f9dad37-7eb4-08d5-9252-4bb208759c48">
+                                            <SHORT-NAME>dra_ConsoInst</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/RP_SR_ConsoInst</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/RootP_SR_Data/SR_ConsoInst/ConsoInst</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                        <VARIABLE-ACCESS UUID="02f73520-8a8c-2709-9ef8-82da3f7aa789">
+                                            <SHORT-NAME>dra_ConsoMoyenneHY1</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/RP_SR_ConsoMoyenneHY1</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/RootP_SR_Data/SR_ConsoMoyenneHY1/ConsoMoyenneHY1</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                        <VARIABLE-ACCESS UUID="2872ca46-1f3e-872f-0346-191765115340">
+                                            <SHORT-NAME>dra_ConsoMoyenneHY2</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/RP_SR_ConsoMoyenneHY2</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/RootP_SR_Data/SR_ConsoMoyenneHY2/ConsoMoyenneHY2</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                        <VARIABLE-ACCESS UUID="86ee0fea-f474-a649-c824-000fd36e7cc3">
+                                            <SHORT-NAME>dra_ConsoMoyenneHY3</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/RP_SR_ConsoMoyenneHY3</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/RootP_SR_Data/SR_ConsoMoyenneHY3/ConsoMoyenneHY3</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                        <VARIABLE-ACCESS UUID="3222102f-7322-c6dc-2119-73e99060d28f">
+                                            <SHORT-NAME>dra_ConsoMoyenneHY4</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/RP_SR_ConsoMoyenneHY4</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/RootP_SR_Data/SR_ConsoMoyenneHY4/ConsoMoyenneHY4</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                        <VARIABLE-ACCESS UUID="20714157-556e-1b52-705d-a713783ada47">
+                                            <SHORT-NAME>dra_ConsoMoyenneHY5</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/RP_SR_ConsoMoyenneHY5</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/RootP_SR_Data/SR_ConsoMoyenneHY5/ConsoMoyenneHY5</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                        <VARIABLE-ACCESS UUID="7923cf83-a5a2-019b-e016-b5f2b79c6ef6">
+                                            <SHORT-NAME>dra_ConsoMoyenneHY6</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/RP_SR_ConsoMoyenneHY6</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/RootP_SR_Data/SR_ConsoMoyenneHY6/ConsoMoyenneHY6</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                        <VARIABLE-ACCESS UUID="33ce8584-b870-27de-4cb6-a9a23a0ad782">
+                                            <SHORT-NAME>dra_ConsoMoyenneT1</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/RP_SR_ConsoMoyenneT1</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/RootP_SR_Data/SR_ConsoMoyenneT1/ConsoMoyenneT1</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                    </DATA-READ-ACCESSS>
+                                    <DATA-RECEIVE-POINT-BY-VALUES />
+                                    <DATA-SEND-POINTS />
+                                    <DATA-WRITE-ACCESSS />
+                                    <READ-LOCAL-VARIABLES />
+                                    <SERVER-CALL-POINTS />
+                                    <SYMBOL>RUNS_DID_ConsoMoyTrajet1_Get</SYMBOL>
+                                    <WRITTEN-LOCAL-VARIABLES />
+                                </RUNNABLE-ENTITY>
+                                <RUNNABLE-ENTITY UUID="6a51e43c-c178-50fd-4013-4de8d3767859">
+                                    <SHORT-NAME>RUNS_DID_ConsoMoyTrajet2_Get</SHORT-NAME>
+                                    <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                                    <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                                    <DATA-READ-ACCESSS>
+                                        <!-- 11 data-element externes lecture -->
+                                        <VARIABLE-ACCESS UUID="45d70ed2-8d00-d290-e1bc-7960ceec504a">
+                                            <SHORT-NAME>dra_Autonomie</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/RP_SR_Autonomie</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/RootP_SR_Data/SR_Autonomie/Autonomie</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                        <VARIABLE-ACCESS UUID="59f50f0e-a61c-a1a2-14b0-fc46c3914fc4">
+                                            <SHORT-NAME>dra_AutonomieGPL</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/RP_SR_AutonomieGPL</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/RootP_SR_Data/SR_AutonomieGPL/AutonomieGPL</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                        <VARIABLE-ACCESS UUID="e1ebbcc4-a7aa-c5d6-36ca-17d4d4191618">
+                                            <SHORT-NAME>dra_ConsoInst</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/RP_SR_ConsoInst</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/RootP_SR_Data/SR_ConsoInst/ConsoInst</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                        <VARIABLE-ACCESS UUID="6153027a-682e-41d6-04f0-7bbb475a6e07">
+                                            <SHORT-NAME>dra_ConsoMoyenneHY1</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/RP_SR_ConsoMoyenneHY1</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/RootP_SR_Data/SR_ConsoMoyenneHY1/ConsoMoyenneHY1</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                        <VARIABLE-ACCESS UUID="a47956a8-8fd6-dfbc-d963-0409ef8560f5">
+                                            <SHORT-NAME>dra_ConsoMoyenneHY2</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/RP_SR_ConsoMoyenneHY2</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/RootP_SR_Data/SR_ConsoMoyenneHY2/ConsoMoyenneHY2</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                        <VARIABLE-ACCESS UUID="22eb0240-e86b-22e9-e42a-e6dfedf2a34e">
+                                            <SHORT-NAME>dra_ConsoMoyenneHY3</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/RP_SR_ConsoMoyenneHY3</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/RootP_SR_Data/SR_ConsoMoyenneHY3/ConsoMoyenneHY3</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                        <VARIABLE-ACCESS UUID="82cc6017-cc3d-89e9-9e36-cf996a484dec">
+                                            <SHORT-NAME>dra_ConsoMoyenneHY4</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/RP_SR_ConsoMoyenneHY4</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/RootP_SR_Data/SR_ConsoMoyenneHY4/ConsoMoyenneHY4</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                        <VARIABLE-ACCESS UUID="41fa89c0-d21f-08c9-f563-a00aa455e0f5">
+                                            <SHORT-NAME>dra_ConsoMoyenneHY5</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/RP_SR_ConsoMoyenneHY5</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/RootP_SR_Data/SR_ConsoMoyenneHY5/ConsoMoyenneHY5</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                        <VARIABLE-ACCESS UUID="6282d548-4042-58e6-2cf4-b8d6a79bd3c7">
+                                            <SHORT-NAME>dra_ConsoMoyenneHY6</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/RP_SR_ConsoMoyenneHY6</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/RootP_SR_Data/SR_ConsoMoyenneHY6/ConsoMoyenneHY6</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                        <VARIABLE-ACCESS UUID="6671a51c-11b5-6582-fba2-fa4cddd76c4f">
+                                            <SHORT-NAME>dra_ConsoMoyenneT1</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/RP_SR_ConsoMoyenneT1</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/RootP_SR_Data/SR_ConsoMoyenneT1/ConsoMoyenneT1</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                        <VARIABLE-ACCESS UUID="a51b6ad9-2ea0-98d0-8700-690dc3a81bf5">
+                                            <SHORT-NAME>dra_ConsoMoyenneT2</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/RP_SR_ConsoMoyenneT2</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/RootP_SR_Data/SR_ConsoMoyenneT2/ConsoMoyenneT2</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                    </DATA-READ-ACCESSS>
+                                    <DATA-RECEIVE-POINT-BY-VALUES />
+                                    <DATA-SEND-POINTS />
+                                    <DATA-WRITE-ACCESSS />
+                                    <READ-LOCAL-VARIABLES />
+                                    <SERVER-CALL-POINTS />
+                                    <SYMBOL>RUNS_DID_ConsoMoyTrajet2_Get</SYMBOL>
+                                    <WRITTEN-LOCAL-VARIABLES />
+                                </RUNNABLE-ENTITY>
+                                <RUNNABLE-ENTITY UUID="52448764-7268-80be-388a-8ad235bff6dd">
+                                    <SHORT-NAME>RUNS_DID_ConsoRapide_Get</SHORT-NAME>
+                                    <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                                    <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                                    <DATA-READ-ACCESSS>
+                                        <!-- 12 data-element externes lecture -->
+                                        <VARIABLE-ACCESS UUID="92adf495-ba7b-b208-495f-fd39af67005c">
+                                            <SHORT-NAME>dra_Autonomie</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/RP_SR_Autonomie</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/RootP_SR_Data/SR_Autonomie/Autonomie</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                        <VARIABLE-ACCESS UUID="e67d1db6-1bbf-45dc-798f-bad7d9faa0a5">
+                                            <SHORT-NAME>dra_AutonomieGPL</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/RP_SR_AutonomieGPL</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/RootP_SR_Data/SR_AutonomieGPL/AutonomieGPL</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                        <VARIABLE-ACCESS UUID="3038b8f8-2cd7-23ee-1c87-f7843dae6d43">
+                                            <SHORT-NAME>dra_ConsoInst</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/RP_SR_ConsoInst</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/RootP_SR_Data/SR_ConsoInst/ConsoInst</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                        <VARIABLE-ACCESS UUID="139f8f2c-5109-33a3-b0b2-df724fadb32c">
+                                            <SHORT-NAME>dra_ConsoMoyenneHY1</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/RP_SR_ConsoMoyenneHY1</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/RootP_SR_Data/SR_ConsoMoyenneHY1/ConsoMoyenneHY1</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                        <VARIABLE-ACCESS UUID="51199fe5-92b4-b40b-77a4-c45f72d3f75e">
+                                            <SHORT-NAME>dra_ConsoMoyenneHY2</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/RP_SR_ConsoMoyenneHY2</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/RootP_SR_Data/SR_ConsoMoyenneHY2/ConsoMoyenneHY2</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                        <VARIABLE-ACCESS UUID="976a7414-5a69-cbec-07c1-95a15fb13eac">
+                                            <SHORT-NAME>dra_ConsoMoyenneHY3</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/RP_SR_ConsoMoyenneHY3</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/RootP_SR_Data/SR_ConsoMoyenneHY3/ConsoMoyenneHY3</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                        <VARIABLE-ACCESS UUID="2b84b75f-2090-70b9-5e88-fdf562b2e73e">
+                                            <SHORT-NAME>dra_ConsoMoyenneHY4</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/RP_SR_ConsoMoyenneHY4</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/RootP_SR_Data/SR_ConsoMoyenneHY4/ConsoMoyenneHY4</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                        <VARIABLE-ACCESS UUID="d2d5a39f-b36f-1c27-fbf0-1a9fbeec650b">
+                                            <SHORT-NAME>dra_ConsoMoyenneHY5</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/RP_SR_ConsoMoyenneHY5</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/RootP_SR_Data/SR_ConsoMoyenneHY5/ConsoMoyenneHY5</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                        <VARIABLE-ACCESS UUID="25964746-1934-28d4-26ea-f2723ef2f0d6">
+                                            <SHORT-NAME>dra_ConsoMoyenneHY6</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/RP_SR_ConsoMoyenneHY6</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/RootP_SR_Data/SR_ConsoMoyenneHY6/ConsoMoyenneHY6</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                        <VARIABLE-ACCESS UUID="9ff68311-2acf-6bd8-6ec7-bacb423cef4e">
+                                            <SHORT-NAME>dra_ConsoMoyenneT1</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/RP_SR_ConsoMoyenneT1</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/RootP_SR_Data/SR_ConsoMoyenneT1/ConsoMoyenneT1</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                        <VARIABLE-ACCESS UUID="20602006-7615-5bb9-0a33-b525756271be">
+                                            <SHORT-NAME>dra_ConsoMoyenneT2</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/RP_SR_ConsoMoyenneT2</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/RootP_SR_Data/SR_ConsoMoyenneT2/ConsoMoyenneT2</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                        <VARIABLE-ACCESS UUID="4ce05648-4f5e-58c1-0a32-cba6477faf01">
+                                            <SHORT-NAME>dra_SAV_ConsoLisse</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/RP_SR_SAV_ConsoLisse</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/RootP_SR_Data/SR_SAV_ConsoLisse/SAV_ConsoLisse</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                    </DATA-READ-ACCESSS>
+                                    <DATA-RECEIVE-POINT-BY-VALUES />
+                                    <DATA-SEND-POINTS />
+                                    <DATA-WRITE-ACCESSS />
+                                    <READ-LOCAL-VARIABLES />
+                                    <SERVER-CALL-POINTS />
+                                    <SYMBOL>RUNS_DID_ConsoRapide_Get</SYMBOL>
+                                    <WRITTEN-LOCAL-VARIABLES />
+                                </RUNNABLE-ENTITY>
+                                <RUNNABLE-ENTITY UUID="6d55a378-f297-41bf-aead-df14301b9c5f">
+                                    <SHORT-NAME>RUNS_DID_PRESENCE_GAZ_Get</SHORT-NAME>
+                                    <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                                    <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                                    <DATA-READ-ACCESSS>
+                                        <!-- 13 data-element externes lecture -->
+                                        <VARIABLE-ACCESS UUID="da404b33-0119-5fc7-268a-51b5b9909862">
+                                            <SHORT-NAME>dra_Autonomie</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/RP_SR_Autonomie</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/RootP_SR_Data/SR_Autonomie/Autonomie</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                        <VARIABLE-ACCESS UUID="296046ee-7cf7-7c05-b81a-3077320c837f">
+                                            <SHORT-NAME>dra_AutonomieGPL</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/RP_SR_AutonomieGPL</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/RootP_SR_Data/SR_AutonomieGPL/AutonomieGPL</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                        <VARIABLE-ACCESS UUID="38c51fee-f192-8710-b715-858ae412e375">
+                                            <SHORT-NAME>dra_ConsoInst</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/RP_SR_ConsoInst</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/RootP_SR_Data/SR_ConsoInst/ConsoInst</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                        <VARIABLE-ACCESS UUID="2a84dfb5-bdec-1216-0754-ad215c0e7263">
+                                            <SHORT-NAME>dra_ConsoMoyenneHY1</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/RP_SR_ConsoMoyenneHY1</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/RootP_SR_Data/SR_ConsoMoyenneHY1/ConsoMoyenneHY1</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                        <VARIABLE-ACCESS UUID="b451a0b3-878d-affb-d54c-831b13ecbcab">
+                                            <SHORT-NAME>dra_ConsoMoyenneHY2</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/RP_SR_ConsoMoyenneHY2</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/RootP_SR_Data/SR_ConsoMoyenneHY2/ConsoMoyenneHY2</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                        <VARIABLE-ACCESS UUID="d5e62959-10ab-e4cd-9fe0-b6e2f6239279">
+                                            <SHORT-NAME>dra_ConsoMoyenneHY3</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/RP_SR_ConsoMoyenneHY3</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/RootP_SR_Data/SR_ConsoMoyenneHY3/ConsoMoyenneHY3</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                        <VARIABLE-ACCESS UUID="52cfda39-8aaa-b197-c548-9cb365dfc7dc">
+                                            <SHORT-NAME>dra_ConsoMoyenneHY4</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/RP_SR_ConsoMoyenneHY4</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/RootP_SR_Data/SR_ConsoMoyenneHY4/ConsoMoyenneHY4</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                        <VARIABLE-ACCESS UUID="c56e5e22-a5e7-771b-ad60-b1e65ac8fdb1">
+                                            <SHORT-NAME>dra_ConsoMoyenneHY5</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/RP_SR_ConsoMoyenneHY5</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/RootP_SR_Data/SR_ConsoMoyenneHY5/ConsoMoyenneHY5</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                        <VARIABLE-ACCESS UUID="b3e83e73-4ea3-9258-2178-fc41340de5ae">
+                                            <SHORT-NAME>dra_ConsoMoyenneHY6</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/RP_SR_ConsoMoyenneHY6</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/RootP_SR_Data/SR_ConsoMoyenneHY6/ConsoMoyenneHY6</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                        <VARIABLE-ACCESS UUID="880d2cfa-3fbf-766b-67b9-d51b56580be3">
+                                            <SHORT-NAME>dra_ConsoMoyenneT1</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/RP_SR_ConsoMoyenneT1</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/RootP_SR_Data/SR_ConsoMoyenneT1/ConsoMoyenneT1</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                        <VARIABLE-ACCESS UUID="71020cd9-2f6a-df9b-0c24-808cc69c4ab5">
+                                            <SHORT-NAME>dra_ConsoMoyenneT2</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/RP_SR_ConsoMoyenneT2</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/RootP_SR_Data/SR_ConsoMoyenneT2/ConsoMoyenneT2</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                        <VARIABLE-ACCESS UUID="84d58984-67d6-2c7f-3879-b711213856de">
+                                            <SHORT-NAME>dra_SAV_ConsoLisse</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/RP_SR_SAV_ConsoLisse</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/RootP_SR_Data/SR_SAV_ConsoLisse/SAV_ConsoLisse</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                        <VARIABLE-ACCESS UUID="5b60e9dd-026e-e1a7-bd6b-d8558ae20b1a">
+                                            <SHORT-NAME>dra_CFG_PRESENCE_GAZ</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/RP_SR_CFG_PRESENCE_GAZ</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/RootP_SR_Param/SR_CFG_PRESENCE_GAZ/CFG_PRESENCE_GAZ</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                    </DATA-READ-ACCESSS>
+                                    <DATA-RECEIVE-POINT-BY-VALUES />
+                                    <DATA-SEND-POINTS />
+                                    <DATA-WRITE-ACCESSS />
+                                    <READ-LOCAL-VARIABLES />
+                                    <SERVER-CALL-POINTS />
+                                    <SYMBOL>RUNS_DID_PRESENCE_GAZ_Get</SYMBOL>
+                                    <WRITTEN-LOCAL-VARIABLES />
+                                </RUNNABLE-ENTITY>
+                                <RUNNABLE-ENTITY UUID="b91314a3-d4a1-34a7-70e1-9f0deb48f08f">
+                                    <SHORT-NAME>RUNS_DID_PRESENCE_GAZ_Set</SHORT-NAME>
+                                    <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                                    <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                                    <DATA-READ-ACCESSS>
+                                        <!-- 1 data-element rebouclages -->
+                                        <VARIABLE-ACCESS UUID="1504d40d-d88c-6847-02c6-81fe828fa4b9">
+                                            <SHORT-NAME>dra_CFG_PRESENCE_GAZ</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="PR-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/PP_SR_CFG_PRESENCE_GAZ</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/RootP_SR_Param/SR_CFG_PRESENCE_GAZ/CFG_PRESENCE_GAZ</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                    </DATA-READ-ACCESSS>
+                                    <DATA-RECEIVE-POINT-BY-VALUES />
+                                    <DATA-SEND-POINTS />
+                                    <DATA-WRITE-ACCESSS>
+                                        <VARIABLE-ACCESS UUID="f638f918-7972-5e7d-dc67-e8adeb168bca">
+                                            <SHORT-NAME>dwa_CFG_PRESENCE_GAZ</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="PR-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/PP_SR_CFG_PRESENCE_GAZ</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/RootP_SR_Param/SR_CFG_PRESENCE_GAZ/CFG_PRESENCE_GAZ</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                    </DATA-WRITE-ACCESSS>
+                                    <READ-LOCAL-VARIABLES />
+                                    <SERVER-CALL-POINTS />
+                                    <SYMBOL>RUNS_DID_PRESENCE_GAZ_Set</SYMBOL>
+                                    <WRITTEN-LOCAL-VARIABLES />
+                                </RUNNABLE-ENTITY>
+                                <RUNNABLE-ENTITY UUID="216f28a2-4fd1-67f8-756c-7d6428488ee9">
+                                    <SHORT-NAME>RUNS_DID_PRESENCE_ODB_Get</SHORT-NAME>
+                                    <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                                    <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                                    <DATA-READ-ACCESSS>
+                                        <!-- 14 data-element externes lecture -->
+                                        <VARIABLE-ACCESS UUID="d48aeed4-d90d-4746-86b9-2280f4053e5c">
+                                            <SHORT-NAME>dra_Autonomie</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/RP_SR_Autonomie</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/RootP_SR_Data/SR_Autonomie/Autonomie</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                        <VARIABLE-ACCESS UUID="b1efa9f3-ae33-6e40-f260-fa8817a295f8">
+                                            <SHORT-NAME>dra_AutonomieGPL</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/RP_SR_AutonomieGPL</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/RootP_SR_Data/SR_AutonomieGPL/AutonomieGPL</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                        <VARIABLE-ACCESS UUID="bc56dc38-4b0b-3277-c187-05779955080c">
+                                            <SHORT-NAME>dra_ConsoInst</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/RP_SR_ConsoInst</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/RootP_SR_Data/SR_ConsoInst/ConsoInst</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                        <VARIABLE-ACCESS UUID="3637bce8-cd5d-929e-2b5f-bc74234db8ea">
+                                            <SHORT-NAME>dra_ConsoMoyenneHY1</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/RP_SR_ConsoMoyenneHY1</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/RootP_SR_Data/SR_ConsoMoyenneHY1/ConsoMoyenneHY1</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                        <VARIABLE-ACCESS UUID="75a40f96-b8c1-5414-0184-fa3e859ef3ab">
+                                            <SHORT-NAME>dra_ConsoMoyenneHY2</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/RP_SR_ConsoMoyenneHY2</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/RootP_SR_Data/SR_ConsoMoyenneHY2/ConsoMoyenneHY2</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                        <VARIABLE-ACCESS UUID="29e9a7f6-4436-3bba-72bc-96949ed9852b">
+                                            <SHORT-NAME>dra_ConsoMoyenneHY3</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/RP_SR_ConsoMoyenneHY3</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/RootP_SR_Data/SR_ConsoMoyenneHY3/ConsoMoyenneHY3</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                        <VARIABLE-ACCESS UUID="b9dce24b-fa23-147a-392e-448ba63138cf">
+                                            <SHORT-NAME>dra_ConsoMoyenneHY4</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/RP_SR_ConsoMoyenneHY4</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/RootP_SR_Data/SR_ConsoMoyenneHY4/ConsoMoyenneHY4</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                        <VARIABLE-ACCESS UUID="e3856886-e11d-45a5-2943-b8506926fa0f">
+                                            <SHORT-NAME>dra_ConsoMoyenneHY5</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/RP_SR_ConsoMoyenneHY5</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/RootP_SR_Data/SR_ConsoMoyenneHY5/ConsoMoyenneHY5</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                        <VARIABLE-ACCESS UUID="cca111e6-813c-d002-6b88-f9279f57e60f">
+                                            <SHORT-NAME>dra_ConsoMoyenneHY6</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/RP_SR_ConsoMoyenneHY6</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/RootP_SR_Data/SR_ConsoMoyenneHY6/ConsoMoyenneHY6</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                        <VARIABLE-ACCESS UUID="a802e948-5dab-a004-cb46-549cac7c6a03">
+                                            <SHORT-NAME>dra_ConsoMoyenneT1</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/RP_SR_ConsoMoyenneT1</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/RootP_SR_Data/SR_ConsoMoyenneT1/ConsoMoyenneT1</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                        <VARIABLE-ACCESS UUID="1be40cd0-47d2-70f5-df54-a9ab89137dc0">
+                                            <SHORT-NAME>dra_ConsoMoyenneT2</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/RP_SR_ConsoMoyenneT2</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/RootP_SR_Data/SR_ConsoMoyenneT2/ConsoMoyenneT2</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                        <VARIABLE-ACCESS UUID="01832952-a288-c738-39cd-60e721f058e7">
+                                            <SHORT-NAME>dra_SAV_ConsoLisse</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/RP_SR_SAV_ConsoLisse</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/RootP_SR_Data/SR_SAV_ConsoLisse/SAV_ConsoLisse</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                        <VARIABLE-ACCESS UUID="86416b2b-dcca-3ce6-35ed-57e2d26d1abd">
+                                            <SHORT-NAME>dra_CFG_PRESENCE_GAZ</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/RP_SR_CFG_PRESENCE_GAZ</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/RootP_SR_Param/SR_CFG_PRESENCE_GAZ/CFG_PRESENCE_GAZ</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                        <VARIABLE-ACCESS UUID="ddaaecfd-36f1-94bf-a853-21a131ca8fe2">
+                                            <SHORT-NAME>dra_CFG_PRESENCE_ODB</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/RP_SR_CFG_PRESENCE_ODB</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/RootP_SR_Param/SR_CFG_PRESENCE_ODB/CFG_PRESENCE_ODB</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                    </DATA-READ-ACCESSS>
+                                    <DATA-RECEIVE-POINT-BY-VALUES />
+                                    <DATA-SEND-POINTS />
+                                    <DATA-WRITE-ACCESSS />
+                                    <READ-LOCAL-VARIABLES />
+                                    <SERVER-CALL-POINTS />
+                                    <SYMBOL>RUNS_DID_PRESENCE_ODB_Get</SYMBOL>
+                                    <WRITTEN-LOCAL-VARIABLES />
+                                </RUNNABLE-ENTITY>
+                                <RUNNABLE-ENTITY UUID="eae99d8e-acd9-8142-24fc-de0985e7b3ce">
+                                    <SHORT-NAME>RUNS_DID_PRESENCE_ODB_Set</SHORT-NAME>
+                                    <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                                    <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                                    <DATA-READ-ACCESSS>
+                                        <!-- 2 data-element rebouclages -->
+                                        <VARIABLE-ACCESS UUID="cfd1eb21-1e23-dfef-bed7-7bc603605737">
+                                            <SHORT-NAME>dra_CFG_PRESENCE_GAZ</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="PR-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/PP_SR_CFG_PRESENCE_GAZ</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/RootP_SR_Param/SR_CFG_PRESENCE_GAZ/CFG_PRESENCE_GAZ</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                        <VARIABLE-ACCESS UUID="00ceaf66-5b44-bce0-6da2-e02b20a06830">
+                                            <SHORT-NAME>dra_CFG_PRESENCE_ODB</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="PR-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/PP_SR_CFG_PRESENCE_ODB</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/RootP_SR_Param/SR_CFG_PRESENCE_ODB/CFG_PRESENCE_ODB</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                    </DATA-READ-ACCESSS>
+                                    <DATA-RECEIVE-POINT-BY-VALUES />
+                                    <DATA-SEND-POINTS />
+                                    <DATA-WRITE-ACCESSS>
+                                        <VARIABLE-ACCESS UUID="e838a6b5-40fa-d12d-2e91-256f0cfee099">
+                                            <SHORT-NAME>dwa_CFG_PRESENCE_GAZ</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="PR-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/PP_SR_CFG_PRESENCE_GAZ</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/RootP_SR_Param/SR_CFG_PRESENCE_GAZ/CFG_PRESENCE_GAZ</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                        <VARIABLE-ACCESS UUID="62adb0af-499b-6268-e390-c8a24ccc028e">
+                                            <SHORT-NAME>dwa_CFG_PRESENCE_ODB</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="PR-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/PP_SR_CFG_PRESENCE_ODB</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/RootP_SR_Param/SR_CFG_PRESENCE_ODB/CFG_PRESENCE_ODB</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                    </DATA-WRITE-ACCESSS>
+                                    <READ-LOCAL-VARIABLES />
+                                    <SERVER-CALL-POINTS />
+                                    <SYMBOL>RUNS_DID_PRESENCE_ODB_Set</SYMBOL>
+                                    <WRITTEN-LOCAL-VARIABLES />
+                                </RUNNABLE-ENTITY>
+                                <RUNNABLE-ENTITY UUID="39a50b33-f6e1-af70-a62d-d955280cb3c0">
+                                    <SHORT-NAME>RUNPI_Aswc_IntDcm</SHORT-NAME>
+                                    <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                                    <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                                    <SYMBOL>RUNPI_Aswc_IntDcm</SYMBOL>
+                                </RUNNABLE-ENTITY>
+                            </RUNNABLES>
+                            <SUPPORTS-MULTIPLE-INSTANTIATION>false</SUPPORTS-MULTIPLE-INSTANTIATION>
+                        </SWC-INTERNAL-BEHAVIOR>
+                    </INTERNAL-BEHAVIORS>
+                </APPLICATION-SW-COMPONENT-TYPE>
+            </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE>
+            <SHORT-NAME>AUTOSAR_Dcm</SHORT-NAME>
+            <AR-PACKAGES>
+                <AR-PACKAGE>
+                    <SHORT-NAME>PortInterfaces</SHORT-NAME>
+                    <ELEMENTS>
+                <!-- 14 Interfaces de type Client Server -->
+                <CLIENT-SERVER-INTERFACE UUID="f3599807-ae96-5a83-c8f5-dac83b3f6758">
+                    <SHORT-NAME>DataServices_DcmDspData_DID_AutonomieCalculee</SHORT-NAME>
+                    <ADMIN-DATA>
+                        <DOC-REVISIONS>
+                            <DOC-REVISION>
+                                <REVISION-LABEL>..</REVISION-LABEL>
+                                <ISSUED-BY>Aswc_IntDcm</ISSUED-BY>
+                                <DATE>2018-02-19</DATE>
+                            </DOC-REVISION>
+                        </DOC-REVISIONS>
+                    </ADMIN-DATA>
+                    <IS-SERVICE>true</IS-SERVICE>
+                    <OPERATIONS>
+                        <CLIENT-SERVER-OPERATION UUID="64377a16-421b-90c0-ed94-8f2d24c8d69c">
+                            <SHORT-NAME>ReadData</SHORT-NAME>
+                            <ARGUMENTS>
+                                <ARGUMENT-DATA-PROTOTYPE UUID="4e888bb9-ded6-d456-9a18-755f45d44f99">
+                                    <SHORT-NAME>Data</SHORT-NAME>
+                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tBYTE</TYPE-TREF>
+                                    <DIRECTION>OUT</DIRECTION>
+                                </ARGUMENT-DATA-PROTOTYPE>
+                            </ARGUMENTS>
+                        </CLIENT-SERVER-OPERATION>
+                    </OPERATIONS>
+                </CLIENT-SERVER-INTERFACE>
+                <CLIENT-SERVER-INTERFACE UUID="16911382-a1a7-074c-b014-bb1227fa1bce">
+                    <SHORT-NAME>DataServices_DcmDspData_DID_AutonomieGPL</SHORT-NAME>
+                    <ADMIN-DATA>
+                        <DOC-REVISIONS>
+                            <DOC-REVISION>
+                                <REVISION-LABEL>..</REVISION-LABEL>
+                                <ISSUED-BY>Aswc_IntDcm</ISSUED-BY>
+                                <DATE>2018-02-19</DATE>
+                            </DOC-REVISION>
+                        </DOC-REVISIONS>
+                    </ADMIN-DATA>
+                    <IS-SERVICE>true</IS-SERVICE>
+                    <OPERATIONS>
+                        <CLIENT-SERVER-OPERATION UUID="fbe177f9-4b51-1836-84d5-58d3cd7aca7f">
+                            <SHORT-NAME>ReadData</SHORT-NAME>
+                            <ARGUMENTS>
+                                <ARGUMENT-DATA-PROTOTYPE UUID="ad0cd0c1-faa4-36ce-9d09-4b9c367030e8">
+                                    <SHORT-NAME>Data</SHORT-NAME>
+                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tBYTE</TYPE-TREF>
+                                    <DIRECTION>OUT</DIRECTION>
+                                </ARGUMENT-DATA-PROTOTYPE>
+                            </ARGUMENTS>
+                        </CLIENT-SERVER-OPERATION>
+                    </OPERATIONS>
+                </CLIENT-SERVER-INTERFACE>
+                <CLIENT-SERVER-INTERFACE UUID="c1f165e4-79af-f97e-9ec0-23141b279464">
+                    <SHORT-NAME>DataServices_DcmDspData_DID_ConsoInstantanee</SHORT-NAME>
+                    <ADMIN-DATA>
+                        <DOC-REVISIONS>
+                            <DOC-REVISION>
+                                <REVISION-LABEL>..</REVISION-LABEL>
+                                <ISSUED-BY>Aswc_IntDcm</ISSUED-BY>
+                                <DATE>2018-02-19</DATE>
+                            </DOC-REVISION>
+                        </DOC-REVISIONS>
+                    </ADMIN-DATA>
+                    <IS-SERVICE>true</IS-SERVICE>
+                    <OPERATIONS>
+                        <CLIENT-SERVER-OPERATION UUID="b266c79d-9dbc-6058-38d2-c154de35a8fb">
+                            <SHORT-NAME>ReadData</SHORT-NAME>
+                            <ARGUMENTS>
+                                <ARGUMENT-DATA-PROTOTYPE UUID="1b09669b-ebea-a193-41df-8bb590c8a20e">
+                                    <SHORT-NAME>Data</SHORT-NAME>
+                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tBYTE</TYPE-TREF>
+                                    <DIRECTION>OUT</DIRECTION>
+                                </ARGUMENT-DATA-PROTOTYPE>
+                            </ARGUMENTS>
+                        </CLIENT-SERVER-OPERATION>
+                    </OPERATIONS>
+                </CLIENT-SERVER-INTERFACE>
+                <CLIENT-SERVER-INTERFACE UUID="e0ed7e2f-7e60-0308-6455-e2da8de49f95">
+                    <SHORT-NAME>DataServices_DcmDspData_DID_ConsoMoyenneHY1</SHORT-NAME>
+                    <ADMIN-DATA>
+                        <DOC-REVISIONS>
+                            <DOC-REVISION>
+                                <REVISION-LABEL>..</REVISION-LABEL>
+                                <ISSUED-BY>Aswc_IntDcm</ISSUED-BY>
+                                <DATE>2018-02-19</DATE>
+                            </DOC-REVISION>
+                        </DOC-REVISIONS>
+                    </ADMIN-DATA>
+                    <IS-SERVICE>true</IS-SERVICE>
+                    <OPERATIONS>
+                        <CLIENT-SERVER-OPERATION UUID="56fbe863-d78c-f0b7-e55b-2cbdb3a22e46">
+                            <SHORT-NAME>ReadData</SHORT-NAME>
+                            <ARGUMENTS>
+                                <ARGUMENT-DATA-PROTOTYPE UUID="3604b6e9-f360-6623-c47b-c7b7dc94ba62">
+                                    <SHORT-NAME>Data</SHORT-NAME>
+                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tBYTE</TYPE-TREF>
+                                    <DIRECTION>OUT</DIRECTION>
+                                </ARGUMENT-DATA-PROTOTYPE>
+                            </ARGUMENTS>
+                        </CLIENT-SERVER-OPERATION>
+                    </OPERATIONS>
+                </CLIENT-SERVER-INTERFACE>
+                <CLIENT-SERVER-INTERFACE UUID="a7525055-ea2c-8ddd-b38f-d9dc0f8c90e7">
+                    <SHORT-NAME>DataServices_DcmDspData_DID_ConsoMoyenneHY2</SHORT-NAME>
+                    <ADMIN-DATA>
+                        <DOC-REVISIONS>
+                            <DOC-REVISION>
+                                <REVISION-LABEL>..</REVISION-LABEL>
+                                <ISSUED-BY>Aswc_IntDcm</ISSUED-BY>
+                                <DATE>2018-02-19</DATE>
+                            </DOC-REVISION>
+                        </DOC-REVISIONS>
+                    </ADMIN-DATA>
+                    <IS-SERVICE>true</IS-SERVICE>
+                    <OPERATIONS>
+                        <CLIENT-SERVER-OPERATION UUID="a22f9dd7-647e-cda2-99d9-c47a20a743cc">
+                            <SHORT-NAME>ReadData</SHORT-NAME>
+                            <ARGUMENTS>
+                                <ARGUMENT-DATA-PROTOTYPE UUID="49d68014-708c-54f7-c17f-ff6b5a7620bf">
+                                    <SHORT-NAME>Data</SHORT-NAME>
+                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tBYTE</TYPE-TREF>
+                                    <DIRECTION>OUT</DIRECTION>
+                                </ARGUMENT-DATA-PROTOTYPE>
+                            </ARGUMENTS>
+                        </CLIENT-SERVER-OPERATION>
+                    </OPERATIONS>
+                </CLIENT-SERVER-INTERFACE>
+                <CLIENT-SERVER-INTERFACE UUID="9896d5c7-99a4-2b81-8c7e-dda4ac6b2de2">
+                    <SHORT-NAME>DataServices_DcmDspData_DID_ConsoMoyenneHY3</SHORT-NAME>
+                    <ADMIN-DATA>
+                        <DOC-REVISIONS>
+                            <DOC-REVISION>
+                                <REVISION-LABEL>..</REVISION-LABEL>
+                                <ISSUED-BY>Aswc_IntDcm</ISSUED-BY>
+                                <DATE>2018-02-19</DATE>
+                            </DOC-REVISION>
+                        </DOC-REVISIONS>
+                    </ADMIN-DATA>
+                    <IS-SERVICE>true</IS-SERVICE>
+                    <OPERATIONS>
+                        <CLIENT-SERVER-OPERATION UUID="8931812d-7feb-1be4-00cd-a9ee4b2f2b09">
+                            <SHORT-NAME>ReadData</SHORT-NAME>
+                            <ARGUMENTS>
+                                <ARGUMENT-DATA-PROTOTYPE UUID="c65f935b-43d1-494f-1c60-c9b40a08d3df">
+                                    <SHORT-NAME>Data</SHORT-NAME>
+                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tBYTE</TYPE-TREF>
+                                    <DIRECTION>OUT</DIRECTION>
+                                </ARGUMENT-DATA-PROTOTYPE>
+                            </ARGUMENTS>
+                        </CLIENT-SERVER-OPERATION>
+                    </OPERATIONS>
+                </CLIENT-SERVER-INTERFACE>
+                <CLIENT-SERVER-INTERFACE UUID="54e04da5-63fc-2dbf-026d-1a4624ae8a1c">
+                    <SHORT-NAME>DataServices_DcmDspData_DID_ConsoMoyenneHY4</SHORT-NAME>
+                    <ADMIN-DATA>
+                        <DOC-REVISIONS>
+                            <DOC-REVISION>
+                                <REVISION-LABEL>..</REVISION-LABEL>
+                                <ISSUED-BY>Aswc_IntDcm</ISSUED-BY>
+                                <DATE>2018-02-19</DATE>
+                            </DOC-REVISION>
+                        </DOC-REVISIONS>
+                    </ADMIN-DATA>
+                    <IS-SERVICE>true</IS-SERVICE>
+                    <OPERATIONS>
+                        <CLIENT-SERVER-OPERATION UUID="aa9ab56f-1ae2-96ad-732d-ef1648d5dde0">
+                            <SHORT-NAME>ReadData</SHORT-NAME>
+                            <ARGUMENTS>
+                                <ARGUMENT-DATA-PROTOTYPE UUID="35f480a4-7368-a4f9-240c-da6620eea8c4">
+                                    <SHORT-NAME>Data</SHORT-NAME>
+                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tBYTE</TYPE-TREF>
+                                    <DIRECTION>OUT</DIRECTION>
+                                </ARGUMENT-DATA-PROTOTYPE>
+                            </ARGUMENTS>
+                        </CLIENT-SERVER-OPERATION>
+                    </OPERATIONS>
+                </CLIENT-SERVER-INTERFACE>
+                <CLIENT-SERVER-INTERFACE UUID="2b6ea94d-23af-7ad9-3ca0-e7076f6e74e4">
+                    <SHORT-NAME>DataServices_DcmDspData_DID_ConsoMoyenneHY5</SHORT-NAME>
+                    <ADMIN-DATA>
+                        <DOC-REVISIONS>
+                            <DOC-REVISION>
+                                <REVISION-LABEL>..</REVISION-LABEL>
+                                <ISSUED-BY>Aswc_IntDcm</ISSUED-BY>
+                                <DATE>2018-02-19</DATE>
+                            </DOC-REVISION>
+                        </DOC-REVISIONS>
+                    </ADMIN-DATA>
+                    <IS-SERVICE>true</IS-SERVICE>
+                    <OPERATIONS>
+                        <CLIENT-SERVER-OPERATION UUID="6e80b521-4d8e-23f8-0cac-87f1fa45ce50">
+                            <SHORT-NAME>ReadData</SHORT-NAME>
+                            <ARGUMENTS>
+                                <ARGUMENT-DATA-PROTOTYPE UUID="494ed258-4750-bbec-d20d-c2167b6e10da">
+                                    <SHORT-NAME>Data</SHORT-NAME>
+                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tBYTE</TYPE-TREF>
+                                    <DIRECTION>OUT</DIRECTION>
+                                </ARGUMENT-DATA-PROTOTYPE>
+                            </ARGUMENTS>
+                        </CLIENT-SERVER-OPERATION>
+                    </OPERATIONS>
+                </CLIENT-SERVER-INTERFACE>
+                <CLIENT-SERVER-INTERFACE UUID="4c20f0a6-e7f6-9921-d0a8-872c3ff9adc8">
+                    <SHORT-NAME>DataServices_DcmDspData_DID_ConsoMoyenneHY6</SHORT-NAME>
+                    <ADMIN-DATA>
+                        <DOC-REVISIONS>
+                            <DOC-REVISION>
+                                <REVISION-LABEL>..</REVISION-LABEL>
+                                <ISSUED-BY>Aswc_IntDcm</ISSUED-BY>
+                                <DATE>2018-02-19</DATE>
+                            </DOC-REVISION>
+                        </DOC-REVISIONS>
+                    </ADMIN-DATA>
+                    <IS-SERVICE>true</IS-SERVICE>
+                    <OPERATIONS>
+                        <CLIENT-SERVER-OPERATION UUID="09711bc9-4c24-bf3e-1f09-caa725789a5b">
+                            <SHORT-NAME>ReadData</SHORT-NAME>
+                            <ARGUMENTS>
+                                <ARGUMENT-DATA-PROTOTYPE UUID="6636a42d-b003-4c73-7ecc-06131fd2d995">
+                                    <SHORT-NAME>Data</SHORT-NAME>
+                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tBYTE</TYPE-TREF>
+                                    <DIRECTION>OUT</DIRECTION>
+                                </ARGUMENT-DATA-PROTOTYPE>
+                            </ARGUMENTS>
+                        </CLIENT-SERVER-OPERATION>
+                    </OPERATIONS>
+                </CLIENT-SERVER-INTERFACE>
+                <CLIENT-SERVER-INTERFACE UUID="4da33c16-09a6-d6fe-73fd-e79649aa4647">
+                    <SHORT-NAME>DataServices_DcmDspData_DID_ConsoMoyTrajet1</SHORT-NAME>
+                    <ADMIN-DATA>
+                        <DOC-REVISIONS>
+                            <DOC-REVISION>
+                                <REVISION-LABEL>..</REVISION-LABEL>
+                                <ISSUED-BY>Aswc_IntDcm</ISSUED-BY>
+                                <DATE>2018-02-19</DATE>
+                            </DOC-REVISION>
+                        </DOC-REVISIONS>
+                    </ADMIN-DATA>
+                    <IS-SERVICE>true</IS-SERVICE>
+                    <OPERATIONS>
+                        <CLIENT-SERVER-OPERATION UUID="d0f9e789-ee81-b42e-78d9-9d8c7e9f72c8">
+                            <SHORT-NAME>ReadData</SHORT-NAME>
+                            <ARGUMENTS>
+                                <ARGUMENT-DATA-PROTOTYPE UUID="2bb6d069-8c06-4a9b-6653-af8db47ee9f4">
+                                    <SHORT-NAME>Data</SHORT-NAME>
+                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tBYTE</TYPE-TREF>
+                                    <DIRECTION>OUT</DIRECTION>
+                                </ARGUMENT-DATA-PROTOTYPE>
+                            </ARGUMENTS>
+                        </CLIENT-SERVER-OPERATION>
+                    </OPERATIONS>
+                </CLIENT-SERVER-INTERFACE>
+                <CLIENT-SERVER-INTERFACE UUID="d7f861db-13d9-7305-e436-a4427190f198">
+                    <SHORT-NAME>DataServices_DcmDspData_DID_ConsoMoyTrajet2</SHORT-NAME>
+                    <ADMIN-DATA>
+                        <DOC-REVISIONS>
+                            <DOC-REVISION>
+                                <REVISION-LABEL>..</REVISION-LABEL>
+                                <ISSUED-BY>Aswc_IntDcm</ISSUED-BY>
+                                <DATE>2018-02-19</DATE>
+                            </DOC-REVISION>
+                        </DOC-REVISIONS>
+                    </ADMIN-DATA>
+                    <IS-SERVICE>true</IS-SERVICE>
+                    <OPERATIONS>
+                        <CLIENT-SERVER-OPERATION UUID="fbdff6ca-d5e8-0b6a-474d-62c7d5f15daa">
+                            <SHORT-NAME>ReadData</SHORT-NAME>
+                            <ARGUMENTS>
+                                <ARGUMENT-DATA-PROTOTYPE UUID="5dfb09f9-2ede-bb4d-7e65-e0954d7bd412">
+                                    <SHORT-NAME>Data</SHORT-NAME>
+                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tBYTE</TYPE-TREF>
+                                    <DIRECTION>OUT</DIRECTION>
+                                </ARGUMENT-DATA-PROTOTYPE>
+                            </ARGUMENTS>
+                        </CLIENT-SERVER-OPERATION>
+                    </OPERATIONS>
+                </CLIENT-SERVER-INTERFACE>
+                <CLIENT-SERVER-INTERFACE UUID="465eff4d-32b0-1e2b-7ffe-7c72e8a6c3a0">
+                    <SHORT-NAME>DataServices_DcmDspData_DID_ConsoRapide</SHORT-NAME>
+                    <ADMIN-DATA>
+                        <DOC-REVISIONS>
+                            <DOC-REVISION>
+                                <REVISION-LABEL>..</REVISION-LABEL>
+                                <ISSUED-BY>Aswc_IntDcm</ISSUED-BY>
+                                <DATE>2018-02-19</DATE>
+                            </DOC-REVISION>
+                        </DOC-REVISIONS>
+                    </ADMIN-DATA>
+                    <IS-SERVICE>true</IS-SERVICE>
+                    <OPERATIONS>
+                        <CLIENT-SERVER-OPERATION UUID="c3faad04-e19d-5eff-fa5c-42201715a83d">
+                            <SHORT-NAME>ReadData</SHORT-NAME>
+                            <ARGUMENTS>
+                                <ARGUMENT-DATA-PROTOTYPE UUID="5c7d52c9-c958-e6b2-6e3f-2c5fc72b56ed">
+                                    <SHORT-NAME>Data</SHORT-NAME>
+                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tBYTE</TYPE-TREF>
+                                    <DIRECTION>OUT</DIRECTION>
+                                </ARGUMENT-DATA-PROTOTYPE>
+                            </ARGUMENTS>
+                        </CLIENT-SERVER-OPERATION>
+                    </OPERATIONS>
+                </CLIENT-SERVER-INTERFACE>
+                <CLIENT-SERVER-INTERFACE UUID="a03c2db0-3ddb-ca3c-e93d-fd8aee62534f">
+                    <SHORT-NAME>DataServices_DcmDspData_DID_PRESENCE_GAZ</SHORT-NAME>
+                    <ADMIN-DATA>
+                        <DOC-REVISIONS>
+                            <DOC-REVISION>
+                                <REVISION-LABEL>..</REVISION-LABEL>
+                                <ISSUED-BY>Aswc_IntDcm</ISSUED-BY>
+                                <DATE>2018-02-19</DATE>
+                            </DOC-REVISION>
+                        </DOC-REVISIONS>
+                    </ADMIN-DATA>
+                    <IS-SERVICE>true</IS-SERVICE>
+                    <OPERATIONS>
+                        <CLIENT-SERVER-OPERATION UUID="b1b2c631-78d1-2ded-50e4-047ad541e598">
+                            <SHORT-NAME>ReadData</SHORT-NAME>
+                            <ARGUMENTS>
+                                <ARGUMENT-DATA-PROTOTYPE UUID="54eaaf88-5374-c53f-7f85-3cc7d527070f">
+                                    <SHORT-NAME>Data</SHORT-NAME>
+                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tBYTE</TYPE-TREF>
+                                    <DIRECTION>OUT</DIRECTION>
+                                </ARGUMENT-DATA-PROTOTYPE>
+                            </ARGUMENTS>
+                        </CLIENT-SERVER-OPERATION>
+                        <CLIENT-SERVER-OPERATION UUID="2def82cb-eea9-a020-0658-a8169ffca31e">
+                            <SHORT-NAME>WriteData</SHORT-NAME>
+                            <ARGUMENTS>
+                                <ARGUMENT-DATA-PROTOTYPE UUID="1dd6cf0f-17d9-937a-d271-f24b467bbdbc">
+                                    <SHORT-NAME>Data</SHORT-NAME>
+                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tBYTE</TYPE-TREF>
+                                    <DIRECTION>IN</DIRECTION>
+                                </ARGUMENT-DATA-PROTOTYPE>
+                                <ARGUMENT-DATA-PROTOTYPE UUID="3bd39457-f327-23a7-8a11-831100972e2e">
+                                    <SHORT-NAME>ErrorCode</SHORT-NAME>
+                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tBYTE</TYPE-TREF>
+                                    <DIRECTION>OUT</DIRECTION>
+                                </ARGUMENT-DATA-PROTOTYPE>
+                            </ARGUMENTS>
+                        </CLIENT-SERVER-OPERATION>
+                    </OPERATIONS>
+                </CLIENT-SERVER-INTERFACE>
+                <CLIENT-SERVER-INTERFACE UUID="eea15937-3fb5-59fa-070d-aef2d02bc03f">
+                    <SHORT-NAME>DataServices_DcmDspData_DID_PRESENCE_ODB</SHORT-NAME>
+                    <ADMIN-DATA>
+                        <DOC-REVISIONS>
+                            <DOC-REVISION>
+                                <REVISION-LABEL>..</REVISION-LABEL>
+                                <ISSUED-BY>Aswc_IntDcm</ISSUED-BY>
+                                <DATE>2018-02-19</DATE>
+                            </DOC-REVISION>
+                        </DOC-REVISIONS>
+                    </ADMIN-DATA>
+                    <IS-SERVICE>true</IS-SERVICE>
+                    <OPERATIONS>
+                        <CLIENT-SERVER-OPERATION UUID="6edb9a17-5176-f3e2-97de-058d1eeb7071">
+                            <SHORT-NAME>ReadData</SHORT-NAME>
+                            <ARGUMENTS>
+                                <ARGUMENT-DATA-PROTOTYPE UUID="8cd92210-538d-0aee-aaa2-03bf24f4c808">
+                                    <SHORT-NAME>Data</SHORT-NAME>
+                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tBYTE</TYPE-TREF>
+                                    <DIRECTION>OUT</DIRECTION>
+                                </ARGUMENT-DATA-PROTOTYPE>
+                            </ARGUMENTS>
+                        </CLIENT-SERVER-OPERATION>
+                        <CLIENT-SERVER-OPERATION UUID="8a1ba814-fcd9-1574-9daa-8509738a6d07">
+                            <SHORT-NAME>WriteData</SHORT-NAME>
+                            <ARGUMENTS>
+                                <ARGUMENT-DATA-PROTOTYPE UUID="e920af90-c137-f885-4884-39c0206b8284">
+                                    <SHORT-NAME>Data</SHORT-NAME>
+                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tBYTE</TYPE-TREF>
+                                    <DIRECTION>IN</DIRECTION>
+                                </ARGUMENT-DATA-PROTOTYPE>
+                                <ARGUMENT-DATA-PROTOTYPE UUID="9b155290-ffbb-35ef-4bf0-7c1fb32d19f5">
+                                    <SHORT-NAME>ErrorCode</SHORT-NAME>
+                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tBYTE</TYPE-TREF>
+                                    <DIRECTION>OUT</DIRECTION>
+                                </ARGUMENT-DATA-PROTOTYPE>
+                            </ARGUMENTS>
+                        </CLIENT-SERVER-OPERATION>
+                    </OPERATIONS>
+                </CLIENT-SERVER-INTERFACE>
+                    </ELEMENTS>
+                </AR-PACKAGE>
+            </AR-PACKAGES>
+        </AR-PACKAGE>
+    </AR-PACKAGES>
+</AUTOSAR>

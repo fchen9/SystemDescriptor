@@ -1,0 +1,557 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 autosar_4-2-1.xsd">
+    <AR-PACKAGES>
+        <AR-PACKAGE>
+            <SHORT-NAME>RootP_DiagDesc</SHORT-NAME>
+            <ELEMENTS>
+                <DIAGNOSTIC-CONTRIBUTION-SET UUID="a21173c7-1de0-719e-c53a-dfb4687ab86a">
+                    <SHORT-NAME>DiagContributionSet</SHORT-NAME>
+                    <CATEGORY>DIAGNOSTICS_ECU_EXTRACT</CATEGORY>
+                    <ELEMENTS>
+                        <!-- 14 reférences de type DID -->
+                        <!-- DID_AutonomieCalculee : ReadOnly -->
+                        <DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                            <DIAGNOSTIC-COMMON-ELEMENT-REF DEST="DIAGNOSTIC-DATA-IDENTIFIER">/RootP_DiagDesc/DID_AutonomieCalculee</DIAGNOSTIC-COMMON-ELEMENT-REF>
+                        </DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                        <DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                            <DIAGNOSTIC-COMMON-ELEMENT-REF DEST="DIAGNOSTIC-READ-DATA-BY-IDENTIFIER">/RootP_DcmDesc/DID_AutonomieCalculee_Read</DIAGNOSTIC-COMMON-ELEMENT-REF>
+                        </DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                        <!-- DID_AutonomieGPL : ReadOnly -->
+                        <DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                            <DIAGNOSTIC-COMMON-ELEMENT-REF DEST="DIAGNOSTIC-DATA-IDENTIFIER">/RootP_DiagDesc/DID_AutonomieGPL</DIAGNOSTIC-COMMON-ELEMENT-REF>
+                        </DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                        <DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                            <DIAGNOSTIC-COMMON-ELEMENT-REF DEST="DIAGNOSTIC-READ-DATA-BY-IDENTIFIER">/RootP_DcmDesc/DID_AutonomieGPL_Read</DIAGNOSTIC-COMMON-ELEMENT-REF>
+                        </DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                        <!-- DID_ConsoInstantanee : ReadOnly -->
+                        <DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                            <DIAGNOSTIC-COMMON-ELEMENT-REF DEST="DIAGNOSTIC-DATA-IDENTIFIER">/RootP_DiagDesc/DID_ConsoInstantanee</DIAGNOSTIC-COMMON-ELEMENT-REF>
+                        </DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                        <DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                            <DIAGNOSTIC-COMMON-ELEMENT-REF DEST="DIAGNOSTIC-READ-DATA-BY-IDENTIFIER">/RootP_DcmDesc/DID_ConsoInstantanee_Read</DIAGNOSTIC-COMMON-ELEMENT-REF>
+                        </DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                        <!-- DID_ConsoMoyenneHY1 : ReadOnly -->
+                        <DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                            <DIAGNOSTIC-COMMON-ELEMENT-REF DEST="DIAGNOSTIC-DATA-IDENTIFIER">/RootP_DiagDesc/DID_ConsoMoyenneHY1</DIAGNOSTIC-COMMON-ELEMENT-REF>
+                        </DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                        <DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                            <DIAGNOSTIC-COMMON-ELEMENT-REF DEST="DIAGNOSTIC-READ-DATA-BY-IDENTIFIER">/RootP_DcmDesc/DID_ConsoMoyenneHY1_Read</DIAGNOSTIC-COMMON-ELEMENT-REF>
+                        </DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                        <!-- DID_ConsoMoyenneHY2 : ReadOnly -->
+                        <DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                            <DIAGNOSTIC-COMMON-ELEMENT-REF DEST="DIAGNOSTIC-DATA-IDENTIFIER">/RootP_DiagDesc/DID_ConsoMoyenneHY2</DIAGNOSTIC-COMMON-ELEMENT-REF>
+                        </DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                        <DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                            <DIAGNOSTIC-COMMON-ELEMENT-REF DEST="DIAGNOSTIC-READ-DATA-BY-IDENTIFIER">/RootP_DcmDesc/DID_ConsoMoyenneHY2_Read</DIAGNOSTIC-COMMON-ELEMENT-REF>
+                        </DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                        <!-- DID_ConsoMoyenneHY3 : ReadOnly -->
+                        <DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                            <DIAGNOSTIC-COMMON-ELEMENT-REF DEST="DIAGNOSTIC-DATA-IDENTIFIER">/RootP_DiagDesc/DID_ConsoMoyenneHY3</DIAGNOSTIC-COMMON-ELEMENT-REF>
+                        </DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                        <DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                            <DIAGNOSTIC-COMMON-ELEMENT-REF DEST="DIAGNOSTIC-READ-DATA-BY-IDENTIFIER">/RootP_DcmDesc/DID_ConsoMoyenneHY3_Read</DIAGNOSTIC-COMMON-ELEMENT-REF>
+                        </DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                        <!-- DID_ConsoMoyenneHY4 : ReadOnly -->
+                        <DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                            <DIAGNOSTIC-COMMON-ELEMENT-REF DEST="DIAGNOSTIC-DATA-IDENTIFIER">/RootP_DiagDesc/DID_ConsoMoyenneHY4</DIAGNOSTIC-COMMON-ELEMENT-REF>
+                        </DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                        <DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                            <DIAGNOSTIC-COMMON-ELEMENT-REF DEST="DIAGNOSTIC-READ-DATA-BY-IDENTIFIER">/RootP_DcmDesc/DID_ConsoMoyenneHY4_Read</DIAGNOSTIC-COMMON-ELEMENT-REF>
+                        </DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                        <!-- DID_ConsoMoyenneHY5 : ReadOnly -->
+                        <DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                            <DIAGNOSTIC-COMMON-ELEMENT-REF DEST="DIAGNOSTIC-DATA-IDENTIFIER">/RootP_DiagDesc/DID_ConsoMoyenneHY5</DIAGNOSTIC-COMMON-ELEMENT-REF>
+                        </DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                        <DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                            <DIAGNOSTIC-COMMON-ELEMENT-REF DEST="DIAGNOSTIC-READ-DATA-BY-IDENTIFIER">/RootP_DcmDesc/DID_ConsoMoyenneHY5_Read</DIAGNOSTIC-COMMON-ELEMENT-REF>
+                        </DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                        <!-- DID_ConsoMoyenneHY6 : ReadOnly -->
+                        <DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                            <DIAGNOSTIC-COMMON-ELEMENT-REF DEST="DIAGNOSTIC-DATA-IDENTIFIER">/RootP_DiagDesc/DID_ConsoMoyenneHY6</DIAGNOSTIC-COMMON-ELEMENT-REF>
+                        </DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                        <DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                            <DIAGNOSTIC-COMMON-ELEMENT-REF DEST="DIAGNOSTIC-READ-DATA-BY-IDENTIFIER">/RootP_DcmDesc/DID_ConsoMoyenneHY6_Read</DIAGNOSTIC-COMMON-ELEMENT-REF>
+                        </DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                        <!-- DID_ConsoMoyTrajet1 : ReadOnly -->
+                        <DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                            <DIAGNOSTIC-COMMON-ELEMENT-REF DEST="DIAGNOSTIC-DATA-IDENTIFIER">/RootP_DiagDesc/DID_ConsoMoyTrajet1</DIAGNOSTIC-COMMON-ELEMENT-REF>
+                        </DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                        <DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                            <DIAGNOSTIC-COMMON-ELEMENT-REF DEST="DIAGNOSTIC-READ-DATA-BY-IDENTIFIER">/RootP_DcmDesc/DID_ConsoMoyTrajet1_Read</DIAGNOSTIC-COMMON-ELEMENT-REF>
+                        </DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                        <!-- DID_ConsoMoyTrajet2 : ReadOnly -->
+                        <DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                            <DIAGNOSTIC-COMMON-ELEMENT-REF DEST="DIAGNOSTIC-DATA-IDENTIFIER">/RootP_DiagDesc/DID_ConsoMoyTrajet2</DIAGNOSTIC-COMMON-ELEMENT-REF>
+                        </DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                        <DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                            <DIAGNOSTIC-COMMON-ELEMENT-REF DEST="DIAGNOSTIC-READ-DATA-BY-IDENTIFIER">/RootP_DcmDesc/DID_ConsoMoyTrajet2_Read</DIAGNOSTIC-COMMON-ELEMENT-REF>
+                        </DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                        <!-- DID_ConsoRapide : ReadOnly -->
+                        <DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                            <DIAGNOSTIC-COMMON-ELEMENT-REF DEST="DIAGNOSTIC-DATA-IDENTIFIER">/RootP_DiagDesc/DID_ConsoRapide</DIAGNOSTIC-COMMON-ELEMENT-REF>
+                        </DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                        <DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                            <DIAGNOSTIC-COMMON-ELEMENT-REF DEST="DIAGNOSTIC-READ-DATA-BY-IDENTIFIER">/RootP_DcmDesc/DID_ConsoRapide_Read</DIAGNOSTIC-COMMON-ELEMENT-REF>
+                        </DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                        <!-- DID_PRESENCE_GAZ : ReadWrite -->
+                        <DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                            <DIAGNOSTIC-COMMON-ELEMENT-REF DEST="DIAGNOSTIC-DATA-IDENTIFIER">/RootP_DiagDesc/DID_PRESENCE_GAZ</DIAGNOSTIC-COMMON-ELEMENT-REF>
+                        </DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                        <DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                            <DIAGNOSTIC-COMMON-ELEMENT-REF DEST="DIAGNOSTIC-READ-DATA-BY-IDENTIFIER">/RootP_DcmDesc/DID_PRESENCE_GAZ_Read</DIAGNOSTIC-COMMON-ELEMENT-REF>
+                        </DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                        <DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                            <DIAGNOSTIC-COMMON-ELEMENT-REF DEST="DIAGNOSTIC-WRITE-DATA-BY-IDENTIFIER">/RootP_DcmDesc/DID_PRESENCE_GAZ_Write</DIAGNOSTIC-COMMON-ELEMENT-REF>
+                        </DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                        <!-- DID_PRESENCE_ODB : ReadWrite -->
+                        <DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                            <DIAGNOSTIC-COMMON-ELEMENT-REF DEST="DIAGNOSTIC-DATA-IDENTIFIER">/RootP_DiagDesc/DID_PRESENCE_ODB</DIAGNOSTIC-COMMON-ELEMENT-REF>
+                        </DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                        <DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                            <DIAGNOSTIC-COMMON-ELEMENT-REF DEST="DIAGNOSTIC-READ-DATA-BY-IDENTIFIER">/RootP_DcmDesc/DID_PRESENCE_ODB_Read</DIAGNOSTIC-COMMON-ELEMENT-REF>
+                        </DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                        <DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                            <DIAGNOSTIC-COMMON-ELEMENT-REF DEST="DIAGNOSTIC-WRITE-DATA-BY-IDENTIFIER">/RootP_DcmDesc/DID_PRESENCE_ODB_Write</DIAGNOSTIC-COMMON-ELEMENT-REF>
+                        </DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                    </ELEMENTS>
+                </DIAGNOSTIC-CONTRIBUTION-SET>
+                <!-- 14 Interfaces de type DID -->
+                <DIAGNOSTIC-DATA-IDENTIFIER UUID="558f84d8-24c4-1a30-6b27-09fd527b9608">
+                    <SHORT-NAME>DID_AutonomieCalculee</SHORT-NAME>
+                    <ID>55521</ID>
+                    <DATA-ELEMENTS>
+                        <DIAGNOSTIC-PARAMETER>
+                            <BIT-OFFSET>0</BIT-OFFSET>
+                            <DATA-ELEMENTS>
+                                <DIAGNOSTIC-DATA-ELEMENT UUID="f21c9e60-0a47-38b4-8183-7ae8cdfe81f2">
+                                    <SHORT-NAME>dde_Autonomie</SHORT-NAME>
+                                    <ARRAY-SIZE-SEMANTICS>FIXED-SIZE</ARRAY-SIZE-SEMANTICS>
+                                    <MAX-NUMBER-OF-ELEMENTS>1</MAX-NUMBER-OF-ELEMENTS>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tWORD</IMPLEMENTATION-DATA-TYPE-REF>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                </DIAGNOSTIC-DATA-ELEMENT>
+                            </DATA-ELEMENTS>
+                        </DIAGNOSTIC-PARAMETER>
+                    </DATA-ELEMENTS>
+                </DIAGNOSTIC-DATA-IDENTIFIER>
+                <DIAGNOSTIC-DATA-IDENTIFIER UUID="59bb5263-a2f6-eebf-9d12-7c452e4db066">
+                    <SHORT-NAME>DID_AutonomieGPL</SHORT-NAME>
+                    <ID>56500</ID>
+                    <DATA-ELEMENTS>
+                        <DIAGNOSTIC-PARAMETER>
+                            <BIT-OFFSET>0</BIT-OFFSET>
+                            <DATA-ELEMENTS>
+                                <DIAGNOSTIC-DATA-ELEMENT UUID="695eec75-23c9-e0ca-5510-be58f3b221e1">
+                                    <SHORT-NAME>dde_AutonomieGPL</SHORT-NAME>
+                                    <ARRAY-SIZE-SEMANTICS>FIXED-SIZE</ARRAY-SIZE-SEMANTICS>
+                                    <MAX-NUMBER-OF-ELEMENTS>1</MAX-NUMBER-OF-ELEMENTS>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tWORD</IMPLEMENTATION-DATA-TYPE-REF>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                </DIAGNOSTIC-DATA-ELEMENT>
+                            </DATA-ELEMENTS>
+                        </DIAGNOSTIC-PARAMETER>
+                    </DATA-ELEMENTS>
+                </DIAGNOSTIC-DATA-IDENTIFIER>
+                <DIAGNOSTIC-DATA-IDENTIFIER UUID="05602fba-eb57-228e-2f04-daf7349a231e">
+                    <SHORT-NAME>DID_ConsoInstantanee</SHORT-NAME>
+                    <ID>55495</ID>
+                    <DATA-ELEMENTS>
+                        <DIAGNOSTIC-PARAMETER>
+                            <BIT-OFFSET>0</BIT-OFFSET>
+                            <DATA-ELEMENTS>
+                                <DIAGNOSTIC-DATA-ELEMENT UUID="44a03e1e-6a45-75e7-9c10-538ed28b9b1c">
+                                    <SHORT-NAME>dde_ConsoInst</SHORT-NAME>
+                                    <ARRAY-SIZE-SEMANTICS>FIXED-SIZE</ARRAY-SIZE-SEMANTICS>
+                                    <MAX-NUMBER-OF-ELEMENTS>1</MAX-NUMBER-OF-ELEMENTS>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tWORD</IMPLEMENTATION-DATA-TYPE-REF>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                </DIAGNOSTIC-DATA-ELEMENT>
+                            </DATA-ELEMENTS>
+                        </DIAGNOSTIC-PARAMETER>
+                    </DATA-ELEMENTS>
+                </DIAGNOSTIC-DATA-IDENTIFIER>
+                <DIAGNOSTIC-DATA-IDENTIFIER UUID="85e25a02-fb3b-9527-3d2e-b1e354e8ee53">
+                    <SHORT-NAME>DID_ConsoMoyenneHY1</SHORT-NAME>
+                    <ID>55524</ID>
+                    <DATA-ELEMENTS>
+                        <DIAGNOSTIC-PARAMETER>
+                            <BIT-OFFSET>0</BIT-OFFSET>
+                            <DATA-ELEMENTS>
+                                <DIAGNOSTIC-DATA-ELEMENT UUID="3e1d66fa-4fae-8bd1-3db0-ff307b192506">
+                                    <SHORT-NAME>dde_ConsoMoyenneHY1</SHORT-NAME>
+                                    <ARRAY-SIZE-SEMANTICS>FIXED-SIZE</ARRAY-SIZE-SEMANTICS>
+                                    <MAX-NUMBER-OF-ELEMENTS>1</MAX-NUMBER-OF-ELEMENTS>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tBYTE</IMPLEMENTATION-DATA-TYPE-REF>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                </DIAGNOSTIC-DATA-ELEMENT>
+                            </DATA-ELEMENTS>
+                        </DIAGNOSTIC-PARAMETER>
+                    </DATA-ELEMENTS>
+                </DIAGNOSTIC-DATA-IDENTIFIER>
+                <DIAGNOSTIC-DATA-IDENTIFIER UUID="4716e85a-5276-cc72-da8f-5573e43d1b36">
+                    <SHORT-NAME>DID_ConsoMoyenneHY2</SHORT-NAME>
+                    <ID>55525</ID>
+                    <DATA-ELEMENTS>
+                        <DIAGNOSTIC-PARAMETER>
+                            <BIT-OFFSET>0</BIT-OFFSET>
+                            <DATA-ELEMENTS>
+                                <DIAGNOSTIC-DATA-ELEMENT UUID="64656c0e-37b9-9da6-e965-26f91933aadd">
+                                    <SHORT-NAME>dde_ConsoMoyenneHY2</SHORT-NAME>
+                                    <ARRAY-SIZE-SEMANTICS>FIXED-SIZE</ARRAY-SIZE-SEMANTICS>
+                                    <MAX-NUMBER-OF-ELEMENTS>1</MAX-NUMBER-OF-ELEMENTS>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tBYTE</IMPLEMENTATION-DATA-TYPE-REF>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                </DIAGNOSTIC-DATA-ELEMENT>
+                            </DATA-ELEMENTS>
+                        </DIAGNOSTIC-PARAMETER>
+                    </DATA-ELEMENTS>
+                </DIAGNOSTIC-DATA-IDENTIFIER>
+                <DIAGNOSTIC-DATA-IDENTIFIER UUID="cc28c0b7-21c3-0c80-29e3-330843c0b951">
+                    <SHORT-NAME>DID_ConsoMoyenneHY3</SHORT-NAME>
+                    <ID>55526</ID>
+                    <DATA-ELEMENTS>
+                        <DIAGNOSTIC-PARAMETER>
+                            <BIT-OFFSET>0</BIT-OFFSET>
+                            <DATA-ELEMENTS>
+                                <DIAGNOSTIC-DATA-ELEMENT UUID="819dd58d-3c5a-4b6a-d3d5-fc0078cd9949">
+                                    <SHORT-NAME>dde_ConsoMoyenneHY3</SHORT-NAME>
+                                    <ARRAY-SIZE-SEMANTICS>FIXED-SIZE</ARRAY-SIZE-SEMANTICS>
+                                    <MAX-NUMBER-OF-ELEMENTS>1</MAX-NUMBER-OF-ELEMENTS>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tBYTE</IMPLEMENTATION-DATA-TYPE-REF>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                </DIAGNOSTIC-DATA-ELEMENT>
+                            </DATA-ELEMENTS>
+                        </DIAGNOSTIC-PARAMETER>
+                    </DATA-ELEMENTS>
+                </DIAGNOSTIC-DATA-IDENTIFIER>
+                <DIAGNOSTIC-DATA-IDENTIFIER UUID="1d7c1dce-945d-5899-6d9c-4bd35c66a343">
+                    <SHORT-NAME>DID_ConsoMoyenneHY4</SHORT-NAME>
+                    <ID>55527</ID>
+                    <DATA-ELEMENTS>
+                        <DIAGNOSTIC-PARAMETER>
+                            <BIT-OFFSET>0</BIT-OFFSET>
+                            <DATA-ELEMENTS>
+                                <DIAGNOSTIC-DATA-ELEMENT UUID="5dd8bf7e-536e-01eb-0f86-8d65620806c0">
+                                    <SHORT-NAME>dde_ConsoMoyenneHY4</SHORT-NAME>
+                                    <ARRAY-SIZE-SEMANTICS>FIXED-SIZE</ARRAY-SIZE-SEMANTICS>
+                                    <MAX-NUMBER-OF-ELEMENTS>1</MAX-NUMBER-OF-ELEMENTS>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tBYTE</IMPLEMENTATION-DATA-TYPE-REF>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                </DIAGNOSTIC-DATA-ELEMENT>
+                            </DATA-ELEMENTS>
+                        </DIAGNOSTIC-PARAMETER>
+                    </DATA-ELEMENTS>
+                </DIAGNOSTIC-DATA-IDENTIFIER>
+                <DIAGNOSTIC-DATA-IDENTIFIER UUID="d0bff814-7b86-5142-f631-6fd430150566">
+                    <SHORT-NAME>DID_ConsoMoyenneHY5</SHORT-NAME>
+                    <ID>55528</ID>
+                    <DATA-ELEMENTS>
+                        <DIAGNOSTIC-PARAMETER>
+                            <BIT-OFFSET>0</BIT-OFFSET>
+                            <DATA-ELEMENTS>
+                                <DIAGNOSTIC-DATA-ELEMENT UUID="a3a2ccd0-e6d6-8a6d-73ec-6129e641a42b">
+                                    <SHORT-NAME>dde_ConsoMoyenneHY5</SHORT-NAME>
+                                    <ARRAY-SIZE-SEMANTICS>FIXED-SIZE</ARRAY-SIZE-SEMANTICS>
+                                    <MAX-NUMBER-OF-ELEMENTS>1</MAX-NUMBER-OF-ELEMENTS>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tBYTE</IMPLEMENTATION-DATA-TYPE-REF>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                </DIAGNOSTIC-DATA-ELEMENT>
+                            </DATA-ELEMENTS>
+                        </DIAGNOSTIC-PARAMETER>
+                    </DATA-ELEMENTS>
+                </DIAGNOSTIC-DATA-IDENTIFIER>
+                <DIAGNOSTIC-DATA-IDENTIFIER UUID="cb8e047b-fcb4-4ea9-d620-0758a91cb073">
+                    <SHORT-NAME>DID_ConsoMoyenneHY6</SHORT-NAME>
+                    <ID>55529</ID>
+                    <DATA-ELEMENTS>
+                        <DIAGNOSTIC-PARAMETER>
+                            <BIT-OFFSET>0</BIT-OFFSET>
+                            <DATA-ELEMENTS>
+                                <DIAGNOSTIC-DATA-ELEMENT UUID="3f6dfd67-7491-6365-dec1-fcb8b09b5a97">
+                                    <SHORT-NAME>dde_ConsoMoyenneHY6</SHORT-NAME>
+                                    <ARRAY-SIZE-SEMANTICS>FIXED-SIZE</ARRAY-SIZE-SEMANTICS>
+                                    <MAX-NUMBER-OF-ELEMENTS>1</MAX-NUMBER-OF-ELEMENTS>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tBYTE</IMPLEMENTATION-DATA-TYPE-REF>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                </DIAGNOSTIC-DATA-ELEMENT>
+                            </DATA-ELEMENTS>
+                        </DIAGNOSTIC-PARAMETER>
+                    </DATA-ELEMENTS>
+                </DIAGNOSTIC-DATA-IDENTIFIER>
+                <DIAGNOSTIC-DATA-IDENTIFIER UUID="c6dcbd80-6a2c-461b-9168-4fbeba1322c5">
+                    <SHORT-NAME>DID_ConsoMoyTrajet1</SHORT-NAME>
+                    <ID>55496</ID>
+                    <DATA-ELEMENTS>
+                        <DIAGNOSTIC-PARAMETER>
+                            <BIT-OFFSET>0</BIT-OFFSET>
+                            <DATA-ELEMENTS>
+                                <DIAGNOSTIC-DATA-ELEMENT UUID="99c9399d-093c-9440-9d85-70002c87ecea">
+                                    <SHORT-NAME>dde_ConsoMoyenneT1</SHORT-NAME>
+                                    <ARRAY-SIZE-SEMANTICS>FIXED-SIZE</ARRAY-SIZE-SEMANTICS>
+                                    <MAX-NUMBER-OF-ELEMENTS>1</MAX-NUMBER-OF-ELEMENTS>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tWORD</IMPLEMENTATION-DATA-TYPE-REF>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                </DIAGNOSTIC-DATA-ELEMENT>
+                            </DATA-ELEMENTS>
+                        </DIAGNOSTIC-PARAMETER>
+                    </DATA-ELEMENTS>
+                </DIAGNOSTIC-DATA-IDENTIFIER>
+                <DIAGNOSTIC-DATA-IDENTIFIER UUID="56a5bfce-2ecd-786b-aff0-9c326ca361ff">
+                    <SHORT-NAME>DID_ConsoMoyTrajet2</SHORT-NAME>
+                    <ID>55497</ID>
+                    <DATA-ELEMENTS>
+                        <DIAGNOSTIC-PARAMETER>
+                            <BIT-OFFSET>0</BIT-OFFSET>
+                            <DATA-ELEMENTS>
+                                <DIAGNOSTIC-DATA-ELEMENT UUID="5b9a001c-52df-9a73-dc5c-fbc36d2cd97a">
+                                    <SHORT-NAME>dde_ConsoMoyenneT2</SHORT-NAME>
+                                    <ARRAY-SIZE-SEMANTICS>FIXED-SIZE</ARRAY-SIZE-SEMANTICS>
+                                    <MAX-NUMBER-OF-ELEMENTS>1</MAX-NUMBER-OF-ELEMENTS>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tWORD</IMPLEMENTATION-DATA-TYPE-REF>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                </DIAGNOSTIC-DATA-ELEMENT>
+                            </DATA-ELEMENTS>
+                        </DIAGNOSTIC-PARAMETER>
+                    </DATA-ELEMENTS>
+                </DIAGNOSTIC-DATA-IDENTIFIER>
+                <DIAGNOSTIC-DATA-IDENTIFIER UUID="52ef16be-14a0-12d1-b1b4-a0c487d396b3">
+                    <SHORT-NAME>DID_ConsoRapide</SHORT-NAME>
+                    <ID>55498</ID>
+                    <DATA-ELEMENTS>
+                        <DIAGNOSTIC-PARAMETER>
+                            <BIT-OFFSET>0</BIT-OFFSET>
+                            <DATA-ELEMENTS>
+                                <DIAGNOSTIC-DATA-ELEMENT UUID="62980b78-7687-2309-dc21-9219efeccb6b">
+                                    <SHORT-NAME>dde_SAV_ConsoLisse</SHORT-NAME>
+                                    <ARRAY-SIZE-SEMANTICS>FIXED-SIZE</ARRAY-SIZE-SEMANTICS>
+                                    <MAX-NUMBER-OF-ELEMENTS>1</MAX-NUMBER-OF-ELEMENTS>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tWORD</IMPLEMENTATION-DATA-TYPE-REF>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                </DIAGNOSTIC-DATA-ELEMENT>
+                            </DATA-ELEMENTS>
+                        </DIAGNOSTIC-PARAMETER>
+                    </DATA-ELEMENTS>
+                </DIAGNOSTIC-DATA-IDENTIFIER>
+                <DIAGNOSTIC-DATA-IDENTIFIER UUID="6f65d62b-f89b-6159-0dc0-09743afc8f1f">
+                    <SHORT-NAME>DID_PRESENCE_GAZ</SHORT-NAME>
+                    <ID>9166</ID>
+                    <DATA-ELEMENTS>
+                        <DIAGNOSTIC-PARAMETER>
+                            <BIT-OFFSET>0</BIT-OFFSET>
+                            <DATA-ELEMENTS>
+                                <DIAGNOSTIC-DATA-ELEMENT UUID="cbcb4d90-5c5a-a350-c86d-bcca3b7906cf">
+                                    <SHORT-NAME>dde_CFG_PRESENCE_GAZ</SHORT-NAME>
+                                    <ARRAY-SIZE-SEMANTICS>FIXED-SIZE</ARRAY-SIZE-SEMANTICS>
+                                    <MAX-NUMBER-OF-ELEMENTS>1</MAX-NUMBER-OF-ELEMENTS>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tLOG</IMPLEMENTATION-DATA-TYPE-REF>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                </DIAGNOSTIC-DATA-ELEMENT>
+                            </DATA-ELEMENTS>
+                        </DIAGNOSTIC-PARAMETER>
+                    </DATA-ELEMENTS>
+                </DIAGNOSTIC-DATA-IDENTIFIER>
+                <DIAGNOSTIC-DATA-IDENTIFIER UUID="66ff3406-1f4c-f84a-d3f8-fad540d48be7">
+                    <SHORT-NAME>DID_PRESENCE_ODB</SHORT-NAME>
+                    <ID>9115</ID>
+                    <DATA-ELEMENTS>
+                        <DIAGNOSTIC-PARAMETER>
+                            <BIT-OFFSET>0</BIT-OFFSET>
+                            <DATA-ELEMENTS>
+                                <DIAGNOSTIC-DATA-ELEMENT UUID="4cfffe91-ec22-6dd1-a04b-fb8b63919743">
+                                    <SHORT-NAME>dde_CFG_PRESENCE_ODB</SHORT-NAME>
+                                    <ARRAY-SIZE-SEMANTICS>FIXED-SIZE</ARRAY-SIZE-SEMANTICS>
+                                    <MAX-NUMBER-OF-ELEMENTS>1</MAX-NUMBER-OF-ELEMENTS>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tLOG</IMPLEMENTATION-DATA-TYPE-REF>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                </DIAGNOSTIC-DATA-ELEMENT>
+                            </DATA-ELEMENTS>
+                        </DIAGNOSTIC-PARAMETER>
+                    </DATA-ELEMENTS>
+                </DIAGNOSTIC-DATA-IDENTIFIER>
+            </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE>
+            <SHORT-NAME>RootP_DcmDesc</SHORT-NAME>
+            <ELEMENTS>
+                <DIAGNOSTIC-SERVICE-TABLE>
+                    <SHORT-NAME>VSM_ServicesTable</SHORT-NAME>
+                    <DIAGNOSTIC-CONNECTIONS>
+                        <DIAGNOSTIC-CONNECTION-REF-CONDITIONAL>
+                            <DIAGNOSTIC-CONNECTION-REF DEST="DIAGNOSTIC-CONNECTION">ToBeDone</DIAGNOSTIC-CONNECTION-REF>
+                        </DIAGNOSTIC-CONNECTION-REF-CONDITIONAL>
+                    </DIAGNOSTIC-CONNECTIONS>
+                    <ECU-INSTANCE-REF DEST="ECU-INSTANCE">/RootP_NetworkDesc/ECUINSTANCES/VSM</ECU-INSTANCE-REF>
+                    <PROTOCOL-KIND>DCM_UDS_ON_CAN</PROTOCOL-KIND>
+                    <SERVICE-INSTANCE-REFS>
+                        <SERVICE-INSTANCE-REF DEST="DIAGNOSTIC-READ-DATA-BY-IDENTIFIER">/RootP_DcmDesc/DID_AutonomieCalculee_Read</SERVICE-INSTANCE-REF>
+                        <SERVICE-INSTANCE-REF DEST="DIAGNOSTIC-READ-DATA-BY-IDENTIFIER">/RootP_DcmDesc/DID_AutonomieGPL_Read</SERVICE-INSTANCE-REF>
+                        <SERVICE-INSTANCE-REF DEST="DIAGNOSTIC-READ-DATA-BY-IDENTIFIER">/RootP_DcmDesc/DID_ConsoInstantanee_Read</SERVICE-INSTANCE-REF>
+                        <SERVICE-INSTANCE-REF DEST="DIAGNOSTIC-READ-DATA-BY-IDENTIFIER">/RootP_DcmDesc/DID_ConsoMoyenneHY1_Read</SERVICE-INSTANCE-REF>
+                        <SERVICE-INSTANCE-REF DEST="DIAGNOSTIC-READ-DATA-BY-IDENTIFIER">/RootP_DcmDesc/DID_ConsoMoyenneHY2_Read</SERVICE-INSTANCE-REF>
+                        <SERVICE-INSTANCE-REF DEST="DIAGNOSTIC-READ-DATA-BY-IDENTIFIER">/RootP_DcmDesc/DID_ConsoMoyenneHY3_Read</SERVICE-INSTANCE-REF>
+                        <SERVICE-INSTANCE-REF DEST="DIAGNOSTIC-READ-DATA-BY-IDENTIFIER">/RootP_DcmDesc/DID_ConsoMoyenneHY4_Read</SERVICE-INSTANCE-REF>
+                        <SERVICE-INSTANCE-REF DEST="DIAGNOSTIC-READ-DATA-BY-IDENTIFIER">/RootP_DcmDesc/DID_ConsoMoyenneHY5_Read</SERVICE-INSTANCE-REF>
+                        <SERVICE-INSTANCE-REF DEST="DIAGNOSTIC-READ-DATA-BY-IDENTIFIER">/RootP_DcmDesc/DID_ConsoMoyenneHY6_Read</SERVICE-INSTANCE-REF>
+                        <SERVICE-INSTANCE-REF DEST="DIAGNOSTIC-READ-DATA-BY-IDENTIFIER">/RootP_DcmDesc/DID_ConsoMoyTrajet1_Read</SERVICE-INSTANCE-REF>
+                        <SERVICE-INSTANCE-REF DEST="DIAGNOSTIC-READ-DATA-BY-IDENTIFIER">/RootP_DcmDesc/DID_ConsoMoyTrajet2_Read</SERVICE-INSTANCE-REF>
+                        <SERVICE-INSTANCE-REF DEST="DIAGNOSTIC-READ-DATA-BY-IDENTIFIER">/RootP_DcmDesc/DID_ConsoRapide_Read</SERVICE-INSTANCE-REF>
+                        <SERVICE-INSTANCE-REF DEST="DIAGNOSTIC-READ-DATA-BY-IDENTIFIER">/RootP_DcmDesc/DID_PRESENCE_GAZ_Read</SERVICE-INSTANCE-REF>
+                        <SERVICE-INSTANCE-REF DEST="DIAGNOSTIC-WRITE-DATA-BY-IDENTIFIER">/RootP_DcmDesc/DID_PRESENCE_GAZ_Write</SERVICE-INSTANCE-REF>
+                        <SERVICE-INSTANCE-REF DEST="DIAGNOSTIC-READ-DATA-BY-IDENTIFIER">/RootP_DcmDesc/DID_PRESENCE_ODB_Read</SERVICE-INSTANCE-REF>
+                        <SERVICE-INSTANCE-REF DEST="DIAGNOSTIC-WRITE-DATA-BY-IDENTIFIER">/RootP_DcmDesc/DID_PRESENCE_ODB_Write</SERVICE-INSTANCE-REF>
+                    </SERVICE-INSTANCE-REFS>
+                </DIAGNOSTIC-SERVICE-TABLE>
+                <DIAGNOSTIC-READ-DATA-BY-IDENTIFIER>
+                    <SHORT-NAME>DID_AutonomieCalculee_Read</SHORT-NAME>
+                    <DATA-IDENTIFIER-REF DEST="DIAGNOSTIC-DATA-IDENTIFIER">/RootP_DiagDesc/DID_AutonomieCalculee</DATA-IDENTIFIER-REF>
+                    <READ-CLASS-REF DEST="DIAGNOSTIC-READ-DATA-BY-IDENTIFIER-CLASS">/RootP_DcmDesc/ReadDataByIdentifierClass</READ-CLASS-REF>
+                </DIAGNOSTIC-READ-DATA-BY-IDENTIFIER>
+                <DIAGNOSTIC-READ-DATA-BY-IDENTIFIER>
+                    <SHORT-NAME>DID_AutonomieGPL_Read</SHORT-NAME>
+                    <DATA-IDENTIFIER-REF DEST="DIAGNOSTIC-DATA-IDENTIFIER">/RootP_DiagDesc/DID_AutonomieGPL</DATA-IDENTIFIER-REF>
+                    <READ-CLASS-REF DEST="DIAGNOSTIC-READ-DATA-BY-IDENTIFIER-CLASS">/RootP_DcmDesc/ReadDataByIdentifierClass</READ-CLASS-REF>
+                </DIAGNOSTIC-READ-DATA-BY-IDENTIFIER>
+                <DIAGNOSTIC-READ-DATA-BY-IDENTIFIER>
+                    <SHORT-NAME>DID_ConsoInstantanee_Read</SHORT-NAME>
+                    <DATA-IDENTIFIER-REF DEST="DIAGNOSTIC-DATA-IDENTIFIER">/RootP_DiagDesc/DID_ConsoInstantanee</DATA-IDENTIFIER-REF>
+                    <READ-CLASS-REF DEST="DIAGNOSTIC-READ-DATA-BY-IDENTIFIER-CLASS">/RootP_DcmDesc/ReadDataByIdentifierClass</READ-CLASS-REF>
+                </DIAGNOSTIC-READ-DATA-BY-IDENTIFIER>
+                <DIAGNOSTIC-READ-DATA-BY-IDENTIFIER>
+                    <SHORT-NAME>DID_ConsoMoyenneHY1_Read</SHORT-NAME>
+                    <DATA-IDENTIFIER-REF DEST="DIAGNOSTIC-DATA-IDENTIFIER">/RootP_DiagDesc/DID_ConsoMoyenneHY1</DATA-IDENTIFIER-REF>
+                    <READ-CLASS-REF DEST="DIAGNOSTIC-READ-DATA-BY-IDENTIFIER-CLASS">/RootP_DcmDesc/ReadDataByIdentifierClass</READ-CLASS-REF>
+                </DIAGNOSTIC-READ-DATA-BY-IDENTIFIER>
+                <DIAGNOSTIC-READ-DATA-BY-IDENTIFIER>
+                    <SHORT-NAME>DID_ConsoMoyenneHY2_Read</SHORT-NAME>
+                    <DATA-IDENTIFIER-REF DEST="DIAGNOSTIC-DATA-IDENTIFIER">/RootP_DiagDesc/DID_ConsoMoyenneHY2</DATA-IDENTIFIER-REF>
+                    <READ-CLASS-REF DEST="DIAGNOSTIC-READ-DATA-BY-IDENTIFIER-CLASS">/RootP_DcmDesc/ReadDataByIdentifierClass</READ-CLASS-REF>
+                </DIAGNOSTIC-READ-DATA-BY-IDENTIFIER>
+                <DIAGNOSTIC-READ-DATA-BY-IDENTIFIER>
+                    <SHORT-NAME>DID_ConsoMoyenneHY3_Read</SHORT-NAME>
+                    <DATA-IDENTIFIER-REF DEST="DIAGNOSTIC-DATA-IDENTIFIER">/RootP_DiagDesc/DID_ConsoMoyenneHY3</DATA-IDENTIFIER-REF>
+                    <READ-CLASS-REF DEST="DIAGNOSTIC-READ-DATA-BY-IDENTIFIER-CLASS">/RootP_DcmDesc/ReadDataByIdentifierClass</READ-CLASS-REF>
+                </DIAGNOSTIC-READ-DATA-BY-IDENTIFIER>
+                <DIAGNOSTIC-READ-DATA-BY-IDENTIFIER>
+                    <SHORT-NAME>DID_ConsoMoyenneHY4_Read</SHORT-NAME>
+                    <DATA-IDENTIFIER-REF DEST="DIAGNOSTIC-DATA-IDENTIFIER">/RootP_DiagDesc/DID_ConsoMoyenneHY4</DATA-IDENTIFIER-REF>
+                    <READ-CLASS-REF DEST="DIAGNOSTIC-READ-DATA-BY-IDENTIFIER-CLASS">/RootP_DcmDesc/ReadDataByIdentifierClass</READ-CLASS-REF>
+                </DIAGNOSTIC-READ-DATA-BY-IDENTIFIER>
+                <DIAGNOSTIC-READ-DATA-BY-IDENTIFIER>
+                    <SHORT-NAME>DID_ConsoMoyenneHY5_Read</SHORT-NAME>
+                    <DATA-IDENTIFIER-REF DEST="DIAGNOSTIC-DATA-IDENTIFIER">/RootP_DiagDesc/DID_ConsoMoyenneHY5</DATA-IDENTIFIER-REF>
+                    <READ-CLASS-REF DEST="DIAGNOSTIC-READ-DATA-BY-IDENTIFIER-CLASS">/RootP_DcmDesc/ReadDataByIdentifierClass</READ-CLASS-REF>
+                </DIAGNOSTIC-READ-DATA-BY-IDENTIFIER>
+                <DIAGNOSTIC-READ-DATA-BY-IDENTIFIER>
+                    <SHORT-NAME>DID_ConsoMoyenneHY6_Read</SHORT-NAME>
+                    <DATA-IDENTIFIER-REF DEST="DIAGNOSTIC-DATA-IDENTIFIER">/RootP_DiagDesc/DID_ConsoMoyenneHY6</DATA-IDENTIFIER-REF>
+                    <READ-CLASS-REF DEST="DIAGNOSTIC-READ-DATA-BY-IDENTIFIER-CLASS">/RootP_DcmDesc/ReadDataByIdentifierClass</READ-CLASS-REF>
+                </DIAGNOSTIC-READ-DATA-BY-IDENTIFIER>
+                <DIAGNOSTIC-READ-DATA-BY-IDENTIFIER>
+                    <SHORT-NAME>DID_ConsoMoyTrajet1_Read</SHORT-NAME>
+                    <DATA-IDENTIFIER-REF DEST="DIAGNOSTIC-DATA-IDENTIFIER">/RootP_DiagDesc/DID_ConsoMoyTrajet1</DATA-IDENTIFIER-REF>
+                    <READ-CLASS-REF DEST="DIAGNOSTIC-READ-DATA-BY-IDENTIFIER-CLASS">/RootP_DcmDesc/ReadDataByIdentifierClass</READ-CLASS-REF>
+                </DIAGNOSTIC-READ-DATA-BY-IDENTIFIER>
+                <DIAGNOSTIC-READ-DATA-BY-IDENTIFIER>
+                    <SHORT-NAME>DID_ConsoMoyTrajet2_Read</SHORT-NAME>
+                    <DATA-IDENTIFIER-REF DEST="DIAGNOSTIC-DATA-IDENTIFIER">/RootP_DiagDesc/DID_ConsoMoyTrajet2</DATA-IDENTIFIER-REF>
+                    <READ-CLASS-REF DEST="DIAGNOSTIC-READ-DATA-BY-IDENTIFIER-CLASS">/RootP_DcmDesc/ReadDataByIdentifierClass</READ-CLASS-REF>
+                </DIAGNOSTIC-READ-DATA-BY-IDENTIFIER>
+                <DIAGNOSTIC-READ-DATA-BY-IDENTIFIER>
+                    <SHORT-NAME>DID_ConsoRapide_Read</SHORT-NAME>
+                    <DATA-IDENTIFIER-REF DEST="DIAGNOSTIC-DATA-IDENTIFIER">/RootP_DiagDesc/DID_ConsoRapide</DATA-IDENTIFIER-REF>
+                    <READ-CLASS-REF DEST="DIAGNOSTIC-READ-DATA-BY-IDENTIFIER-CLASS">/RootP_DcmDesc/ReadDataByIdentifierClass</READ-CLASS-REF>
+                </DIAGNOSTIC-READ-DATA-BY-IDENTIFIER>
+                <DIAGNOSTIC-READ-DATA-BY-IDENTIFIER>
+                    <SHORT-NAME>DID_PRESENCE_GAZ_Read</SHORT-NAME>
+                    <DATA-IDENTIFIER-REF DEST="DIAGNOSTIC-DATA-IDENTIFIER">/RootP_DiagDesc/DID_PRESENCE_GAZ</DATA-IDENTIFIER-REF>
+                    <READ-CLASS-REF DEST="DIAGNOSTIC-READ-DATA-BY-IDENTIFIER-CLASS">/RootP_DcmDesc/ReadDataByIdentifierClass</READ-CLASS-REF>
+                </DIAGNOSTIC-READ-DATA-BY-IDENTIFIER>
+                <DIAGNOSTIC-WRITE-DATA-BY-IDENTIFIER>
+                    <SHORT-NAME>DID_PRESENCE_GAZ_Write</SHORT-NAME>
+                    <DATA-IDENTIFIER-REF DEST="DIAGNOSTIC-DATA-IDENTIFIER">/RootP_DiagDesc/DID_PRESENCE_GAZ</DATA-IDENTIFIER-REF>
+                    <WRITE-CLASS-REF DEST="DIAGNOSTIC-WRITE-DATA-BY-IDENTIFIER-CLASS">/RootP_DcmDesc/WriteDataByIdentifierClass</WRITE-CLASS-REF>
+                </DIAGNOSTIC-WRITE-DATA-BY-IDENTIFIER>
+                <DIAGNOSTIC-READ-DATA-BY-IDENTIFIER>
+                    <SHORT-NAME>DID_PRESENCE_ODB_Read</SHORT-NAME>
+                    <DATA-IDENTIFIER-REF DEST="DIAGNOSTIC-DATA-IDENTIFIER">/RootP_DiagDesc/DID_PRESENCE_ODB</DATA-IDENTIFIER-REF>
+                    <READ-CLASS-REF DEST="DIAGNOSTIC-READ-DATA-BY-IDENTIFIER-CLASS">/RootP_DcmDesc/ReadDataByIdentifierClass</READ-CLASS-REF>
+                </DIAGNOSTIC-READ-DATA-BY-IDENTIFIER>
+                <DIAGNOSTIC-WRITE-DATA-BY-IDENTIFIER>
+                    <SHORT-NAME>DID_PRESENCE_ODB_Write</SHORT-NAME>
+                    <DATA-IDENTIFIER-REF DEST="DIAGNOSTIC-DATA-IDENTIFIER">/RootP_DiagDesc/DID_PRESENCE_ODB</DATA-IDENTIFIER-REF>
+                    <WRITE-CLASS-REF DEST="DIAGNOSTIC-WRITE-DATA-BY-IDENTIFIER-CLASS">/RootP_DcmDesc/WriteDataByIdentifierClass</WRITE-CLASS-REF>
+                </DIAGNOSTIC-WRITE-DATA-BY-IDENTIFIER>
+            </ELEMENTS>
+        </AR-PACKAGE>
+    </AR-PACKAGES>
+</AUTOSAR>

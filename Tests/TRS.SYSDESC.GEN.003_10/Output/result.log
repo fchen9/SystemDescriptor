@@ -1,0 +1,24 @@
+2018-04-13 15:08:09,489 INFO =================Parsing information=================
+2018-04-13 15:08:09,554 INFO  The file C:\Users\rconstantin\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.003_10\Input\ASWC_A26.mappings1.dico is well-formed
+2018-04-13 15:08:09,554 INFO  The file C:\Users\rconstantin\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.003_10\Input\ASWC_A26.mappings2.dico is well-formed
+2018-04-13 15:08:09,584 INFO The file: C:\Users\rconstantin\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.003_10\Input\ASWC_A26.aswc.arxml is well-formed
+2018-04-13 15:08:10,173 INFO The file: C:\Users\rconstantin\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.003_10\Input\ASWC_A26.aswc.arxml is valid with the AUTOSAR schema
+2018-04-13 15:08:10,223 INFO The file: C:\Users\rconstantin\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.003_10\Input\ASWC_A26.diag.arxml is well-formed
+2018-04-13 15:08:10,776 WARNING The file: C:\Users\rconstantin\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.003_10\Input\ASWC_A26.diag.arxml is NOT valid with the AUTOSAR schema
+2018-04-13 15:08:10,837 INFO The file: C:\Users\rconstantin\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.003_10\Input\ASWC_A26.epc.arxml is well-formed
+2018-04-13 15:08:11,393 INFO The file: C:\Users\rconstantin\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.003_10\Input\ASWC_A26.epc.arxml is valid with the AUTOSAR schema
+2018-04-13 15:08:11,450 INFO The file: C:\Users\rconstantin\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.003_10\Input\Messagerie_4.0.arxml is well-formed
+2018-04-13 15:08:12,006 WARNING The file: C:\Users\rconstantin\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.003_10\Input\Messagerie_4.0.arxml is NOT valid with the AUTOSAR schema
+2018-04-13 15:08:12,066 INFO The file: C:\Users\rconstantin\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.003_10\Input\SoftwareComponents_8CAN_7LIN_ETH.arxml is well-formed
+2018-04-13 15:08:12,618 INFO The file: C:\Users\rconstantin\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.003_10\Input\SoftwareComponents_8CAN_7LIN_ETH.arxml is valid with the AUTOSAR schema
+2018-04-13 15:08:12,658 INFO =================<SENDER-RECEIVER-TO-SIGNAL-MAPPING> without added signal=================
+2018-04-13 15:08:12,658 INFO =================Interfaces without PPorts/PRPorts=================
+2018-04-13 15:08:12,658 INFO The interface SR_ApportCarbDetecte doesn't have an PPort or PRPort
+2018-04-13 15:08:12,658 INFO The interface SR_TrebuieSaApara doesn't have an PPort or PRPort
+2018-04-13 15:08:12,668 INFO The interface If_Counter doesn't have an PPort or PRPort
+2018-04-13 15:08:12,668 INFO The interface If_Internal doesn't have an PPort or PRPort
+2018-04-13 15:08:12,668 INFO The interface ComM_UserRequest doesn't have an PPort or PRPort
+2018-04-13 15:08:12,668 INFO The interface DETService doesn't have an PPort or PRPort
+2018-04-13 15:08:12,668 INFO The interface If_CounterModify doesn't have an PPort or PRPort
+2018-04-13 15:08:12,668 INFO The interface If_DiscreteValueOutput doesn't have an PPort or PRPort
+2018-04-13 15:08:12,668 ERROR SW-COMPONENT-PROTOTYPE with the short-name Instance_ASWC_A26 cannot be merged

@@ -1,0 +1,4 @@
+2018-04-13 15:12:04,323 INFO =================Parsing information=================
+2018-04-13 15:12:04,373 INFO  The file C:\Users\rconstantin\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.1\Input\ASWC_A26.mappings1.dico is well-formed
+2018-04-13 15:12:04,373 INFO  The file C:\Users\rconstantin\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.1\Input\ASWC_A26.mappings2.dico is well-formed
+2018-04-13 15:12:04,373 ERROR The file: C:\Users\rconstantin\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.1\Input\ASWC_A26.aswc.arxml is not well-formed: C:\Users\rconstantin\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.1\Input\ASWC_A26.aswc.arxml:58:10: mismatched tag
