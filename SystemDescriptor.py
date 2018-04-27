@@ -10,6 +10,7 @@ from xml.dom.minidom import parseString
 def arg_parse(parser):
     parser.add_argument('-config', '--config', help="configuration file location", required=True, default="")
     parser.add_argument('-system', '--system', help="system name", required=False, default="")
+    parser.add_argument('-mapping', '--mapping', help="mapping name", required=False, default="")
     parser.add_argument('-compo', '--compo', help="composition name", required=False, default="")
     parser.add_argument("-modularity", action="store_const", const="-modularity", required=False)
 
@@ -186,7 +187,7 @@ def check_compatibility(recursive_arxml, recursive_dico, simple_arxml, simple_di
         return True
 
 
-def generate_system(recursive_arxml, recursive_dico, simple_arxml, simple_dico, output_path, xsd_path, system_name, composition_name, modularity, logger):
+def generate_system(recursive_arxml, recursive_dico, simple_arxml, simple_dico, output_path, xsd_path, system_name, mapping_name, composition_name, modularity, logger):
     NSMAP = {None: 'http://autosar.org/schema/r4.0',
              "xsi": 'http://www.w3.org/2001/XMLSchema-instance'}
     attr_qname = etree.QName("http://www.w3.org/2001/XMLSchema-instance", "schemaLocation")
@@ -1558,42 +1559,43 @@ def generate_system(recursive_arxml, recursive_dico, simple_arxml, simple_dico, 
     rootSystem = etree.Element('AUTOSAR', {attr_qname: 'http://autosar.org/schema/r4.0 AUTOSAR_4-2-2_STRICT_COMPACT.xsd'}, nsmap=NSMAP)
     packages = etree.SubElement(rootSystem, 'AR-PACKAGES')
     package = ""
-    for elem in final_interfaces:
-        if package != elem['PACKAGE']:
-            package = elem['PACKAGE']
-            compo = etree.SubElement(packages, 'AR-PACKAGE')
-            short_name = etree.SubElement(compo, 'SHORT-NAME').text = elem['PACKAGE']
-            elements = etree.SubElement(compo, 'ELEMENTS')
-            elements.append(elem['DATA'])
-        else:
-            elements.append(elem['DATA'])
-    for elem in final_types:
-        if package != elem['PACKAGE']:
-            package = elem['PACKAGE']
-            compo = etree.SubElement(packages, 'AR-PACKAGE')
-            short_name = etree.SubElement(compo, 'SHORT-NAME').text = elem['PACKAGE']
-            elements = etree.SubElement(compo, 'ELEMENTS')
-            elements.append(elem['DATA'])
-        else:
-            elements.append(elem['DATA'])
-    for elem in compu_methods:
-        if package != elem['PACKAGE']:
-            package = elem['PACKAGE']
-            compo = etree.SubElement(packages, 'AR-PACKAGE')
-            short_name = etree.SubElement(compo, 'SHORT-NAME').text = elem['PACKAGE']
-            elements = etree.SubElement(compo, 'ELEMENTS')
-            elements.append(elem['DATA'])
-        else:
-            elements.append(elem['DATA'])
-    for elem in final_data_constr:
-        if package != elem['PACKAGE']:
-            package = elem['PACKAGE']
-            compo = etree.SubElement(packages, 'AR-PACKAGE')
-            short_name = etree.SubElement(compo, 'SHORT-NAME').text = elem['PACKAGE']
-            elements = etree.SubElement(compo, 'ELEMENTS')
-            elements.append(elem['DATA'])
-        else:
-            elements.append(elem['DATA'])
+    if modularity:
+        for elem in final_interfaces:
+            if package != elem['PACKAGE']:
+                package = elem['PACKAGE']
+                compo = etree.SubElement(packages, 'AR-PACKAGE')
+                short_name = etree.SubElement(compo, 'SHORT-NAME').text = elem['PACKAGE']
+                elements = etree.SubElement(compo, 'ELEMENTS')
+                elements.append(elem['DATA'])
+            else:
+                elements.append(elem['DATA'])
+        for elem in final_types:
+            if package != elem['PACKAGE']:
+                package = elem['PACKAGE']
+                compo = etree.SubElement(packages, 'AR-PACKAGE')
+                short_name = etree.SubElement(compo, 'SHORT-NAME').text = elem['PACKAGE']
+                elements = etree.SubElement(compo, 'ELEMENTS')
+                elements.append(elem['DATA'])
+            else:
+                elements.append(elem['DATA'])
+        for elem in compu_methods:
+            if package != elem['PACKAGE']:
+                package = elem['PACKAGE']
+                compo = etree.SubElement(packages, 'AR-PACKAGE')
+                short_name = etree.SubElement(compo, 'SHORT-NAME').text = elem['PACKAGE']
+                elements = etree.SubElement(compo, 'ELEMENTS')
+                elements.append(elem['DATA'])
+            else:
+                elements.append(elem['DATA'])
+        for elem in final_data_constr:
+            if package != elem['PACKAGE']:
+                package = elem['PACKAGE']
+                compo = etree.SubElement(packages, 'AR-PACKAGE')
+                short_name = etree.SubElement(compo, 'SHORT-NAME').text = elem['PACKAGE']
+                elements = etree.SubElement(compo, 'ELEMENTS')
+                elements.append(elem['DATA'])
+            else:
+                elements.append(elem['DATA'])
     package = ""
     if system_name != "":
         for elem in system_version:
@@ -1639,71 +1641,73 @@ def generate_system(recursive_arxml, recursive_dico, simple_arxml, simple_dico, 
                             if sysname == elem_fibex['SYSTEM']:
                                 system_tag.append(elem_fibex['DATA'])
                         mappings_tag = etree.SubElement(system_tag, 'MAPPINGS')
-                        for elem in data_mappings_name:
-                            system_mapping_tag = etree.SubElement(mappings_tag, 'SYSTEM-MAPPING')
-                            short_name_mappings = etree.SubElement(system_mapping_tag, 'SHORT-NAME').text = str(elem)
-                            data_mappings_tag = etree.SubElement(system_mapping_tag, 'DATA-MAPPINGS')
-                            for element in client_server_signal_group_mapping:
-                                if element['NAME'] == elem and element['ROOT'] == package and element['SYSTEM'] == sysname:
-                                    data_mappings_tag.append(element['DATA'])
-                            for element in client_server_signal_mapping:
-                                if element['NAME'] == elem and element['ROOT'] == package and element['SYSTEM'] == sysname:
-                                    data_mappings_tag.append(element['DATA'])
-                            for element in sender_receiver_composite_element:
-                                if element['NAME'] == elem and element['ROOT'] == package and element['SYSTEM'] == sysname:
-                                    data_mappings_tag.append(element['DATA'])
-                            for element in sender_receiver_signal_group_mapping:
-                                if element['NAME'] == elem and element['ROOT'] == package and element['SYSTEM'] == sysname:
-                                    data_mappings_tag.append(element['DATA'])
-                            for element in sender_receiver_signal_mapping:
-                                if element['NAME'] == elem and element['ROOT'] == package and element['SYSTEM'] == sysname:
-                                    data_mappings_tag.append(element['DATA'])
-                            for element in trigger_signal_mapping:
-                                if element['NAME'] == elem and element['ROOT'] == package and element['SYSTEM'] == sysname:
-                                    data_mappings_tag.append(element['DATA'])
-                            ecu_mappings_tag = etree.SubElement(system_mapping_tag, 'ECU-RESOURCE-MAPPINGS')
-                            for element in swc_ecu_mapping:
-                                if element['NAME'] == elem and element['ROOT'] == package and element['SYSTEM'] == sysname:
-                                    ecu_mappings_tag.append(element['DATA'])
-                            mapping_constraints_tag = etree.SubElement(system_mapping_tag, 'MAPPING-CONSTRAINTS')
-                            for element in component_clustering:
-                                if element['NAME'] == elem and element['ROOT'] == package and element['SYSTEM'] == sysname:
-                                    mapping_constraints_tag.append(element['DATA'])
-                            for element in component_separation:
-                                if element['NAME'] == elem and element['ROOT'] == package and element['SYSTEM'] == sysname:
-                                    mapping_constraints_tag.append(element['DATA'])
-                            for element in sw_ecu_mapping_constraint:
-                                if element['NAME'] == elem and element['ROOT'] == package and element['SYSTEM'] == sysname:
-                                    mapping_constraints_tag.append(element['DATA'])
-                            pnc_mapping_tag = etree.SubElement(system_mapping_tag, 'PNC-MAPPINGS')
-                            for element in pnc_mapping:
-                                if element['NAME'] == elem and element['ROOT'] == package and element['SYSTEM'] == sysname:
-                                    pnc_mapping_tag.append(element['DATA'])
-                            resource_estimation_tag = etree.SubElement(system_mapping_tag, 'RESOURCE-ESTIMATIONS')
-                            for element in ecu_resource_estimation:
-                                if element['NAME'] == elem and element['ROOT'] == package and element['SYSTEM'] == sysname:
-                                    resource_estimation_tag.append(element['DATA'])
-                            signal_path_constraints_tag = etree.SubElement(system_mapping_tag, 'SIGNAL-PATH-CONSTRAINTS')
-                            for element in common_signal_path:
-                                if element['NAME'] == elem and element['ROOT'] == package and element['SYSTEM'] == sysname:
-                                    signal_path_constraints_tag.append(element['DATA'])
-                            for element in forbidden_signal_path:
-                                if element['NAME'] == elem and element['ROOT'] == package and element['SYSTEM'] == sysname:
-                                    signal_path_constraints_tag.append(element['DATA'])
-                            for element in permissible_signal_path:
-                                if element['NAME'] == elem and element['ROOT'] == package and element['SYSTEM'] == sysname:
-                                    signal_path_constraints_tag.append(element['DATA'])
-                            for element in separate_signal_path:
-                                if element['NAME'] == elem and element['ROOT'] == package and element['SYSTEM'] == sysname:
-                                    signal_path_constraints_tag.append(element['DATA'])
-                            sw_impl_mappings_tag = etree.SubElement(system_mapping_tag, 'SW-IMPL-MAPPINGS')
-                            for element in final_sw_impl_mapping:
-                                if element['NAME'] == elem and element['ROOT'] == package and element['SYSTEM'] == sysname:
-                                    sw_impl_mappings_tag.append(element['DATA'])
-                            sw_mappings_tag = etree.SubElement(system_mapping_tag, 'SW-MAPPINGS')
-                            for element in final_swc_ecu_mappings:
-                                if element['NAME'] == elem and element['ROOT'] == package and element['SYSTEM'] == sysname:
-                                    sw_mappings_tag.append(element['DATA'])
+                        if mapping_name != "":
+                            for elem in data_mappings_name:
+                                if elem == mapping_name:
+                                    system_mapping_tag = etree.SubElement(mappings_tag, 'SYSTEM-MAPPING')
+                                    short_name_mappings = etree.SubElement(system_mapping_tag, 'SHORT-NAME').text = str(elem)
+                                    data_mappings_tag = etree.SubElement(system_mapping_tag, 'DATA-MAPPINGS')
+                                    for element in client_server_signal_group_mapping:
+                                        if element['NAME'] == elem and element['ROOT'] == package and element['SYSTEM'] == sysname:
+                                            data_mappings_tag.append(element['DATA'])
+                                    for element in client_server_signal_mapping:
+                                        if element['NAME'] == elem and element['ROOT'] == package and element['SYSTEM'] == sysname:
+                                            data_mappings_tag.append(element['DATA'])
+                                    for element in sender_receiver_composite_element:
+                                        if element['NAME'] == elem and element['ROOT'] == package and element['SYSTEM'] == sysname:
+                                            data_mappings_tag.append(element['DATA'])
+                                    for element in sender_receiver_signal_group_mapping:
+                                        if element['NAME'] == elem and element['ROOT'] == package and element['SYSTEM'] == sysname:
+                                            data_mappings_tag.append(element['DATA'])
+                                    for element in sender_receiver_signal_mapping:
+                                        if element['NAME'] == elem and element['ROOT'] == package and element['SYSTEM'] == sysname:
+                                            data_mappings_tag.append(element['DATA'])
+                                    for element in trigger_signal_mapping:
+                                        if element['NAME'] == elem and element['ROOT'] == package and element['SYSTEM'] == sysname:
+                                            data_mappings_tag.append(element['DATA'])
+                                    ecu_mappings_tag = etree.SubElement(system_mapping_tag, 'ECU-RESOURCE-MAPPINGS')
+                                    for element in swc_ecu_mapping:
+                                        if element['NAME'] == elem and element['ROOT'] == package and element['SYSTEM'] == sysname:
+                                            ecu_mappings_tag.append(element['DATA'])
+                                    mapping_constraints_tag = etree.SubElement(system_mapping_tag, 'MAPPING-CONSTRAINTS')
+                                    for element in component_clustering:
+                                        if element['NAME'] == elem and element['ROOT'] == package and element['SYSTEM'] == sysname:
+                                            mapping_constraints_tag.append(element['DATA'])
+                                    for element in component_separation:
+                                        if element['NAME'] == elem and element['ROOT'] == package and element['SYSTEM'] == sysname:
+                                            mapping_constraints_tag.append(element['DATA'])
+                                    for element in sw_ecu_mapping_constraint:
+                                        if element['NAME'] == elem and element['ROOT'] == package and element['SYSTEM'] == sysname:
+                                            mapping_constraints_tag.append(element['DATA'])
+                                    pnc_mapping_tag = etree.SubElement(system_mapping_tag, 'PNC-MAPPINGS')
+                                    for element in pnc_mapping:
+                                        if element['NAME'] == elem and element['ROOT'] == package and element['SYSTEM'] == sysname:
+                                            pnc_mapping_tag.append(element['DATA'])
+                                    resource_estimation_tag = etree.SubElement(system_mapping_tag, 'RESOURCE-ESTIMATIONS')
+                                    for element in ecu_resource_estimation:
+                                        if element['NAME'] == elem and element['ROOT'] == package and element['SYSTEM'] == sysname:
+                                            resource_estimation_tag.append(element['DATA'])
+                                    signal_path_constraints_tag = etree.SubElement(system_mapping_tag, 'SIGNAL-PATH-CONSTRAINTS')
+                                    for element in common_signal_path:
+                                        if element['NAME'] == elem and element['ROOT'] == package and element['SYSTEM'] == sysname:
+                                            signal_path_constraints_tag.append(element['DATA'])
+                                    for element in forbidden_signal_path:
+                                        if element['NAME'] == elem and element['ROOT'] == package and element['SYSTEM'] == sysname:
+                                            signal_path_constraints_tag.append(element['DATA'])
+                                    for element in permissible_signal_path:
+                                        if element['NAME'] == elem and element['ROOT'] == package and element['SYSTEM'] == sysname:
+                                            signal_path_constraints_tag.append(element['DATA'])
+                                    for element in separate_signal_path:
+                                        if element['NAME'] == elem and element['ROOT'] == package and element['SYSTEM'] == sysname:
+                                            signal_path_constraints_tag.append(element['DATA'])
+                                    sw_impl_mappings_tag = etree.SubElement(system_mapping_tag, 'SW-IMPL-MAPPINGS')
+                                    for element in final_sw_impl_mapping:
+                                        if element['NAME'] == elem and element['ROOT'] == package and element['SYSTEM'] == sysname:
+                                            sw_impl_mappings_tag.append(element['DATA'])
+                                    sw_mappings_tag = etree.SubElement(system_mapping_tag, 'SW-MAPPINGS')
+                                    for element in final_swc_ecu_mappings:
+                                        if element['NAME'] == elem and element['ROOT'] == package and element['SYSTEM'] == sysname:
+                                            sw_mappings_tag.append(element['DATA'])
                         rsc = etree.SubElement(system_tag, 'ROOT-SOFTWARE-COMPOSITIONS')
                         for elem_root in temp_root:
                             if sysname == elem_root['SYSTEM']:
@@ -1728,13 +1732,12 @@ def generate_system(recursive_arxml, recursive_dico, simple_arxml, simple_dico, 
                         temp.append(elem2)
                 temp = sorted(temp, key=lambda x: x['NAME'])
                 compo = composition_name
-                for elem in temp:
-                    if compo == elem['NAME']:
-                        composition_sw_tag = etree.SubElement(elements_tag, 'COMPOSITION-SW-COMPONENT-TYPE')
-                        short_name_compo = etree.SubElement(composition_sw_tag, 'SHORT-NAME').text = elem['NAME']
-                        components_tag = etree.SubElement(composition_sw_tag, 'COMPONENTS')
-                        for element in final_software_composition:
-                            components_tag.append(element['DATA'])
+                composition_sw_tag = etree.SubElement(elements_tag, 'COMPOSITION-SW-COMPONENT-TYPE')
+                short_name_compo = etree.SubElement(composition_sw_tag, 'SHORT-NAME').text = composition_name
+                components_tag = etree.SubElement(composition_sw_tag, 'COMPONENTS')
+                for element in temp:
+                    if compo == element['NAME']:
+                        components_tag.append(element['DATA'])
     pretty_xml = new_prettify(rootSystem)
     output = etree.ElementTree(etree.fromstring(pretty_xml))
     output.write(output_path + '/SystemGenerated.arxml', encoding='UTF-8', xml_declaration=True, method="xml")
@@ -1750,9 +1753,12 @@ def main():
     config_file = args.config
     system_name = ""
     composition_name = ""
+    mapping_name = ""
     modularity = False
     if args.system:
         system_name = args.system
+    if args.mapping:
+        mapping_name = args.mapping
     if args.compo:
         composition_name = args.compo
     if args.modularity:
@@ -1796,7 +1802,7 @@ def main():
     if modularity:
         generation = check_compatibility(recursive_path_arxml, recursive_path_dico, simple_path_arxml, simple_path_dico, xsd_path, logger)
     if generation:
-        generate_system(recursive_path_arxml, recursive_path_dico, simple_path_arxml, simple_path_dico, sys_path, xsd_path, system_name, composition_name, modularity, logger)
+        generate_system(recursive_path_arxml, recursive_path_dico, simple_path_arxml, simple_path_dico, sys_path, xsd_path, system_name, mapping_name, composition_name, modularity, logger)
 
 
 def check_xml_wellformed(file):
