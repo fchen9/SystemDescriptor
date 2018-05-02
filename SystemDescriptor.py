@@ -5,6 +5,7 @@ from lxml import etree
 from xml.sax import make_parser
 from xml.sax.handler import ContentHandler
 from xml.dom.minidom import parseString
+from coverage import Coverage
 
 # define the command line parameters
 def arg_parse(parser):
@@ -1965,5 +1966,11 @@ def validate_xsd(path_xsd, path_xml, logger):
         logger.warning('There is no xsd provided schema!')
 
 
-if __name__ == "__main__":
-    main()
+# if __name__ == "__main__":
+#     main()
+if __name__ == "__main__":                          # pragma: no cover
+    cov = Coverage()                                # pragma: no cover
+    cov.start()                                     # pragma: no cover
+    main()                                          # pragma: no cover
+    cov.stop()                                      # pragma: no cover
+    cov.html_report(directory='coverage-html')
