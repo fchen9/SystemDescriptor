@@ -6,7 +6,7 @@ from xml.sax import make_parser
 from xml.sax.handler import ContentHandler
 from xml.dom.minidom import parseString
 
-# define the command line parameters
+
 def arg_parse(parser):
     parser.add_argument('-config', '--config', help="configuration file location", required=True, default="")
     parser.add_argument('-system', '--system', help="system name", required=False, default="")
@@ -21,15 +21,16 @@ def new_prettify(elem):
     return '\n'.join([line for line in reparsed.toprettyxml(indent=' '*4).split('\n') if line.strip()])
 
 
-def remove_duplicates(L):
+def remove_duplicates(list_to_be_checked):
     found = set()
-    for item in L:
+    for item in list_to_be_checked:
         if item['DATA'].find("{http://autosar.org/schema/r4.0}SHORT-NAME").text not in found:
             yield item
             found.add(item['DATA'].find("{http://autosar.org/schema/r4.0}SHORT-NAME").text)
 
+
 # check compatibility between interfaces or types
-def check_compatibility(recursive_arxml, recursive_dico, simple_arxml, simple_dico, xsd_path, logger):
+def check_compatibility(recursive_dico, simple_dico, logger):
     # parse all input files to get all interfaces and types
     sr_interfaces = []
     cs_interfaces = []
@@ -230,12 +231,18 @@ def generate_system(recursive_arxml, recursive_dico, simple_arxml, simple_dico, 
     fibex_elements = []
     compu_methods = []
     arxml_compu_methods = []
+    xmlschema_xsd_arxml = etree.parse(xsd_path)
+    xmlschema_arxml = etree.XMLSchema(xmlschema_xsd_arxml)
     for each_path in recursive_dico:
         for directory, directories, files in os.walk(each_path):
             for file in files:
                 if file.endswith('.dico'):
                     fullname = os.path.join(directory, file)
                     tree = etree.parse(fullname)
+                    if xmlschema_arxml.validate(tree) is not True:
+                        logger.warning('The file: ' + fullname + ' is NOT valid with the provided xsd schema')
+                    else:
+                        logger.info('The file: ' + fullname + ' is valid with the provided xsd schema')
                     root = tree.getroot()
                     pports = root.findall(".//{http://autosar.org/schema/r4.0}P-PORT-PROTOTYPE")
                     prports = root.findall(".//{http://autosar.org/schema/r4.0}PR-PORT-PROTOTYPE")
@@ -479,6 +486,11 @@ def generate_system(recursive_arxml, recursive_dico, simple_arxml, simple_dico, 
         for file in os.listdir(each_path):
             if file.endswith('.dico'):
                 fullname = os.path.join(each_path, file)
+                tree = etree.parse(fullname)
+                if xmlschema_arxml.validate(tree) is not True:
+                    logger.warning('The file: ' + fullname + ' is NOT valid with the provided xsd schema')
+                else:
+                    logger.info('The file: ' + fullname + ' is valid with the provided xsd schema')
                 tree = etree.parse(fullname)
                 root = tree.getroot()
                 pports = root.findall(".//{http://autosar.org/schema/r4.0}P-PORT-PROTOTYPE")
@@ -729,8 +741,11 @@ def generate_system(recursive_arxml, recursive_dico, simple_arxml, simple_dico, 
                     except Exception as e:
                         logger.error('The file: ' + fullname + ' is not well-formed: ' + str(e))
                         return
-                    validate_xsd(xsd_path, fullname, logger)
                     tree = etree.parse(fullname)
+                    if xmlschema_arxml.validate(tree) is not True:
+                        logger.warning('The file: ' + fullname + ' is NOT valid with the provided xsd schema')
+                    else:
+                        logger.info('The file: ' + fullname + ' is valid with the provided xsd schema')
                     root = tree.getroot()
                     pports = root.findall(".//{http://autosar.org/schema/r4.0}P-PORT-PROTOTYPE")
                     prports = root.findall(".//{http://autosar.org/schema/r4.0}PR-PORT-PROTOTYPE")
@@ -739,15 +754,35 @@ def generate_system(recursive_arxml, recursive_dico, simple_arxml, simple_dico, 
                     for elem in prports:
                         provided_ports.append(elem.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text)
                     sender_receiver_interface = root.findall(".//{http://autosar.org/schema/r4.0}SENDER-RECEIVER-INTERFACE")
-                    arxml_interfaces = arxml_interfaces + sender_receiver_interface
+                    for elem in sender_receiver_interface:
+                        objElem = {}
+                        objElem['PACKAGE'] = elem.getparent().getparent().getchildren()[0].text
+                        objElem['DATA'] = elem
+                        arxml_interfaces.append(objElem)
                     client_server_interface = root.findall(".//{http://autosar.org/schema/r4.0}CLIENT-SERVER-INTERFACE")
-                    arxml_interfaces = arxml_interfaces + client_server_interface
+                    for elem in client_server_interface:
+                        objElem = {}
+                        objElem['PACKAGE'] = elem.getparent().getparent().getchildren()[0].text
+                        objElem['DATA'] = elem
+                        arxml_interfaces.append(objElem)
                     nv_data_interface = root.findall(".//{http://autosar.org/schema/r4.0}NV-DATA-INTERFACE")
-                    arxml_interfaces = arxml_interfaces + nv_data_interface
+                    for elem in nv_data_interface:
+                        objElem = {}
+                        objElem['PACKAGE'] = elem.getparent().getparent().getchildren()[0].text
+                        objElem['DATA'] = elem
+                        arxml_interfaces.append(objElem)
                     parameter_interface = root.findall(".//{http://autosar.org/schema/r4.0}PARAMETER-INTERFACE")
-                    arxml_interfaces = arxml_interfaces + parameter_interface
+                    for elem in parameter_interface:
+                        objElem = {}
+                        objElem['PACKAGE'] = elem.getparent().getparent().getchildren()[0].text
+                        objElem['DATA'] = elem
+                        arxml_interfaces.append(objElem)
                     mode_switch_interface = root.findall(".//{http://autosar.org/schema/r4.0}MODE-SWITCH-INTERFACE")
-                    arxml_interfaces = arxml_interfaces + mode_switch_interface
+                    for elem in mode_switch_interface:
+                        objElem = {}
+                        objElem['PACKAGE'] = elem.getparent().getparent().getchildren()[0].text
+                        objElem['DATA'] = elem
+                        arxml_interfaces.append(objElem)
                     data_types = root.findall(".//{http://autosar.org/schema/r4.0}IMPLEMENTATION-DATA-TYPE")
                     arxml_types = arxml_types + data_types
                     computational_methods = root.findall(".//{http://autosar.org/schema/r4.0}COMPU-METHOD")
@@ -773,8 +808,7 @@ def generate_system(recursive_arxml, recursive_dico, simple_arxml, simple_dico, 
                     temp = root.findall(".//{http://autosar.org/schema/r4.0}CLIENT-SERVER-TO-SIGNAL-MAPPING")
                     for elem in temp:
                         objElem = {}
-                        objElem['ROOT'] = elem.getparent().getparent().getparent().getparent().getparent().getparent().getchildren()[
-                            0].text
+                        objElem['ROOT'] = elem.getparent().getparent().getparent().getparent().getparent().getparent().getchildren()[0].text
                         objElem['SYSTEM'] = elem.getparent().getparent().getparent().getparent().getchildren()[0].text
                         objElem['NAME'] = elem.getparent().getparent().getchildren()[0].text
                         objElem['DATA'] = elem
@@ -782,8 +816,7 @@ def generate_system(recursive_arxml, recursive_dico, simple_arxml, simple_dico, 
                     temp = root.findall(".//{http://autosar.org/schema/r4.0}SENDER-RECEIVER-COMPOSITE-ELEMENT-TO-SIGNAL-MAPPING")
                     for elem in temp:
                         objElem = {}
-                        objElem['ROOT'] = elem.getparent().getparent().getparent().getparent().getparent().getparent().getchildren()[
-                            0].text
+                        objElem['ROOT'] = elem.getparent().getparent().getparent().getparent().getparent().getparent().getchildren()[0].text
                         objElem['SYSTEM'] = elem.getparent().getparent().getparent().getparent().getchildren()[0].text
                         objElem['NAME'] = elem.getparent().getparent().getchildren()[0].text
                         objElem['DATA'] = elem
@@ -791,8 +824,7 @@ def generate_system(recursive_arxml, recursive_dico, simple_arxml, simple_dico, 
                     temp = root.findall(".//{http://autosar.org/schema/r4.0}SENDER-RECEIVER-TO-SIGNAL-GROUP-MAPPING")
                     for elem in temp:
                         objElem = {}
-                        objElem['ROOT'] = elem.getparent().getparent().getparent().getparent().getparent().getparent().getchildren()[
-                            0].text
+                        objElem['ROOT'] = elem.getparent().getparent().getparent().getparent().getparent().getparent().getchildren()[0].text
                         objElem['SYSTEM'] = elem.getparent().getparent().getparent().getparent().getchildren()[0].text
                         objElem['NAME'] = elem.getparent().getparent().getchildren()[0].text
                         objElem['DATA'] = elem
@@ -800,8 +832,7 @@ def generate_system(recursive_arxml, recursive_dico, simple_arxml, simple_dico, 
                     temp = root.findall(".//{http://autosar.org/schema/r4.0}SENDER-RECEIVER-TO-SIGNAL-MAPPING")
                     for elem in temp:
                         objElem = {}
-                        objElem['ROOT'] = elem.getparent().getparent().getparent().getparent().getparent().getparent().getchildren()[
-                            0].text
+                        objElem['ROOT'] = elem.getparent().getparent().getparent().getparent().getparent().getparent().getchildren()[0].text
                         objElem['SYSTEM'] = elem.getparent().getparent().getparent().getparent().getchildren()[0].text
                         objElem['NAME'] = elem.getparent().getparent().getchildren()[0].text
                         objElem['DATA'] = elem
@@ -809,8 +840,7 @@ def generate_system(recursive_arxml, recursive_dico, simple_arxml, simple_dico, 
                     temp = root.findall(".//{http://autosar.org/schema/r4.0}TRIGGER-TO-SIGNAL-MAPPING")
                     for elem in temp:
                         objElem = {}
-                        objElem['ROOT'] = elem.getparent().getparent().getparent().getparent().getparent().getparent().getchildren()[
-                            0].text
+                        objElem['ROOT'] = elem.getparent().getparent().getparent().getparent().getparent().getparent().getchildren()[0].text
                         objElem['SYSTEM'] = elem.getparent().getparent().getparent().getparent().getchildren()[0].text
                         objElem['NAME'] = elem.getparent().getparent().getchildren()[0].text
                         objElem['DATA'] = elem
@@ -819,8 +849,7 @@ def generate_system(recursive_arxml, recursive_dico, simple_arxml, simple_dico, 
                     temp = root.findall(".//{http://autosar.org/schema/r4.0}ECU-MAPPING")
                     for elem in temp:
                         objElem = {}
-                        objElem['ROOT'] = elem.getparent().getparent().getparent().getparent().getparent().getparent().getchildren()[
-                            0].text
+                        objElem['ROOT'] = elem.getparent().getparent().getparent().getparent().getparent().getparent().getchildren()[0].text
                         objElem['SYSTEM'] = elem.getparent().getparent().getparent().getparent().getchildren()[0].text
                         objElem['NAME'] = elem.getparent().getparent().getchildren()[0].text
                         objElem['DATA'] = elem
@@ -829,8 +858,7 @@ def generate_system(recursive_arxml, recursive_dico, simple_arxml, simple_dico, 
                     temp = root.findall(".//{http://autosar.org/schema/r4.0}COMPONENT-CLUSTERING")
                     for elem in temp:
                         objElem = {}
-                        objElem['ROOT'] = elem.getparent().getparent().getparent().getparent().getparent().getparent().getchildren()[
-                            0].text
+                        objElem['ROOT'] = elem.getparent().getparent().getparent().getparent().getparent().getparent().getchildren()[0].text
                         objElem['SYSTEM'] = elem.getparent().getparent().getparent().getparent().getchildren()[0].text
                         objElem['NAME'] = elem.getparent().getparent().getchildren()[0].text
                         objElem['DATA'] = elem
@@ -838,8 +866,7 @@ def generate_system(recursive_arxml, recursive_dico, simple_arxml, simple_dico, 
                     temp = root.findall(".//{http://autosar.org/schema/r4.0}COMPONENT-SEPARATION")
                     for elem in temp:
                         objElem = {}
-                        objElem['ROOT'] = elem.getparent().getparent().getparent().getparent().getparent().getparent().getchildren()[
-                            0].text
+                        objElem['ROOT'] = elem.getparent().getparent().getparent().getparent().getparent().getparent().getchildren()[0].text
                         objElem['SYSTEM'] = elem.getparent().getparent().getparent().getparent().getchildren()[0].text
                         objElem['NAME'] = elem.getparent().getparent().getchildren()[0].text
                         objElem['DATA'] = elem
@@ -847,8 +874,7 @@ def generate_system(recursive_arxml, recursive_dico, simple_arxml, simple_dico, 
                     temp = root.findall(".//{http://autosar.org/schema/r4.0}SWC-TO-ECU-MAPPING-CONSTRAINT")
                     for elem in temp:
                         objElem = {}
-                        objElem['ROOT'] = elem.getparent().getparent().getparent().getparent().getparent().getparent().getchildren()[
-                            0].text
+                        objElem['ROOT'] = elem.getparent().getparent().getparent().getparent().getparent().getparent().getchildren()[0].text
                         objElem['SYSTEM'] = elem.getparent().getparent().getparent().getparent().getchildren()[0].text
                         objElem['NAME'] = elem.getparent().getparent().getchildren()[0].text
                         objElem['DATA'] = elem
@@ -857,8 +883,7 @@ def generate_system(recursive_arxml, recursive_dico, simple_arxml, simple_dico, 
                     temp = root.findall(".//{http://autosar.org/schema/r4.0}PNC-MAPPING")
                     for elem in temp:
                         objElem = {}
-                        objElem['ROOT'] = elem.getparent().getparent().getparent().getparent().getparent().getparent().getchildren()[
-                            0].text
+                        objElem['ROOT'] = elem.getparent().getparent().getparent().getparent().getparent().getparent().getchildren()[0].text
                         objElem['SYSTEM'] = elem.getparent().getparent().getparent().getparent().getchildren()[0].text
                         objElem['NAME'] = elem.getparent().getparent().getchildren()[0].text
                         objElem['DATA'] = elem
@@ -867,8 +892,7 @@ def generate_system(recursive_arxml, recursive_dico, simple_arxml, simple_dico, 
                     temp = root.findall(".//{http://autosar.org/schema/r4.0}ECU-RESOURCE-ESTIMATION")
                     for elem in temp:
                         objElem = {}
-                        objElem['ROOT'] = elem.getparent().getparent().getparent().getparent().getparent().getparent().getchildren()[
-                            0].text
+                        objElem['ROOT'] = elem.getparent().getparent().getparent().getparent().getparent().getparent().getchildren()[0].text
                         objElem['SYSTEM'] = elem.getparent().getparent().getparent().getparent().getchildren()[0].text
                         objElem['NAME'] = elem.getparent().getparent().getchildren()[0].text
                         objElem['DATA'] = elem
@@ -877,8 +901,7 @@ def generate_system(recursive_arxml, recursive_dico, simple_arxml, simple_dico, 
                     temp = root.findall(".//{http://autosar.org/schema/r4.0}COMMON-SIGNAL-PATH")
                     for elem in temp:
                         objElem = {}
-                        objElem['ROOT'] = elem.getparent().getparent().getparent().getparent().getparent().getparent().getchildren()[
-                            0].text
+                        objElem['ROOT'] = elem.getparent().getparent().getparent().getparent().getparent().getparent().getchildren()[0].text
                         objElem['SYSTEM'] = elem.getparent().getparent().getparent().getparent().getchildren()[0].text
                         objElem['NAME'] = elem.getparent().getparent().getchildren()[0].text
                         objElem['DATA'] = elem
@@ -886,8 +909,7 @@ def generate_system(recursive_arxml, recursive_dico, simple_arxml, simple_dico, 
                     temp = root.findall(".//{http://autosar.org/schema/r4.0}FORBIDDEN-SIGNAL-PATH")
                     for elem in temp:
                         objElem = {}
-                        objElem['ROOT'] = elem.getparent().getparent().getparent().getparent().getparent().getparent().getchildren()[
-                            0].text
+                        objElem['ROOT'] = elem.getparent().getparent().getparent().getparent().getparent().getparent().getchildren()[0].text
                         objElem['SYSTEM'] = elem.getparent().getparent().getparent().getparent().getchildren()[0].text
                         objElem['NAME'] = elem.getparent().getparent().getchildren()[0].text
                         objElem['DATA'] = elem
@@ -895,8 +917,7 @@ def generate_system(recursive_arxml, recursive_dico, simple_arxml, simple_dico, 
                     temp = root.findall(".//{http://autosar.org/schema/r4.0}PERMISSIBLE-SIGNAL-PATH")
                     for elem in temp:
                         objElem = {}
-                        objElem['ROOT'] = elem.getparent().getparent().getparent().getparent().getparent().getparent().getchildren()[
-                            0].text
+                        objElem['ROOT'] = elem.getparent().getparent().getparent().getparent().getparent().getparent().getchildren()[0].text
                         objElem['SYSTEM'] = elem.getparent().getparent().getparent().getparent().getchildren()[0].text
                         objElem['NAME'] = elem.getparent().getparent().getchildren()[0].text
                         objElem['DATA'] = elem
@@ -904,8 +925,7 @@ def generate_system(recursive_arxml, recursive_dico, simple_arxml, simple_dico, 
                     temp = root.findall(".//{http://autosar.org/schema/r4.0}SEPARATE-SIGNAL-PATH")
                     for elem in temp:
                         objElem = {}
-                        objElem['ROOT'] = elem.getparent().getparent().getparent().getparent().getparent().getparent().getchildren()[
-                            0].text
+                        objElem['ROOT'] = elem.getparent().getparent().getparent().getparent().getparent().getparent().getchildren()[0].text
                         objElem['SYSTEM'] = elem.getparent().getparent().getparent().getparent().getchildren()[0].text
                         objElem['NAME'] = elem.getparent().getparent().getchildren()[0].text
                         objElem['DATA'] = elem
@@ -914,8 +934,7 @@ def generate_system(recursive_arxml, recursive_dico, simple_arxml, simple_dico, 
                     temp = root.findall(".//{http://autosar.org/schema/r4.0}SWC-TO-IMPL-MAPPING")
                     for elem in temp:
                         objElem = {}
-                        objElem['ROOT'] = elem.getparent().getparent().getparent().getparent().getparent().getparent().getchildren()[
-                            0].text
+                        objElem['ROOT'] = elem.getparent().getparent().getparent().getparent().getparent().getparent().getchildren()[0].text
                         objElem['SYSTEM'] = elem.getparent().getparent().getparent().getparent().getchildren()[0].text
                         objElem['NAME'] = elem.getparent().getparent().getchildren()[0].text
                         objElem['DATA'] = elem
@@ -924,8 +943,7 @@ def generate_system(recursive_arxml, recursive_dico, simple_arxml, simple_dico, 
                     temp = root.findall(".//{http://autosar.org/schema/r4.0}SWC-TO-ECU-MAPPING")
                     for elem in temp:
                         objElem = {}
-                        objElem['ROOT'] = elem.getparent().getparent().getparent().getparent().getparent().getparent().getchildren()[
-                            0].text
+                        objElem['ROOT'] = elem.getparent().getparent().getparent().getparent().getparent().getparent().getchildren()[0].text
                         objElem['SYSTEM'] = elem.getparent().getparent().getparent().getparent().getchildren()[0].text
                         objElem['NAME'] = elem.getparent().getparent().getchildren()[0].text
                         objElem['DATA'] = elem
@@ -971,7 +989,11 @@ def generate_system(recursive_arxml, recursive_dico, simple_arxml, simple_dico, 
                 except Exception as e:
                     logger.error('The file: ' + fullname + ' is not well-formed: ' + str(e))
                     return
-                validate_xsd(xsd_path, fullname, logger)
+                tree = etree.parse(fullname)
+                if xmlschema_arxml.validate(tree) is not True:
+                    logger.warning('The file: ' + fullname + ' is NOT valid with the provided xsd schema')
+                else:
+                    logger.info('The file: ' + fullname + ' is valid with the provided xsd schema')
                 tree = etree.parse(fullname)
                 root = tree.getroot()
                 pports = root.findall(".//{http://autosar.org/schema/r4.0}P-PORT-PROTOTYPE")
@@ -981,15 +1003,35 @@ def generate_system(recursive_arxml, recursive_dico, simple_arxml, simple_dico, 
                 for elem in prports:
                     provided_ports.append(elem.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text)
                 sender_receiver_interface = root.findall(".//{http://autosar.org/schema/r4.0}SENDER-RECEIVER-INTERFACE")
-                arxml_interfaces = arxml_interfaces + sender_receiver_interface
+                for elem in sender_receiver_interface:
+                    objElem = {}
+                    objElem['PACKAGE'] = elem.getparent().getparent().getchildren()[0].text
+                    objElem['DATA'] = elem
+                    arxml_interfaces.append(objElem)
                 client_server_interface = root.findall(".//{http://autosar.org/schema/r4.0}CLIENT-SERVER-INTERFACE")
-                arxml_interfaces = arxml_interfaces + client_server_interface
+                for elem in client_server_interface:
+                    objElem = {}
+                    objElem['PACKAGE'] = elem.getparent().getparent().getchildren()[0].text
+                    objElem['DATA'] = elem
+                    arxml_interfaces.append(objElem)
                 nv_data_interface = root.findall(".//{http://autosar.org/schema/r4.0}NV-DATA-INTERFACE")
-                arxml_interfaces = arxml_interfaces + nv_data_interface
+                for elem in nv_data_interface:
+                    objElem = {}
+                    objElem['PACKAGE'] = elem.getparent().getparent().getchildren()[0].text
+                    objElem['DATA'] = elem
+                    arxml_interfaces.append(objElem)
                 parameter_interface = root.findall(".//{http://autosar.org/schema/r4.0}PARAMETER-INTERFACE")
-                arxml_interfaces = arxml_interfaces + parameter_interface
+                for elem in parameter_interface:
+                    objElem = {}
+                    objElem['PACKAGE'] = elem.getparent().getparent().getchildren()[0].text
+                    objElem['DATA'] = elem
+                    arxml_interfaces.append(objElem)
                 mode_switch_interface = root.findall(".//{http://autosar.org/schema/r4.0}MODE-SWITCH-INTERFACE")
-                arxml_interfaces = arxml_interfaces + mode_switch_interface
+                for elem in mode_switch_interface:
+                    objElem = {}
+                    objElem['PACKAGE'] = elem.getparent().getparent().getchildren()[0].text
+                    objElem['DATA'] = elem
+                    arxml_interfaces.append(objElem)
                 data_types = root.findall(".//{http://autosar.org/schema/r4.0}IMPLEMENTATION-DATA-TYPE")
                 arxml_types = arxml_types + data_types
                 computational_methods = root.findall(".//{http://autosar.org/schema/r4.0}COMPU-METHOD")
@@ -1233,11 +1275,11 @@ def generate_system(recursive_arxml, recursive_dico, simple_arxml, simple_dico, 
         for interface in arxml_interfaces:
             found = False
             for port in provided_ports:
-                if "PP_"+interface.find('.//{http://autosar.org/schema/r4.0}SHORT-NAME').text == port or "PRP_"+interface.find('.//{http://autosar.org/schema/r4.0}SHORT-NAME').text == port:
+                if "PP_"+interface['DATA'].find('.//{http://autosar.org/schema/r4.0}SHORT-NAME').text == port or "PRP_"+interface['DATA'].find('.//{http://autosar.org/schema/r4.0}SHORT-NAME').text == port:
                     found = True
                     break
             if not found:
-                logger.info("The interface " + interface.find('.//{http://autosar.org/schema/r4.0}SHORT-NAME').text + " doesn't have an PPort or PRPort")
+                logger.info("The interface " + interface['DATA'].find('.//{http://autosar.org/schema/r4.0}SHORT-NAME').text + " doesn't have an PPort or PRPort")
         for index1 in range(len(types)):
             found = False
             for index2 in range(len(types)):
@@ -1276,35 +1318,29 @@ def generate_system(recursive_arxml, recursive_dico, simple_arxml, simple_dico, 
             if found is False:
                 m_data_constr.append(m_data_constr[index1])
         final_data_constr = list(remove_duplicates(m_data_constr))
-    else:
-        for elem_interface in interfaces:
-            final_interfaces.append(elem_interface)
-        for elem_type in types:
-            final_types.append(elem_type)
+        compu_methods = list(remove_duplicates(compu_methods))
+        for elem_dico in final_interfaces[:]:
+            for elem_arxml in arxml_interfaces:
+                if elem_dico['DATA'].find("{http://autosar.org/schema/r4.0}SHORT-NAME").text == elem_arxml['DATA'].find("{http://autosar.org/schema/r4.0}SHORT-NAME").text:
+                    if elem_dico['PACKAGE'] == elem_arxml['PACKAGE']:
+                        final_interfaces.remove(elem_dico)
+                        print("removed: " + elem_dico['DATA'].find("{http://autosar.org/schema/r4.0}SHORT-NAME").text)
+        final_interfaces = sorted(final_interfaces, key=lambda x: x['PACKAGE'])
+        for elem_dico in final_types[:]:
+            for elem_arxml in arxml_types:
+                if elem_dico['DATA'].find("{http://autosar.org/schema/r4.0}SHORT-NAME").text == elem_arxml.find("{http://autosar.org/schema/r4.0}SHORT-NAME").text:
+                    final_types.remove(elem_dico)
         final_types = sorted(final_types, key=lambda x: x['PACKAGE'])
-        for elem_data in data_constr:
-            final_data_constr.append(elem_data)
-    compu_methods = list(remove_duplicates(compu_methods))
-    for elem_dico in final_interfaces[:]:
-        for elem_arxml in arxml_interfaces:
-            if elem_dico['DATA'].find("{http://autosar.org/schema/r4.0}SHORT-NAME").text == elem_arxml.find("{http://autosar.org/schema/r4.0}SHORT-NAME").text:
-                final_interfaces.remove(elem_dico)
-    final_interfaces = sorted(final_interfaces, key=lambda x: x['PACKAGE'])
-    for elem_dico in final_types[:]:
-        for elem_arxml in arxml_types:
-            if elem_dico['DATA'].find("{http://autosar.org/schema/r4.0}SHORT-NAME").text == elem_arxml.find("{http://autosar.org/schema/r4.0}SHORT-NAME").text:
-                final_types.remove(elem_dico)
-    final_types = sorted(final_types, key=lambda x: x['PACKAGE'])
-    for elem_dico in compu_methods[:]:
-        for elem_arxml in arxml_compu_methods:
-            if elem_dico['DATA'].find("{http://autosar.org/schema/r4.0}SHORT-NAME").text == elem_arxml.find("{http://autosar.org/schema/r4.0}SHORT-NAME").text:
-                compu_methods.remove(elem_dico)
-    compu_methods = sorted(compu_methods, key=lambda x: x['PACKAGE'])
-    for elem_dico in final_data_constr[:]:
-        for elem_arxml in arxml_data_constr:
-            if elem_dico['DATA'].find("{http://autosar.org/schema/r4.0}SHORT-NAME").text == elem_arxml.find("{http://autosar.org/schema/r4.0}SHORT-NAME").text:
-                final_data_constr.remove(elem_dico)
-    final_data_constr = sorted(final_data_constr, key=lambda x: x['PACKAGE'])
+        for elem_dico in compu_methods[:]:
+            for elem_arxml in arxml_compu_methods:
+                if elem_dico['DATA'].find("{http://autosar.org/schema/r4.0}SHORT-NAME").text == elem_arxml.find("{http://autosar.org/schema/r4.0}SHORT-NAME").text:
+                    compu_methods.remove(elem_dico)
+        compu_methods = sorted(compu_methods, key=lambda x: x['PACKAGE'])
+        for elem_dico in final_data_constr[:]:
+            for elem_arxml in arxml_data_constr:
+                if elem_dico['DATA'].find("{http://autosar.org/schema/r4.0}SHORT-NAME").text == elem_arxml.find("{http://autosar.org/schema/r4.0}SHORT-NAME").text:
+                    final_data_constr.remove(elem_dico)
+        final_data_constr = sorted(final_data_constr, key=lambda x: x['PACKAGE'])
 
     # TRS.SYSDESC.GEN.003
     software_composition = sorted(software_composition, key=lambda x: x['NAME'])
@@ -1459,8 +1495,8 @@ def generate_system(recursive_arxml, recursive_dico, simple_arxml, simple_dico, 
         else:
             cont = True
             ecu_instance = elem['DATA'].find('.//{http://autosar.org/schema/r4.0}ECU-INSTANCE-REF').text
-            for i in range(len(temp)):
-                if temp[i]['DATA'].find('.//{http://autosar.org/schema/r4.0}ECU-INSTANCE-REF').text != ecu_instance:
+            for index in range(len(temp)):
+                if temp[index]['DATA'].find('.//{http://autosar.org/schema/r4.0}ECU-INSTANCE-REF').text != ecu_instance:
                     cont = False
             if cont:
                 objElem = {}
@@ -1742,7 +1778,10 @@ def generate_system(recursive_arxml, recursive_dico, simple_arxml, simple_dico, 
     output = etree.ElementTree(etree.fromstring(pretty_xml))
     output.write(output_path + '/SystemGenerated.arxml', encoding='UTF-8', xml_declaration=True, method="xml")
     logger.info('=================Output file information=================')
-    validate_xsd(xsd_path, output_path + '/SystemGenerated.arxml', logger)
+    if xmlschema_arxml.validate(etree.parse(output_path + '/SystemGenerated.arxml')) is not True:
+        logger.warning('The file: ' + 'SystemGenerated.arxml' + ' is NOT valid with the provided xsd schema')
+    else:
+        logger.info('The file: ' + 'SystemGenerated.arxml' + ' is valid with the provided xsd schema')
 
 
 def main():
@@ -1800,7 +1839,7 @@ def main():
     # function calls: create systemDescriptor and create stubDescriptor
     generation = True
     if modularity:
-        generation = check_compatibility(recursive_path_arxml, recursive_path_dico, simple_path_arxml, simple_path_dico, xsd_path, logger)
+        generation = check_compatibility(recursive_path_dico, simple_path_dico, logger)
     if generation:
         generate_system(recursive_path_arxml, recursive_path_dico, simple_path_arxml, simple_path_dico, sys_path, xsd_path, system_name, mapping_name, composition_name, modularity, logger)
 
@@ -1809,21 +1848,6 @@ def check_xml_wellformed(file):
     parser = make_parser()
     parser.setContentHandler(ContentHandler())
     parser.parse(file)
-
-
-def validate_xsd(path_xsd, path_xml, logger):
-    # load xsd file
-    if path_xsd.endswith('.xsd'):
-        xmlschema_xsd = etree.parse(path_xsd)
-        xmlschema = etree.XMLSchema(xmlschema_xsd)
-        # validate xml file
-        xmldoc = etree.parse(path_xml)
-        if xmlschema.validate(xmldoc) is not True:
-            logger.warning('The file: ' + path_xml + ' is NOT valid with the AUTOSAR schema')
-        else:
-            logger.info('The file: ' + path_xml + ' is valid with the AUTOSAR schema')
-    else:
-        logger.warning('There is no xsd provided schema!')
 
 
 if __name__ == "__main__":
