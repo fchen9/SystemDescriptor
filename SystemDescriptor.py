@@ -1324,7 +1324,6 @@ def generate_system(recursive_arxml, recursive_dico, simple_arxml, simple_dico, 
                 if elem_dico['DATA'].find("{http://autosar.org/schema/r4.0}SHORT-NAME").text == elem_arxml['DATA'].find("{http://autosar.org/schema/r4.0}SHORT-NAME").text:
                     if elem_dico['PACKAGE'] == elem_arxml['PACKAGE']:
                         final_interfaces.remove(elem_dico)
-                        print("removed: " + elem_dico['DATA'].find("{http://autosar.org/schema/r4.0}SHORT-NAME").text)
         final_interfaces = sorted(final_interfaces, key=lambda x: x['PACKAGE'])
         for elem_dico in final_types[:]:
             for elem_arxml in arxml_types:
@@ -1836,7 +1835,7 @@ def main():
     logger.addHandler(hdlr)
     logger.setLevel(logging.INFO)
     open(report_path + '/result.log', 'w').close()
-    # function calls: create systemDescriptor and create stubDescriptor
+    # function calls: create systemDescriptor
     generation = True
     if modularity:
         generation = check_compatibility(recursive_path_dico, simple_path_dico, logger)
