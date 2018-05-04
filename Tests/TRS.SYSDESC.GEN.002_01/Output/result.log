@@ -1,28 +1,28 @@
-2018-05-04 11:14:28,028 INFO =================Parsing information=================
-2018-05-04 11:14:28,109 INFO  The file C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.002_01\Input\ASWC_A26_interfaces1.dico is well-formed
-2018-05-04 11:14:28,111 INFO  The file C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.002_01\Input\ASWC_A26_interfaces2.dico is well-formed
-2018-05-04 11:14:28,827 INFO The file: C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.002_01\Input\ASWC_A26_interfaces1.dico is valid with the provided xsd schema
-2018-05-04 11:14:28,828 INFO The file: C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.002_01\Input\ASWC_A26_interfaces2.dico is valid with the provided xsd schema
-2018-05-04 11:14:28,853 INFO The file: C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.002_01\Input\ASWC_A26.aswc.arxml is well-formed
-2018-05-04 11:14:28,868 INFO The file: C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.002_01\Input\ASWC_A26.aswc.arxml is valid with the provided xsd schema
-2018-05-04 11:14:28,886 INFO The file: C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.002_01\Input\ASWC_A26.diag.arxml is well-formed
-2018-05-04 11:14:28,892 WARNING The file: C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.002_01\Input\ASWC_A26.diag.arxml is NOT valid with the provided xsd schema
-2018-05-04 11:14:28,898 INFO The file: C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.002_01\Input\ASWC_A26.epc.arxml is well-formed
-2018-05-04 11:14:28,899 INFO The file: C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.002_01\Input\ASWC_A26.epc.arxml is valid with the provided xsd schema
-2018-05-04 11:14:28,901 INFO The file: C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.002_01\Input\Messagerie_4.0.arxml is well-formed
-2018-05-04 11:14:28,902 WARNING The file: C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.002_01\Input\Messagerie_4.0.arxml is NOT valid with the provided xsd schema
-2018-05-04 11:14:28,908 INFO The file: C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.002_01\Input\SoftwareComponents_8CAN_7LIN_ETH.arxml is well-formed
-2018-05-04 11:14:28,913 INFO The file: C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.002_01\Input\SoftwareComponents_8CAN_7LIN_ETH.arxml is valid with the provided xsd schema
-2018-05-04 11:14:28,916 INFO =================<SENDER-RECEIVER-TO-SIGNAL-MAPPING> without added signal=================
-2018-05-04 11:14:28,916 INFO =================Interfaces without PPorts/PRPorts=================
-2018-05-04 11:14:28,917 INFO The interface SR_ApportCarbDetecteTest doesn't have an PPort or PRPort
-2018-05-04 11:14:28,918 INFO The interface SR_ApportCarbDetecte doesn't have an PPort or PRPort
-2018-05-04 11:14:28,919 INFO The interface SR_TrebuieSaApara doesn't have an PPort or PRPort
-2018-05-04 11:14:28,927 INFO The interface If_Counter doesn't have an PPort or PRPort
-2018-05-04 11:14:28,928 INFO The interface If_Internal doesn't have an PPort or PRPort
-2018-05-04 11:14:28,929 INFO The interface ComM_UserRequest doesn't have an PPort or PRPort
-2018-05-04 11:14:28,930 INFO The interface DETService doesn't have an PPort or PRPort
-2018-05-04 11:14:28,931 INFO The interface If_CounterModify doesn't have an PPort or PRPort
-2018-05-04 11:14:28,932 INFO The interface If_DiscreteValueOutput doesn't have an PPort or PRPort
-2018-05-04 11:14:28,938 INFO =================Output file information=================
-2018-05-04 11:14:28,938 INFO The file: SystemGenerated.arxml is valid with the provided xsd schema
+2018-05-04 13:28:37,761 INFO =================Parsing information=================
+2018-05-04 13:28:37,818 INFO  The file C:\Users\rconstantin\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.002_01\Input\ASWC_A26_interfaces1.dico is well-formed
+2018-05-04 13:28:37,821 INFO  The file C:\Users\rconstantin\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.002_01\Input\ASWC_A26_interfaces2.dico is well-formed
+2018-05-04 13:28:38,378 INFO The file: C:\Users\rconstantin\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.002_01\Input\ASWC_A26_interfaces1.dico is valid with the provided xsd schema
+2018-05-04 13:28:38,379 INFO The file: C:\Users\rconstantin\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.002_01\Input\ASWC_A26_interfaces2.dico is valid with the provided xsd schema
+2018-05-04 13:28:38,400 INFO The file: C:\Users\rconstantin\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.002_01\Input\ASWC_A26.aswc.arxml is well-formed
+2018-05-04 13:28:38,412 INFO The file: C:\Users\rconstantin\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.002_01\Input\ASWC_A26.aswc.arxml is valid with the provided xsd schema
+2018-05-04 13:28:38,425 INFO The file: C:\Users\rconstantin\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.002_01\Input\ASWC_A26.diag.arxml is well-formed
+2018-05-04 13:28:38,429 WARNING The file: C:\Users\rconstantin\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.002_01\Input\ASWC_A26.diag.arxml is NOT valid with the provided xsd schema
+2018-05-04 13:28:38,440 INFO The file: C:\Users\rconstantin\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.002_01\Input\ASWC_A26.epc.arxml is well-formed
+2018-05-04 13:28:38,441 INFO The file: C:\Users\rconstantin\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.002_01\Input\ASWC_A26.epc.arxml is valid with the provided xsd schema
+2018-05-04 13:28:38,452 INFO The file: C:\Users\rconstantin\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.002_01\Input\Messagerie_4.0.arxml is well-formed
+2018-05-04 13:28:38,453 WARNING The file: C:\Users\rconstantin\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.002_01\Input\Messagerie_4.0.arxml is NOT valid with the provided xsd schema
+2018-05-04 13:28:38,458 INFO The file: C:\Users\rconstantin\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.002_01\Input\SoftwareComponents_8CAN_7LIN_ETH.arxml is well-formed
+2018-05-04 13:28:38,461 INFO The file: C:\Users\rconstantin\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.002_01\Input\SoftwareComponents_8CAN_7LIN_ETH.arxml is valid with the provided xsd schema
+2018-05-04 13:28:38,463 INFO =================<SENDER-RECEIVER-TO-SIGNAL-MAPPING> without added signal=================
+2018-05-04 13:28:38,463 INFO =================Interfaces without PPorts/PRPorts=================
+2018-05-04 13:28:38,464 INFO The interface SR_ApportCarbDetecteTest doesn't have an PPort or PRPort
+2018-05-04 13:28:38,464 INFO The interface SR_ApportCarbDetecte doesn't have an PPort or PRPort
+2018-05-04 13:28:38,465 INFO The interface SR_TrebuieSaApara doesn't have an PPort or PRPort
+2018-05-04 13:28:38,469 INFO The interface If_Counter doesn't have an PPort or PRPort
+2018-05-04 13:28:38,470 INFO The interface If_Internal doesn't have an PPort or PRPort
+2018-05-04 13:28:38,470 INFO The interface ComM_UserRequest doesn't have an PPort or PRPort
+2018-05-04 13:28:38,471 INFO The interface DETService doesn't have an PPort or PRPort
+2018-05-04 13:28:38,471 INFO The interface If_CounterModify doesn't have an PPort or PRPort
+2018-05-04 13:28:38,472 INFO The interface If_DiscreteValueOutput doesn't have an PPort or PRPort
+2018-05-04 13:28:38,476 INFO =================Output file information=================
+2018-05-04 13:28:38,477 INFO The file: SystemGenerated.arxml is valid with the provided xsd schema

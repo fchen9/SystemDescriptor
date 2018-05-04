@@ -3,21 +3,21 @@
 <CONF-SYSTEM-DESC xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="./ConfigSystemDescriptor.xsd">
 	<INPUTS>
 		<DICO>
-			<DIR RECURSIVE="false">C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.FUNC.002_03\Input</DIR>
+			<DIR RECURSIVE="false">C:\Users\rconstantin\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.FUNC.002_03\Input</DIR>
 		</DICO>
 		<ARXML>
-			<DIR RECURSIVE="false">C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.FUNC.002_03\Input</DIR>
+			<DIR RECURSIVE="false">C:\Users\rconstantin\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.FUNC.002_03\Input</DIR>
 		</ARXML>
 		<XSD>
-			<FILE_PATH>C:\Users\Cristi\PycharmProjects\SystemDescriptor\AUTOSAR_4-2-2_STRICT.xsd</FILE_PATH>
+			<FILE_PATH>C:\Users\rconstantin\PycharmProjects\SystemDescriptor\AUTOSAR_4-2-2_STRICT.xsd</FILE_PATH>
 		</XSD>
 	</INPUTS>
 	<OUTPUTS>
 		<SYS_ARXML>
-			<DIR>C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.FUNC.002_03\Output</DIR>
+			<DIR>C:\Users\rconstantin\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.FUNC.002_03\Output</DIR>
 		</SYS_ARXML>
 		<REPORT>
-			<DIR>C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.FUNC.002_03\Output</DIR>
+			<DIR>C:\Users\rconstantin\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.FUNC.002_03\Output</DIR>
 		</REPORT>
 	</OUTPUTS>
 </CONF-SYSTEM-DESC>

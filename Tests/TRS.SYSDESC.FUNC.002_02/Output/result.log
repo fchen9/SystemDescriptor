@@ -1,5 +1,5 @@
-2018-05-04 11:14:07,331 INFO =================Parsing information=================
-2018-05-04 11:14:07,396 INFO  The file C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.FUNC.002_02\Input\ASWC_A26_interfaces1.dico is well-formed
-2018-05-04 11:14:07,397 INFO  The file C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.FUNC.002_02\Input\ASWC_A26_interfaces2.dico is well-formed
-2018-05-04 11:14:07,398 ERROR The interface: SR_ApportCarbDetecteTest has different versions:1.06950.81829 and 1.06950.81830
-2018-05-04 11:14:07,398 ERROR The interface: SR_ApportCarbDetecteTest has different versions:1.06950.81830 and 1.06950.81829
+2018-05-04 13:28:21,785 INFO =================Parsing information=================
+2018-05-04 13:28:21,841 INFO  The file C:\Users\rconstantin\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.FUNC.002_02\Input\ASWC_A26_interfaces1.dico is well-formed
+2018-05-04 13:28:21,842 INFO  The file C:\Users\rconstantin\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.FUNC.002_02\Input\ASWC_A26_interfaces2.dico is well-formed
+2018-05-04 13:28:21,842 ERROR The interface: SR_ApportCarbDetecteTest has different versions:1.06950.81829 and 1.06950.81830
+2018-05-04 13:28:21,842 ERROR The interface: SR_ApportCarbDetecteTest has different versions:1.06950.81830 and 1.06950.81829
