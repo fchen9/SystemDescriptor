@@ -12,7 +12,7 @@ def arg_parse(parser):
     parser.add_argument('-system', '--system', help="system name", required=False, default="")
     parser.add_argument('-mapping', '--mapping', help="mapping name", required=False, default="")
     parser.add_argument('-compo', '--compo', help="composition name", required=False, default="")
-    parser.add_argument('-modularity', action="store_const", const="-modularity", required=False)
+    parser.add_argument('-modularity', action="store_const", const="-modularity", required=False, default="")
 
 
 def new_prettify(elem):

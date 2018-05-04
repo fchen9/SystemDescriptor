@@ -8,7 +8,7 @@
                     <SHORT-NAME>VSM_System</SHORT-NAME>
                     <MAPPINGS>
                         <SYSTEM-MAPPING>
-                            <SHORT-NAME>SystemMapping_ASWC_A26</SHORT-NAME>
+                            <SHORT-NAME>SystemMapping</SHORT-NAME>
                             <DATA-MAPPINGS/>
                             <ECU-RESOURCE-MAPPINGS/>
                             <MAPPING-CONSTRAINTS/>

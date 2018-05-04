@@ -1,24 +1,26 @@
-2018-04-13 15:06:37,348 INFO =================Parsing information=================
-2018-04-13 15:06:37,398 INFO  The file C:\Users\rconstantin\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.003_6\Input\ASWC_A26.mappings1.dico is well-formed
-2018-04-13 15:06:37,408 INFO  The file C:\Users\rconstantin\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.003_6\Input\ASWC_A26.mappings2.dico is well-formed
-2018-04-13 15:06:37,418 INFO The file: C:\Users\rconstantin\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.003_6\Input\ASWC_A26.aswc.arxml is well-formed
-2018-04-13 15:06:38,002 INFO The file: C:\Users\rconstantin\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.003_6\Input\ASWC_A26.aswc.arxml is valid with the AUTOSAR schema
-2018-04-13 15:06:38,052 INFO The file: C:\Users\rconstantin\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.003_6\Input\ASWC_A26.diag.arxml is well-formed
-2018-04-13 15:06:38,622 WARNING The file: C:\Users\rconstantin\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.003_6\Input\ASWC_A26.diag.arxml is NOT valid with the AUTOSAR schema
-2018-04-13 15:06:38,662 INFO The file: C:\Users\rconstantin\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.003_6\Input\ASWC_A26.epc.arxml is well-formed
-2018-04-13 15:06:39,207 INFO The file: C:\Users\rconstantin\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.003_6\Input\ASWC_A26.epc.arxml is valid with the AUTOSAR schema
-2018-04-13 15:06:39,254 INFO The file: C:\Users\rconstantin\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.003_6\Input\Messagerie_4.0.arxml is well-formed
-2018-04-13 15:06:39,809 WARNING The file: C:\Users\rconstantin\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.003_6\Input\Messagerie_4.0.arxml is NOT valid with the AUTOSAR schema
-2018-04-13 15:06:39,843 INFO The file: C:\Users\rconstantin\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.003_6\Input\SoftwareComponents_8CAN_7LIN_ETH.arxml is well-formed
-2018-04-13 15:06:40,397 INFO The file: C:\Users\rconstantin\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.003_6\Input\SoftwareComponents_8CAN_7LIN_ETH.arxml is valid with the AUTOSAR schema
-2018-04-13 15:06:40,443 INFO =================<SENDER-RECEIVER-TO-SIGNAL-MAPPING> without added signal=================
-2018-04-13 15:06:40,443 INFO =================Interfaces without PPorts/PRPorts=================
-2018-04-13 15:06:40,443 INFO The interface SR_ApportCarbDetecte doesn't have an PPort or PRPort
-2018-04-13 15:06:40,443 INFO The interface SR_TrebuieSaApara doesn't have an PPort or PRPort
-2018-04-13 15:06:40,453 INFO The interface If_Counter doesn't have an PPort or PRPort
-2018-04-13 15:06:40,453 INFO The interface If_Internal doesn't have an PPort or PRPort
-2018-04-13 15:06:40,453 INFO The interface ComM_UserRequest doesn't have an PPort or PRPort
-2018-04-13 15:06:40,453 INFO The interface DETService doesn't have an PPort or PRPort
-2018-04-13 15:06:40,453 INFO The interface If_CounterModify doesn't have an PPort or PRPort
-2018-04-13 15:06:40,453 INFO The interface If_DiscreteValueOutput doesn't have an PPort or PRPort
-2018-04-13 15:06:40,453 ERROR SWC-TO-ECU-MAPPING with the short-name SwToEcuMapping8 cannot be merged
+2018-05-04 11:14:34,088 INFO =================Parsing information=================
+2018-05-04 11:14:34,155 INFO  The file C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.003_6\Input\ASWC_A26.mappings1.dico is well-formed
+2018-05-04 11:14:34,156 INFO  The file C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.003_6\Input\ASWC_A26.mappings2.dico is well-formed
+2018-05-04 11:14:34,860 WARNING The file: C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.003_6\Input\ASWC_A26.mappings1.dico is NOT valid with the provided xsd schema
+2018-05-04 11:14:34,862 WARNING The file: C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.003_6\Input\ASWC_A26.mappings2.dico is NOT valid with the provided xsd schema
+2018-05-04 11:14:34,888 INFO The file: C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.003_6\Input\ASWC_A26.aswc.arxml is well-formed
+2018-05-04 11:14:34,903 INFO The file: C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.003_6\Input\ASWC_A26.aswc.arxml is valid with the provided xsd schema
+2018-05-04 11:14:34,922 INFO The file: C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.003_6\Input\ASWC_A26.diag.arxml is well-formed
+2018-05-04 11:14:34,928 WARNING The file: C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.003_6\Input\ASWC_A26.diag.arxml is NOT valid with the provided xsd schema
+2018-05-04 11:14:34,934 INFO The file: C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.003_6\Input\ASWC_A26.epc.arxml is well-formed
+2018-05-04 11:14:34,936 INFO The file: C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.003_6\Input\ASWC_A26.epc.arxml is valid with the provided xsd schema
+2018-05-04 11:14:34,938 INFO The file: C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.003_6\Input\Messagerie_4.0.arxml is well-formed
+2018-05-04 11:14:34,938 WARNING The file: C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.003_6\Input\Messagerie_4.0.arxml is NOT valid with the provided xsd schema
+2018-05-04 11:14:34,945 INFO The file: C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.003_6\Input\SoftwareComponents_8CAN_7LIN_ETH.arxml is well-formed
+2018-05-04 11:14:34,949 INFO The file: C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.003_6\Input\SoftwareComponents_8CAN_7LIN_ETH.arxml is valid with the provided xsd schema
+2018-05-04 11:14:34,952 INFO =================<SENDER-RECEIVER-TO-SIGNAL-MAPPING> without added signal=================
+2018-05-04 11:14:34,952 INFO =================Interfaces without PPorts/PRPorts=================
+2018-05-04 11:14:34,953 INFO The interface SR_ApportCarbDetecte doesn't have an PPort or PRPort
+2018-05-04 11:14:34,954 INFO The interface SR_TrebuieSaApara doesn't have an PPort or PRPort
+2018-05-04 11:14:34,963 INFO The interface If_Counter doesn't have an PPort or PRPort
+2018-05-04 11:14:34,964 INFO The interface If_Internal doesn't have an PPort or PRPort
+2018-05-04 11:14:34,965 INFO The interface ComM_UserRequest doesn't have an PPort or PRPort
+2018-05-04 11:14:34,966 INFO The interface DETService doesn't have an PPort or PRPort
+2018-05-04 11:14:34,967 INFO The interface If_CounterModify doesn't have an PPort or PRPort
+2018-05-04 11:14:34,968 INFO The interface If_DiscreteValueOutput doesn't have an PPort or PRPort
+2018-05-04 11:14:34,968 ERROR SWC-TO-ECU-MAPPING with the short-name SwToEcuMapping8 cannot be merged

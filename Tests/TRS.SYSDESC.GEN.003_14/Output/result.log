@@ -1,24 +1,26 @@
-2018-04-13 15:09:37,242 INFO =================Parsing information=================
-2018-04-13 15:09:37,302 INFO  The file C:\Users\rconstantin\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.003_14\Input\ASWC_A26.mappings1.dico is well-formed
-2018-04-13 15:09:37,302 INFO  The file C:\Users\rconstantin\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.003_14\Input\ASWC_A26.mappings2.dico is well-formed
-2018-04-13 15:09:37,322 INFO The file: C:\Users\rconstantin\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.003_14\Input\ASWC_A26.aswc.arxml is well-formed
-2018-04-13 15:09:37,907 INFO The file: C:\Users\rconstantin\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.003_14\Input\ASWC_A26.aswc.arxml is valid with the AUTOSAR schema
-2018-04-13 15:09:37,953 INFO The file: C:\Users\rconstantin\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.003_14\Input\ASWC_A26.diag.arxml is well-formed
-2018-04-13 15:09:38,531 WARNING The file: C:\Users\rconstantin\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.003_14\Input\ASWC_A26.diag.arxml is NOT valid with the AUTOSAR schema
-2018-04-13 15:09:38,561 INFO The file: C:\Users\rconstantin\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.003_14\Input\ASWC_A26.epc.arxml is well-formed
-2018-04-13 15:09:39,121 INFO The file: C:\Users\rconstantin\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.003_14\Input\ASWC_A26.epc.arxml is valid with the AUTOSAR schema
-2018-04-13 15:09:39,151 INFO The file: C:\Users\rconstantin\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.003_14\Input\Messagerie_4.0.arxml is well-formed
-2018-04-13 15:09:39,704 WARNING The file: C:\Users\rconstantin\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.003_14\Input\Messagerie_4.0.arxml is NOT valid with the AUTOSAR schema
-2018-04-13 15:09:39,744 INFO The file: C:\Users\rconstantin\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.003_14\Input\SoftwareComponents_8CAN_7LIN_ETH.arxml is well-formed
-2018-04-13 15:09:40,303 INFO The file: C:\Users\rconstantin\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.003_14\Input\SoftwareComponents_8CAN_7LIN_ETH.arxml is valid with the AUTOSAR schema
-2018-04-13 15:09:40,343 INFO =================<SENDER-RECEIVER-TO-SIGNAL-MAPPING> without added signal=================
-2018-04-13 15:09:40,343 INFO =================Interfaces without PPorts/PRPorts=================
-2018-04-13 15:09:40,343 INFO The interface SR_ApportCarbDetecte doesn't have an PPort or PRPort
-2018-04-13 15:09:40,343 INFO The interface SR_TrebuieSaApara doesn't have an PPort or PRPort
-2018-04-13 15:09:40,343 INFO The interface If_Counter doesn't have an PPort or PRPort
-2018-04-13 15:09:40,343 INFO The interface If_Internal doesn't have an PPort or PRPort
-2018-04-13 15:09:40,353 INFO The interface ComM_UserRequest doesn't have an PPort or PRPort
-2018-04-13 15:09:40,353 INFO The interface DETService doesn't have an PPort or PRPort
-2018-04-13 15:09:40,353 INFO The interface If_CounterModify doesn't have an PPort or PRPort
-2018-04-13 15:09:40,353 INFO The interface If_DiscreteValueOutput doesn't have an PPort or PRPort
-2018-04-13 15:09:40,353 ERROR ROOT-SW-COMPOSITION-PROTOTYPE with the short-name RootCompositionVSM cannot be merged
+2018-05-04 11:14:43,708 INFO =================Parsing information=================
+2018-05-04 11:14:43,772 INFO  The file C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.003_14\Input\ASWC_A26.mappings1.dico is well-formed
+2018-05-04 11:14:43,773 INFO  The file C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.003_14\Input\ASWC_A26.mappings2.dico is well-formed
+2018-05-04 11:14:44,474 INFO The file: C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.003_14\Input\ASWC_A26.mappings1.dico is valid with the provided xsd schema
+2018-05-04 11:14:44,475 INFO The file: C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.003_14\Input\ASWC_A26.mappings2.dico is valid with the provided xsd schema
+2018-05-04 11:14:44,501 INFO The file: C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.003_14\Input\ASWC_A26.aswc.arxml is well-formed
+2018-05-04 11:14:44,517 INFO The file: C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.003_14\Input\ASWC_A26.aswc.arxml is valid with the provided xsd schema
+2018-05-04 11:14:44,536 INFO The file: C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.003_14\Input\ASWC_A26.diag.arxml is well-formed
+2018-05-04 11:14:44,541 WARNING The file: C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.003_14\Input\ASWC_A26.diag.arxml is NOT valid with the provided xsd schema
+2018-05-04 11:14:44,547 INFO The file: C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.003_14\Input\ASWC_A26.epc.arxml is well-formed
+2018-05-04 11:14:44,549 INFO The file: C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.003_14\Input\ASWC_A26.epc.arxml is valid with the provided xsd schema
+2018-05-04 11:14:44,551 INFO The file: C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.003_14\Input\Messagerie_4.0.arxml is well-formed
+2018-05-04 11:14:44,552 WARNING The file: C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.003_14\Input\Messagerie_4.0.arxml is NOT valid with the provided xsd schema
+2018-05-04 11:14:44,559 INFO The file: C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.003_14\Input\SoftwareComponents_8CAN_7LIN_ETH.arxml is well-formed
+2018-05-04 11:14:44,563 INFO The file: C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.003_14\Input\SoftwareComponents_8CAN_7LIN_ETH.arxml is valid with the provided xsd schema
+2018-05-04 11:14:44,566 INFO =================<SENDER-RECEIVER-TO-SIGNAL-MAPPING> without added signal=================
+2018-05-04 11:14:44,566 INFO =================Interfaces without PPorts/PRPorts=================
+2018-05-04 11:14:44,568 INFO The interface SR_ApportCarbDetecte doesn't have an PPort or PRPort
+2018-05-04 11:14:44,569 INFO The interface SR_TrebuieSaApara doesn't have an PPort or PRPort
+2018-05-04 11:14:44,577 INFO The interface If_Counter doesn't have an PPort or PRPort
+2018-05-04 11:14:44,578 INFO The interface If_Internal doesn't have an PPort or PRPort
+2018-05-04 11:14:44,579 INFO The interface ComM_UserRequest doesn't have an PPort or PRPort
+2018-05-04 11:14:44,580 INFO The interface DETService doesn't have an PPort or PRPort
+2018-05-04 11:14:44,581 INFO The interface If_CounterModify doesn't have an PPort or PRPort
+2018-05-04 11:14:44,582 INFO The interface If_DiscreteValueOutput doesn't have an PPort or PRPort
+2018-05-04 11:14:44,583 ERROR ROOT-SW-COMPOSITION-PROTOTYPE with the short-name RootCompositionVSM cannot be merged
