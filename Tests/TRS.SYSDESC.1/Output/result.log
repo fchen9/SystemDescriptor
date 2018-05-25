@@ -1,6 +1,6 @@
-2018-05-04 11:14:04,458 INFO =================Parsing information=================
-2018-05-04 11:14:04,555 INFO  The file C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.1\Input\ASWC_A26.mappings1.dico is well-formed
-2018-05-04 11:14:04,556 INFO  The file C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.1\Input\ASWC_A26.mappings2.dico is well-formed
-2018-05-04 11:14:05,371 INFO The file: C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.1\Input\ASWC_A26.mappings1.dico is valid with the provided xsd schema
-2018-05-04 11:14:05,372 INFO The file: C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.1\Input\ASWC_A26.mappings2.dico is valid with the provided xsd schema
-2018-05-04 11:14:05,373 ERROR The file: C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.1\Input\ASWC_A26.aswc.arxml is not well-formed: C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.1\Input\ASWC_A26.aswc.arxml:58:10: mismatched tag
+2018-05-25 10:33:08,377 INFO =================Parsing information=================
+2018-05-25 10:33:08,447 INFO  The file ./Tests\TRS.SYSDESC.1\Input\ASWC_A26.mappings1.dico is well-formed
+2018-05-25 10:33:08,448 INFO  The file ./Tests\TRS.SYSDESC.1\Input\ASWC_A26.mappings2.dico is well-formed
+2018-05-25 10:33:09,176 INFO The file: ./Tests\TRS.SYSDESC.1\Input\ASWC_A26.mappings1.dico is valid with the provided xsd schema
+2018-05-25 10:33:09,177 INFO The file: ./Tests\TRS.SYSDESC.1\Input\ASWC_A26.mappings2.dico is valid with the provided xsd schema
+2018-05-25 10:33:09,179 ERROR The file: ./Tests\TRS.SYSDESC.1\Input\ASWC_A26.aswc.arxml is not well-formed: ./Tests\TRS.SYSDESC.1\Input\ASWC_A26.aswc.arxml:58:10: mismatched tag

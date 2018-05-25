@@ -445,10 +445,10 @@ class SystemDescriptor(unittest.TestCase):
         self.assertTrue(FileCompare.checkLog(head + '\\Tests\\TRS.SYSDESC.2\\output\\result.log', "ERROR", ["ASWC_A26.mappings1.dico"]))
 
 
-# suite = unittest.TestLoader().loadTestsFromTestCase(SystemDescriptor)
-# unittest.TextTestRunner(verbosity=2).run(suite)
+suite = unittest.TestLoader().loadTestsFromTestCase(SystemDescriptor)
+unittest.TextTestRunner(verbosity=2).run(suite)
 
-current_path = os.path.realpath(__file__)
-head, tail = ntpath.split(current_path)
-if __name__ == "__main__":
-    unittest.main(testRunner=HtmlTestRunner.HTMLTestRunner(output=head + "\\tests"))
+# current_path = os.path.realpath(__file__)
+# head, tail = ntpath.split(current_path)
+# if __name__ == "__main__":
+#     unittest.main(testRunner=HtmlTestRunner.HTMLTestRunner(output=head + "\\tests"))

@@ -1,2 +1,2 @@
-2018-05-04 11:14:05,771 INFO =================Parsing information=================
-2018-05-04 11:14:05,839 ERROR  The file C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.2\Input\ASWC_A26.mappings1.dico is not well-formed: C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.2\Input\ASWC_A26.mappings1.dico:18:10: mismatched tag
+2018-05-25 10:33:09,495 INFO =================Parsing information=================
+2018-05-25 10:33:09,564 ERROR  The file ./Tests\TRS.SYSDESC.2\Input\ASWC_A26.mappings1.dico is not well-formed: ./Tests\TRS.SYSDESC.2\Input\ASWC_A26.mappings1.dico:18:10: mismatched tag
