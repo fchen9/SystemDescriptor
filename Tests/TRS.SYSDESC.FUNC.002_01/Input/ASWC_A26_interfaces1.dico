@@ -20,12 +20,12 @@
                         <VARIABLE-DATA-PROTOTYPE UUID="262d2945-7058-40d8-b227-08426f6278d0">
                             <SHORT-NAME>ApportCarbDetecte</SHORT-NAME>
                             <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tLOG</TYPE-TREF>
-                                    <INIT-VALUE>
-                                        <NUMERICAL-VALUE-SPECIFICATION>
-                                            <SHORT-LABEL>CONST_tLOG_0</SHORT-LABEL>
-                                            <VALUE>0</VALUE>
-                                        </NUMERICAL-VALUE-SPECIFICATION>
-                                    </INIT-VALUE>
+							<INIT-VALUE>
+								<NUMERICAL-VALUE-SPECIFICATION>
+									<SHORT-LABEL>CONST_tLOG_0</SHORT-LABEL>
+									<VALUE>0</VALUE>
+								</NUMERICAL-VALUE-SPECIFICATION>
+							</INIT-VALUE>
                         </VARIABLE-DATA-PROTOTYPE>
                     </DATA-ELEMENTS>
                 </SENDER-RECEIVER-INTERFACE>

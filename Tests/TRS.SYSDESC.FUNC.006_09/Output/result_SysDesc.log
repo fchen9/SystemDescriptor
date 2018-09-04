@@ -1,0 +1,8 @@
+2018-09-03 16:33:50,763 INFO The file: C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.FUNC.006_09\Input\ASWC_A26.aswc.arxml is well-formed
+2018-09-03 16:33:50,807 INFO The file: C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.FUNC.006_09\Input\ASWC_A26.diag.arxml is well-formed
+2018-09-03 16:33:50,815 INFO The file: C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.FUNC.006_09\Input\ASWC_A26.epc.arxml is well-formed
+2018-09-03 16:33:50,831 INFO The file: C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.FUNC.006_09\Input\ConfigSystemDescriptor.xml is well-formed
+2018-09-03 16:33:50,833 INFO The file: C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.FUNC.006_09\Input\Messagerie_4.0.arxml is well-formed
+2018-09-03 16:33:50,843 INFO The file: C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.FUNC.006_09\Input\SoftwareComponents_8CAN_7LIN_ETH.arxml is well-formed
+2018-09-03 16:33:50,849 INFO =================<SENDER-RECEIVER-TO-SIGNAL-MAPPING> without added signal=================
+2018-09-03 16:33:50,850 INFO The SENDER-RECEIVER-TO-SIGNAL-MAPPING using the signal/RootP_NetworkDesc/AUTONOMIE_HS1_52E has not beed added because the signal reference is missing

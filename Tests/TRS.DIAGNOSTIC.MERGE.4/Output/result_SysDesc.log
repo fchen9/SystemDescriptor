@@ -1,0 +1,5 @@
+2018-09-03 16:33:37,810 INFO The file: C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.DIAGNOSTIC.MERGE.4\Input\ASWC_M130.map_did.xml is well-formed
+2018-09-03 16:33:37,812 INFO The file: C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.DIAGNOSTIC.MERGE.4\Input\diag_mapp.arxml is well-formed
+2018-09-03 16:33:37,813 INFO =================<SENDER-RECEIVER-TO-SIGNAL-MAPPING> without added signal=================
+2018-09-03 16:33:37,813 ERROR Cannot merge  VSM_ServicesTable because of incompatible data
+2018-09-03 16:33:37,814 ERROR Cannot merge  VSM_ServicesTable because of incompatible data

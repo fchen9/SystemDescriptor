@@ -1,5 +1,0 @@
-2018-05-25 10:33:12,610 INFO =================Parsing information=================
-2018-05-25 10:33:12,674 INFO  The file ./Tests\TRS.SYSDESC.FUNC.002_04\Input\ASWC_A26.types.dico is well-formed
-2018-05-25 10:33:12,675 INFO  The file ./Tests\TRS.SYSDESC.FUNC.002_04\Input\ASWC_A26.types2.dico is well-formed
-2018-05-25 10:33:12,675 ERROR The interface: tBinaire has different versions:1.29518.18353 and 1.29518.18352
-2018-05-25 10:33:12,676 ERROR The interface: tBinaire has different versions:1.29518.18352 and 1.29518.18353

@@ -13,6 +13,7 @@
                             <SOFTWARE-COMPOSITION-TREF DEST="COMPOSITION-SW-COMPONENT-TYPE">/RootP_NetworkDesc/Compo_VSM</SOFTWARE-COMPOSITION-TREF>
                         </ROOT-SW-COMPOSITION-PROTOTYPE>
                     </ROOT-SOFTWARE-COMPOSITIONS>
+                    <SYSTEM-VERSION>4.0.3</SYSTEM-VERSION>
                 </SYSTEM>
             </ELEMENTS>
         </AR-PACKAGE>

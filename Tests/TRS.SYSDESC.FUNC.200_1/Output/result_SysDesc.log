@@ -1,0 +1,18 @@
+2018-09-03 16:33:51,201 INFO =================Parsing information=================
+2018-09-03 16:33:51,284 INFO  The file C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.FUNC.200_1\Input\ASWC_A26.nv_data_interfaces.dico is well-formed
+2018-09-03 16:33:51,302 INFO The file: C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.FUNC.200_1\Input\ASWC_A26.aswc.arxml is well-formed
+2018-09-03 16:33:51,317 INFO The file: C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.FUNC.200_1\Input\ASWC_A26.diag.arxml is well-formed
+2018-09-03 16:33:51,325 INFO The file: C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.FUNC.200_1\Input\ASWC_A26.epc.arxml is well-formed
+2018-09-03 16:33:51,328 INFO The file: C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.FUNC.200_1\Input\ConfigSystemDescriptor.xml is well-formed
+2018-09-03 16:33:51,330 INFO The file: C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.FUNC.200_1\Input\Messagerie_4.0.arxml is well-formed
+2018-09-03 16:33:51,338 INFO The file: C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.FUNC.200_1\Input\SoftwareComponents_8CAN_7LIN_ETH.arxml is well-formed
+2018-09-03 16:33:51,342 INFO =================<SENDER-RECEIVER-TO-SIGNAL-MAPPING> without added signal=================
+2018-09-03 16:33:51,346 INFO =================Interfaces without PPorts/PRPorts=================
+2018-09-03 16:33:51,353 INFO The interface SR_ApportCarbDetecteTest doesn't have an PPort or PRPort
+2018-09-03 16:33:51,355 INFO The interface SR_TrebuieSaApara doesn't have an PPort or PRPort
+2018-09-03 16:33:51,368 INFO The interface If_Counter doesn't have an PPort or PRPort
+2018-09-03 16:33:51,369 INFO The interface If_Internal doesn't have an PPort or PRPort
+2018-09-03 16:33:51,371 INFO The interface ComM_UserRequest doesn't have an PPort or PRPort
+2018-09-03 16:33:51,372 INFO The interface DETService doesn't have an PPort or PRPort
+2018-09-03 16:33:51,373 INFO The interface If_CounterModify doesn't have an PPort or PRPort
+2018-09-03 16:33:51,375 INFO The interface If_DiscreteValueOutput doesn't have an PPort or PRPort

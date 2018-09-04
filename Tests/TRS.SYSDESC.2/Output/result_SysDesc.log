@@ -1,0 +1,2 @@
+2018-09-03 16:33:38,535 INFO =================Parsing information=================
+2018-09-03 16:33:38,616 ERROR  The file C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.2\Input\ASWC_A26.mappings1.dico is not well-formed: C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.2\Input\ASWC_A26.mappings1.dico:18:10: mismatched tag
