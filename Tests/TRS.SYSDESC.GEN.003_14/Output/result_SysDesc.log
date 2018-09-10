@@ -1,20 +1,20 @@
-2018-09-03 16:33:59,518 INFO =================Parsing information=================
-2018-09-03 16:33:59,599 INFO  The file C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.003_14\Input\ASWC_A26.mappings1.dico is well-formed
-2018-09-03 16:33:59,601 INFO  The file C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.003_14\Input\ASWC_A26.mappings2.dico is well-formed
-2018-09-03 16:33:59,628 INFO The file: C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.003_14\Input\ASWC_A26.aswc.arxml is well-formed
-2018-09-03 16:33:59,652 INFO The file: C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.003_14\Input\ASWC_A26.diag.arxml is well-formed
-2018-09-03 16:33:59,659 INFO The file: C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.003_14\Input\ASWC_A26.epc.arxml is well-formed
-2018-09-03 16:33:59,663 INFO The file: C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.003_14\Input\ConfigSystemDescriptor.xml is well-formed
-2018-09-03 16:33:59,664 INFO The file: C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.003_14\Input\Messagerie_4.0.arxml is well-formed
-2018-09-03 16:33:59,672 INFO The file: C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.003_14\Input\SoftwareComponents_8CAN_7LIN_ETH.arxml is well-formed
-2018-09-03 16:33:59,677 INFO =================<SENDER-RECEIVER-TO-SIGNAL-MAPPING> without added signal=================
-2018-09-03 16:33:59,677 INFO =================Interfaces without PPorts/PRPorts=================
-2018-09-03 16:33:59,678 INFO The interface SR_ApportCarbDetecte doesn't have an PPort or PRPort
-2018-09-03 16:33:59,680 INFO The interface SR_TrebuieSaApara doesn't have an PPort or PRPort
-2018-09-03 16:33:59,690 INFO The interface If_Counter doesn't have an PPort or PRPort
-2018-09-03 16:33:59,692 INFO The interface If_Internal doesn't have an PPort or PRPort
-2018-09-03 16:33:59,693 INFO The interface ComM_UserRequest doesn't have an PPort or PRPort
-2018-09-03 16:33:59,694 INFO The interface DETService doesn't have an PPort or PRPort
-2018-09-03 16:33:59,695 INFO The interface If_CounterModify doesn't have an PPort or PRPort
-2018-09-03 16:33:59,697 INFO The interface If_DiscreteValueOutput doesn't have an PPort or PRPort
-2018-09-03 16:33:59,697 ERROR ROOT-SW-COMPOSITION-PROTOTYPE with the short-name RootCompositionVSM cannot be merged
+2018-09-06 10:01:57,318 INFO =================Parsing information=================
+2018-09-06 10:01:57,380 INFO  The file C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.003_14\Input\ASWC_A26.mappings1.dico is well-formed
+2018-09-06 10:01:57,381 INFO  The file C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.003_14\Input\ASWC_A26.mappings2.dico is well-formed
+2018-09-06 10:01:57,402 INFO The file: C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.003_14\Input\ASWC_A26.aswc.arxml is well-formed
+2018-09-06 10:01:57,419 INFO The file: C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.003_14\Input\ASWC_A26.diag.arxml is well-formed
+2018-09-06 10:01:57,424 INFO The file: C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.003_14\Input\ASWC_A26.epc.arxml is well-formed
+2018-09-06 10:01:57,427 INFO The file: C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.003_14\Input\ConfigSystemDescriptor.xml is well-formed
+2018-09-06 10:01:57,428 INFO The file: C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.003_14\Input\Messagerie_4.0.arxml is well-formed
+2018-09-06 10:01:57,434 INFO The file: C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.003_14\Input\SoftwareComponents_8CAN_7LIN_ETH.arxml is well-formed
+2018-09-06 10:01:57,437 INFO =================<SENDER-RECEIVER-TO-SIGNAL-MAPPING> without added signal=================
+2018-09-06 10:01:57,437 INFO =================Interfaces without PPorts/PRPorts=================
+2018-09-06 10:01:57,438 INFO The interface SR_ApportCarbDetecte doesn't have an PPort or PRPort
+2018-09-06 10:01:57,439 INFO The interface SR_TrebuieSaApara doesn't have an PPort or PRPort
+2018-09-06 10:01:57,448 INFO The interface If_Counter doesn't have an PPort or PRPort
+2018-09-06 10:01:57,450 INFO The interface If_Internal doesn't have an PPort or PRPort
+2018-09-06 10:01:57,451 INFO The interface ComM_UserRequest doesn't have an PPort or PRPort
+2018-09-06 10:01:57,452 INFO The interface DETService doesn't have an PPort or PRPort
+2018-09-06 10:01:57,453 INFO The interface If_CounterModify doesn't have an PPort or PRPort
+2018-09-06 10:01:57,454 INFO The interface If_DiscreteValueOutput doesn't have an PPort or PRPort
+2018-09-06 10:01:57,455 ERROR ROOT-SW-COMPOSITION-PROTOTYPE with the short-name RootCompositionVSM cannot be merged

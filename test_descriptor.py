@@ -167,7 +167,7 @@ class SystemDescriptor(unittest.TestCase):
         head, tail = ntpath.split(current_path)
         os.system('SystemDescriptor.py -in ' + head + '\\Tests\\TRS.SYSDESC.FUNC.002_04\\Input -out ' + head + '\\Tests\\TRS.SYSDESC.FUNC.002_04\\Output -compo Compo_VSM -system VSM_System -mapping SystemMapping -modularity')
         self.assertFalse(FileCompare.isOutput(head+'\\Tests\\TRS.SYSDESC.FUNC.002_04\\Output\\SystemGenerated.arxml'))
-        self.assertTrue(FileCompare.checkLog(head + '\\Tests\\TRS.SYSDESC.FUNC.002_04\\output\\result_SysDesc.log', "ERROR", ["The interface: tBinaire"]))
+        self.assertTrue(FileCompare.checkLog(head + '\\Tests\\TRS.SYSDESC.FUNC.002_04\\output\\result_SysDesc.log', "ERROR", ["The type: tBinaire"]))
 
     def test_TRS_SYSDESC_FUNC_002_05(self):
         current_path = os.path.realpath(__file__)
@@ -423,6 +423,11 @@ class SystemDescriptor(unittest.TestCase):
         self.assertFalse(FileCompare.isOutput(head + '\\Tests\\TRS.DIAGNOSTIC.MERGE.4\\Output\\SystemGenerated.arxml'))
         self.assertTrue(FileCompare.checkLog(head + '\\Tests\\TRS.DIAGNOSTIC.MERGE.4\\output\\result_SysDesc.log', "ERROR", ["VSM_ServicesTable"]))
 
+    def test_TRS_DIAGNOSTIC_MERGE_05(self):
+        current_path = os.path.realpath(__file__)
+        head, tail = ntpath.split(current_path)
+        os.system('SystemDescriptor.py -in ' + head + '\\Tests\\TRS.DIAGNOSTIC.MERGE.5\Input -out ' + head + '\\Tests\\TRS.DIAGNOSTIC.MERGE.5\Output -service_table')
+        self.assertTrue(FileCompare.areSame(head+'\\Tests\\TRS.DIAGNOSTIC.MERGE.5\\SystemGenerated.arxml', head+'\\Tests\\TRS.DIAGNOSTIC.MERGE.5\\Output\\SystemGenerated.arxml'))
 
 
 suite = unittest.TestLoader().loadTestsFromTestCase(SystemDescriptor)

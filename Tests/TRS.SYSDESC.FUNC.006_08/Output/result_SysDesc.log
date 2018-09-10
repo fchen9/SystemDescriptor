@@ -1,54 +1,54 @@
-2018-09-03 16:33:49,517 INFO =================Parsing information=================
-2018-09-03 16:33:49,608 INFO  The file C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.FUNC.006_08\Input\ASWC_A26.mappings.dico is well-formed
-2018-09-03 16:33:49,615 INFO  The file C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.FUNC.006_08\Input\ASWC_A26.types.dico is well-formed
-2018-09-03 16:33:49,626 INFO  The file C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.FUNC.006_08\Input\ASWC_A26_interfaces.dico is well-formed
-2018-09-03 16:33:49,668 INFO The file: C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.FUNC.006_08\Input\ASWC_A26.aswc.arxml is well-formed
-2018-09-03 16:33:49,693 INFO The file: C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.FUNC.006_08\Input\ASWC_A26.diag.arxml is well-formed
-2018-09-03 16:33:49,702 INFO The file: C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.FUNC.006_08\Input\ASWC_A26.epc.arxml is well-formed
-2018-09-03 16:33:49,717 INFO The file: C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.FUNC.006_08\Input\ConfigSystemDescriptor.xml is well-formed
-2018-09-03 16:33:49,719 INFO The file: C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.FUNC.006_08\Input\Messagerie_4.0.arxml is well-formed
-2018-09-03 16:33:49,729 INFO The file: C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.FUNC.006_08\Input\SoftwareComponents_8CAN_7LIN_ETH.arxml is well-formed
-2018-09-03 16:33:49,734 INFO =================<SENDER-RECEIVER-TO-SIGNAL-MAPPING> without added signal=================
-2018-09-03 16:33:49,947 INFO =================Interfaces without PPorts/PRPorts=================
-2018-09-03 16:33:49,948 INFO The interface SR_ApportCarbDetecte doesn't have an PPort or PRPort
-2018-09-03 16:33:49,951 INFO The interface SR_CMMMuet_P26 doesn't have an PPort or PRPort
-2018-09-03 16:33:49,952 INFO The interface SR_ConsommationCarbReelle_P26 doesn't have an PPort or PRPort
-2018-09-03 16:33:49,954 INFO The interface SR_ConsommationGPL doesn't have an PPort or PRPort
-2018-09-03 16:33:49,956 INFO The interface SR_DdeRazDeOdometre doesn't have an PPort or PRPort
-2018-09-03 16:33:49,958 INFO The interface SR_DdeRazT1_P26 doesn't have an PPort or PRPort
-2018-09-03 16:33:49,961 INFO The interface SR_DdeRazT2_P26 doesn't have an PPort or PRPort
-2018-09-03 16:33:49,962 INFO The interface SR_DefautJaugeCarbConfirme doesn't have an PPort or PRPort
-2018-09-03 16:33:49,965 INFO The interface SR_DistanceParcourue doesn't have an PPort or PRPort
-2018-09-03 16:33:49,967 INFO The interface SR_DistanceParcourueFigee doesn't have an PPort or PRPort
-2018-09-03 16:33:49,968 INFO The interface SR_DistanceParcourueValide doesn't have an PPort or PRPort
-2018-09-03 16:33:49,971 INFO The interface SR_DistanceT1 doesn't have an PPort or PRPort
-2018-09-03 16:33:49,972 INFO The interface SR_DistanceT2 doesn't have an PPort or PRPort
-2018-09-03 16:33:49,974 INFO The interface SR_DysfVitesseVehicule doesn't have an PPort or PRPort
-2018-09-03 16:33:49,976 INFO The interface SR_EtatGMP doesn't have an PPort or PRPort
-2018-09-03 16:33:49,978 INFO The interface SR_EtatGMPDeHY doesn't have an PPort or PRPort
-2018-09-03 16:33:49,980 INFO The interface SR_EtatModeGaz doesn't have an PPort or PRPort
-2018-09-03 16:33:49,981 INFO The interface SR_EtatPrincipalSEV doesn't have an PPort or PRPort
-2018-09-03 16:33:49,984 INFO The interface SR_GAZMuet_P26 doesn't have an PPort or PRPort
-2018-09-03 16:33:49,986 INFO The interface SR_GPLModeINFO doesn't have an PPort or PRPort
-2018-09-03 16:33:49,988 INFO The interface SR_GPLtankCapacity doesn't have an PPort or PRPort
-2018-09-03 16:33:49,990 INFO The interface SR_ModeFonctMotGAZ doesn't have an PPort or PRPort
-2018-09-03 16:33:49,992 INFO The interface SR_NivGPLAffiche doesn't have an PPort or PRPort
-2018-09-03 16:33:49,993 INFO The interface SR_PhaseVieLS doesn't have an PPort or PRPort
-2018-09-03 16:33:49,996 INFO The interface SR_PremiereMesureJC_OK doesn't have an PPort or PRPort
-2018-09-03 16:33:49,999 INFO The interface SR_PseudoConsommationCarb doesn't have an PPort or PRPort
-2018-09-03 16:33:50,001 INFO The interface SR_QteEnergieRecup doesn't have an PPort or PRPort
-2018-09-03 16:33:50,003 INFO The interface SR_RegimeMoteur_P26 doesn't have an PPort or PRPort
-2018-09-03 16:33:50,004 INFO The interface SR_SAV_DistancePreciseT1 doesn't have an PPort or PRPort
-2018-09-03 16:33:50,005 INFO The interface SR_SAV_DistancePreciseT2 doesn't have an PPort or PRPort
-2018-09-03 16:33:50,008 INFO The interface SR_SAV_EtatReseauElectrique doesn't have an PPort or PRPort
-2018-09-03 16:33:50,010 INFO The interface SR_SAV_NivCarbAffiche doesn't have an PPort or PRPort
-2018-09-03 16:33:50,012 INFO The interface SR_VitesseVehicule doesn't have an PPort or PRPort
-2018-09-03 16:33:50,014 INFO The interface SR_ZoomConsoIHM doesn't have an PPort or PRPort
-2018-09-03 16:33:50,035 INFO The interface SR_ApportCarbDetecte doesn't have an PPort or PRPort
-2018-09-03 16:33:50,037 INFO The interface SR_TrebuieSaApara doesn't have an PPort or PRPort
-2018-09-03 16:33:50,053 INFO The interface If_Counter doesn't have an PPort or PRPort
-2018-09-03 16:33:50,055 INFO The interface If_Internal doesn't have an PPort or PRPort
-2018-09-03 16:33:50,057 INFO The interface ComM_UserRequest doesn't have an PPort or PRPort
-2018-09-03 16:33:50,059 INFO The interface DETService doesn't have an PPort or PRPort
-2018-09-03 16:33:50,061 INFO The interface If_CounterModify doesn't have an PPort or PRPort
-2018-09-03 16:33:50,063 INFO The interface If_DiscreteValueOutput doesn't have an PPort or PRPort
+2018-09-06 10:01:48,784 INFO =================Parsing information=================
+2018-09-06 10:01:48,849 INFO  The file C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.FUNC.006_08\Input\ASWC_A26.mappings.dico is well-formed
+2018-09-06 10:01:48,853 INFO  The file C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.FUNC.006_08\Input\ASWC_A26.types.dico is well-formed
+2018-09-06 10:01:48,859 INFO  The file C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.FUNC.006_08\Input\ASWC_A26_interfaces.dico is well-formed
+2018-09-06 10:01:48,885 INFO The file: C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.FUNC.006_08\Input\ASWC_A26.aswc.arxml is well-formed
+2018-09-06 10:01:48,902 INFO The file: C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.FUNC.006_08\Input\ASWC_A26.diag.arxml is well-formed
+2018-09-06 10:01:48,907 INFO The file: C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.FUNC.006_08\Input\ASWC_A26.epc.arxml is well-formed
+2018-09-06 10:01:48,915 INFO The file: C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.FUNC.006_08\Input\ConfigSystemDescriptor.xml is well-formed
+2018-09-06 10:01:48,916 INFO The file: C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.FUNC.006_08\Input\Messagerie_4.0.arxml is well-formed
+2018-09-06 10:01:48,922 INFO The file: C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.FUNC.006_08\Input\SoftwareComponents_8CAN_7LIN_ETH.arxml is well-formed
+2018-09-06 10:01:48,924 INFO =================<SENDER-RECEIVER-TO-SIGNAL-MAPPING> without added signal=================
+2018-09-06 10:01:49,046 INFO =================Interfaces without PPorts/PRPorts=================
+2018-09-06 10:01:49,048 INFO The interface SR_ApportCarbDetecte doesn't have an PPort or PRPort
+2018-09-06 10:01:49,049 INFO The interface SR_CMMMuet_P26 doesn't have an PPort or PRPort
+2018-09-06 10:01:49,050 INFO The interface SR_ConsommationCarbReelle_P26 doesn't have an PPort or PRPort
+2018-09-06 10:01:49,051 INFO The interface SR_ConsommationGPL doesn't have an PPort or PRPort
+2018-09-06 10:01:49,052 INFO The interface SR_DdeRazDeOdometre doesn't have an PPort or PRPort
+2018-09-06 10:01:49,053 INFO The interface SR_DdeRazT1_P26 doesn't have an PPort or PRPort
+2018-09-06 10:01:49,054 INFO The interface SR_DdeRazT2_P26 doesn't have an PPort or PRPort
+2018-09-06 10:01:49,056 INFO The interface SR_DefautJaugeCarbConfirme doesn't have an PPort or PRPort
+2018-09-06 10:01:49,057 INFO The interface SR_DistanceParcourue doesn't have an PPort or PRPort
+2018-09-06 10:01:49,058 INFO The interface SR_DistanceParcourueFigee doesn't have an PPort or PRPort
+2018-09-06 10:01:49,059 INFO The interface SR_DistanceParcourueValide doesn't have an PPort or PRPort
+2018-09-06 10:01:49,060 INFO The interface SR_DistanceT1 doesn't have an PPort or PRPort
+2018-09-06 10:01:49,061 INFO The interface SR_DistanceT2 doesn't have an PPort or PRPort
+2018-09-06 10:01:49,063 INFO The interface SR_DysfVitesseVehicule doesn't have an PPort or PRPort
+2018-09-06 10:01:49,064 INFO The interface SR_EtatGMP doesn't have an PPort or PRPort
+2018-09-06 10:01:49,065 INFO The interface SR_EtatGMPDeHY doesn't have an PPort or PRPort
+2018-09-06 10:01:49,066 INFO The interface SR_EtatModeGaz doesn't have an PPort or PRPort
+2018-09-06 10:01:49,067 INFO The interface SR_EtatPrincipalSEV doesn't have an PPort or PRPort
+2018-09-06 10:01:49,068 INFO The interface SR_GAZMuet_P26 doesn't have an PPort or PRPort
+2018-09-06 10:01:49,069 INFO The interface SR_GPLModeINFO doesn't have an PPort or PRPort
+2018-09-06 10:01:49,070 INFO The interface SR_GPLtankCapacity doesn't have an PPort or PRPort
+2018-09-06 10:01:49,071 INFO The interface SR_ModeFonctMotGAZ doesn't have an PPort or PRPort
+2018-09-06 10:01:49,072 INFO The interface SR_NivGPLAffiche doesn't have an PPort or PRPort
+2018-09-06 10:01:49,074 INFO The interface SR_PhaseVieLS doesn't have an PPort or PRPort
+2018-09-06 10:01:49,075 INFO The interface SR_PremiereMesureJC_OK doesn't have an PPort or PRPort
+2018-09-06 10:01:49,076 INFO The interface SR_PseudoConsommationCarb doesn't have an PPort or PRPort
+2018-09-06 10:01:49,077 INFO The interface SR_QteEnergieRecup doesn't have an PPort or PRPort
+2018-09-06 10:01:49,078 INFO The interface SR_RegimeMoteur_P26 doesn't have an PPort or PRPort
+2018-09-06 10:01:49,079 INFO The interface SR_SAV_DistancePreciseT1 doesn't have an PPort or PRPort
+2018-09-06 10:01:49,081 INFO The interface SR_SAV_DistancePreciseT2 doesn't have an PPort or PRPort
+2018-09-06 10:01:49,082 INFO The interface SR_SAV_EtatReseauElectrique doesn't have an PPort or PRPort
+2018-09-06 10:01:49,083 INFO The interface SR_SAV_NivCarbAffiche doesn't have an PPort or PRPort
+2018-09-06 10:01:49,084 INFO The interface SR_VitesseVehicule doesn't have an PPort or PRPort
+2018-09-06 10:01:49,086 INFO The interface SR_ZoomConsoIHM doesn't have an PPort or PRPort
+2018-09-06 10:01:49,097 INFO The interface SR_ApportCarbDetecte doesn't have an PPort or PRPort
+2018-09-06 10:01:49,098 INFO The interface SR_TrebuieSaApara doesn't have an PPort or PRPort
+2018-09-06 10:01:49,108 INFO The interface If_Counter doesn't have an PPort or PRPort
+2018-09-06 10:01:49,109 INFO The interface If_Internal doesn't have an PPort or PRPort
+2018-09-06 10:01:49,110 INFO The interface ComM_UserRequest doesn't have an PPort or PRPort
+2018-09-06 10:01:49,111 INFO The interface DETService doesn't have an PPort or PRPort
+2018-09-06 10:01:49,112 INFO The interface If_CounterModify doesn't have an PPort or PRPort
+2018-09-06 10:01:49,113 INFO The interface If_DiscreteValueOutput doesn't have an PPort or PRPort

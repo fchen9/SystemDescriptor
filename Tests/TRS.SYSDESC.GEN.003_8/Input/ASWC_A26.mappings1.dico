@@ -23,8 +23,8 @@
                     <SHORT-NAME>Compo_VSM</SHORT-NAME>
                     <COMPONENTS>
                         <SW-COMPONENT-PROTOTYPE>
-                            <SHORT-NAME>Instance_ASWC_A26Test</SHORT-NAME>
-                            <TYPE-TREF DEST="APPLICATION-SW-COMPONENT-TYPE">/RootP_ASWC_A26Test/ASWC_A26</TYPE-TREF>
+                            <SHORT-NAME>Instance_ASWC_A28</SHORT-NAME>
+                            <TYPE-TREF DEST="APPLICATION-SW-COMPONENT-TYPE">/RootP_ASWC_A28/ASWC_A28</TYPE-TREF>
                         </SW-COMPONENT-PROTOTYPE>
                     </COMPONENTS>
                 </COMPOSITION-SW-COMPONENT-TYPE>

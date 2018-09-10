@@ -24,7 +24,7 @@
                     <COMPONENTS>
                         <SW-COMPONENT-PROTOTYPE>
                             <SHORT-NAME>Instance_ASWC_A26</SHORT-NAME>
-                            <TYPE-TREF DEST="APPLICATION-SW-COMPONENT-TYPE">/RootP_ASWC_A26Test/ASWC_A26Test</TYPE-TREF>
+                            <TYPE-TREF DEST="APPLICATION-SW-COMPONENT-TYPE">/RootP_ASWC_A28/ASWC_A28</TYPE-TREF>
                         </SW-COMPONENT-PROTOTYPE>
                     </COMPONENTS>
                 </COMPOSITION-SW-COMPONENT-TYPE>

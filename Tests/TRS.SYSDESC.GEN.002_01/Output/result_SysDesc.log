@@ -1,19 +1,19 @@
-2018-09-03 16:33:52,729 INFO =================Parsing information=================
-2018-09-03 16:33:52,806 INFO  The file C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.002_01\Input\ASWC_A26_interfaces1.dico is well-formed
-2018-09-03 16:33:52,807 INFO  The file C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.002_01\Input\ASWC_A26_interfaces2.dico is well-formed
-2018-09-03 16:33:52,833 INFO The file: C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.002_01\Input\ASWC_A26.aswc.arxml is well-formed
-2018-09-03 16:33:52,852 INFO The file: C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.002_01\Input\ASWC_A26.diag.arxml is well-formed
-2018-09-03 16:33:52,858 INFO The file: C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.002_01\Input\ASWC_A26.epc.arxml is well-formed
-2018-09-03 16:33:52,863 INFO The file: C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.002_01\Input\Messagerie_4.0.arxml is well-formed
-2018-09-03 16:33:52,872 INFO The file: C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.002_01\Input\SoftwareComponents_8CAN_7LIN_ETH.arxml is well-formed
-2018-09-03 16:33:52,874 INFO =================<SENDER-RECEIVER-TO-SIGNAL-MAPPING> without added signal=================
-2018-09-03 16:33:52,875 INFO =================Interfaces without PPorts/PRPorts=================
-2018-09-03 16:33:52,877 INFO The interface SR_ApportCarbDetecteTest doesn't have an PPort or PRPort
-2018-09-03 16:33:52,878 INFO The interface SR_ApportCarbDetecte doesn't have an PPort or PRPort
-2018-09-03 16:33:52,879 INFO The interface SR_TrebuieSaApara doesn't have an PPort or PRPort
-2018-09-03 16:33:52,893 INFO The interface If_Counter doesn't have an PPort or PRPort
-2018-09-03 16:33:52,894 INFO The interface If_Internal doesn't have an PPort or PRPort
-2018-09-03 16:33:52,895 INFO The interface ComM_UserRequest doesn't have an PPort or PRPort
-2018-09-03 16:33:52,897 INFO The interface DETService doesn't have an PPort or PRPort
-2018-09-03 16:33:52,898 INFO The interface If_CounterModify doesn't have an PPort or PRPort
-2018-09-03 16:33:52,899 INFO The interface If_DiscreteValueOutput doesn't have an PPort or PRPort
+2018-09-06 10:01:51,050 INFO =================Parsing information=================
+2018-09-06 10:01:51,114 INFO  The file C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.002_01\Input\ASWC_A26_interfaces1.dico is well-formed
+2018-09-06 10:01:51,115 INFO  The file C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.002_01\Input\ASWC_A26_interfaces2.dico is well-formed
+2018-09-06 10:01:51,134 INFO The file: C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.002_01\Input\ASWC_A26.aswc.arxml is well-formed
+2018-09-06 10:01:51,151 INFO The file: C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.002_01\Input\ASWC_A26.diag.arxml is well-formed
+2018-09-06 10:01:51,156 INFO The file: C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.002_01\Input\ASWC_A26.epc.arxml is well-formed
+2018-09-06 10:01:51,160 INFO The file: C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.002_01\Input\Messagerie_4.0.arxml is well-formed
+2018-09-06 10:01:51,166 INFO The file: C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.002_01\Input\SoftwareComponents_8CAN_7LIN_ETH.arxml is well-formed
+2018-09-06 10:01:51,169 INFO =================<SENDER-RECEIVER-TO-SIGNAL-MAPPING> without added signal=================
+2018-09-06 10:01:51,169 INFO =================Interfaces without PPorts/PRPorts=================
+2018-09-06 10:01:51,170 INFO The interface SR_ApportCarbDetecteTest doesn't have an PPort or PRPort
+2018-09-06 10:01:51,171 INFO The interface SR_ApportCarbDetecte doesn't have an PPort or PRPort
+2018-09-06 10:01:51,172 INFO The interface SR_TrebuieSaApara doesn't have an PPort or PRPort
+2018-09-06 10:01:51,182 INFO The interface If_Counter doesn't have an PPort or PRPort
+2018-09-06 10:01:51,183 INFO The interface If_Internal doesn't have an PPort or PRPort
+2018-09-06 10:01:51,185 INFO The interface ComM_UserRequest doesn't have an PPort or PRPort
+2018-09-06 10:01:51,186 INFO The interface DETService doesn't have an PPort or PRPort
+2018-09-06 10:01:51,187 INFO The interface If_CounterModify doesn't have an PPort or PRPort
+2018-09-06 10:01:51,188 INFO The interface If_DiscreteValueOutput doesn't have an PPort or PRPort

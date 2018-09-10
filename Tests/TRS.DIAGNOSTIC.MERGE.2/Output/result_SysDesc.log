@@ -1,3 +1,4 @@
-2018-09-03 16:33:36,938 INFO The file: C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.DIAGNOSTIC.MERGE.2\Input\ASWC_M130.map_did.xml is well-formed
-2018-09-03 16:33:36,941 INFO The file: C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.DIAGNOSTIC.MERGE.2\Input\diag_mapp.arxml is well-formed
-2018-09-03 16:33:36,942 INFO =================<SENDER-RECEIVER-TO-SIGNAL-MAPPING> without added signal=================
+2018-09-06 10:01:41,094 INFO The file: C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.DIAGNOSTIC.MERGE.2\Input\ASWC_M130.map_did.xml is well-formed
+2018-09-06 10:01:41,095 INFO The file: C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.DIAGNOSTIC.MERGE.2\Input\diag_mapp.arxml is well-formed
+2018-09-06 10:01:41,097 INFO =================<SENDER-RECEIVER-TO-SIGNAL-MAPPING> without added signal=================
+2018-09-06 10:01:41,097 INFO =================Unmapped SERVICE-INSTANCE-REF from DIAGNOSTIC-TABLE=================

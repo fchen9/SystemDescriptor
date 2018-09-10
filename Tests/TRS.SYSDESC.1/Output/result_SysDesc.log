@@ -1,4 +1,4 @@
-2018-09-03 16:33:38,135 INFO =================Parsing information=================
-2018-09-03 16:33:38,211 INFO  The file C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.1\Input\ASWC_A26.mappings1.dico is well-formed
-2018-09-03 16:33:38,212 INFO  The file C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.1\Input\ASWC_A26.mappings2.dico is well-formed
-2018-09-03 16:33:38,214 ERROR The file: C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.1\Input\ASWC_A26.aswc.arxml is not well-formed: C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.1\Input\ASWC_A26.aswc.arxml:58:10: mismatched tag
+2018-09-06 10:01:42,530 INFO =================Parsing information=================
+2018-09-06 10:01:42,595 INFO  The file C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.1\Input\ASWC_A26.mappings1.dico is well-formed
+2018-09-06 10:01:42,596 INFO  The file C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.1\Input\ASWC_A26.mappings2.dico is well-formed
+2018-09-06 10:01:42,597 ERROR The file: C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.1\Input\ASWC_A26.aswc.arxml is not well-formed: C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.1\Input\ASWC_A26.aswc.arxml:58:10: mismatched tag
