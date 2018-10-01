@@ -607,52 +607,73 @@ def generate_system(file_list, output_path, system_name, mapping_name, compositi
                     obj_diag['REF'] = elem.find(".//{http://autosar.org/schema/r4.0}DATA-IDENTIFIER-REF").text
                     obj_diag['MAPPED'] = False
                     arxml_diagnostic_data.append(obj_diag)
-                #obtain all SW-COMPONENT-TYPE--SUBTYPES-ENUM from arxml files
+                # obtain all SW-COMPONENT-TYPE--SUBTYPES-ENUM from arxml files
                 temp = root.findall(".//{http://autosar.org/schema/r4.0}APPLICATION-SW-COMPONENT-TYPE")
                 for elem_ref in temp:
-                    text = '/' + elem_ref.getparent().getparent().getchildren()[0].text + "/" + elem_ref.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text
-                    types_refs.append(text)
+                    obj_temp = {}
+                    obj_temp['TYPE'] = 'APPLICATION-SW-COMPONENT-TYPE'
+                    obj_temp['TEXT'] = '/' + elem_ref.getparent().getparent().getchildren()[0].text + "/" + elem_ref.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text
+                    types_refs.append(obj_temp)
                 temp = root.findall(".//{http://autosar.org/schema/r4.0}ATOMIC-SW-COMPONENT-TYPE")
                 for elem_ref in temp:
-                    text = '/' + elem_ref.getparent().getparent().getchildren()[0].text + "/" + elem_ref.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text
-                    types_refs.append(text)
+                    obj_temp = {}
+                    obj_temp['TYPE'] = 'ATOMIC-SW-COMPONENT-TYPE'
+                    obj_temp['TEXT'] = '/' + elem_ref.getparent().getparent().getchildren()[0].text + "/" + elem_ref.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text
+                    types_refs.append(obj_temp)
                 temp = root.findall(".//{http://autosar.org/schema/r4.0}COMPLEX-DEVICE-DRIVER-SW-COMPONENT-TYPE")
                 for elem_ref in temp:
-                    text = '/' + elem_ref.getparent().getparent().getchildren()[0].text + "/" + elem_ref.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text
-                    types_refs.append(text)
+                    obj_temp = {}
+                    obj_temp['TYPE'] = 'COMPLEX-DEVICE-DRIVER-SW-COMPONENT-TYPE'
+                    obj_temp['TEXT'] = '/' + elem_ref.getparent().getparent().getchildren()[0].text + "/" + elem_ref.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text
+                    types_refs.append(obj_temp)
                 temp = root.findall(".//{http://autosar.org/schema/r4.0}COMPOSITION-SW-COMPONENT-TYPE")
                 for elem_ref in temp:
-                    text = '/' + elem_ref.getparent().getparent().getchildren()[0].text + "/" + elem_ref.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text
-                    types_refs.append(text)
+                    obj_temp = {}
+                    obj_temp['TYPE'] = 'COMPOSITION-SW-COMPONENT-TYPE'
+                    obj_temp['TEXT'] = '/' + elem_ref.getparent().getparent().getchildren()[0].text + "/" + elem_ref.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text
+                    types_refs.append(obj_temp)
                 temp = root.findall(".//{http://autosar.org/schema/r4.0}ECU-ABSTRACTION-SW-COMPONENT-TYPE")
                 for elem_ref in temp:
-                    text = '/' + elem_ref.getparent().getparent().getchildren()[0].text + "/" + elem_ref.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text
-                    types_refs.append(text)
+                    obj_temp = {}
+                    obj_temp['TYPE'] = 'ECU-ABSTRACTION-SW-COMPONENT-TYPE'
+                    obj_temp['TEXT'] = '/' + elem_ref.getparent().getparent().getchildren()[0].text + "/" + elem_ref.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text
+                    types_refs.append(obj_temp)
                 temp = root.findall(".//{http://autosar.org/schema/r4.0}NV-BLOCK-SW-COMPONENT-TYPE")
                 for elem_ref in temp:
-                    text = '/' + elem_ref.getparent().getparent().getchildren()[0].text + "/" + elem_ref.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text
-                    types_refs.append(text)
+                    obj_temp = {}
+                    obj_temp['TYPE'] = 'NV-BLOCK-SW-COMPONENT-TYPE'
+                    obj_temp['TEXT'] = '/' + elem_ref.getparent().getparent().getchildren()[0].text + "/" + elem_ref.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text
+                    types_refs.append(obj_temp)
                 temp = root.findall(".//{http://autosar.org/schema/r4.0}PARAMETER-SW-COMPONENT-TYPE")
                 for elem_ref in temp:
-                    text = '/' + elem_ref.getparent().getparent().getchildren()[0].text + "/" + elem_ref.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text
-                    types_refs.append(text)
+                    obj_temp = {}
+                    obj_temp['TYPE'] = 'PARAMETER-SW-COMPONENT-TYPE'
+                    obj_temp['TEXT'] = '/' + elem_ref.getparent().getparent().getchildren()[0].text + "/" + elem_ref.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text
+                    types_refs.append(obj_temp)
                 temp = root.findall(".//{http://autosar.org/schema/r4.0}SENSOR-ACTUATOR-SW-COMPONENT-TYPE")
                 for elem_ref in temp:
-                    text = '/' + elem_ref.getparent().getparent().getchildren()[0].text + "/" + elem_ref.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text
-                    types_refs.append(text)
+                    obj_temp = {}
+                    obj_temp['TYPE'] = 'SENSOR-ACTUATOR-SW-COMPONENT-TYPE'
+                    obj_temp['TEXT'] = '/' + elem_ref.getparent().getparent().getchildren()[0].text + "/" + elem_ref.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text
+                    types_refs.append(obj_temp)
                 temp = root.findall(".//{http://autosar.org/schema/r4.0}SERVICE-PROXY-SW-COMPONENT-TYPE")
                 for elem_ref in temp:
-                    text = '/' + elem_ref.getparent().getparent().getchildren()[0].text + "/" + elem_ref.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text
-                    types_refs.append(text)
+                    obj_temp = {}
+                    obj_temp['TYPE'] = 'SERVICE-PROXY-SW-COMPONENT-TYPE'
+                    obj_temp['TEXT'] = '/' + elem_ref.getparent().getparent().getchildren()[0].text + "/" + elem_ref.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text
+                    types_refs.append(obj_temp)
                 temp = root.findall(".//{http://autosar.org/schema/r4.0}SERVICE-SW-COMPONENT-TYPE")
                 for elem_ref in temp:
-                    text = '/' + elem_ref.getparent().getparent().getchildren()[0].text + "/" + elem_ref.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text
-                    types_refs.append(text)
+                    obj_temp = {}
+                    obj_temp['TYPE'] = 'SERVICE-SW-COMPONENT-TYPE'
+                    obj_temp['TEXT'] = '/' + elem_ref.getparent().getparent().getchildren()[0].text + "/" + elem_ref.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text
+                    types_refs.append(obj_temp)
                 temp = root.findall(".//{http://autosar.org/schema/r4.0}SW-COMPONENT-TYPE")
                 for elem_ref in temp:
-                    text = '/' + elem_ref.getparent().getparent().getchildren()[0].text + "/" + elem_ref.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text
-                    text = '/' + elem_ref.getparent().getparent().getchildren()[0].text + "/" + elem_ref.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text
-                    types_refs.append(text)
+                    obj_temp = {}
+                    obj_temp['TYPE'] = 'SW-COMPONENT-TYPE'
+                    obj_temp['TEXT'] = '/' + elem_ref.getparent().getparent().getchildren()[0].text + "/" + elem_ref.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text
+                    types_refs.append(obj_temp)
                 # obtain all interface-related data
                 sender_receiver_interface = root.findall(".//{http://autosar.org/schema/r4.0}SENDER-RECEIVER-INTERFACE")
                 for elem in sender_receiver_interface:
@@ -881,16 +902,16 @@ def generate_system(file_list, output_path, system_name, mapping_name, compositi
                 pass
             sys.exit(1)
         # keep SW-COMPONENT-PROTOTYPE only if their reference exists
-        ref_software_composition = software_composition[:]
-        for elem in software_composition[:]:
-            found = False
-            for type in types_refs:
-                if type in elem['DATA'].find(".//{http://autosar.org/schema/r4.0}TYPE-TREF").text:
-                    found = True
-                    break
-            if not found:
-                software_composition.remove(elem)
-                logger.warning("The <SW-COMPONENT-PROTOTYPE>: " + elem['DATA'].find(".//{http://autosar.org/schema/r4.0}TYPE-TREF").text + " has been deleted because is not existent in arxml files")
+        # ref_software_composition = software_composition[:]
+        # for elem in software_composition[:]:
+        #     found = False
+        #     for type in types_refs:
+        #         if type in elem['DATA'].find(".//{http://autosar.org/schema/r4.0}TYPE-TREF").text:
+        #             found = True
+        #             break
+        #     if not found:
+        #         software_composition.remove(elem)
+        #         logger.warning("The <SW-COMPONENT-PROTOTYPE>: " + elem['DATA'].find(".//{http://autosar.org/schema/r4.0}TYPE-TREF").text + " has been deleted because is not existent in arxml files")
         # TRS.SYSDESC.GEN.004
         logger.info('=================<SENDER-RECEIVER-TO-SIGNAL-MAPPING> without added signal=================')
         for elem in sender_receiver_signal_mapping[:]:
@@ -1186,14 +1207,14 @@ def generate_system(file_list, output_path, system_name, mapping_name, compositi
         [data_mappings_name.append(elem['NAME']) for elem in final_sw_impl_mapping if elem['NAME'] not in data_mappings_name]
         # <SW-MAPPINGS>
         # check if mappings have to be created
-        for elem in swc_ecu_mapping[:]:
-            found = False
-            for swc in ref_software_composition:
-                if elem['DATA'].find(".//{http://autosar.org/schema/r4.0}TARGET-COMPONENT-REF").text == '/'+swc['ROOT']+'/'+swc['NAME']+'/'+swc['DATA'].find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text:
-                    found = True
-                    break
-            if not found:
-                swc_ecu_mapping.remove(elem)
+        # for elem in swc_ecu_mapping[:]:
+        #     found = False
+        #     for swc in ref_software_composition:
+        #         if elem['DATA'].find(".//{http://autosar.org/schema/r4.0}TARGET-COMPONENT-REF").text == '/'+swc['ROOT']+'/'+swc['NAME']+'/'+swc['DATA'].find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text:
+        #             found = True
+        #             break
+        #     if not found:
+        #         swc_ecu_mapping.remove(elem)
 
         # concatenate mappings
         swc_ecu_mapping = sorted(swc_ecu_mapping, key=lambda x: x['NAME'])
@@ -1375,7 +1396,7 @@ def generate_system(file_list, output_path, system_name, mapping_name, compositi
                             mappings_tag = etree.SubElement(system_tag, 'MAPPINGS')
                             if mapping_name != "":
                                 for elem3 in data_mappings_name:
-                                    if elem3 == mapping_name:
+                                    if elem3 == mapping_name.split('/')[-1]:
                                         system_mapping_tag = etree.SubElement(mappings_tag, 'SYSTEM-MAPPING')
                                         short_name_mappings = etree.SubElement(system_mapping_tag, 'SHORT-NAME').text = str(elem3)
                                         data_mappings_tag = etree.SubElement(system_mapping_tag, 'DATA-MAPPINGS')
@@ -1437,13 +1458,32 @@ def generate_system(file_list, output_path, system_name, mapping_name, compositi
                                             if element['NAME'] == elem3 and element['ROOT'] == package and element['SYSTEM'] == sysname:
                                                 sw_impl_mappings_tag.append(element['DATA'])
                                         sw_mappings_tag = etree.SubElement(system_mapping_tag, 'SW-MAPPINGS')
-                                        for element in final_swc_ecu_mappings:
-                                            if element['NAME'] == elem3 and element['ROOT'] == package and element['SYSTEM'] == sysname:
-                                                sw_mappings_tag.append(element['DATA'])
+                                        sw_ecu_mapping = etree.SubElement(sw_mappings_tag, 'SWC-TO-ECU-MAPPING')
+                                        short_name_swc = etree.SubElement(sw_ecu_mapping, 'SHORT-NAME').text = 'SwToEcuMapping'
+                                        component_irefs = etree.SubElement(sw_ecu_mapping, 'COMPONENT-IREFS')
+                                        ecu_instance_ref = etree.SubElement(sw_ecu_mapping, 'ECU-INSTANCE-REF')
+                                        ecu_instance_ref.attrib['DEST'] = 'ECU-INSTANCE'
+                                        ecu_instance_ref.text = '/RootP_NetworkDesc/ECUINSTANCES/VSM'
+                                        # for element in final_swc_ecu_mappings:
+                                        #     if element['NAME'] == elem3 and element['ROOT'] == package and element['SYSTEM'] == sysname:
+                                        #         sw_mappings_tag.append(element['DATA'])
                             rsc = etree.SubElement(system_tag, 'ROOT-SOFTWARE-COMPOSITIONS')
                             for elem_root in temp_root:
                                 if sysname == elem_root['SYSTEM']:
                                     rsc.append(elem_root['DATA'])
+                            # generating SwToEcuMapping
+                            for elem_root in temp_root:
+                                if sysname == elem_root['SYSTEM']:
+                                    temp_text = '/' + elem_root['ROOT'] + '/' + elem_root['SYSTEM'] + '/' + elem_root['DATA'].find('.//SHORT-NAME').text
+                                    for type_sw in types_refs:
+                                        compo_iref = etree.SubElement(component_irefs, 'COMPONENT-IREF')
+                                        context_compo = etree.SubElement(compo_iref, 'CONTEXT-COMPOSITION-REF')
+                                        context_compo.attrib['DEST'] = 'ROOT-SW-COMPOSITION-PROTOTYPE'
+                                        context_compo.text = temp_text
+                                        target_compo = etree.SubElement(compo_iref, 'TARGET-COMPONENT-REF')
+                                        target_compo.attrib['DEST'] = 'SW-COMPONENT-PROTOTYPE'
+                                        target_compo.text = composition_name + '/Instance_' + type_sw['TEXT'].split('/')[-1]
+
                             version = etree.SubElement(system_tag, 'SYSTEM-VERSION').text = "4.0.3"
         package = ""
         if serviceTable:
@@ -1488,26 +1528,41 @@ def generate_system(file_list, output_path, system_name, mapping_name, compositi
                         service_instance_ref = etree.SubElement(service_instance_refs, 'SERVICE-INSTANCE-REF')
                         service_instance_ref.attrib['DEST'] = elem3['DEST']
                         service_instance_ref.text = elem3['INSTANCE']
-        package = ""
         if composition_name != "":
-            for elem in final_software_composition:
-                if package != elem['ROOT']:
-                    temp = []
-                    package = elem['ROOT']
-                    component = etree.SubElement(packages, 'AR-PACKAGE')
-                    short_name = etree.SubElement(component, 'SHORT-NAME').text = elem['ROOT']
-                    elements_tag = etree.SubElement(component, 'ELEMENTS')
-                    for elem2 in final_software_composition:
-                        if elem2['ROOT'] == package:
-                            temp.append(elem2)
-                    temp = sorted(temp, key=lambda x: x['NAME'])
-                    compo = composition_name
-                    composition_sw_tag = etree.SubElement(elements_tag, 'COMPOSITION-SW-COMPONENT-TYPE')
-                    short_name_compo = etree.SubElement(composition_sw_tag, 'SHORT-NAME').text = composition_name
-                    components_tag = etree.SubElement(composition_sw_tag, 'COMPONENTS')
-                    for element in temp:
-                        if compo == element['NAME']:
-                            components_tag.append(element['DATA'])
+            # old way, when it was merged and not generated
+            # for elem in final_software_composition:
+            #     if package != elem['ROOT']:
+            #         temp = []
+            #         package = elem['ROOT']
+            #         component = etree.SubElement(packages, 'AR-PACKAGE')
+            #         short_name = etree.SubElement(component, 'SHORT-NAME').text = elem['ROOT']
+            #         elements_tag = etree.SubElement(component, 'ELEMENTS')
+            #         for elem2 in final_software_composition:
+            #             if elem2['ROOT'] == package:
+            #                 temp.append(elem2)
+            #         temp = sorted(temp, key=lambda x: x['NAME'])
+            #         compo = composition_name
+            #         composition_sw_tag = etree.SubElement(elements_tag, 'COMPOSITION-SW-COMPONENT-TYPE')
+            #         short_name_compo = etree.SubElement(composition_sw_tag, 'SHORT-NAME').text = composition_name
+            #         components_tag = etree.SubElement(composition_sw_tag, 'COMPONENTS')
+            #         for element in temp:
+            #             if compo == element['NAME']:
+            #                 components_tag.append(element['DATA'])
+            # new way, for COMPO generation
+            component = etree.SubElement(packages, 'AR-PACKAGE')
+            short_name = etree.SubElement(component, 'SHORT-NAME').text = composition_name.split('/')[-2]
+            elements_tag = etree.SubElement(component, 'ELEMENTS')
+            composition_sw_tag = etree.SubElement(elements_tag, 'COMPOSITION-SW-COMPONENT-TYPE')
+            short_name_compo = etree.SubElement(composition_sw_tag, 'SHORT-NAME').text = composition_name.split('/')[-1]
+            components_tag = etree.SubElement(composition_sw_tag, 'COMPONENTS')
+            for type in types_refs:
+                sw_component_prototype = etree.SubElement(components_tag, 'SW-COMPONENT-PROTOTYPE')
+                short_name_instance = etree.SubElement(sw_component_prototype, 'SHORT-NAME')
+                short_name_instance.text = 'Instance_' + type['TEXT'].split('/')[-1]
+                type_tref = etree.SubElement(sw_component_prototype, 'TYPE-TREF')
+                type_tref.attrib['DEST'] = type['TYPE']
+                type_tref.text = type['TEXT']
+
         pretty_xml = new_prettify(rootSystem)
         output = etree.ElementTree(etree.fromstring(pretty_xml))
         if os.path.isdir(output_path):
