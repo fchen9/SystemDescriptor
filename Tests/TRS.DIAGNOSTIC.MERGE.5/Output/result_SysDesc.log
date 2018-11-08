@@ -1,0 +1,5 @@
+2018-09-06 10:01:42,249 INFO The file: C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.DIAGNOSTIC.MERGE.5\Input\ASWC_M130.map_did.xml is well-formed
+2018-09-06 10:01:42,250 INFO The file: C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.DIAGNOSTIC.MERGE.5\Input\diag_mapp.arxml is well-formed
+2018-09-06 10:01:42,251 INFO =================<SENDER-RECEIVER-TO-SIGNAL-MAPPING> without added signal=================
+2018-09-06 10:01:42,251 INFO =================Unmapped SERVICE-INSTANCE-REF from DIAGNOSTIC-TABLE=================
+2018-09-06 10:01:42,252 WARNING The data /RootP_DiagDesc/Routine_RAZIndicDiagTNB from table VSM_ServicesTable has been deleted because is not mapped

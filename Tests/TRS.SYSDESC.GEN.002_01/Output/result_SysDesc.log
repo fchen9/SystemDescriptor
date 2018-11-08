@@ -1,19 +1,39 @@
-2018-09-06 10:01:51,050 INFO =================Parsing information=================
-2018-09-06 10:01:51,114 INFO  The file C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.002_01\Input\ASWC_A26_interfaces1.dico is well-formed
-2018-09-06 10:01:51,115 INFO  The file C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.002_01\Input\ASWC_A26_interfaces2.dico is well-formed
-2018-09-06 10:01:51,134 INFO The file: C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.002_01\Input\ASWC_A26.aswc.arxml is well-formed
-2018-09-06 10:01:51,151 INFO The file: C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.002_01\Input\ASWC_A26.diag.arxml is well-formed
-2018-09-06 10:01:51,156 INFO The file: C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.002_01\Input\ASWC_A26.epc.arxml is well-formed
-2018-09-06 10:01:51,160 INFO The file: C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.002_01\Input\Messagerie_4.0.arxml is well-formed
-2018-09-06 10:01:51,166 INFO The file: C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.002_01\Input\SoftwareComponents_8CAN_7LIN_ETH.arxml is well-formed
-2018-09-06 10:01:51,169 INFO =================<SENDER-RECEIVER-TO-SIGNAL-MAPPING> without added signal=================
-2018-09-06 10:01:51,169 INFO =================Interfaces without PPorts/PRPorts=================
-2018-09-06 10:01:51,170 INFO The interface SR_ApportCarbDetecteTest doesn't have an PPort or PRPort
-2018-09-06 10:01:51,171 INFO The interface SR_ApportCarbDetecte doesn't have an PPort or PRPort
-2018-09-06 10:01:51,172 INFO The interface SR_TrebuieSaApara doesn't have an PPort or PRPort
-2018-09-06 10:01:51,182 INFO The interface If_Counter doesn't have an PPort or PRPort
-2018-09-06 10:01:51,183 INFO The interface If_Internal doesn't have an PPort or PRPort
-2018-09-06 10:01:51,185 INFO The interface ComM_UserRequest doesn't have an PPort or PRPort
-2018-09-06 10:01:51,186 INFO The interface DETService doesn't have an PPort or PRPort
-2018-09-06 10:01:51,187 INFO The interface If_CounterModify doesn't have an PPort or PRPort
-2018-09-06 10:01:51,188 INFO The interface If_DiscreteValueOutput doesn't have an PPort or PRPort
+2018-10-08 14:17:41,018 INFO =================Parsing information=================
+2018-10-08 14:17:41,137 INFO  The file C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.002_01\Input\ASWC_A26_interfaces1.dico is well-formed
+2018-10-08 14:17:41,139 INFO  The file C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.002_01\Input\ASWC_A26_interfaces2.dico is well-formed
+2018-10-08 14:17:41,140 INFO Period time: 0.12100720405578613
+2018-10-08 14:17:41,174 INFO The file: C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.002_01\Input\ASWC_A26.aswc.arxml is well-formed
+2018-10-08 14:17:41,206 INFO The file: C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.002_01\Input\ASWC_A26.diag.arxml is well-formed
+2018-10-08 14:17:41,218 INFO The file: C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.002_01\Input\ASWC_A26.epc.arxml is well-formed
+2018-10-08 14:17:41,221 INFO The file: C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.002_01\Input\Messagerie_4.0.arxml is well-formed
+2018-10-08 14:17:41,229 INFO The file: C:\Users\Cristi\PycharmProjects\SystemDescriptor\Tests\TRS.SYSDESC.GEN.002_01\Input\SoftwareComponents_8CAN_7LIN_ETH.arxml is well-formed
+2018-10-08 14:17:41,236 INFO =================<SENDER-RECEIVER-TO-SIGNAL-MAPPING> without added signal=================
+2018-10-08 14:17:41,236 INFO =================<SENDER-RECEIVER-TO-SIGNAL-MAPPING> without port=================
+2018-10-08 14:17:41,237 INFO Period time: 0.0010001659393310547
+2018-10-08 14:17:41,237 INFO Period time: 0.0
+2018-10-08 14:17:41,237 INFO =================Interfaces without PPorts/PRPorts=================
+2018-10-08 14:17:41,237 INFO The interface SR_ApportCarbDetecteTest doesn't have an PPort or PRPort
+2018-10-08 14:17:41,237 INFO The interface SR_ApportCarbDetecte doesn't have an PPort or PRPort
+2018-10-08 14:17:41,238 INFO The interface SR_TrebuieSaApara doesn't have an PPort or PRPort
+2018-10-08 14:17:41,238 INFO The interface DataServices_DcmDspData_DID_AutonomieCalculee doesn't have an PPort or PRPort
+2018-10-08 14:17:41,238 INFO The interface DataServices_DcmDspData_DID_AutonomieGPL doesn't have an PPort or PRPort
+2018-10-08 14:17:41,238 INFO The interface DataServices_DcmDspData_DID_ConsoInstantanee doesn't have an PPort or PRPort
+2018-10-08 14:17:41,239 INFO The interface DataServices_DcmDspData_DID_ConsoMoyenneHY1 doesn't have an PPort or PRPort
+2018-10-08 14:17:41,239 INFO The interface DataServices_DcmDspData_DID_ConsoMoyenneHY2 doesn't have an PPort or PRPort
+2018-10-08 14:17:41,239 INFO The interface DataServices_DcmDspData_DID_ConsoMoyenneHY3 doesn't have an PPort or PRPort
+2018-10-08 14:17:41,239 INFO The interface DataServices_DcmDspData_DID_ConsoMoyenneHY4 doesn't have an PPort or PRPort
+2018-10-08 14:17:41,239 INFO The interface DataServices_DcmDspData_DID_ConsoMoyenneHY5 doesn't have an PPort or PRPort
+2018-10-08 14:17:41,240 INFO The interface DataServices_DcmDspData_DID_ConsoMoyenneHY6 doesn't have an PPort or PRPort
+2018-10-08 14:17:41,240 INFO The interface DataServices_DcmDspData_DID_ConsoMoyTrajet1 doesn't have an PPort or PRPort
+2018-10-08 14:17:41,241 INFO The interface DataServices_DcmDspData_DID_ConsoMoyTrajet2 doesn't have an PPort or PRPort
+2018-10-08 14:17:41,241 INFO The interface DataServices_DcmDspData_DID_ConsoRapide doesn't have an PPort or PRPort
+2018-10-08 14:17:41,242 INFO The interface DataServices_DcmDspData_DID_PRESENCE_GAZ doesn't have an PPort or PRPort
+2018-10-08 14:17:41,242 INFO The interface DataServices_DcmDspData_DID_PRESENCE_ODB doesn't have an PPort or PRPort
+2018-10-08 14:17:41,242 INFO The interface ComM_UserRequest doesn't have an PPort or PRPort
+2018-10-08 14:17:41,242 INFO The interface DETService doesn't have an PPort or PRPort
+2018-10-08 14:17:41,245 INFO Period time: 0.008000612258911133
+2018-10-08 14:17:41,246 INFO Period time: 0.0
+2018-10-08 14:17:41,246 INFO Period time: 0.0
+2018-10-08 14:17:41,246 INFO Period time: 0.0
+2018-10-08 14:17:41,246 INFO Period time: 0.0
+2018-10-08 14:17:41,248 INFO Period time: 0.002000093460083008

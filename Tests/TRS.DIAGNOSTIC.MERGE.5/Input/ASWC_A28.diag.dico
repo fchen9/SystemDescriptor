@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 autosar_4-2-1.xsd">
+    <AR-PACKAGES>
+        <AR-PACKAGE>
+            <SHORT-NAME>RootP_DcmDesc</SHORT-NAME>
+            <ELEMENTS>
+                <DIAGNOSTIC-SERVICE-TABLE>
+                    <SHORT-NAME>VSM_ServicesTable</SHORT-NAME>
+                    <DIAGNOSTIC-CONNECTIONS>
+                        <DIAGNOSTIC-CONNECTION-REF-CONDITIONAL>
+                            <DIAGNOSTIC-CONNECTION-REF DEST="DIAGNOSTIC-CONNECTION">ToBeDone</DIAGNOSTIC-CONNECTION-REF>
+                        </DIAGNOSTIC-CONNECTION-REF-CONDITIONAL>
+                    </DIAGNOSTIC-CONNECTIONS>
+                    <ECU-INSTANCE-REF DEST="ECU-INSTANCE">/RootP_NetworkDesc/ECUINSTANCES/VSM</ECU-INSTANCE-REF>
+                    <PROTOCOL-KIND>DCM_UDS_ON_CAN</PROTOCOL-KIND>
+                    <SERVICE-INSTANCE-REFS>
+                        <SERVICE-INSTANCE-REF DEST="DIAGNOSTIC-WRITE-DATA-BY-IDENTIFIER">/RootP_DcmDesc/DID_DIURNES_VALEUR_DEFAUT_Write</SERVICE-INSTANCE-REF>
+						<SERVICE-INSTANCE-REF DEST="DIAGNOSTIC-ROUTINE-CONTROL">/RootP_DiagDesc/Routine_RAZIndicDiagTNB</SERVICE-INSTANCE-REF>
+                    </SERVICE-INSTANCE-REFS>
+                </DIAGNOSTIC-SERVICE-TABLE>
+            </ELEMENTS>
+        </AR-PACKAGE>
+    </AR-PACKAGES>
+</AUTOSAR>

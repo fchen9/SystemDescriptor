@@ -1,0 +1,1522 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 autosar_4-2-1.xsd">
+    <AR-PACKAGES>
+        <AR-PACKAGE>
+            <SHORT-NAME>RootP_ASWC_A28</SHORT-NAME>
+            <ELEMENTS>
+            </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE>
+            <SHORT-NAME>RootP_IntDcm</SHORT-NAME>
+            <ELEMENTS>
+                <APPLICATION-SW-COMPONENT-TYPE>
+                    <SHORT-NAME>Aswc_IntDcm</SHORT-NAME>
+                    <PORTS>
+                        <!-- 16 Provided Ports sur des interfaces de type Client Server -->
+                        <P-PORT-PROTOTYPE UUID="d1b0463d-197e-9090-9419-2965c2d05791">
+                            <SHORT-NAME>PP_DataServices_DcmDspData_DID_DispoEtatMenuPrgPem</SHORT-NAME>
+                            <PROVIDED-COM-SPECS>
+                                <SERVER-COM-SPEC>
+                                    <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_Dcm/PortInterfaces/DataServices_DcmDspData_DID_DispoEtatMenuPrgPem/ReadData</OPERATION-REF>
+                                    <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                                </SERVER-COM-SPEC>
+                            </PROVIDED-COM-SPECS>
+                            <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/AUTOSAR_Dcm/PortInterfaces/DataServices_DcmDspData_DID_DispoEtatMenuPrgPem</PROVIDED-INTERFACE-TREF>
+                        </P-PORT-PROTOTYPE>
+                        <P-PORT-PROTOTYPE UUID="4caaabc6-9ed8-d6f8-b896-84649b0a10ec">
+                            <SHORT-NAME>PP_DataServices_DcmDspData_DID_DispoEtatMenuReserveZEV</SHORT-NAME>
+                            <PROVIDED-COM-SPECS>
+                                <SERVER-COM-SPEC>
+                                    <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_Dcm/PortInterfaces/DataServices_DcmDspData_DID_DispoEtatMenuReserveZEV/ReadData</OPERATION-REF>
+                                    <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                                </SERVER-COM-SPEC>
+                            </PROVIDED-COM-SPECS>
+                            <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/AUTOSAR_Dcm/PortInterfaces/DataServices_DcmDspData_DID_DispoEtatMenuReserveZEV</PROVIDED-INTERFACE-TREF>
+                        </P-PORT-PROTOTYPE>
+                        <P-PORT-PROTOTYPE UUID="6318063e-e54e-9ddd-cb73-6d2eb6d674ee">
+                            <SHORT-NAME>PP_DataServices_DcmDspData_DID_DispoMenuInfoXVV</SHORT-NAME>
+                            <PROVIDED-COM-SPECS>
+                                <SERVER-COM-SPEC>
+                                    <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_Dcm/PortInterfaces/DataServices_DcmDspData_DID_DispoMenuInfoXVV/ReadData</OPERATION-REF>
+                                    <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                                </SERVER-COM-SPEC>
+                            </PROVIDED-COM-SPECS>
+                            <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/AUTOSAR_Dcm/PortInterfaces/DataServices_DcmDspData_DID_DispoMenuInfoXVV</PROVIDED-INTERFACE-TREF>
+                        </P-PORT-PROTOTYPE>
+                        <P-PORT-PROTOTYPE UUID="98a7f329-2b15-08ef-3f35-0880a6a0a0f5">
+                            <SHORT-NAME>PP_DataServices_DcmDspData_DID_DIURNES_VALEUR_DEFAUT</SHORT-NAME>
+                            <PROVIDED-COM-SPECS>
+                                <SERVER-COM-SPEC>
+                                    <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_Dcm/PortInterfaces/DataServices_DcmDspData_DID_DIURNES_VALEUR_DEFAUT/ReadData</OPERATION-REF>
+                                    <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                                </SERVER-COM-SPEC>
+                                <SERVER-COM-SPEC>
+                                    <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_Dcm/PortInterfaces/DataServices_DcmDspData_DID_DIURNES_VALEUR_DEFAUT/WriteData</OPERATION-REF>
+                                    <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                                </SERVER-COM-SPEC>
+                            </PROVIDED-COM-SPECS>
+                            <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/AUTOSAR_Dcm/PortInterfaces/DataServices_DcmDspData_DID_DIURNES_VALEUR_DEFAUT</PROVIDED-INTERFACE-TREF>
+                        </P-PORT-PROTOTYPE>
+                        <P-PORT-PROTOTYPE UUID="bf35b2db-d04c-ed01-3440-66bbc162fdd1">
+                            <SHORT-NAME>PP_DataServices_DcmDspData_DID_EtatFctMenuParam</SHORT-NAME>
+                            <PROVIDED-COM-SPECS>
+                                <SERVER-COM-SPEC>
+                                    <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_Dcm/PortInterfaces/DataServices_DcmDspData_DID_EtatFctMenuParam/ReadData</OPERATION-REF>
+                                    <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                                </SERVER-COM-SPEC>
+                            </PROVIDED-COM-SPECS>
+                            <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/AUTOSAR_Dcm/PortInterfaces/DataServices_DcmDspData_DID_EtatFctMenuParam</PROVIDED-INTERFACE-TREF>
+                        </P-PORT-PROTOTYPE>
+                        <P-PORT-PROTOTYPE UUID="20b5dae5-563c-b0a6-3f32-1122b553a021">
+                            <SHORT-NAME>PP_DataServices_DcmDspData_DID_EtatMenuInfoParamDispo</SHORT-NAME>
+                            <PROVIDED-COM-SPECS>
+                                <SERVER-COM-SPEC>
+                                    <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_Dcm/PortInterfaces/DataServices_DcmDspData_DID_EtatMenuInfoParamDispo/ReadData</OPERATION-REF>
+                                    <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                                </SERVER-COM-SPEC>
+                            </PROVIDED-COM-SPECS>
+                            <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/AUTOSAR_Dcm/PortInterfaces/DataServices_DcmDspData_DID_EtatMenuInfoParamDispo</PROVIDED-INTERFACE-TREF>
+                        </P-PORT-PROTOTYPE>
+                        <P-PORT-PROTOTYPE UUID="d51467a3-c4e8-6947-d83a-cf374b7c053a">
+                            <SHORT-NAME>PP_DataServices_DcmDspData_DID_EtatMenuInfoUniteLangueDispo</SHORT-NAME>
+                            <PROVIDED-COM-SPECS>
+                                <SERVER-COM-SPEC>
+                                    <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_Dcm/PortInterfaces/DataServices_DcmDspData_DID_EtatMenuInfoUniteLangueDispo/ReadData</OPERATION-REF>
+                                    <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                                </SERVER-COM-SPEC>
+                            </PROVIDED-COM-SPECS>
+                            <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/AUTOSAR_Dcm/PortInterfaces/DataServices_DcmDspData_DID_EtatMenuInfoUniteLangueDispo</PROVIDED-INTERFACE-TREF>
+                        </P-PORT-PROTOTYPE>
+                        <P-PORT-PROTOTYPE UUID="8d58dc42-17e4-4eb9-bbc1-2855ae89abb6">
+                            <SHORT-NAME>PP_DataServices_DcmDspData_DID_EtatMenuPrgMem</SHORT-NAME>
+                            <PROVIDED-COM-SPECS>
+                                <SERVER-COM-SPEC>
+                                    <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_Dcm/PortInterfaces/DataServices_DcmDspData_DID_EtatMenuPrgMem/ReadData</OPERATION-REF>
+                                    <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                                </SERVER-COM-SPEC>
+                                <SERVER-COM-SPEC>
+                                    <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_Dcm/PortInterfaces/DataServices_DcmDspData_DID_EtatMenuPrgMem/WriteData</OPERATION-REF>
+                                    <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                                </SERVER-COM-SPEC>
+                            </PROVIDED-COM-SPECS>
+                            <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/AUTOSAR_Dcm/PortInterfaces/DataServices_DcmDspData_DID_EtatMenuPrgMem</PROVIDED-INTERFACE-TREF>
+                        </P-PORT-PROTOTYPE>
+                        <P-PORT-PROTOTYPE UUID="0dde683c-b04b-45d2-544d-9051d3fcee45">
+                            <SHORT-NAME>PP_DataServices_DcmDspData_DID_EtatMenuReserveZEV</SHORT-NAME>
+                            <PROVIDED-COM-SPECS>
+                                <SERVER-COM-SPEC>
+                                    <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_Dcm/PortInterfaces/DataServices_DcmDspData_DID_EtatMenuReserveZEV/ReadData</OPERATION-REF>
+                                    <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                                </SERVER-COM-SPEC>
+                            </PROVIDED-COM-SPECS>
+                            <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/AUTOSAR_Dcm/PortInterfaces/DataServices_DcmDspData_DID_EtatMenuReserveZEV</PROVIDED-INTERFACE-TREF>
+                        </P-PORT-PROTOTYPE>
+                        <P-PORT-PROTOTYPE UUID="52da42f4-d4d4-4a12-9467-b97c2057b450">
+                            <SHORT-NAME>PP_DataServices_DcmDspData_DID_EtatMenuUnitesLangue</SHORT-NAME>
+                            <PROVIDED-COM-SPECS>
+                                <SERVER-COM-SPEC>
+                                    <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_Dcm/PortInterfaces/DataServices_DcmDspData_DID_EtatMenuUnitesLangue/ReadData</OPERATION-REF>
+                                    <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                                </SERVER-COM-SPEC>
+                            </PROVIDED-COM-SPECS>
+                            <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/AUTOSAR_Dcm/PortInterfaces/DataServices_DcmDspData_DID_EtatMenuUnitesLangue</PROVIDED-INTERFACE-TREF>
+                        </P-PORT-PROTOTYPE>
+                        <P-PORT-PROTOTYPE UUID="eee6e010-87e6-1b82-fe98-beba812ffad4">
+                            <SHORT-NAME>PP_DataServices_DcmDspData_DID_EtatReglageButeesXVV</SHORT-NAME>
+                            <PROVIDED-COM-SPECS>
+                                <SERVER-COM-SPEC>
+                                    <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_Dcm/PortInterfaces/DataServices_DcmDspData_DID_EtatReglageButeesXVV/ReadData</OPERATION-REF>
+                                    <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                                </SERVER-COM-SPEC>
+                            </PROVIDED-COM-SPECS>
+                            <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/AUTOSAR_Dcm/PortInterfaces/DataServices_DcmDspData_DID_EtatReglageButeesXVV</PROVIDED-INTERFACE-TREF>
+                        </P-PORT-PROTOTYPE>
+                        <P-PORT-PROTOTYPE UUID="0182daf4-ebb9-ecdd-f10b-9bdf247be8eb">
+                            <SHORT-NAME>PP_DataServices_DcmDspData_DID_INIT_FARC</SHORT-NAME>
+                            <PROVIDED-COM-SPECS>
+                                <SERVER-COM-SPEC>
+                                    <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_Dcm/PortInterfaces/DataServices_DcmDspData_DID_INIT_FARC/ReadData</OPERATION-REF>
+                                    <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                                </SERVER-COM-SPEC>
+                                <SERVER-COM-SPEC>
+                                    <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_Dcm/PortInterfaces/DataServices_DcmDspData_DID_INIT_FARC/WriteData</OPERATION-REF>
+                                    <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                                </SERVER-COM-SPEC>
+                            </PROVIDED-COM-SPECS>
+                            <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/AUTOSAR_Dcm/PortInterfaces/DataServices_DcmDspData_DID_INIT_FARC</PROVIDED-INTERFACE-TREF>
+                        </P-PORT-PROTOTYPE>
+                        <P-PORT-PROTOTYPE UUID="8e46f8ff-5ac0-72e2-cfee-3dc6b8ec4895">
+                            <SHORT-NAME>PP_DataServices_DcmDspData_DID_INIT_PRESENCE_ARC</SHORT-NAME>
+                            <PROVIDED-COM-SPECS>
+                                <SERVER-COM-SPEC>
+                                    <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_Dcm/PortInterfaces/DataServices_DcmDspData_DID_INIT_PRESENCE_ARC/ReadData</OPERATION-REF>
+                                    <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                                </SERVER-COM-SPEC>
+                                <SERVER-COM-SPEC>
+                                    <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_Dcm/PortInterfaces/DataServices_DcmDspData_DID_INIT_PRESENCE_ARC/WriteData</OPERATION-REF>
+                                    <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                                </SERVER-COM-SPEC>
+                            </PROVIDED-COM-SPECS>
+                            <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/AUTOSAR_Dcm/PortInterfaces/DataServices_DcmDspData_DID_INIT_PRESENCE_ARC</PROVIDED-INTERFACE-TREF>
+                        </P-PORT-PROTOTYPE>
+                        <P-PORT-PROTOTYPE UUID="13b936eb-1c7e-ee0e-869c-24b55d5358c7">
+                            <SHORT-NAME>PP_DataServices_DcmDspData_DID_INIT_SENS_ARC_NIV</SHORT-NAME>
+                            <PROVIDED-COM-SPECS>
+                                <SERVER-COM-SPEC>
+                                    <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_Dcm/PortInterfaces/DataServices_DcmDspData_DID_INIT_SENS_ARC_NIV/ReadData</OPERATION-REF>
+                                    <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                                </SERVER-COM-SPEC>
+                                <SERVER-COM-SPEC>
+                                    <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_Dcm/PortInterfaces/DataServices_DcmDspData_DID_INIT_SENS_ARC_NIV/WriteData</OPERATION-REF>
+                                    <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                                </SERVER-COM-SPEC>
+                            </PROVIDED-COM-SPECS>
+                            <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/AUTOSAR_Dcm/PortInterfaces/DataServices_DcmDspData_DID_INIT_SENS_ARC_NIV</PROVIDED-INTERFACE-TREF>
+                        </P-PORT-PROTOTYPE>
+                        <P-PORT-PROTOTYPE UUID="7b02e495-06dc-8290-233b-1eae6b7f2801">
+                            <SHORT-NAME>PP_DataServices_DcmDspData_DID_TYPE_MENU_PERSO</SHORT-NAME>
+                            <PROVIDED-COM-SPECS>
+                                <SERVER-COM-SPEC>
+                                    <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_Dcm/PortInterfaces/DataServices_DcmDspData_DID_TYPE_MENU_PERSO/ReadData</OPERATION-REF>
+                                    <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                                </SERVER-COM-SPEC>
+                                <SERVER-COM-SPEC>
+                                    <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_Dcm/PortInterfaces/DataServices_DcmDspData_DID_TYPE_MENU_PERSO/WriteData</OPERATION-REF>
+                                    <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                                </SERVER-COM-SPEC>
+                            </PROVIDED-COM-SPECS>
+                            <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/AUTOSAR_Dcm/PortInterfaces/DataServices_DcmDspData_DID_TYPE_MENU_PERSO</PROVIDED-INTERFACE-TREF>
+                        </P-PORT-PROTOTYPE>
+                        <P-PORT-PROTOTYPE UUID="80bdb8de-3e61-04d7-4cfb-f3a16c6b3eb9">
+                            <SHORT-NAME>PP_DataServices_DcmDspData_DID_VitLVVDeMenuPerso</SHORT-NAME>
+                            <PROVIDED-COM-SPECS>
+                                <SERVER-COM-SPEC>
+                                    <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_Dcm/PortInterfaces/DataServices_DcmDspData_DID_VitLVVDeMenuPerso/ReadData</OPERATION-REF>
+                                    <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                                </SERVER-COM-SPEC>
+                            </PROVIDED-COM-SPECS>
+                            <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/AUTOSAR_Dcm/PortInterfaces/DataServices_DcmDspData_DID_VitLVVDeMenuPerso</PROVIDED-INTERFACE-TREF>
+                        </P-PORT-PROTOTYPE>
+                        <!-- 12 Provided Ports sur des interfaces de type Sender Receiver -->
+                        <PR-PORT-PROTOTYPE UUID="482ebb30-3043-bfff-856f-1e043191a853">
+                            <SHORT-NAME>PP_SR_CFG_INIT_ECL_FEUX_DIURNES</SHORT-NAME>
+                            <REQUIRED-COM-SPECS>
+                            </REQUIRED-COM-SPECS>
+                            <PROVIDED-REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/RootP_SR_Param/SR_CFG_INIT_ECL_FEUX_DIURNES</PROVIDED-REQUIRED-INTERFACE-TREF>
+                        </PR-PORT-PROTOTYPE>
+                        <PR-PORT-PROTOTYPE UUID="9fe64e03-d0a0-4555-5e15-684ffcb5310a">
+                            <SHORT-NAME>PP_SR_DmdMenuSelPrgDi</SHORT-NAME>
+                            <REQUIRED-COM-SPECS>
+                            </REQUIRED-COM-SPECS>
+                            <PROVIDED-REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/RootP_SR_Data/SR_DmdMenuSelPrgDi</PROVIDED-REQUIRED-INTERFACE-TREF>
+                        </PR-PORT-PROTOTYPE>
+                        <PR-PORT-PROTOTYPE UUID="f0fbd14e-d62a-1f40-c009-753e01c7a9f2">
+                            <SHORT-NAME>PP_SR_DmdMenuSelPrgJe</SHORT-NAME>
+                            <REQUIRED-COM-SPECS>
+                            </REQUIRED-COM-SPECS>
+                            <PROVIDED-REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/RootP_SR_Data/SR_DmdMenuSelPrgJe</PROVIDED-REQUIRED-INTERFACE-TREF>
+                        </PR-PORT-PROTOTYPE>
+                        <PR-PORT-PROTOTYPE UUID="9773975f-cfed-4782-3c9a-81b54441ccb4">
+                            <SHORT-NAME>PP_SR_DmdMenuSelPrgLu</SHORT-NAME>
+                            <REQUIRED-COM-SPECS>
+                            </REQUIRED-COM-SPECS>
+                            <PROVIDED-REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/RootP_SR_Data/SR_DmdMenuSelPrgLu</PROVIDED-REQUIRED-INTERFACE-TREF>
+                        </PR-PORT-PROTOTYPE>
+                        <PR-PORT-PROTOTYPE UUID="39d64034-8372-2101-6d3d-49e2b3907543">
+                            <SHORT-NAME>PP_SR_DmdMenuSelPrgMa</SHORT-NAME>
+                            <REQUIRED-COM-SPECS>
+                            </REQUIRED-COM-SPECS>
+                            <PROVIDED-REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/RootP_SR_Data/SR_DmdMenuSelPrgMa</PROVIDED-REQUIRED-INTERFACE-TREF>
+                        </PR-PORT-PROTOTYPE>
+                        <PR-PORT-PROTOTYPE UUID="542d7010-1272-e922-57f6-3828fcd3e3ef">
+                            <SHORT-NAME>PP_SR_DmdMenuSelPrgMe</SHORT-NAME>
+                            <REQUIRED-COM-SPECS>
+                            </REQUIRED-COM-SPECS>
+                            <PROVIDED-REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/RootP_SR_Data/SR_DmdMenuSelPrgMe</PROVIDED-REQUIRED-INTERFACE-TREF>
+                        </PR-PORT-PROTOTYPE>
+                        <PR-PORT-PROTOTYPE UUID="c87e5b81-ef7f-064e-0ed7-f70fcaae3598">
+                            <SHORT-NAME>PP_SR_DmdMenuSelPrgSa</SHORT-NAME>
+                            <REQUIRED-COM-SPECS>
+                            </REQUIRED-COM-SPECS>
+                            <PROVIDED-REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/RootP_SR_Data/SR_DmdMenuSelPrgSa</PROVIDED-REQUIRED-INTERFACE-TREF>
+                        </PR-PORT-PROTOTYPE>
+                        <PR-PORT-PROTOTYPE UUID="b82ba48f-0357-8245-89ce-60d3dd9f974e">
+                            <SHORT-NAME>PP_SR_DmdMenuSelPrgVe</SHORT-NAME>
+                            <REQUIRED-COM-SPECS>
+                            </REQUIRED-COM-SPECS>
+                            <PROVIDED-REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/RootP_SR_Data/SR_DmdMenuSelPrgVe</PROVIDED-REQUIRED-INTERFACE-TREF>
+                        </PR-PORT-PROTOTYPE>
+                        <PR-PORT-PROTOTYPE UUID="f708f7a3-4d5f-9b22-95dd-0801945c56f8">
+                            <SHORT-NAME>PP_SR_CFG_INIT_FARC</SHORT-NAME>
+                            <REQUIRED-COM-SPECS>
+                            </REQUIRED-COM-SPECS>
+                            <PROVIDED-REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/RootP_SR_Param/SR_CFG_INIT_FARC</PROVIDED-REQUIRED-INTERFACE-TREF>
+                        </PR-PORT-PROTOTYPE>
+                        <PR-PORT-PROTOTYPE UUID="d6de7f21-1860-fdc1-f674-c73d8c1d9d95">
+                            <SHORT-NAME>PP_SR_CFG_INIT_PRESENCE_ARC</SHORT-NAME>
+                            <REQUIRED-COM-SPECS>
+                            </REQUIRED-COM-SPECS>
+                            <PROVIDED-REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/RootP_SR_Param/SR_CFG_INIT_PRESENCE_ARC</PROVIDED-REQUIRED-INTERFACE-TREF>
+                        </PR-PORT-PROTOTYPE>
+                        <PR-PORT-PROTOTYPE UUID="731e0345-01c0-4dbf-acaf-e4361f634e9b">
+                            <SHORT-NAME>PP_SR_CFG_INIT_SENS_ARC_NIV</SHORT-NAME>
+                            <REQUIRED-COM-SPECS>
+                            </REQUIRED-COM-SPECS>
+                            <PROVIDED-REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/RootP_SR_Param/SR_CFG_INIT_SENS_ARC_NIV</PROVIDED-REQUIRED-INTERFACE-TREF>
+                        </PR-PORT-PROTOTYPE>
+                        <PR-PORT-PROTOTYPE UUID="fba2600a-44fd-3a90-e4c3-aa19032d4e6a">
+                            <SHORT-NAME>PP_SR_CFG_PRESENCE_MENU_PERSO</SHORT-NAME>
+                            <REQUIRED-COM-SPECS>
+                            </REQUIRED-COM-SPECS>
+                            <PROVIDED-REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/RootP_SR_Param/SR_CFG_PRESENCE_MENU_PERSO</PROVIDED-REQUIRED-INTERFACE-TREF>
+                        </PR-PORT-PROTOTYPE>
+                        <!-- 64 Required Ports sur des interfaces de type Sender Receiver -->
+                        <R-PORT-PROTOTYPE UUID="ee99c250-63d3-49dc-320b-0de6dcade11c">
+                            <SHORT-NAME>RP_SR_DispoEtatMenuPrgPem</SHORT-NAME>
+                            <REQUIRED-COM-SPECS>
+                            </REQUIRED-COM-SPECS>
+                            <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/RootP_SR_Data/SR_DispoEtatMenuPrgPem</REQUIRED-INTERFACE-TREF>
+                        </R-PORT-PROTOTYPE>
+                        <R-PORT-PROTOTYPE UUID="78379d10-4272-4a85-6073-877c5fe78ca4">
+                            <SHORT-NAME>RP_SR_DispoEtatMenuReserveZEV</SHORT-NAME>
+                            <REQUIRED-COM-SPECS>
+                            </REQUIRED-COM-SPECS>
+                            <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/RootP_SR_Data/SR_DispoEtatMenuReserveZEV</REQUIRED-INTERFACE-TREF>
+                        </R-PORT-PROTOTYPE>
+                        <R-PORT-PROTOTYPE UUID="a021d5f4-5194-85c7-6f06-7417c867df58">
+                            <SHORT-NAME>RP_SR_EtatMenuInfoXVVDispo</SHORT-NAME>
+                            <REQUIRED-COM-SPECS>
+                            </REQUIRED-COM-SPECS>
+                            <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/RootP_SR_Data/SR_EtatMenuInfoXVVDispo</REQUIRED-INTERFACE-TREF>
+                        </R-PORT-PROTOTYPE>
+                        <R-PORT-PROTOTYPE UUID="30cd98b8-8058-0cd3-28c3-8a1a45faadea">
+                            <SHORT-NAME>RP_SR_CFG_INIT_ECL_FEUX_DIURNES</SHORT-NAME>
+                            <REQUIRED-COM-SPECS>
+                            </REQUIRED-COM-SPECS>
+                            <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/RootP_SR_Param/SR_CFG_INIT_ECL_FEUX_DIURNES</REQUIRED-INTERFACE-TREF>
+                        </R-PORT-PROTOTYPE>
+                        <R-PORT-PROTOTYPE UUID="c0ed95d4-a35c-fb87-98e7-df008df46135">
+                            <SHORT-NAME>RP_SR_EtatMenuAccueilCond</SHORT-NAME>
+                            <REQUIRED-COM-SPECS>
+                            </REQUIRED-COM-SPECS>
+                            <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/RootP_SR_Data/SR_EtatMenuAccueilCond</REQUIRED-INTERFACE-TREF>
+                        </R-PORT-PROTOTYPE>
+                        <R-PORT-PROTOTYPE UUID="9077d59a-16fd-f40b-92c3-506dc2f654f6">
+                            <SHORT-NAME>RP_SR_EtatMenuARCSensNiv</SHORT-NAME>
+                            <REQUIRED-COM-SPECS>
+                            </REQUIRED-COM-SPECS>
+                            <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/RootP_SR_Data/SR_EtatMenuARCSensNiv</REQUIRED-INTERFACE-TREF>
+                        </R-PORT-PROTOTYPE>
+                        <R-PORT-PROTOTYPE UUID="ad2ee152-e0d1-cd5d-0997-ab4306c0e669">
+                            <SHORT-NAME>RP_SR_EtatMenuEclAccomp</SHORT-NAME>
+                            <REQUIRED-COM-SPECS>
+                            </REQUIRED-COM-SPECS>
+                            <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/RootP_SR_Data/SR_EtatMenuEclAccomp</REQUIRED-INTERFACE-TREF>
+                        </R-PORT-PROTOTYPE>
+                        <R-PORT-PROTOTYPE UUID="c41e7b9e-4e8a-06bd-c5e1-4b8395913c2a">
+                            <SHORT-NAME>RP_SR_EtatMenuEclAccompTempo</SHORT-NAME>
+                            <REQUIRED-COM-SPECS>
+                            </REQUIRED-COM-SPECS>
+                            <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/RootP_SR_Data/SR_EtatMenuEclAccompTempo</REQUIRED-INTERFACE-TREF>
+                        </R-PORT-PROTOTYPE>
+                        <R-PORT-PROTOTYPE UUID="45ca2210-d9f0-33a3-eb7e-9279625a95a4">
+                            <SHORT-NAME>RP_SR_EtatMenuEclAdapt</SHORT-NAME>
+                            <REQUIRED-COM-SPECS>
+                            </REQUIRED-COM-SPECS>
+                            <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/RootP_SR_Data/SR_EtatMenuEclAdapt</REQUIRED-INTERFACE-TREF>
+                        </R-PORT-PROTOTYPE>
+                        <R-PORT-PROTOTYPE UUID="4fa14b17-4a74-131f-634b-25f89e43064a">
+                            <SHORT-NAME>RP_SR_EtatMenuEclAmbi</SHORT-NAME>
+                            <REQUIRED-COM-SPECS>
+                            </REQUIRED-COM-SPECS>
+                            <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/RootP_SR_Data/SR_EtatMenuEclAmbi</REQUIRED-INTERFACE-TREF>
+                        </R-PORT-PROTOTYPE>
+                        <R-PORT-PROTOTYPE UUID="d1132e17-6a24-1c17-c276-0687024ba62a">
+                            <SHORT-NAME>RP_SR_EtatMenuEclAmbiNiv</SHORT-NAME>
+                            <REQUIRED-COM-SPECS>
+                            </REQUIRED-COM-SPECS>
+                            <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/RootP_SR_Data/SR_EtatMenuEclAmbiNiv</REQUIRED-INTERFACE-TREF>
+                        </R-PORT-PROTOTYPE>
+                        <R-PORT-PROTOTYPE UUID="e4d294dc-869d-b56e-8baf-703f9f192ebe">
+                            <SHORT-NAME>RP_SR_EtatMenuEclAuto</SHORT-NAME>
+                            <REQUIRED-COM-SPECS>
+                            </REQUIRED-COM-SPECS>
+                            <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/RootP_SR_Data/SR_EtatMenuEclAuto</REQUIRED-INTERFACE-TREF>
+                        </R-PORT-PROTOTYPE>
+                        <R-PORT-PROTOTYPE UUID="299fdb53-66d9-89c0-e18b-f076965883f3">
+                            <SHORT-NAME>RP_SR_EtatMenuEclAutoroute</SHORT-NAME>
+                            <REQUIRED-COM-SPECS>
+                            </REQUIRED-COM-SPECS>
+                            <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/RootP_SR_Data/SR_EtatMenuEclAutoroute</REQUIRED-INTERFACE-TREF>
+                        </R-PORT-PROTOTYPE>
+                        <R-PORT-PROTOTYPE UUID="931f8557-cbeb-739e-e3a7-7e4515d55472">
+                            <SHORT-NAME>RP_SR_EtatMenuEclDeconda</SHORT-NAME>
+                            <REQUIRED-COM-SPECS>
+                            </REQUIRED-COM-SPECS>
+                            <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/RootP_SR_Data/SR_EtatMenuEclDeconda</REQUIRED-INTERFACE-TREF>
+                        </R-PORT-PROTOTYPE>
+                        <R-PORT-PROTOTYPE UUID="721fb733-f851-5d8f-e396-85bf82e6710d">
+                            <SHORT-NAME>RP_SR_EtatMenuEclDecondaTempo</SHORT-NAME>
+                            <REQUIRED-COM-SPECS>
+                            </REQUIRED-COM-SPECS>
+                            <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/RootP_SR_Data/SR_EtatMenuEclDecondaTempo</REQUIRED-INTERFACE-TREF>
+                        </R-PORT-PROTOTYPE>
+                        <R-PORT-PROTOTYPE UUID="54be3d06-9d0c-00c1-1cb3-87854bcc19de">
+                            <SHORT-NAME>RP_SR_EtatMenuEssuiVitMar</SHORT-NAME>
+                            <REQUIRED-COM-SPECS>
+                            </REQUIRED-COM-SPECS>
+                            <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/RootP_SR_Data/SR_EtatMenuEssuiVitMar</REQUIRED-INTERFACE-TREF>
+                        </R-PORT-PROTOTYPE>
+                        <R-PORT-PROTOTYPE UUID="9de197ac-6405-7802-6601-f25d7965e581">
+                            <SHORT-NAME>RP_SR_EtatMenuFARC</SHORT-NAME>
+                            <REQUIRED-COM-SPECS>
+                            </REQUIRED-COM-SPECS>
+                            <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/RootP_SR_Data/SR_EtatMenuFARC</REQUIRED-INTERFACE-TREF>
+                        </R-PORT-PROTOTYPE>
+                        <R-PORT-PROTOTYPE UUID="4b53f68b-37fa-0424-38ae-3c2099e6f7a3">
+                            <SHORT-NAME>RP_SR_EtatMenuFeuxDiurne</SHORT-NAME>
+                            <REQUIRED-COM-SPECS>
+                            </REQUIRED-COM-SPECS>
+                            <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/RootP_SR_Data/SR_EtatMenuFeuxDiurne</REQUIRED-INTERFACE-TREF>
+                        </R-PORT-PROTOTYPE>
+                        <R-PORT-PROTOTYPE UUID="fcd2189c-92d6-c132-ad93-b76f39a17c4f">
+                            <SHORT-NAME>RP_SR_EtatMenuFSEAuto</SHORT-NAME>
+                            <REQUIRED-COM-SPECS>
+                            </REQUIRED-COM-SPECS>
+                            <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/RootP_SR_Data/SR_EtatMenuFSEAuto</REQUIRED-INTERFACE-TREF>
+                        </R-PORT-PROTOTYPE>
+                        <R-PORT-PROTOTYPE UUID="10eedb69-5069-9700-d97f-30a999236e93">
+                            <SHORT-NAME>RP_SR_EtatMenuMotoVolAr</SHORT-NAME>
+                            <REQUIRED-COM-SPECS>
+                            </REQUIRED-COM-SPECS>
+                            <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/RootP_SR_Data/SR_EtatMenuMotoVolAr</REQUIRED-INTERFACE-TREF>
+                        </R-PORT-PROTOTYPE>
+                        <R-PORT-PROTOTYPE UUID="1d2f66a7-123e-4aed-cd2e-7efa5d8cc238">
+                            <SHORT-NAME>RP_SR_EtatMenuPresenceARC</SHORT-NAME>
+                            <REQUIRED-COM-SPECS>
+                            </REQUIRED-COM-SPECS>
+                            <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/RootP_SR_Data/SR_EtatMenuPresenceARC</REQUIRED-INTERFACE-TREF>
+                        </R-PORT-PROTOTYPE>
+                        <R-PORT-PROTOTYPE UUID="d73c133c-84a8-4376-e802-11ff8c54d966">
+                            <SHORT-NAME>RP_SR_EtatMenuSelecArriere</SHORT-NAME>
+                            <REQUIRED-COM-SPECS>
+                            </REQUIRED-COM-SPECS>
+                            <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/RootP_SR_Data/SR_EtatMenuSelecArriere</REQUIRED-INTERFACE-TREF>
+                        </R-PORT-PROTOTYPE>
+                        <R-PORT-PROTOTYPE UUID="67436f6c-6ef2-1a67-7384-9c610ad848b1">
+                            <SHORT-NAME>RP_SR_EtatMenuSelecCabine</SHORT-NAME>
+                            <REQUIRED-COM-SPECS>
+                            </REQUIRED-COM-SPECS>
+                            <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/RootP_SR_Data/SR_EtatMenuSelecCabine</REQUIRED-INTERFACE-TREF>
+                        </R-PORT-PROTOTYPE>
+                        <R-PORT-PROTOTYPE UUID="14dadb57-1463-e737-892a-faed812555d9">
+                            <SHORT-NAME>RP_SR_EtatMenuSelecOuvPlip</SHORT-NAME>
+                            <REQUIRED-COM-SPECS>
+                            </REQUIRED-COM-SPECS>
+                            <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/RootP_SR_Data/SR_EtatMenuSelecOuvPlip</REQUIRED-INTERFACE-TREF>
+                        </R-PORT-PROTOTYPE>
+                        <R-PORT-PROTOTYPE UUID="a55b9710-7b7d-63af-820f-fdfcd6ede1a6">
+                            <SHORT-NAME>RP_SR_EtatMenuSonPoly</SHORT-NAME>
+                            <REQUIRED-COM-SPECS>
+                            </REQUIRED-COM-SPECS>
+                            <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/RootP_SR_Data/SR_EtatMenuSonPoly</REQUIRED-INTERFACE-TREF>
+                        </R-PORT-PROTOTYPE>
+                        <R-PORT-PROTOTYPE UUID="61ffff1a-87ad-dc97-3d05-7e497be49086">
+                            <SHORT-NAME>RP_SR_EtatMenuStatusAAS</SHORT-NAME>
+                            <REQUIRED-COM-SPECS>
+                            </REQUIRED-COM-SPECS>
+                            <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/RootP_SR_Data/SR_EtatMenuStatusAAS</REQUIRED-INTERFACE-TREF>
+                        </R-PORT-PROTOTYPE>
+                        <R-PORT-PROTOTYPE UUID="e1f69d65-8272-cfd6-3085-c257e1aeac41">
+                            <SHORT-NAME>RP_SR_EtatMenuStatusSAM</SHORT-NAME>
+                            <REQUIRED-COM-SPECS>
+                            </REQUIRED-COM-SPECS>
+                            <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/RootP_SR_Data/SR_EtatMenuStatusSAM</REQUIRED-INTERFACE-TREF>
+                        </R-PORT-PROTOTYPE>
+                        <R-PORT-PROTOTYPE UUID="3d9bbfe2-6db4-bd7a-24c3-04696853dfd9">
+                            <SHORT-NAME>RP_SR_EtatMenuTCFG</SHORT-NAME>
+                            <REQUIRED-COM-SPECS>
+                            </REQUIRED-COM-SPECS>
+                            <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/RootP_SR_Data/SR_EtatMenuTCFG</REQUIRED-INTERFACE-TREF>
+                        </R-PORT-PROTOTYPE>
+                        <R-PORT-PROTOTYPE UUID="47e6cb81-c5ae-e5a1-d14c-c41797819ff6">
+                            <SHORT-NAME>RP_SR_EtatMenuInfoParamDispo</SHORT-NAME>
+                            <REQUIRED-COM-SPECS>
+                            </REQUIRED-COM-SPECS>
+                            <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/RootP_SR_Data/SR_EtatMenuInfoParamDispo</REQUIRED-INTERFACE-TREF>
+                        </R-PORT-PROTOTYPE>
+                        <R-PORT-PROTOTYPE UUID="66d8a0a9-b5a1-2cb6-791e-f5bfe27a7f42">
+                            <SHORT-NAME>RP_SR_EtatMenuInfoUniteLangueDispo</SHORT-NAME>
+                            <REQUIRED-COM-SPECS>
+                            </REQUIRED-COM-SPECS>
+                            <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/RootP_SR_Data/SR_EtatMenuInfoUniteLangueDispo</REQUIRED-INTERFACE-TREF>
+                        </R-PORT-PROTOTYPE>
+                        <R-PORT-PROTOTYPE UUID="9989aeff-0348-1128-4069-12a6eee0f297">
+                            <SHORT-NAME>RP_SR_DmdMenuSelPrgDi</SHORT-NAME>
+                            <REQUIRED-COM-SPECS>
+                            </REQUIRED-COM-SPECS>
+                            <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/RootP_SR_Data/SR_DmdMenuSelPrgDi</REQUIRED-INTERFACE-TREF>
+                        </R-PORT-PROTOTYPE>
+                        <R-PORT-PROTOTYPE UUID="790bbdc9-00dd-cb65-ce7d-474e76f01cf5">
+                            <SHORT-NAME>RP_SR_DmdMenuSelPrgJe</SHORT-NAME>
+                            <REQUIRED-COM-SPECS>
+                            </REQUIRED-COM-SPECS>
+                            <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/RootP_SR_Data/SR_DmdMenuSelPrgJe</REQUIRED-INTERFACE-TREF>
+                        </R-PORT-PROTOTYPE>
+                        <R-PORT-PROTOTYPE UUID="1602f809-9943-3120-5804-97d558c75ece">
+                            <SHORT-NAME>RP_SR_DmdMenuSelPrgLu</SHORT-NAME>
+                            <REQUIRED-COM-SPECS>
+                            </REQUIRED-COM-SPECS>
+                            <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/RootP_SR_Data/SR_DmdMenuSelPrgLu</REQUIRED-INTERFACE-TREF>
+                        </R-PORT-PROTOTYPE>
+                        <R-PORT-PROTOTYPE UUID="f43ba565-48e5-ca44-2f17-ea32f275003f">
+                            <SHORT-NAME>RP_SR_DmdMenuSelPrgMa</SHORT-NAME>
+                            <REQUIRED-COM-SPECS>
+                            </REQUIRED-COM-SPECS>
+                            <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/RootP_SR_Data/SR_DmdMenuSelPrgMa</REQUIRED-INTERFACE-TREF>
+                        </R-PORT-PROTOTYPE>
+                        <R-PORT-PROTOTYPE UUID="7843ddf8-ce6e-b349-7b84-c300621b3ae6">
+                            <SHORT-NAME>RP_SR_DmdMenuSelPrgMe</SHORT-NAME>
+                            <REQUIRED-COM-SPECS>
+                            </REQUIRED-COM-SPECS>
+                            <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/RootP_SR_Data/SR_DmdMenuSelPrgMe</REQUIRED-INTERFACE-TREF>
+                        </R-PORT-PROTOTYPE>
+                        <R-PORT-PROTOTYPE UUID="366ab41d-3e80-6993-2e27-4a23cd86b275">
+                            <SHORT-NAME>RP_SR_DmdMenuSelPrgSa</SHORT-NAME>
+                            <REQUIRED-COM-SPECS>
+                            </REQUIRED-COM-SPECS>
+                            <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/RootP_SR_Data/SR_DmdMenuSelPrgSa</REQUIRED-INTERFACE-TREF>
+                        </R-PORT-PROTOTYPE>
+                        <R-PORT-PROTOTYPE UUID="ba63f8fd-6916-9641-555a-55790ba6a846">
+                            <SHORT-NAME>RP_SR_DmdMenuSelPrgVe</SHORT-NAME>
+                            <REQUIRED-COM-SPECS>
+                            </REQUIRED-COM-SPECS>
+                            <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/RootP_SR_Data/SR_DmdMenuSelPrgVe</REQUIRED-INTERFACE-TREF>
+                        </R-PORT-PROTOTYPE>
+                        <R-PORT-PROTOTYPE UUID="276c5ef7-4196-3f15-7f08-e3de91979cc6">
+                            <SHORT-NAME>RP_SR_EtatMenuReserveZEV</SHORT-NAME>
+                            <REQUIRED-COM-SPECS>
+                            </REQUIRED-COM-SPECS>
+                            <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/RootP_SR_Data/SR_EtatMenuReserveZEV</REQUIRED-INTERFACE-TREF>
+                        </R-PORT-PROTOTYPE>
+                        <R-PORT-PROTOTYPE UUID="4c0c0b58-a4da-bfa7-c918-5e2c0aa71047">
+                            <SHORT-NAME>RP_SR_EtatMenuLangueVehicule</SHORT-NAME>
+                            <REQUIRED-COM-SPECS>
+                            </REQUIRED-COM-SPECS>
+                            <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/RootP_SR_Data/SR_EtatMenuLangueVehicule</REQUIRED-INTERFACE-TREF>
+                        </R-PORT-PROTOTYPE>
+                        <R-PORT-PROTOTYPE UUID="87435494-6db7-3fcb-17ff-00ee411a0437">
+                            <SHORT-NAME>RP_SR_EtatMenuUniteConso</SHORT-NAME>
+                            <REQUIRED-COM-SPECS>
+                            </REQUIRED-COM-SPECS>
+                            <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/RootP_SR_Data/SR_EtatMenuUniteConso</REQUIRED-INTERFACE-TREF>
+                        </R-PORT-PROTOTYPE>
+                        <R-PORT-PROTOTYPE UUID="d12215ab-a654-da06-08d3-665ced8f857d">
+                            <SHORT-NAME>RP_SR_EtatMenuUniteDistance</SHORT-NAME>
+                            <REQUIRED-COM-SPECS>
+                            </REQUIRED-COM-SPECS>
+                            <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/RootP_SR_Data/SR_EtatMenuUniteDistance</REQUIRED-INTERFACE-TREF>
+                        </R-PORT-PROTOTYPE>
+                        <R-PORT-PROTOTYPE UUID="860ce8e7-5c66-7047-f88e-55dcb39580ff">
+                            <SHORT-NAME>RP_SR_EtatMenuUniteTemperature</SHORT-NAME>
+                            <REQUIRED-COM-SPECS>
+                            </REQUIRED-COM-SPECS>
+                            <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/RootP_SR_Data/SR_EtatMenuUniteTemperature</REQUIRED-INTERFACE-TREF>
+                        </R-PORT-PROTOTYPE>
+                        <R-PORT-PROTOTYPE UUID="b990c635-7dc0-b2e3-c5b2-a3814d434a08">
+                            <SHORT-NAME>RP_SR_EtatMenuUniteVolume</SHORT-NAME>
+                            <REQUIRED-COM-SPECS>
+                            </REQUIRED-COM-SPECS>
+                            <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/RootP_SR_Data/SR_EtatMenuUniteVolume</REQUIRED-INTERFACE-TREF>
+                        </R-PORT-PROTOTYPE>
+                        <R-PORT-PROTOTYPE UUID="9e32f445-afb2-7981-29fa-70adcce2823f">
+                            <SHORT-NAME>RP_SR_EtatMenuActButee1XVV</SHORT-NAME>
+                            <REQUIRED-COM-SPECS>
+                            </REQUIRED-COM-SPECS>
+                            <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/RootP_SR_Data/SR_EtatMenuActButee1XVV</REQUIRED-INTERFACE-TREF>
+                        </R-PORT-PROTOTYPE>
+                        <R-PORT-PROTOTYPE UUID="ed4150cf-dd24-85d8-b846-37c5cfa80bb5">
+                            <SHORT-NAME>RP_SR_EtatMenuActButee2XVV</SHORT-NAME>
+                            <REQUIRED-COM-SPECS>
+                            </REQUIRED-COM-SPECS>
+                            <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/RootP_SR_Data/SR_EtatMenuActButee2XVV</REQUIRED-INTERFACE-TREF>
+                        </R-PORT-PROTOTYPE>
+                        <R-PORT-PROTOTYPE UUID="96434b02-f63b-ca59-0149-175e3369d4af">
+                            <SHORT-NAME>RP_SR_EtatMenuActButee3XVV</SHORT-NAME>
+                            <REQUIRED-COM-SPECS>
+                            </REQUIRED-COM-SPECS>
+                            <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/RootP_SR_Data/SR_EtatMenuActButee3XVV</REQUIRED-INTERFACE-TREF>
+                        </R-PORT-PROTOTYPE>
+                        <R-PORT-PROTOTYPE UUID="ea8001ed-1b70-ba7e-3b56-8bb66f36912e">
+                            <SHORT-NAME>RP_SR_EtatMenuActButee4XVV</SHORT-NAME>
+                            <REQUIRED-COM-SPECS>
+                            </REQUIRED-COM-SPECS>
+                            <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/RootP_SR_Data/SR_EtatMenuActButee4XVV</REQUIRED-INTERFACE-TREF>
+                        </R-PORT-PROTOTYPE>
+                        <R-PORT-PROTOTYPE UUID="fd01ff73-410d-79c7-0221-60c7fd14f994">
+                            <SHORT-NAME>RP_SR_EtatMenuActButee5XVV</SHORT-NAME>
+                            <REQUIRED-COM-SPECS>
+                            </REQUIRED-COM-SPECS>
+                            <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/RootP_SR_Data/SR_EtatMenuActButee5XVV</REQUIRED-INTERFACE-TREF>
+                        </R-PORT-PROTOTYPE>
+                        <R-PORT-PROTOTYPE UUID="eebc60e7-9f5a-61b4-5803-856c8cbc68ba">
+                            <SHORT-NAME>RP_SR_EtatMenuActButeeGenXVV</SHORT-NAME>
+                            <REQUIRED-COM-SPECS>
+                            </REQUIRED-COM-SPECS>
+                            <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/RootP_SR_Data/SR_EtatMenuActButeeGenXVV</REQUIRED-INTERFACE-TREF>
+                        </R-PORT-PROTOTYPE>
+                        <R-PORT-PROTOTYPE UUID="c1747f8c-faf6-c550-30c5-c53de1af5f0d">
+                            <SHORT-NAME>RP_SR_EtatMenuVitesse1XVV</SHORT-NAME>
+                            <REQUIRED-COM-SPECS>
+                            </REQUIRED-COM-SPECS>
+                            <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/RootP_SR_Data/SR_EtatMenuVitesse1XVV</REQUIRED-INTERFACE-TREF>
+                        </R-PORT-PROTOTYPE>
+                        <R-PORT-PROTOTYPE UUID="e9b7ce74-175c-cef3-7fd6-2623f80865b4">
+                            <SHORT-NAME>RP_SR_EtatMenuVitesse2XVV</SHORT-NAME>
+                            <REQUIRED-COM-SPECS>
+                            </REQUIRED-COM-SPECS>
+                            <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/RootP_SR_Data/SR_EtatMenuVitesse2XVV</REQUIRED-INTERFACE-TREF>
+                        </R-PORT-PROTOTYPE>
+                        <R-PORT-PROTOTYPE UUID="6d815313-02be-591c-74b8-292ab084612b">
+                            <SHORT-NAME>RP_SR_EtatMenuVitesse3XVV</SHORT-NAME>
+                            <REQUIRED-COM-SPECS>
+                            </REQUIRED-COM-SPECS>
+                            <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/RootP_SR_Data/SR_EtatMenuVitesse3XVV</REQUIRED-INTERFACE-TREF>
+                        </R-PORT-PROTOTYPE>
+                        <R-PORT-PROTOTYPE UUID="381d9df2-c405-01d8-0eee-49197611d46c">
+                            <SHORT-NAME>RP_SR_EtatMenuVitesse4XVV</SHORT-NAME>
+                            <REQUIRED-COM-SPECS>
+                            </REQUIRED-COM-SPECS>
+                            <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/RootP_SR_Data/SR_EtatMenuVitesse4XVV</REQUIRED-INTERFACE-TREF>
+                        </R-PORT-PROTOTYPE>
+                        <R-PORT-PROTOTYPE UUID="d9e5a3cf-76e4-9834-b9d7-41e2a8734b7a">
+                            <SHORT-NAME>RP_SR_EtatMenuVitesse5XVV</SHORT-NAME>
+                            <REQUIRED-COM-SPECS>
+                            </REQUIRED-COM-SPECS>
+                            <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/RootP_SR_Data/SR_EtatMenuVitesse5XVV</REQUIRED-INTERFACE-TREF>
+                        </R-PORT-PROTOTYPE>
+                        <R-PORT-PROTOTYPE UUID="a6c4eae6-defc-0c51-0f66-c6a37a96f770">
+                            <SHORT-NAME>RP_SR_CFG_INIT_FARC</SHORT-NAME>
+                            <REQUIRED-COM-SPECS>
+                            </REQUIRED-COM-SPECS>
+                            <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/RootP_SR_Param/SR_CFG_INIT_FARC</REQUIRED-INTERFACE-TREF>
+                        </R-PORT-PROTOTYPE>
+                        <R-PORT-PROTOTYPE UUID="765b6f7d-4f8b-044c-891c-8c8672d5a1a5">
+                            <SHORT-NAME>RP_SR_CFG_INIT_PRESENCE_ARC</SHORT-NAME>
+                            <REQUIRED-COM-SPECS>
+                            </REQUIRED-COM-SPECS>
+                            <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/RootP_SR_Param/SR_CFG_INIT_PRESENCE_ARC</REQUIRED-INTERFACE-TREF>
+                        </R-PORT-PROTOTYPE>
+                        <R-PORT-PROTOTYPE UUID="d7a1be5f-3129-c29b-5221-e2eee742c9d7">
+                            <SHORT-NAME>RP_SR_CFG_INIT_SENS_ARC_NIV</SHORT-NAME>
+                            <REQUIRED-COM-SPECS>
+                            </REQUIRED-COM-SPECS>
+                            <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/RootP_SR_Param/SR_CFG_INIT_SENS_ARC_NIV</REQUIRED-INTERFACE-TREF>
+                        </R-PORT-PROTOTYPE>
+                        <R-PORT-PROTOTYPE UUID="54c5661a-c630-ad72-f8b0-d6717b010277">
+                            <SHORT-NAME>RP_SR_CFG_PRESENCE_MENU_PERSO</SHORT-NAME>
+                            <REQUIRED-COM-SPECS>
+                            </REQUIRED-COM-SPECS>
+                            <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/RootP_SR_Param/SR_CFG_PRESENCE_MENU_PERSO</REQUIRED-INTERFACE-TREF>
+                        </R-PORT-PROTOTYPE>
+                        <R-PORT-PROTOTYPE UUID="6ad2775c-16b8-8269-d8e1-c55f4d0fc2e6">
+                            <SHORT-NAME>RP_SR_EtatMenuVitLvv1</SHORT-NAME>
+                            <REQUIRED-COM-SPECS>
+                            </REQUIRED-COM-SPECS>
+                            <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/RootP_SR_Data/SR_EtatMenuVitLvv1</REQUIRED-INTERFACE-TREF>
+                        </R-PORT-PROTOTYPE>
+                        <R-PORT-PROTOTYPE UUID="9fbd82c8-2753-82a4-7f9a-a6d66a8755ee">
+                            <SHORT-NAME>RP_SR_EtatMenuVitLvv2</SHORT-NAME>
+                            <REQUIRED-COM-SPECS>
+                            </REQUIRED-COM-SPECS>
+                            <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/RootP_SR_Data/SR_EtatMenuVitLvv2</REQUIRED-INTERFACE-TREF>
+                        </R-PORT-PROTOTYPE>
+                        <R-PORT-PROTOTYPE UUID="0a7ea9ba-0429-31bd-3956-fbfa044c80f9">
+                            <SHORT-NAME>RP_SR_EtatMenuVitLvv3</SHORT-NAME>
+                            <REQUIRED-COM-SPECS>
+                            </REQUIRED-COM-SPECS>
+                            <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/RootP_SR_Data/SR_EtatMenuVitLvv3</REQUIRED-INTERFACE-TREF>
+                        </R-PORT-PROTOTYPE>
+                        <R-PORT-PROTOTYPE UUID="f396d48d-ea22-5f70-1e2f-5833dd97a655">
+                            <SHORT-NAME>RP_SR_EtatMenuVitLvv4</SHORT-NAME>
+                            <REQUIRED-COM-SPECS>
+                            </REQUIRED-COM-SPECS>
+                            <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/RootP_SR_Data/SR_EtatMenuVitLvv4</REQUIRED-INTERFACE-TREF>
+                        </R-PORT-PROTOTYPE>
+                        <R-PORT-PROTOTYPE UUID="a83a2855-828d-83c0-7f7b-db293ba34128">
+                            <SHORT-NAME>RP_SR_EtatMenuVitLvv5</SHORT-NAME>
+                            <REQUIRED-COM-SPECS>
+                            </REQUIRED-COM-SPECS>
+                            <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/RootP_SR_Data/SR_EtatMenuVitLvv5</REQUIRED-INTERFACE-TREF>
+                        </R-PORT-PROTOTYPE>
+                        <R-PORT-PROTOTYPE UUID="d8f09986-bb26-7257-8b24-8c68376083d9">
+                            <SHORT-NAME>RP_SR_EtatMenuVitLvv6</SHORT-NAME>
+                            <REQUIRED-COM-SPECS>
+                            </REQUIRED-COM-SPECS>
+                            <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/RootP_SR_Data/SR_EtatMenuVitLvv6</REQUIRED-INTERFACE-TREF>
+                        </R-PORT-PROTOTYPE>
+                        <!-- Required Port Mode Switch Event -->
+                        <R-PORT-PROTOTYPE UUID="a7b87a89-16f6-a273-bbb7-7c2102ee1aab">
+                            <SHORT-NAME>Aswc_IntDcm_MSI</SHORT-NAME>
+                            <REQUIRED-INTERFACE-TREF DEST="MODE-SWITCH-INTERFACE">/RootP_Mode/RootP_RteMode</REQUIRED-INTERFACE-TREF>
+                        </R-PORT-PROTOTYPE>
+                    </PORTS>
+                    <INTERNAL-BEHAVIORS>
+                        <SWC-INTERNAL-BEHAVIOR UUID="4fda2846-3d0e-3774-6645-777b0b16207d">
+                            <SHORT-NAME>IB_Aswc_IntDcm</SHORT-NAME>
+                            <DATA-TYPE-MAPPING-REFS>
+                                <DATA-TYPE-MAPPING-REF DEST="DATA-TYPE-MAPPING-SET">/RootP_Mode/ApplicationModeMapping</DATA-TYPE-MAPPING-REF>
+                            </DATA-TYPE-MAPPING-REFS>
+                            <AR-TYPED-PER-INSTANCE-MEMORYS />
+                            <EVENTS>
+                                <OPERATION-INVOKED-EVENT UUID="86cb6890-7c92-73bc-ccfb-03bd734487a7">
+                                    <SHORT-NAME>DataServices_DcmDspData_DID_DispoEtatMenuPrgPem_ReadData_OIE</SHORT-NAME>
+                                    <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/RootP_IntDcm/Aswc_IntDcm/IB_Aswc_IntDcm/RUNS_DID_DispoEtatMenuPrgPem_Get</START-ON-EVENT-REF>
+                                    <OPERATION-IREF>
+                                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/PP_DataServices_DcmDspData_DID_DispoEtatMenuPrgPem</CONTEXT-P-PORT-REF>
+                                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_Dcm/PortInterfaces/DataServices_DcmDspData_DID_DispoEtatMenuPrgPem/ReadData</TARGET-PROVIDED-OPERATION-REF>
+                                    </OPERATION-IREF>
+                                </OPERATION-INVOKED-EVENT>
+                                <OPERATION-INVOKED-EVENT UUID="0867f14e-aa2b-eec1-33c8-475777c2a770">
+                                    <SHORT-NAME>DataServices_DcmDspData_DID_DispoEtatMenuReserveZEV_ReadData_OIE</SHORT-NAME>
+                                    <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/RootP_IntDcm/Aswc_IntDcm/IB_Aswc_IntDcm/RUNS_DID_DispoEtatMenuReserveZEV_Get</START-ON-EVENT-REF>
+                                    <OPERATION-IREF>
+                                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/PP_DataServices_DcmDspData_DID_DispoEtatMenuReserveZEV</CONTEXT-P-PORT-REF>
+                                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_Dcm/PortInterfaces/DataServices_DcmDspData_DID_DispoEtatMenuReserveZEV/ReadData</TARGET-PROVIDED-OPERATION-REF>
+                                    </OPERATION-IREF>
+                                </OPERATION-INVOKED-EVENT>
+                                <OPERATION-INVOKED-EVENT UUID="fa7074a6-65c6-d902-b3f4-49f11ec511b2">
+                                    <SHORT-NAME>DataServices_DcmDspData_DID_DispoMenuInfoXVV_ReadData_OIE</SHORT-NAME>
+                                    <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/RootP_IntDcm/Aswc_IntDcm/IB_Aswc_IntDcm/RUNS_DID_DispoMenuInfoXVV_Get</START-ON-EVENT-REF>
+                                    <OPERATION-IREF>
+                                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/PP_DataServices_DcmDspData_DID_DispoMenuInfoXVV</CONTEXT-P-PORT-REF>
+                                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_Dcm/PortInterfaces/DataServices_DcmDspData_DID_DispoMenuInfoXVV/ReadData</TARGET-PROVIDED-OPERATION-REF>
+                                    </OPERATION-IREF>
+                                </OPERATION-INVOKED-EVENT>
+                                <OPERATION-INVOKED-EVENT UUID="57d7e0a9-ff8c-a96b-fb01-34f54ec83ba7">
+                                    <SHORT-NAME>DataServices_DcmDspData_DID_DIURNES_VALEUR_DEFAUT_ReadData_OIE</SHORT-NAME>
+                                    <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/RootP_IntDcm/Aswc_IntDcm/IB_Aswc_IntDcm/RUNS_DID_DIURNES_VALEUR_DEFAUT_Get</START-ON-EVENT-REF>
+                                    <OPERATION-IREF>
+                                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/PP_DataServices_DcmDspData_DID_DIURNES_VALEUR_DEFAUT</CONTEXT-P-PORT-REF>
+                                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_Dcm/PortInterfaces/DataServices_DcmDspData_DID_DIURNES_VALEUR_DEFAUT/ReadData</TARGET-PROVIDED-OPERATION-REF>
+                                    </OPERATION-IREF>
+                                </OPERATION-INVOKED-EVENT>
+                                <OPERATION-INVOKED-EVENT UUID="43ba15ab-5567-41c2-b68d-4d50542ed131">
+                                    <SHORT-NAME>DataServices_DcmDspData_DID_DIURNES_VALEUR_DEFAUT_WriteData_OIE</SHORT-NAME>
+                                    <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/RootP_IntDcm/Aswc_IntDcm/IB_Aswc_IntDcm/RUNS_DID_DIURNES_VALEUR_DEFAUT_Set</START-ON-EVENT-REF>
+                                    <OPERATION-IREF>
+                                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/PP_DataServices_DcmDspData_DID_DIURNES_VALEUR_DEFAUT</CONTEXT-P-PORT-REF>
+                                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_Dcm/PortInterfaces/DataServices_DcmDspData_DID_DIURNES_VALEUR_DEFAUT/WriteData</TARGET-PROVIDED-OPERATION-REF>
+                                    </OPERATION-IREF>
+                                </OPERATION-INVOKED-EVENT>
+                                <OPERATION-INVOKED-EVENT UUID="d5062e63-b332-fa79-8fa9-b6d73c05b6de">
+                                    <SHORT-NAME>DataServices_DcmDspData_DID_EtatFctMenuParam_ReadData_OIE</SHORT-NAME>
+                                    <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/RootP_IntDcm/Aswc_IntDcm/IB_Aswc_IntDcm/RUNS_DID_EtatFctMenuParam_Get</START-ON-EVENT-REF>
+                                    <OPERATION-IREF>
+                                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/PP_DataServices_DcmDspData_DID_EtatFctMenuParam</CONTEXT-P-PORT-REF>
+                                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_Dcm/PortInterfaces/DataServices_DcmDspData_DID_EtatFctMenuParam/ReadData</TARGET-PROVIDED-OPERATION-REF>
+                                    </OPERATION-IREF>
+                                </OPERATION-INVOKED-EVENT>
+                                <OPERATION-INVOKED-EVENT UUID="520229ec-9430-7d2c-6557-c30220498c34">
+                                    <SHORT-NAME>DataServices_DcmDspData_DID_EtatMenuInfoParamDispo_ReadData_OIE</SHORT-NAME>
+                                    <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/RootP_IntDcm/Aswc_IntDcm/IB_Aswc_IntDcm/RUNS_DID_EtatMenuInfoParamDispo_Get</START-ON-EVENT-REF>
+                                    <OPERATION-IREF>
+                                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/PP_DataServices_DcmDspData_DID_EtatMenuInfoParamDispo</CONTEXT-P-PORT-REF>
+                                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_Dcm/PortInterfaces/DataServices_DcmDspData_DID_EtatMenuInfoParamDispo/ReadData</TARGET-PROVIDED-OPERATION-REF>
+                                    </OPERATION-IREF>
+                                </OPERATION-INVOKED-EVENT>
+                                <OPERATION-INVOKED-EVENT UUID="7852f7ae-83d9-7d35-156f-a3712e33702a">
+                                    <SHORT-NAME>DataServices_DcmDspData_DID_EtatMenuInfoUniteLangueDispo_ReadData_OIE</SHORT-NAME>
+                                    <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/RootP_IntDcm/Aswc_IntDcm/IB_Aswc_IntDcm/RUNS_DID_EtatMenuInfoUniteLangueDispo_Get</START-ON-EVENT-REF>
+                                    <OPERATION-IREF>
+                                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/PP_DataServices_DcmDspData_DID_EtatMenuInfoUniteLangueDispo</CONTEXT-P-PORT-REF>
+                                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_Dcm/PortInterfaces/DataServices_DcmDspData_DID_EtatMenuInfoUniteLangueDispo/ReadData</TARGET-PROVIDED-OPERATION-REF>
+                                    </OPERATION-IREF>
+                                </OPERATION-INVOKED-EVENT>
+                                <OPERATION-INVOKED-EVENT UUID="f58cdf8d-8219-db2d-4bb9-a3c20a40ca05">
+                                    <SHORT-NAME>DataServices_DcmDspData_DID_EtatMenuPrgMem_ReadData_OIE</SHORT-NAME>
+                                    <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/RootP_IntDcm/Aswc_IntDcm/IB_Aswc_IntDcm/RUNS_DID_EtatMenuPrgMem_Get</START-ON-EVENT-REF>
+                                    <OPERATION-IREF>
+                                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/PP_DataServices_DcmDspData_DID_EtatMenuPrgMem</CONTEXT-P-PORT-REF>
+                                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_Dcm/PortInterfaces/DataServices_DcmDspData_DID_EtatMenuPrgMem/ReadData</TARGET-PROVIDED-OPERATION-REF>
+                                    </OPERATION-IREF>
+                                </OPERATION-INVOKED-EVENT>
+                                <OPERATION-INVOKED-EVENT UUID="8d6525d5-facd-04e3-c641-1a1f17703fc7">
+                                    <SHORT-NAME>DataServices_DcmDspData_DID_EtatMenuPrgMem_WriteData_OIE</SHORT-NAME>
+                                    <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/RootP_IntDcm/Aswc_IntDcm/IB_Aswc_IntDcm/RUNS_DID_EtatMenuPrgMem_Set</START-ON-EVENT-REF>
+                                    <OPERATION-IREF>
+                                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/PP_DataServices_DcmDspData_DID_EtatMenuPrgMem</CONTEXT-P-PORT-REF>
+                                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_Dcm/PortInterfaces/DataServices_DcmDspData_DID_EtatMenuPrgMem/WriteData</TARGET-PROVIDED-OPERATION-REF>
+                                    </OPERATION-IREF>
+                                </OPERATION-INVOKED-EVENT>
+                                <OPERATION-INVOKED-EVENT UUID="f6d449c8-0268-bf81-8c48-544359b8ac52">
+                                    <SHORT-NAME>DataServices_DcmDspData_DID_EtatMenuReserveZEV_ReadData_OIE</SHORT-NAME>
+                                    <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/RootP_IntDcm/Aswc_IntDcm/IB_Aswc_IntDcm/RUNS_DID_EtatMenuReserveZEV_Get</START-ON-EVENT-REF>
+                                    <OPERATION-IREF>
+                                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/PP_DataServices_DcmDspData_DID_EtatMenuReserveZEV</CONTEXT-P-PORT-REF>
+                                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_Dcm/PortInterfaces/DataServices_DcmDspData_DID_EtatMenuReserveZEV/ReadData</TARGET-PROVIDED-OPERATION-REF>
+                                    </OPERATION-IREF>
+                                </OPERATION-INVOKED-EVENT>
+                                <OPERATION-INVOKED-EVENT UUID="69d906f5-15e2-2629-1e6c-83d459a15d6b">
+                                    <SHORT-NAME>DataServices_DcmDspData_DID_EtatMenuUnitesLangue_ReadData_OIE</SHORT-NAME>
+                                    <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/RootP_IntDcm/Aswc_IntDcm/IB_Aswc_IntDcm/RUNS_DID_EtatMenuUnitesLangue_Get</START-ON-EVENT-REF>
+                                    <OPERATION-IREF>
+                                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/PP_DataServices_DcmDspData_DID_EtatMenuUnitesLangue</CONTEXT-P-PORT-REF>
+                                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_Dcm/PortInterfaces/DataServices_DcmDspData_DID_EtatMenuUnitesLangue/ReadData</TARGET-PROVIDED-OPERATION-REF>
+                                    </OPERATION-IREF>
+                                </OPERATION-INVOKED-EVENT>
+                                <OPERATION-INVOKED-EVENT UUID="2e0118f6-34ed-ae38-06c6-845944ce315b">
+                                    <SHORT-NAME>DataServices_DcmDspData_DID_EtatReglageButeesXVV_ReadData_OIE</SHORT-NAME>
+                                    <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/RootP_IntDcm/Aswc_IntDcm/IB_Aswc_IntDcm/RUNS_DID_EtatReglageButeesXVV_Get</START-ON-EVENT-REF>
+                                    <OPERATION-IREF>
+                                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/PP_DataServices_DcmDspData_DID_EtatReglageButeesXVV</CONTEXT-P-PORT-REF>
+                                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_Dcm/PortInterfaces/DataServices_DcmDspData_DID_EtatReglageButeesXVV/ReadData</TARGET-PROVIDED-OPERATION-REF>
+                                    </OPERATION-IREF>
+                                </OPERATION-INVOKED-EVENT>
+                                <OPERATION-INVOKED-EVENT UUID="7b36f1dd-19b1-7751-2f0b-0ed45a6af023">
+                                    <SHORT-NAME>DataServices_DcmDspData_DID_INIT_FARC_ReadData_OIE</SHORT-NAME>
+                                    <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/RootP_IntDcm/Aswc_IntDcm/IB_Aswc_IntDcm/RUNS_DID_INIT_FARC_Get</START-ON-EVENT-REF>
+                                    <OPERATION-IREF>
+                                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/PP_DataServices_DcmDspData_DID_INIT_FARC</CONTEXT-P-PORT-REF>
+                                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_Dcm/PortInterfaces/DataServices_DcmDspData_DID_INIT_FARC/ReadData</TARGET-PROVIDED-OPERATION-REF>
+                                    </OPERATION-IREF>
+                                </OPERATION-INVOKED-EVENT>
+                                <OPERATION-INVOKED-EVENT UUID="90efa4ca-caeb-acc7-2c77-0d6611b3baa0">
+                                    <SHORT-NAME>DataServices_DcmDspData_DID_INIT_FARC_WriteData_OIE</SHORT-NAME>
+                                    <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/RootP_IntDcm/Aswc_IntDcm/IB_Aswc_IntDcm/RUNS_DID_INIT_FARC_Set</START-ON-EVENT-REF>
+                                    <OPERATION-IREF>
+                                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/PP_DataServices_DcmDspData_DID_INIT_FARC</CONTEXT-P-PORT-REF>
+                                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_Dcm/PortInterfaces/DataServices_DcmDspData_DID_INIT_FARC/WriteData</TARGET-PROVIDED-OPERATION-REF>
+                                    </OPERATION-IREF>
+                                </OPERATION-INVOKED-EVENT>
+                                <OPERATION-INVOKED-EVENT UUID="50569e69-bf0b-319c-6aed-661e3499ac6e">
+                                    <SHORT-NAME>DataServices_DcmDspData_DID_INIT_PRESENCE_ARC_ReadData_OIE</SHORT-NAME>
+                                    <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/RootP_IntDcm/Aswc_IntDcm/IB_Aswc_IntDcm/RUNS_DID_INIT_PRESENCE_ARC_Get</START-ON-EVENT-REF>
+                                    <OPERATION-IREF>
+                                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/PP_DataServices_DcmDspData_DID_INIT_PRESENCE_ARC</CONTEXT-P-PORT-REF>
+                                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_Dcm/PortInterfaces/DataServices_DcmDspData_DID_INIT_PRESENCE_ARC/ReadData</TARGET-PROVIDED-OPERATION-REF>
+                                    </OPERATION-IREF>
+                                </OPERATION-INVOKED-EVENT>
+                                <OPERATION-INVOKED-EVENT UUID="159912b9-c990-8db8-b8e4-e094d8182efa">
+                                    <SHORT-NAME>DataServices_DcmDspData_DID_INIT_PRESENCE_ARC_WriteData_OIE</SHORT-NAME>
+                                    <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/RootP_IntDcm/Aswc_IntDcm/IB_Aswc_IntDcm/RUNS_DID_INIT_PRESENCE_ARC_Set</START-ON-EVENT-REF>
+                                    <OPERATION-IREF>
+                                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/PP_DataServices_DcmDspData_DID_INIT_PRESENCE_ARC</CONTEXT-P-PORT-REF>
+                                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_Dcm/PortInterfaces/DataServices_DcmDspData_DID_INIT_PRESENCE_ARC/WriteData</TARGET-PROVIDED-OPERATION-REF>
+                                    </OPERATION-IREF>
+                                </OPERATION-INVOKED-EVENT>
+                                <OPERATION-INVOKED-EVENT UUID="11617837-ff79-7be2-2fe6-353ad727f600">
+                                    <SHORT-NAME>DataServices_DcmDspData_DID_INIT_SENS_ARC_NIV_ReadData_OIE</SHORT-NAME>
+                                    <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/RootP_IntDcm/Aswc_IntDcm/IB_Aswc_IntDcm/RUNS_DID_INIT_SENS_ARC_NIV_Get</START-ON-EVENT-REF>
+                                    <OPERATION-IREF>
+                                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/PP_DataServices_DcmDspData_DID_INIT_SENS_ARC_NIV</CONTEXT-P-PORT-REF>
+                                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_Dcm/PortInterfaces/DataServices_DcmDspData_DID_INIT_SENS_ARC_NIV/ReadData</TARGET-PROVIDED-OPERATION-REF>
+                                    </OPERATION-IREF>
+                                </OPERATION-INVOKED-EVENT>
+                                <OPERATION-INVOKED-EVENT UUID="14c9cff2-cf64-cc1e-747a-cf764ff943be">
+                                    <SHORT-NAME>DataServices_DcmDspData_DID_INIT_SENS_ARC_NIV_WriteData_OIE</SHORT-NAME>
+                                    <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/RootP_IntDcm/Aswc_IntDcm/IB_Aswc_IntDcm/RUNS_DID_INIT_SENS_ARC_NIV_Set</START-ON-EVENT-REF>
+                                    <OPERATION-IREF>
+                                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/PP_DataServices_DcmDspData_DID_INIT_SENS_ARC_NIV</CONTEXT-P-PORT-REF>
+                                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_Dcm/PortInterfaces/DataServices_DcmDspData_DID_INIT_SENS_ARC_NIV/WriteData</TARGET-PROVIDED-OPERATION-REF>
+                                    </OPERATION-IREF>
+                                </OPERATION-INVOKED-EVENT>
+                                <OPERATION-INVOKED-EVENT UUID="912534dd-b012-8f81-89b2-2b4b021dd924">
+                                    <SHORT-NAME>DataServices_DcmDspData_DID_TYPE_MENU_PERSO_ReadData_OIE</SHORT-NAME>
+                                    <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/RootP_IntDcm/Aswc_IntDcm/IB_Aswc_IntDcm/RUNS_DID_TYPE_MENU_PERSO_Get</START-ON-EVENT-REF>
+                                    <OPERATION-IREF>
+                                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/PP_DataServices_DcmDspData_DID_TYPE_MENU_PERSO</CONTEXT-P-PORT-REF>
+                                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_Dcm/PortInterfaces/DataServices_DcmDspData_DID_TYPE_MENU_PERSO/ReadData</TARGET-PROVIDED-OPERATION-REF>
+                                    </OPERATION-IREF>
+                                </OPERATION-INVOKED-EVENT>
+                                <OPERATION-INVOKED-EVENT UUID="8a930c6b-c4a3-1d17-5900-084d5e11757e">
+                                    <SHORT-NAME>DataServices_DcmDspData_DID_TYPE_MENU_PERSO_WriteData_OIE</SHORT-NAME>
+                                    <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/RootP_IntDcm/Aswc_IntDcm/IB_Aswc_IntDcm/RUNS_DID_TYPE_MENU_PERSO_Set</START-ON-EVENT-REF>
+                                    <OPERATION-IREF>
+                                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/PP_DataServices_DcmDspData_DID_TYPE_MENU_PERSO</CONTEXT-P-PORT-REF>
+                                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_Dcm/PortInterfaces/DataServices_DcmDspData_DID_TYPE_MENU_PERSO/WriteData</TARGET-PROVIDED-OPERATION-REF>
+                                    </OPERATION-IREF>
+                                </OPERATION-INVOKED-EVENT>
+                                <OPERATION-INVOKED-EVENT UUID="3005efea-d591-0931-8205-692fd91ec1a4">
+                                    <SHORT-NAME>DataServices_DcmDspData_DID_VitLVVDeMenuPerso_ReadData_OIE</SHORT-NAME>
+                                    <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/RootP_IntDcm/Aswc_IntDcm/IB_Aswc_IntDcm/RUNS_DID_VitLVVDeMenuPerso_Get</START-ON-EVENT-REF>
+                                    <OPERATION-IREF>
+                                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/PP_DataServices_DcmDspData_DID_VitLVVDeMenuPerso</CONTEXT-P-PORT-REF>
+                                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_Dcm/PortInterfaces/DataServices_DcmDspData_DID_VitLVVDeMenuPerso/ReadData</TARGET-PROVIDED-OPERATION-REF>
+                                    </OPERATION-IREF>
+                                </OPERATION-INVOKED-EVENT>
+                                <SWC-MODE-SWITCH-EVENT UUID="45421c86-d925-6e24-3952-3f3ea6aabd9f">
+                                    <SHORT-NAME>RUNPI_Aswc_IntDcm_ENTRY</SHORT-NAME>
+                                    <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/RootP_IntDcm/Aswc_IntDcm/IB_Aswc_IntDcm/RUNPI_Aswc_IntDcm</START-ON-EVENT-REF>
+                                    <ACTIVATION>ON-ENTRY</ACTIVATION>
+                                    <MODE-IREFS>
+                                        <MODE-IREF>
+                                            <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/RootP_IntDcm/Aswc_IntDcm/Aswc_IntDcm_MSI</CONTEXT-PORT-REF>
+                                            <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/RootP_Mode/RootP_RteMode/RteMode</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                                            <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/RootP_Mode/ApplicationModeGroup/APP_WAKEUP</TARGET-MODE-DECLARATION-REF>
+                                        </MODE-IREF>
+                                    </MODE-IREFS>
+                                </SWC-MODE-SWITCH-EVENT>
+                            </EVENTS>
+                            <EXPLICIT-INTER-RUNNABLE-VARIABLES />
+                            <HANDLE-TERMINATION-AND-RESTART>NO-SUPPORT</HANDLE-TERMINATION-AND-RESTART>
+                            <IMPLICIT-INTER-RUNNABLE-VARIABLES />
+                            <RUNNABLES>
+                                <RUNNABLE-ENTITY UUID="05946a59-4072-9008-bb0f-4259ef6e0b5a">
+                                    <SHORT-NAME>RUNS_DID_DispoEtatMenuPrgPem_Get</SHORT-NAME>
+                                    <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                                    <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                                    <DATA-READ-ACCESSS />
+                                    <DATA-RECEIVE-POINT-BY-VALUES />
+                                    <DATA-SEND-POINTS />
+                                    <DATA-WRITE-ACCESSS />
+                                    <READ-LOCAL-VARIABLES />
+                                    <SERVER-CALL-POINTS />
+                                    <SYMBOL>RUNS_DID_DispoEtatMenuPrgPem_Get</SYMBOL>
+                                    <WRITTEN-LOCAL-VARIABLES />
+                                </RUNNABLE-ENTITY>
+                                <RUNNABLE-ENTITY UUID="0eb58277-d7ff-09a8-7c20-fe8366d93e53">
+                                    <SHORT-NAME>RUNS_DID_DispoEtatMenuReserveZEV_Get</SHORT-NAME>
+                                    <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                                    <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                                    <DATA-READ-ACCESSS />
+                                    <DATA-RECEIVE-POINT-BY-VALUES />
+                                    <DATA-SEND-POINTS />
+                                    <DATA-WRITE-ACCESSS />
+                                    <READ-LOCAL-VARIABLES />
+                                    <SERVER-CALL-POINTS />
+                                    <SYMBOL>RUNS_DID_DispoEtatMenuReserveZEV_Get</SYMBOL>
+                                    <WRITTEN-LOCAL-VARIABLES />
+                                </RUNNABLE-ENTITY>
+                                <RUNNABLE-ENTITY UUID="3c912777-1cd9-8a56-ec3f-ee4116bae1e3">
+                                    <SHORT-NAME>RUNS_DID_DispoMenuInfoXVV_Get</SHORT-NAME>
+                                    <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                                    <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                                    <DATA-READ-ACCESSS />
+                                    <DATA-RECEIVE-POINT-BY-VALUES />
+                                    <DATA-SEND-POINTS />
+                                    <DATA-WRITE-ACCESSS />
+                                    <READ-LOCAL-VARIABLES />
+                                    <SERVER-CALL-POINTS />
+                                    <SYMBOL>RUNS_DID_DispoMenuInfoXVV_Get</SYMBOL>
+                                    <WRITTEN-LOCAL-VARIABLES />
+                                </RUNNABLE-ENTITY>
+                                <RUNNABLE-ENTITY UUID="092b2449-d330-fb9f-da2b-a93ac78f9dd9">
+                                    <SHORT-NAME>RUNS_DID_DIURNES_VALEUR_DEFAUT_Get</SHORT-NAME>
+                                    <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                                    <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                                    <DATA-READ-ACCESSS />
+                                    <DATA-RECEIVE-POINT-BY-VALUES />
+                                    <DATA-SEND-POINTS />
+                                    <DATA-WRITE-ACCESSS />
+                                    <READ-LOCAL-VARIABLES />
+                                    <SERVER-CALL-POINTS />
+                                    <SYMBOL>RUNS_DID_DIURNES_VALEUR_DEFAUT_Get</SYMBOL>
+                                    <WRITTEN-LOCAL-VARIABLES />
+                                </RUNNABLE-ENTITY>
+                                <RUNNABLE-ENTITY UUID="37f7ea55-b31a-9f58-5581-cddd2ff23866">
+                                    <SHORT-NAME>RUNS_DID_DIURNES_VALEUR_DEFAUT_Set</SHORT-NAME>
+                                    <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                                    <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                                    <DATA-READ-ACCESSS />
+                                    <DATA-RECEIVE-POINT-BY-VALUES />
+                                    <DATA-SEND-POINTS />
+                                    <DATA-WRITE-ACCESSS />
+                                    <READ-LOCAL-VARIABLES />
+                                    <SERVER-CALL-POINTS />
+                                    <SYMBOL>RUNS_DID_DIURNES_VALEUR_DEFAUT_Set</SYMBOL>
+                                    <WRITTEN-LOCAL-VARIABLES />
+                                </RUNNABLE-ENTITY>
+                                <RUNNABLE-ENTITY UUID="a9d12b91-ad95-8dcc-319b-4a19df7e756f">
+                                    <SHORT-NAME>RUNS_DID_EtatFctMenuParam_Get</SHORT-NAME>
+                                    <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                                    <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                                    <DATA-READ-ACCESSS />
+                                    <DATA-RECEIVE-POINT-BY-VALUES />
+                                    <DATA-SEND-POINTS />
+                                    <DATA-WRITE-ACCESSS />
+                                    <READ-LOCAL-VARIABLES />
+                                    <SERVER-CALL-POINTS />
+                                    <SYMBOL>RUNS_DID_EtatFctMenuParam_Get</SYMBOL>
+                                    <WRITTEN-LOCAL-VARIABLES />
+                                </RUNNABLE-ENTITY>
+                                <RUNNABLE-ENTITY UUID="4e1e6c55-5ed2-2760-74fc-325053de9259">
+                                    <SHORT-NAME>RUNS_DID_EtatMenuInfoParamDispo_Get</SHORT-NAME>
+                                    <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                                    <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                                    <DATA-READ-ACCESSS />
+                                    <DATA-RECEIVE-POINT-BY-VALUES />
+                                    <DATA-SEND-POINTS />
+                                    <DATA-WRITE-ACCESSS />
+                                    <READ-LOCAL-VARIABLES />
+                                    <SERVER-CALL-POINTS />
+                                    <SYMBOL>RUNS_DID_EtatMenuInfoParamDispo_Get</SYMBOL>
+                                    <WRITTEN-LOCAL-VARIABLES />
+                                </RUNNABLE-ENTITY>
+                                <RUNNABLE-ENTITY UUID="9a4475bb-21ee-d2db-ffb5-5db9e2d5487c">
+                                    <SHORT-NAME>RUNS_DID_EtatMenuInfoUniteLangueDispo_Get</SHORT-NAME>
+                                    <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                                    <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                                    <DATA-READ-ACCESSS />
+                                    <DATA-RECEIVE-POINT-BY-VALUES />
+                                    <DATA-SEND-POINTS />
+                                    <DATA-WRITE-ACCESSS />
+                                    <READ-LOCAL-VARIABLES />
+                                    <SERVER-CALL-POINTS />
+                                    <SYMBOL>RUNS_DID_EtatMenuInfoUniteLangueDispo_Get</SYMBOL>
+                                    <WRITTEN-LOCAL-VARIABLES />
+                                </RUNNABLE-ENTITY>
+                                <RUNNABLE-ENTITY UUID="55f40792-e637-fd33-abb2-dfdaed7fe301">
+                                    <SHORT-NAME>RUNS_DID_EtatMenuPrgMem_Get</SHORT-NAME>
+                                    <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                                    <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                                    <DATA-READ-ACCESSS />
+                                    <DATA-RECEIVE-POINT-BY-VALUES />
+                                    <DATA-SEND-POINTS />
+                                    <DATA-WRITE-ACCESSS />
+                                    <READ-LOCAL-VARIABLES />
+                                    <SERVER-CALL-POINTS />
+                                    <SYMBOL>RUNS_DID_EtatMenuPrgMem_Get</SYMBOL>
+                                    <WRITTEN-LOCAL-VARIABLES />
+                                </RUNNABLE-ENTITY>
+                                <RUNNABLE-ENTITY UUID="d86e99b8-bb42-5d9b-b122-08b7e5e91260">
+                                    <SHORT-NAME>RUNS_DID_EtatMenuPrgMem_Set</SHORT-NAME>
+                                    <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                                    <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                                    <DATA-READ-ACCESSS />
+                                    <DATA-RECEIVE-POINT-BY-VALUES />
+                                    <DATA-SEND-POINTS />
+                                    <DATA-WRITE-ACCESSS />
+                                    <READ-LOCAL-VARIABLES />
+                                    <SERVER-CALL-POINTS />
+                                    <SYMBOL>RUNS_DID_EtatMenuPrgMem_Set</SYMBOL>
+                                    <WRITTEN-LOCAL-VARIABLES />
+                                </RUNNABLE-ENTITY>
+                                <RUNNABLE-ENTITY UUID="a36c4823-8cf1-c5f0-27fb-354c8c7e5e5b">
+                                    <SHORT-NAME>RUNS_DID_EtatMenuReserveZEV_Get</SHORT-NAME>
+                                    <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                                    <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                                    <DATA-READ-ACCESSS />
+                                    <DATA-RECEIVE-POINT-BY-VALUES />
+                                    <DATA-SEND-POINTS />
+                                    <DATA-WRITE-ACCESSS />
+                                    <READ-LOCAL-VARIABLES />
+                                    <SERVER-CALL-POINTS />
+                                    <SYMBOL>RUNS_DID_EtatMenuReserveZEV_Get</SYMBOL>
+                                    <WRITTEN-LOCAL-VARIABLES />
+                                </RUNNABLE-ENTITY>
+                                <RUNNABLE-ENTITY UUID="755f06ab-ec5c-0841-031b-6cb41f4df4ea">
+                                    <SHORT-NAME>RUNS_DID_EtatMenuUnitesLangue_Get</SHORT-NAME>
+                                    <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                                    <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                                    <DATA-READ-ACCESSS />
+                                    <DATA-RECEIVE-POINT-BY-VALUES />
+                                    <DATA-SEND-POINTS />
+                                    <DATA-WRITE-ACCESSS />
+                                    <READ-LOCAL-VARIABLES />
+                                    <SERVER-CALL-POINTS />
+                                    <SYMBOL>RUNS_DID_EtatMenuUnitesLangue_Get</SYMBOL>
+                                    <WRITTEN-LOCAL-VARIABLES />
+                                </RUNNABLE-ENTITY>
+                                <RUNNABLE-ENTITY UUID="17904595-06a2-7eac-d7e1-1ef494b3c386">
+                                    <SHORT-NAME>RUNS_DID_EtatReglageButeesXVV_Get</SHORT-NAME>
+                                    <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                                    <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                                    <DATA-READ-ACCESSS />
+                                    <DATA-RECEIVE-POINT-BY-VALUES />
+                                    <DATA-SEND-POINTS />
+                                    <DATA-WRITE-ACCESSS />
+                                    <READ-LOCAL-VARIABLES />
+                                    <SERVER-CALL-POINTS />
+                                    <SYMBOL>RUNS_DID_EtatReglageButeesXVV_Get</SYMBOL>
+                                    <WRITTEN-LOCAL-VARIABLES />
+                                </RUNNABLE-ENTITY>
+                                <RUNNABLE-ENTITY UUID="8cfcfdb6-bf8a-4016-f754-953dd9521280">
+                                    <SHORT-NAME>RUNS_DID_INIT_FARC_Get</SHORT-NAME>
+                                    <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                                    <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                                    <DATA-READ-ACCESSS />
+                                    <DATA-RECEIVE-POINT-BY-VALUES />
+                                    <DATA-SEND-POINTS />
+                                    <DATA-WRITE-ACCESSS />
+                                    <READ-LOCAL-VARIABLES />
+                                    <SERVER-CALL-POINTS />
+                                    <SYMBOL>RUNS_DID_INIT_FARC_Get</SYMBOL>
+                                    <WRITTEN-LOCAL-VARIABLES />
+                                </RUNNABLE-ENTITY>
+                                <RUNNABLE-ENTITY UUID="912bbf2a-82f7-ef3d-c57a-2cecc3426f77">
+                                    <SHORT-NAME>RUNS_DID_INIT_FARC_Set</SHORT-NAME>
+                                    <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                                    <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                                    <DATA-READ-ACCESSS />
+                                    <DATA-RECEIVE-POINT-BY-VALUES />
+                                    <DATA-SEND-POINTS />
+                                    <DATA-WRITE-ACCESSS />
+                                    <READ-LOCAL-VARIABLES />
+                                    <SERVER-CALL-POINTS />
+                                    <SYMBOL>RUNS_DID_INIT_FARC_Set</SYMBOL>
+                                    <WRITTEN-LOCAL-VARIABLES />
+                                </RUNNABLE-ENTITY>
+                                <RUNNABLE-ENTITY UUID="23038d92-5716-5e43-4df5-1b549a449aee">
+                                    <SHORT-NAME>RUNS_DID_INIT_PRESENCE_ARC_Get</SHORT-NAME>
+                                    <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                                    <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                                    <DATA-READ-ACCESSS />
+                                    <DATA-RECEIVE-POINT-BY-VALUES />
+                                    <DATA-SEND-POINTS />
+                                    <DATA-WRITE-ACCESSS />
+                                    <READ-LOCAL-VARIABLES />
+                                    <SERVER-CALL-POINTS />
+                                    <SYMBOL>RUNS_DID_INIT_PRESENCE_ARC_Get</SYMBOL>
+                                    <WRITTEN-LOCAL-VARIABLES />
+                                </RUNNABLE-ENTITY>
+                                <RUNNABLE-ENTITY UUID="6bf4d915-305f-dea6-68b3-bdbf6ccebc85">
+                                    <SHORT-NAME>RUNS_DID_INIT_PRESENCE_ARC_Set</SHORT-NAME>
+                                    <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                                    <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                                    <DATA-READ-ACCESSS />
+                                    <DATA-RECEIVE-POINT-BY-VALUES />
+                                    <DATA-SEND-POINTS />
+                                    <DATA-WRITE-ACCESSS />
+                                    <READ-LOCAL-VARIABLES />
+                                    <SERVER-CALL-POINTS />
+                                    <SYMBOL>RUNS_DID_INIT_PRESENCE_ARC_Set</SYMBOL>
+                                    <WRITTEN-LOCAL-VARIABLES />
+                                </RUNNABLE-ENTITY>
+                                <RUNNABLE-ENTITY UUID="729f2ab7-a299-0384-8056-03b206455f22">
+                                    <SHORT-NAME>RUNS_DID_INIT_SENS_ARC_NIV_Get</SHORT-NAME>
+                                    <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                                    <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                                    <DATA-READ-ACCESSS />
+                                    <DATA-RECEIVE-POINT-BY-VALUES />
+                                    <DATA-SEND-POINTS />
+                                    <DATA-WRITE-ACCESSS />
+                                    <READ-LOCAL-VARIABLES />
+                                    <SERVER-CALL-POINTS />
+                                    <SYMBOL>RUNS_DID_INIT_SENS_ARC_NIV_Get</SYMBOL>
+                                    <WRITTEN-LOCAL-VARIABLES />
+                                </RUNNABLE-ENTITY>
+                                <RUNNABLE-ENTITY UUID="edf344e3-da84-b89f-9a8b-cf1b79befda2">
+                                    <SHORT-NAME>RUNS_DID_INIT_SENS_ARC_NIV_Set</SHORT-NAME>
+                                    <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                                    <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                                    <DATA-READ-ACCESSS />
+                                    <DATA-RECEIVE-POINT-BY-VALUES />
+                                    <DATA-SEND-POINTS />
+                                    <DATA-WRITE-ACCESSS />
+                                    <READ-LOCAL-VARIABLES />
+                                    <SERVER-CALL-POINTS />
+                                    <SYMBOL>RUNS_DID_INIT_SENS_ARC_NIV_Set</SYMBOL>
+                                    <WRITTEN-LOCAL-VARIABLES />
+                                </RUNNABLE-ENTITY>
+                                <RUNNABLE-ENTITY UUID="f046afb2-5855-9a5f-584f-f64b4a79219d">
+                                    <SHORT-NAME>RUNS_DID_TYPE_MENU_PERSO_Get</SHORT-NAME>
+                                    <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                                    <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                                    <DATA-READ-ACCESSS />
+                                    <DATA-RECEIVE-POINT-BY-VALUES />
+                                    <DATA-SEND-POINTS />
+                                    <DATA-WRITE-ACCESSS />
+                                    <READ-LOCAL-VARIABLES />
+                                    <SERVER-CALL-POINTS />
+                                    <SYMBOL>RUNS_DID_TYPE_MENU_PERSO_Get</SYMBOL>
+                                    <WRITTEN-LOCAL-VARIABLES />
+                                </RUNNABLE-ENTITY>
+                                <RUNNABLE-ENTITY UUID="337aaac4-c721-016d-2bc0-aee5d64d29f3">
+                                    <SHORT-NAME>RUNS_DID_TYPE_MENU_PERSO_Set</SHORT-NAME>
+                                    <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                                    <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                                    <DATA-READ-ACCESSS />
+                                    <DATA-RECEIVE-POINT-BY-VALUES />
+                                    <DATA-SEND-POINTS />
+                                    <DATA-WRITE-ACCESSS />
+                                    <READ-LOCAL-VARIABLES />
+                                    <SERVER-CALL-POINTS />
+                                    <SYMBOL>RUNS_DID_TYPE_MENU_PERSO_Set</SYMBOL>
+                                    <WRITTEN-LOCAL-VARIABLES />
+                                </RUNNABLE-ENTITY>
+                                <RUNNABLE-ENTITY UUID="f9504e26-bf3e-a2a0-8c1a-47751dbd896f">
+                                    <SHORT-NAME>RUNS_DID_VitLVVDeMenuPerso_Get</SHORT-NAME>
+                                    <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                                    <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                                    <DATA-READ-ACCESSS />
+                                    <DATA-RECEIVE-POINT-BY-VALUES />
+                                    <DATA-SEND-POINTS />
+                                    <DATA-WRITE-ACCESSS />
+                                    <READ-LOCAL-VARIABLES />
+                                    <SERVER-CALL-POINTS />
+                                    <SYMBOL>RUNS_DID_VitLVVDeMenuPerso_Get</SYMBOL>
+                                    <WRITTEN-LOCAL-VARIABLES />
+                                </RUNNABLE-ENTITY>
+                                <RUNNABLE-ENTITY UUID="39a50b33-f6e1-af70-a62d-d955280cb3c0">
+                                    <SHORT-NAME>RUNPI_Aswc_IntDcm</SHORT-NAME>
+                                    <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                                    <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                                    <SYMBOL>RUNPI_Aswc_IntDcm</SYMBOL>
+                                </RUNNABLE-ENTITY>
+                            </RUNNABLES>
+                            <SUPPORTS-MULTIPLE-INSTANTIATION>false</SUPPORTS-MULTIPLE-INSTANTIATION>
+                        </SWC-INTERNAL-BEHAVIOR>
+                    </INTERNAL-BEHAVIORS>
+                </APPLICATION-SW-COMPONENT-TYPE>
+            </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE>
+            <SHORT-NAME>AUTOSAR_Dcm</SHORT-NAME>
+            <AR-PACKAGES>
+                <AR-PACKAGE>
+                    <SHORT-NAME>PortInterfaces</SHORT-NAME>
+                    <ELEMENTS>
+                <!-- 16 Interfaces de type Client Server -->
+                <CLIENT-SERVER-INTERFACE UUID="6562b9d5-fc74-6c2a-1b6f-9fe6491fd6b5">
+                    <SHORT-NAME>DataServices_DcmDspData_DID_DispoEtatMenuPrgPem</SHORT-NAME>
+                    <IS-SERVICE>true</IS-SERVICE>
+                    <OPERATIONS>
+                        <CLIENT-SERVER-OPERATION UUID="55f876b5-fc1c-f390-5470-d6de35c37e2e">
+                            <SHORT-NAME>ReadData</SHORT-NAME>
+                            <ARGUMENTS>
+                                <ARGUMENT-DATA-PROTOTYPE UUID="71849bd5-4675-a7f3-82b2-b77fa3723525">
+                                    <SHORT-NAME>Data</SHORT-NAME>
+                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tBYTE</TYPE-TREF>
+                                    <DIRECTION>OUT</DIRECTION>
+                                </ARGUMENT-DATA-PROTOTYPE>
+                            </ARGUMENTS>
+                        </CLIENT-SERVER-OPERATION>
+                    </OPERATIONS>
+                </CLIENT-SERVER-INTERFACE>
+                <CLIENT-SERVER-INTERFACE UUID="903ca833-4fba-0097-5107-5e0bc5595bdc">
+                    <SHORT-NAME>DataServices_DcmDspData_DID_DispoEtatMenuReserveZEV</SHORT-NAME>
+                    <IS-SERVICE>true</IS-SERVICE>
+                    <OPERATIONS>
+                        <CLIENT-SERVER-OPERATION UUID="da9e59e7-446d-058d-20e9-0f92c8d1f221">
+                            <SHORT-NAME>ReadData</SHORT-NAME>
+                            <ARGUMENTS>
+                                <ARGUMENT-DATA-PROTOTYPE UUID="7be0142a-d26d-34c5-67fe-b674f7077262">
+                                    <SHORT-NAME>Data</SHORT-NAME>
+                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tBYTE</TYPE-TREF>
+                                    <DIRECTION>OUT</DIRECTION>
+                                </ARGUMENT-DATA-PROTOTYPE>
+                            </ARGUMENTS>
+                        </CLIENT-SERVER-OPERATION>
+                    </OPERATIONS>
+                </CLIENT-SERVER-INTERFACE>
+                <CLIENT-SERVER-INTERFACE UUID="869f2c41-11dd-5bc5-9b1f-201326afa2ce">
+                    <SHORT-NAME>DataServices_DcmDspData_DID_DispoMenuInfoXVV</SHORT-NAME>
+                    <IS-SERVICE>true</IS-SERVICE>
+                    <OPERATIONS>
+                        <CLIENT-SERVER-OPERATION UUID="39b7c5cf-172c-ddd6-9a1c-954319ccca8e">
+                            <SHORT-NAME>ReadData</SHORT-NAME>
+                            <ARGUMENTS>
+                                <ARGUMENT-DATA-PROTOTYPE UUID="63792cd6-31d2-28e8-6105-0ac6c5d89a96">
+                                    <SHORT-NAME>Data</SHORT-NAME>
+                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tBYTE</TYPE-TREF>
+                                    <DIRECTION>OUT</DIRECTION>
+                                </ARGUMENT-DATA-PROTOTYPE>
+                            </ARGUMENTS>
+                        </CLIENT-SERVER-OPERATION>
+                    </OPERATIONS>
+                </CLIENT-SERVER-INTERFACE>
+                <CLIENT-SERVER-INTERFACE UUID="00f49f00-e715-20d6-3465-9777eb17514d">
+                    <SHORT-NAME>DataServices_DcmDspData_DID_DIURNES_VALEUR_DEFAUT</SHORT-NAME>
+                    <IS-SERVICE>true</IS-SERVICE>
+                    <OPERATIONS>
+                        <CLIENT-SERVER-OPERATION UUID="e7412948-1141-864c-5313-03579b12a58d">
+                            <SHORT-NAME>ReadData</SHORT-NAME>
+                            <ARGUMENTS>
+                                <ARGUMENT-DATA-PROTOTYPE UUID="5dd8d6f8-6d3e-c85f-2102-d42425c8e354">
+                                    <SHORT-NAME>Data</SHORT-NAME>
+                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tBYTE</TYPE-TREF>
+                                    <DIRECTION>OUT</DIRECTION>
+                                </ARGUMENT-DATA-PROTOTYPE>
+                            </ARGUMENTS>
+                        </CLIENT-SERVER-OPERATION>
+                        <CLIENT-SERVER-OPERATION UUID="b0746d5f-a22d-b6e8-fbf4-68a1e792f3f7">
+                            <SHORT-NAME>WriteData</SHORT-NAME>
+                            <ARGUMENTS>
+                                <ARGUMENT-DATA-PROTOTYPE UUID="c53889ae-e4e1-8f0a-6b0b-4b34782a0688">
+                                    <SHORT-NAME>Data</SHORT-NAME>
+                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tBYTE</TYPE-TREF>
+                                    <DIRECTION>IN</DIRECTION>
+                                </ARGUMENT-DATA-PROTOTYPE>
+                                <ARGUMENT-DATA-PROTOTYPE UUID="605be200-1502-71fc-7c67-bcef455203d3">
+                                    <SHORT-NAME>ErrorCode</SHORT-NAME>
+                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tBYTE</TYPE-TREF>
+                                    <DIRECTION>OUT</DIRECTION>
+                                </ARGUMENT-DATA-PROTOTYPE>
+                            </ARGUMENTS>
+                        </CLIENT-SERVER-OPERATION>
+                    </OPERATIONS>
+                </CLIENT-SERVER-INTERFACE>
+                <CLIENT-SERVER-INTERFACE UUID="e5ae2944-d5b8-e750-2b7e-e352492b8a29">
+                    <SHORT-NAME>DataServices_DcmDspData_DID_EtatFctMenuParam</SHORT-NAME>
+                    <IS-SERVICE>true</IS-SERVICE>
+                    <OPERATIONS>
+                        <CLIENT-SERVER-OPERATION UUID="42941af4-d1a1-8702-ba7a-b91cc8c04c5c">
+                            <SHORT-NAME>ReadData</SHORT-NAME>
+                            <ARGUMENTS>
+                                <ARGUMENT-DATA-PROTOTYPE UUID="57861fad-60db-f482-f683-50414a7ba6a4">
+                                    <SHORT-NAME>Data</SHORT-NAME>
+                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tBYTE</TYPE-TREF>
+                                    <DIRECTION>OUT</DIRECTION>
+                                </ARGUMENT-DATA-PROTOTYPE>
+                            </ARGUMENTS>
+                        </CLIENT-SERVER-OPERATION>
+                    </OPERATIONS>
+                </CLIENT-SERVER-INTERFACE>
+                <CLIENT-SERVER-INTERFACE UUID="473a6e3d-21e7-9b0e-ebee-c6074de6a62e">
+                    <SHORT-NAME>DataServices_DcmDspData_DID_EtatMenuInfoParamDispo</SHORT-NAME>
+                    <IS-SERVICE>true</IS-SERVICE>
+                    <OPERATIONS>
+                        <CLIENT-SERVER-OPERATION UUID="c9cc4382-05f5-0949-2114-8d210c9625ea">
+                            <SHORT-NAME>ReadData</SHORT-NAME>
+                            <ARGUMENTS>
+                                <ARGUMENT-DATA-PROTOTYPE UUID="3ccb5c79-6288-e942-80dc-5865002b8e5f">
+                                    <SHORT-NAME>Data</SHORT-NAME>
+                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tBYTE</TYPE-TREF>
+                                    <DIRECTION>OUT</DIRECTION>
+                                </ARGUMENT-DATA-PROTOTYPE>
+                            </ARGUMENTS>
+                        </CLIENT-SERVER-OPERATION>
+                    </OPERATIONS>
+                </CLIENT-SERVER-INTERFACE>
+                <CLIENT-SERVER-INTERFACE UUID="0a5b1d97-01cd-8eb2-09b1-84bae6f0d623">
+                    <SHORT-NAME>DataServices_DcmDspData_DID_EtatMenuInfoUniteLangueDispo</SHORT-NAME>
+                    <IS-SERVICE>true</IS-SERVICE>
+                    <OPERATIONS>
+                        <CLIENT-SERVER-OPERATION UUID="a56666ee-46a3-0d69-0a79-d4a252540836">
+                            <SHORT-NAME>ReadData</SHORT-NAME>
+                            <ARGUMENTS>
+                                <ARGUMENT-DATA-PROTOTYPE UUID="1a6aab0e-6888-e7ec-bc4e-b63248979a01">
+                                    <SHORT-NAME>Data</SHORT-NAME>
+                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tBYTE</TYPE-TREF>
+                                    <DIRECTION>OUT</DIRECTION>
+                                </ARGUMENT-DATA-PROTOTYPE>
+                            </ARGUMENTS>
+                        </CLIENT-SERVER-OPERATION>
+                    </OPERATIONS>
+                </CLIENT-SERVER-INTERFACE>
+                <CLIENT-SERVER-INTERFACE UUID="f14edafe-bf99-bc57-c7c6-f052c7653a43">
+                    <SHORT-NAME>DataServices_DcmDspData_DID_EtatMenuPrgMem</SHORT-NAME>
+                    <IS-SERVICE>true</IS-SERVICE>
+                    <OPERATIONS>
+                        <CLIENT-SERVER-OPERATION UUID="b4359e9e-85fc-762f-4399-fa9965687f26">
+                            <SHORT-NAME>ReadData</SHORT-NAME>
+                            <ARGUMENTS>
+                                <ARGUMENT-DATA-PROTOTYPE UUID="630f2ab4-4508-5159-eb99-65c08376bdd6">
+                                    <SHORT-NAME>Data</SHORT-NAME>
+                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tBYTE</TYPE-TREF>
+                                    <DIRECTION>OUT</DIRECTION>
+                                </ARGUMENT-DATA-PROTOTYPE>
+                            </ARGUMENTS>
+                        </CLIENT-SERVER-OPERATION>
+                        <CLIENT-SERVER-OPERATION UUID="def93d8f-b6ff-b35f-8381-2a777a27eb1b">
+                            <SHORT-NAME>WriteData</SHORT-NAME>
+                            <ARGUMENTS>
+                                <ARGUMENT-DATA-PROTOTYPE UUID="42ca0849-879a-c758-1ff9-e48e7a2326e5">
+                                    <SHORT-NAME>Data</SHORT-NAME>
+                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tBYTE</TYPE-TREF>
+                                    <DIRECTION>IN</DIRECTION>
+                                </ARGUMENT-DATA-PROTOTYPE>
+                                <ARGUMENT-DATA-PROTOTYPE UUID="b7b822ae-7822-f875-d318-97a215e67ed7">
+                                    <SHORT-NAME>ErrorCode</SHORT-NAME>
+                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tBYTE</TYPE-TREF>
+                                    <DIRECTION>OUT</DIRECTION>
+                                </ARGUMENT-DATA-PROTOTYPE>
+                            </ARGUMENTS>
+                        </CLIENT-SERVER-OPERATION>
+                    </OPERATIONS>
+                </CLIENT-SERVER-INTERFACE>
+                <CLIENT-SERVER-INTERFACE UUID="dd4242ea-fb61-b647-9b86-a0d7403c6331">
+                    <SHORT-NAME>DataServices_DcmDspData_DID_EtatMenuReserveZEV</SHORT-NAME>
+                    <IS-SERVICE>true</IS-SERVICE>
+                    <OPERATIONS>
+                        <CLIENT-SERVER-OPERATION UUID="19ed0f87-145e-70a0-bde9-73352e3fb0db">
+                            <SHORT-NAME>ReadData</SHORT-NAME>
+                            <ARGUMENTS>
+                                <ARGUMENT-DATA-PROTOTYPE UUID="b15a0772-6e41-5075-d4bf-3e82c9320f52">
+                                    <SHORT-NAME>Data</SHORT-NAME>
+                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tBYTE</TYPE-TREF>
+                                    <DIRECTION>OUT</DIRECTION>
+                                </ARGUMENT-DATA-PROTOTYPE>
+                            </ARGUMENTS>
+                        </CLIENT-SERVER-OPERATION>
+                    </OPERATIONS>
+                </CLIENT-SERVER-INTERFACE>
+                <CLIENT-SERVER-INTERFACE UUID="2c296e37-d791-9211-09ba-35261928f935">
+                    <SHORT-NAME>DataServices_DcmDspData_DID_EtatMenuUnitesLangue</SHORT-NAME>
+                    <IS-SERVICE>true</IS-SERVICE>
+                    <OPERATIONS>
+                        <CLIENT-SERVER-OPERATION UUID="d3c718a7-2614-aeae-971e-88a733063913">
+                            <SHORT-NAME>ReadData</SHORT-NAME>
+                            <ARGUMENTS>
+                                <ARGUMENT-DATA-PROTOTYPE UUID="060a0c41-edf5-053b-35d1-2c4f4e2f310b">
+                                    <SHORT-NAME>Data</SHORT-NAME>
+                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tBYTE</TYPE-TREF>
+                                    <DIRECTION>OUT</DIRECTION>
+                                </ARGUMENT-DATA-PROTOTYPE>
+                            </ARGUMENTS>
+                        </CLIENT-SERVER-OPERATION>
+                    </OPERATIONS>
+                </CLIENT-SERVER-INTERFACE>
+                <CLIENT-SERVER-INTERFACE UUID="33ed4a3f-81fd-09b2-56c3-4607b3ab996c">
+                    <SHORT-NAME>DataServices_DcmDspData_DID_EtatReglageButeesXVV</SHORT-NAME>
+                    <IS-SERVICE>true</IS-SERVICE>
+                    <OPERATIONS>
+                        <CLIENT-SERVER-OPERATION UUID="a924f7e6-3b04-09b4-a9e2-395126ed4cc4">
+                            <SHORT-NAME>ReadData</SHORT-NAME>
+                            <ARGUMENTS>
+                                <ARGUMENT-DATA-PROTOTYPE UUID="772ef01a-bace-8387-ad5d-2e4a7066e491">
+                                    <SHORT-NAME>Data</SHORT-NAME>
+                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tBYTE</TYPE-TREF>
+                                    <DIRECTION>OUT</DIRECTION>
+                                </ARGUMENT-DATA-PROTOTYPE>
+                            </ARGUMENTS>
+                        </CLIENT-SERVER-OPERATION>
+                    </OPERATIONS>
+                </CLIENT-SERVER-INTERFACE>
+                <CLIENT-SERVER-INTERFACE UUID="e7430ae5-0533-a2d4-bebe-9ffc64772ef1">
+                    <SHORT-NAME>DataServices_DcmDspData_DID_INIT_FARC</SHORT-NAME>
+                    <IS-SERVICE>true</IS-SERVICE>
+                    <OPERATIONS>
+                        <CLIENT-SERVER-OPERATION UUID="aef94f8a-9e17-c68b-864d-8f6f090f6d54">
+                            <SHORT-NAME>ReadData</SHORT-NAME>
+                            <ARGUMENTS>
+                                <ARGUMENT-DATA-PROTOTYPE UUID="b098aefd-da72-b650-14db-0f86c3633b4b">
+                                    <SHORT-NAME>Data</SHORT-NAME>
+                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tBYTE</TYPE-TREF>
+                                    <DIRECTION>OUT</DIRECTION>
+                                </ARGUMENT-DATA-PROTOTYPE>
+                            </ARGUMENTS>
+                        </CLIENT-SERVER-OPERATION>
+                        <CLIENT-SERVER-OPERATION UUID="6a1e4640-603a-e6ae-684a-75cc0707d616">
+                            <SHORT-NAME>WriteData</SHORT-NAME>
+                            <ARGUMENTS>
+                                <ARGUMENT-DATA-PROTOTYPE UUID="a09e83dc-05e7-da1a-c547-b0f4ca48299b">
+                                    <SHORT-NAME>Data</SHORT-NAME>
+                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tBYTE</TYPE-TREF>
+                                    <DIRECTION>IN</DIRECTION>
+                                </ARGUMENT-DATA-PROTOTYPE>
+                                <ARGUMENT-DATA-PROTOTYPE UUID="f6ba4de3-1dc6-b319-03a1-307190c6ba42">
+                                    <SHORT-NAME>ErrorCode</SHORT-NAME>
+                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tBYTE</TYPE-TREF>
+                                    <DIRECTION>OUT</DIRECTION>
+                                </ARGUMENT-DATA-PROTOTYPE>
+                            </ARGUMENTS>
+                        </CLIENT-SERVER-OPERATION>
+                    </OPERATIONS>
+                </CLIENT-SERVER-INTERFACE>
+                <CLIENT-SERVER-INTERFACE UUID="060f1fd9-ac51-ce9b-adca-50e680f76999">
+                    <SHORT-NAME>DataServices_DcmDspData_DID_INIT_PRESENCE_ARC</SHORT-NAME>
+                    <IS-SERVICE>true</IS-SERVICE>
+                    <OPERATIONS>
+                        <CLIENT-SERVER-OPERATION UUID="18e52ebc-e93c-9ddf-b543-e19f82eaa977">
+                            <SHORT-NAME>ReadData</SHORT-NAME>
+                            <ARGUMENTS>
+                                <ARGUMENT-DATA-PROTOTYPE UUID="9e000006-995d-3311-6bee-9df92cfb96eb">
+                                    <SHORT-NAME>Data</SHORT-NAME>
+                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tBYTE</TYPE-TREF>
+                                    <DIRECTION>OUT</DIRECTION>
+                                </ARGUMENT-DATA-PROTOTYPE>
+                            </ARGUMENTS>
+                        </CLIENT-SERVER-OPERATION>
+                        <CLIENT-SERVER-OPERATION UUID="011e90e7-f417-ae2c-a28c-f346c793b32b">
+                            <SHORT-NAME>WriteData</SHORT-NAME>
+                            <ARGUMENTS>
+                                <ARGUMENT-DATA-PROTOTYPE UUID="fc06005e-172a-4922-d6ea-caabad4c6608">
+                                    <SHORT-NAME>Data</SHORT-NAME>
+                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tBYTE</TYPE-TREF>
+                                    <DIRECTION>IN</DIRECTION>
+                                </ARGUMENT-DATA-PROTOTYPE>
+                                <ARGUMENT-DATA-PROTOTYPE UUID="e62e9d62-f61e-dd09-8a4b-9dc48a924f44">
+                                    <SHORT-NAME>ErrorCode</SHORT-NAME>
+                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tBYTE</TYPE-TREF>
+                                    <DIRECTION>OUT</DIRECTION>
+                                </ARGUMENT-DATA-PROTOTYPE>
+                            </ARGUMENTS>
+                        </CLIENT-SERVER-OPERATION>
+                    </OPERATIONS>
+                </CLIENT-SERVER-INTERFACE>
+                <CLIENT-SERVER-INTERFACE UUID="7e25fc82-35ed-42aa-16d5-67bebc5aad5d">
+                    <SHORT-NAME>DataServices_DcmDspData_DID_INIT_SENS_ARC_NIV</SHORT-NAME>
+                    <IS-SERVICE>true</IS-SERVICE>
+                    <OPERATIONS>
+                        <CLIENT-SERVER-OPERATION UUID="4af12c8f-d5cf-98cf-90ba-d33ea53ec22b">
+                            <SHORT-NAME>ReadData</SHORT-NAME>
+                            <ARGUMENTS>
+                                <ARGUMENT-DATA-PROTOTYPE UUID="77fc42a9-ca43-f010-3c7d-95f66f4bb239">
+                                    <SHORT-NAME>Data</SHORT-NAME>
+                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tBYTE</TYPE-TREF>
+                                    <DIRECTION>OUT</DIRECTION>
+                                </ARGUMENT-DATA-PROTOTYPE>
+                            </ARGUMENTS>
+                        </CLIENT-SERVER-OPERATION>
+                        <CLIENT-SERVER-OPERATION UUID="972a7eea-5e38-c514-8db0-37240b0b6bc5">
+                            <SHORT-NAME>WriteData</SHORT-NAME>
+                            <ARGUMENTS>
+                                <ARGUMENT-DATA-PROTOTYPE UUID="eefcc158-cca0-9893-6386-3e531ef093fd">
+                                    <SHORT-NAME>Data</SHORT-NAME>
+                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tBYTE</TYPE-TREF>
+                                    <DIRECTION>IN</DIRECTION>
+                                </ARGUMENT-DATA-PROTOTYPE>
+                                <ARGUMENT-DATA-PROTOTYPE UUID="489d6ae2-a858-81f6-14d9-a6493c7fab8d">
+                                    <SHORT-NAME>ErrorCode</SHORT-NAME>
+                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tBYTE</TYPE-TREF>
+                                    <DIRECTION>OUT</DIRECTION>
+                                </ARGUMENT-DATA-PROTOTYPE>
+                            </ARGUMENTS>
+                        </CLIENT-SERVER-OPERATION>
+                    </OPERATIONS>
+                </CLIENT-SERVER-INTERFACE>
+                <CLIENT-SERVER-INTERFACE UUID="8f6538ea-a0b8-50d5-d81d-3daaef4d92b6">
+                    <SHORT-NAME>DataServices_DcmDspData_DID_TYPE_MENU_PERSO</SHORT-NAME>
+                    <IS-SERVICE>true</IS-SERVICE>
+                    <OPERATIONS>
+                        <CLIENT-SERVER-OPERATION UUID="600ffd39-c341-be30-aedb-c74e1b48009c">
+                            <SHORT-NAME>ReadData</SHORT-NAME>
+                            <ARGUMENTS>
+                                <ARGUMENT-DATA-PROTOTYPE UUID="f4eedde3-3534-8f06-42db-fe3c4261a6bc">
+                                    <SHORT-NAME>Data</SHORT-NAME>
+                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tBYTE</TYPE-TREF>
+                                    <DIRECTION>OUT</DIRECTION>
+                                </ARGUMENT-DATA-PROTOTYPE>
+                            </ARGUMENTS>
+                        </CLIENT-SERVER-OPERATION>
+                        <CLIENT-SERVER-OPERATION UUID="ad1f2b2c-de67-de17-9e37-08892e12c1cc">
+                            <SHORT-NAME>WriteData</SHORT-NAME>
+                            <ARGUMENTS>
+                                <ARGUMENT-DATA-PROTOTYPE UUID="32e5b55d-ca72-4066-71e6-1821c35dc1af">
+                                    <SHORT-NAME>Data</SHORT-NAME>
+                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tBYTE</TYPE-TREF>
+                                    <DIRECTION>IN</DIRECTION>
+                                </ARGUMENT-DATA-PROTOTYPE>
+                                <ARGUMENT-DATA-PROTOTYPE UUID="56e08200-6b43-857c-7d3b-fd970be5028d">
+                                    <SHORT-NAME>ErrorCode</SHORT-NAME>
+                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tBYTE</TYPE-TREF>
+                                    <DIRECTION>OUT</DIRECTION>
+                                </ARGUMENT-DATA-PROTOTYPE>
+                            </ARGUMENTS>
+                        </CLIENT-SERVER-OPERATION>
+                    </OPERATIONS>
+                </CLIENT-SERVER-INTERFACE>
+                <CLIENT-SERVER-INTERFACE UUID="c5a5ca95-682c-6285-f542-bc486cef8d92">
+                    <SHORT-NAME>DataServices_DcmDspData_DID_VitLVVDeMenuPerso</SHORT-NAME>
+                    <IS-SERVICE>true</IS-SERVICE>
+                    <OPERATIONS>
+                        <CLIENT-SERVER-OPERATION UUID="b2a42531-cf82-80a2-ce4b-33646fb24121">
+                            <SHORT-NAME>ReadData</SHORT-NAME>
+                            <ARGUMENTS>
+                                <ARGUMENT-DATA-PROTOTYPE UUID="8efb6b2c-1461-2a63-f7b2-5c7d1de3ff8b">
+                                    <SHORT-NAME>Data</SHORT-NAME>
+                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tBYTE</TYPE-TREF>
+                                    <DIRECTION>OUT</DIRECTION>
+                                </ARGUMENT-DATA-PROTOTYPE>
+                            </ARGUMENTS>
+                        </CLIENT-SERVER-OPERATION>
+                    </OPERATIONS>
+                </CLIENT-SERVER-INTERFACE>
+                    </ELEMENTS>
+                </AR-PACKAGE>
+            </AR-PACKAGES>
+        </AR-PACKAGE>
+    </AR-PACKAGES>
+</AUTOSAR>

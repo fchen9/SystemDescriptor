@@ -6,6 +6,7 @@ from lxml import etree
 from xml.sax import make_parser
 from xml.sax.handler import ContentHandler
 from xml.dom.minidom import parseString
+import time
 
 
 def arg_parse(parser):
@@ -42,6 +43,12 @@ def dupli_diag(list_to_be_checked):
             yield item
             found.add(item['NAME'])
 
+def remove_aswc(list_to_be_checked):
+    found = set()
+    for item in list_to_be_checked:
+        if item['TEXT'] not in found:
+            yield item
+            found.add(item['TEXT'])
 
 def set_logger(path, filename):
     # logger creation and setting
@@ -69,6 +76,7 @@ def check_compatibility(file_list, output_path, disableCheck, logger):
     types = []
     logger.info('=================Parsing information=================')
     try:
+        start = time.time()
         for file in file_list:
             if file.endswith('.dico'):
                 try:
@@ -204,6 +212,9 @@ def check_compatibility(file_list, output_path, disableCheck, logger):
                                 print('The type: '+types[index1]['SHORT-NAME']+' has different versions:'+types[index1]['VERSION']+' and '+types[index2]['VERSION'])
                                 error_no = error_no + 1
                                 error_found = True
+        end = time.time()
+        elapsed = end - start
+        #logger.info("Period time: " + str(elapsed))
         if error_found:
             print("There is at least one blocking error! Check the generated log.")
             print("\nExecution stopped with: " + str(info_no) + " infos, " + str(warning_no) + " warnings, " + str(error_no) + " errors\n")
@@ -242,6 +253,7 @@ def generate_system(file_list, output_path, system_name, mapping_name, compositi
     arxml_data_constr = []
     system_signals = []
     provided_ports = []
+    required_ports = []
     client_server_signal_group_mapping = []
     client_server_signal_mapping = []
     sender_receiver_composite_element = []
@@ -305,9 +317,15 @@ def generate_system(file_list, output_path, system_name, mapping_name, compositi
                 pports = root.findall(".//{http://autosar.org/schema/r4.0}P-PORT-PROTOTYPE")
                 prports = root.findall(".//{http://autosar.org/schema/r4.0}PR-PORT-PROTOTYPE")
                 for elem in pports:
-                    provided_ports.append(elem.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text)
+                    obj_port = {}
+                    obj_port['NAME'] = elem.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text
+                    obj_port['INTERFACE'] = elem.find(".//{http://autosar.org/schema/r4.0}PROVIDED-INTERFACE-TREF").text
+                    provided_ports.append(obj_port)
                 for elem in prports:
-                    provided_ports.append(elem.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text)
+                    obj_port = {}
+                    obj_port['NAME'] = elem.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text
+                    obj_port['INTERFACE'] = elem.find(".//{http://autosar.org/schema/r4.0}PROVIDED-REQUIRED-INTERFACE-TREF").text
+                    provided_ports.append(obj_port)
                 diagnostic_table = root.findall(".//{http://autosar.org/schema/r4.0}DIAGNOSTIC-SERVICE-TABLE")
                 for elem in diagnostic_table:
                     objDiag = {}
@@ -338,57 +356,66 @@ def generate_system(file_list, output_path, system_name, mapping_name, compositi
                 for elem in sender_receiver_interface:
                     objElem = {}
                     objElem['PACKAGE'] = elem.getparent().getprevious().text
+                    objElem['SHORT-NAME'] = elem.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text
+                    objElem['VERSION'] = elem.find(".//{http://autosar.org/schema/r4.0}REVISION-LABEL").text
                     objElem['DATA'] = elem
-                    objElem['KEEP'] = True
                     interfaces.append(objElem)
                 client_server_interface = root.findall(".//{http://autosar.org/schema/r4.0}CLIENT-SERVER-INTERFACE")
                 for elem in client_server_interface:
                     objElem = {}
                     objElem['PACKAGE'] = elem.getparent().getprevious().text
+                    objElem['SHORT-NAME'] = elem.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text
+                    objElem['VERSION'] = elem.find(".//{http://autosar.org/schema/r4.0}REVISION-LABEL").text
                     objElem['DATA'] = elem
-                    objElem['KEEP'] = True
                     interfaces.append(objElem)
                 nv_data_interface = root.findall(".//{http://autosar.org/schema/r4.0}NV-DATA-INTERFACE")
                 for elem in nv_data_interface:
                     objElem = {}
                     objElem['PACKAGE'] = elem.getparent().getprevious().text
+                    objElem['SHORT-NAME'] = elem.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text
+                    objElem['VERSION'] = elem.find(".//{http://autosar.org/schema/r4.0}REVISION-LABEL").text
                     objElem['DATA'] = elem
-                    objElem['KEEP'] = True
                     interfaces.append(objElem)
                 parameter_interface = root.findall(".//{http://autosar.org/schema/r4.0}PARAMETER-INTERFACE")
                 for elem in parameter_interface:
                     objElem = {}
                     objElem['PACKAGE'] = elem.getparent().getprevious().text
+                    objElem['SHORT-NAME'] = elem.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text
+                    objElem['VERSION'] = elem.find(".//{http://autosar.org/schema/r4.0}REVISION-LABEL").text
                     objElem['DATA'] = elem
-                    objElem['KEEP'] = True
                     interfaces.append(objElem)
                 mode_switch_interface = root.findall(".//{http://autosar.org/schema/r4.0}MODE-SWITCH-INTERFACE")
                 for elem in mode_switch_interface:
                     objElem = {}
                     objElem['PACKAGE'] = elem.getparent().getprevious().text
+                    objElem['SHORT-NAME'] = elem.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text
+                    objElem['VERSION'] = elem.find(".//{http://autosar.org/schema/r4.0}REVISION-LABEL").text
                     objElem['DATA'] = elem
-                    objElem['KEEP'] = True
                     interfaces.append(objElem)
                 data_types = root.findall(".//{http://autosar.org/schema/r4.0}IMPLEMENTATION-DATA-TYPE")
                 for elem in data_types:
                     objElem = {}
                     objElem['PACKAGE'] = elem.getparent().getprevious().text
+                    objElem['SHORT-NAME'] = elem.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text
+                    if elem.find(".//{http://autosar.org/schema/r4.0}REVISION-LABEL") is not None:
+                        objElem['VERSION'] = elem.find(".//{http://autosar.org/schema/r4.0}REVISION-LABEL").text
                     objElem['DATA'] = elem
-                    objElem['KEEP'] = True
                     types.append(objElem)
                 computational_methods = root.findall(".//{http://autosar.org/schema/r4.0}COMPU-METHOD")
                 for elem in computational_methods:
                     objElem = {}
                     objElem['PACKAGE'] = elem.getparent().getprevious().text
+                    objElem['SHORT-NAME'] = elem.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text
+                    # objElem['VERSION'] = elem.find(".//{http://autosar.org/schema/r4.0}REVISION-LABEL").text
                     objElem['DATA'] = elem
-                    objElem['KEEP'] = True
                     compu_methods.append(objElem)
                 data_constraints = root.findall(".//{http://autosar.org/schema/r4.0}DATA-CONSTR")
                 for elem in data_constraints:
                     objElem = {}
                     objElem['PACKAGE'] = elem.getparent().getprevious().text
+                    objElem['SHORT-NAME'] = elem.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text
+                    objElem['VERSION'] = elem.find(".//{http://autosar.org/schema/r4.0}REVISION-LABEL").text
                     objElem['DATA'] = elem
-                    objElem['KEEP'] = True
                     data_constr.append(objElem)
                 # data mappings
                 temp = root.findall(".//{http://autosar.org/schema/r4.0}CLIENT-SERVER-TO-SIGNAL-GROUP-MAPPING")
@@ -588,9 +615,24 @@ def generate_system(file_list, output_path, system_name, mapping_name, compositi
                 pports = root.findall(".//{http://autosar.org/schema/r4.0}P-PORT-PROTOTYPE")
                 prports = root.findall(".//{http://autosar.org/schema/r4.0}PR-PORT-PROTOTYPE")
                 for elem in pports:
-                    provided_ports.append(elem.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text)
+                    obj_port = {}
+                    obj_port['NAME'] = elem.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text
+                    obj_port['ASWC'] = elem.getparent().getparent().getchildren()[0].text
+                    obj_port['INTERFACE'] = elem.find(".//{http://autosar.org/schema/r4.0}PROVIDED-INTERFACE-TREF").text
+                    provided_ports.append(obj_port)
                 for elem in prports:
-                    provided_ports.append(elem.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text)
+                    obj_port = {}
+                    obj_port['NAME'] = elem.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text
+                    obj_port['INTERFACE'] = elem.find(".//{http://autosar.org/schema/r4.0}PROVIDED-REQUIRED-INTERFACE-TREF").text
+                    obj_port['ASWC'] = elem.getparent().getparent().getchildren()[0].text
+                    provided_ports.append(obj_port)
+                rports = root.findall(".//{http://autosar.org/schema/r4.0}R-PORT-PROTOTYPE")
+                for elem in rports:
+                    obj_port = {}
+                    obj_port['NAME'] = elem.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text
+                    obj_port['INTERFACE'] = elem.find(".//{http://autosar.org/schema/r4.0}REQUIRED-INTERFACE-TREF").text
+                    obj_port['ASWC'] = elem.getparent().getparent().getchildren()[0].text
+                    required_ports.append(obj_port)
                 diagnostic_write = root.findall(".//{http://autosar.org/schema/r4.0}DIAGNOSTIC-WRITE-DATA-BY-IDENTIFIER")
                 for elem in diagnostic_write:
                     obj_diag = {}
@@ -612,97 +654,135 @@ def generate_system(file_list, output_path, system_name, mapping_name, compositi
                 for elem_ref in temp:
                     obj_temp = {}
                     obj_temp['TYPE'] = 'APPLICATION-SW-COMPONENT-TYPE'
-                    obj_temp['TEXT'] = '/' + elem_ref.getparent().getparent().getchildren()[0].text + "/" + elem_ref.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text
+                    if elem_ref.getparent().getparent().getparent().getparent().getchildren()[0].tag =='{http://autosar.org/schema/r4.0}SHORT-NAME':
+                        obj_temp['TEXT'] = '/' + elem_ref.getparent().getparent().getparent().getparent().getchildren()[0].text + '/' + elem_ref.getparent().getparent().getchildren()[0].text + "/" + elem_ref.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text
+                    else:
+                        obj_temp['TEXT'] = '/' + elem_ref.getparent().getparent().getchildren()[0].text + "/" + elem_ref.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text
                     types_refs.append(obj_temp)
                 temp = root.findall(".//{http://autosar.org/schema/r4.0}ATOMIC-SW-COMPONENT-TYPE")
                 for elem_ref in temp:
                     obj_temp = {}
                     obj_temp['TYPE'] = 'ATOMIC-SW-COMPONENT-TYPE'
-                    obj_temp['TEXT'] = '/' + elem_ref.getparent().getparent().getchildren()[0].text + "/" + elem_ref.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text
+                    if elem_ref.getparent().getparent().getparent().getparent().getchildren()[0].tag == '{http://autosar.org/schema/r4.0}SHORT-NAME':
+                        obj_temp['TEXT'] = '/' + elem_ref.getparent().getparent().getparent().getparent().getchildren()[0].text + '/' + elem_ref.getparent().getparent().getchildren()[0].text + "/" + elem_ref.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text
+                    else:
+                        obj_temp['TEXT'] = '/' + elem_ref.getparent().getparent().getchildren()[0].text + "/" + elem_ref.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text
                     types_refs.append(obj_temp)
                 temp = root.findall(".//{http://autosar.org/schema/r4.0}COMPLEX-DEVICE-DRIVER-SW-COMPONENT-TYPE")
                 for elem_ref in temp:
                     obj_temp = {}
                     obj_temp['TYPE'] = 'COMPLEX-DEVICE-DRIVER-SW-COMPONENT-TYPE'
-                    obj_temp['TEXT'] = '/' + elem_ref.getparent().getparent().getchildren()[0].text + "/" + elem_ref.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text
+                    if elem_ref.getparent().getparent().getparent().getparent().getchildren()[0].tag == '{http://autosar.org/schema/r4.0}SHORT-NAME':
+                        obj_temp['TEXT'] = '/' + elem_ref.getparent().getparent().getparent().getparent().getchildren()[0].text + '/' + elem_ref.getparent().getparent().getchildren()[0].text + "/" + elem_ref.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text
+                    else:
+                        obj_temp['TEXT'] = '/' + elem_ref.getparent().getparent().getchildren()[0].text + "/" + elem_ref.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text
                     types_refs.append(obj_temp)
                 temp = root.findall(".//{http://autosar.org/schema/r4.0}COMPOSITION-SW-COMPONENT-TYPE")
                 for elem_ref in temp:
                     obj_temp = {}
                     obj_temp['TYPE'] = 'COMPOSITION-SW-COMPONENT-TYPE'
-                    obj_temp['TEXT'] = '/' + elem_ref.getparent().getparent().getchildren()[0].text + "/" + elem_ref.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text
+                    if elem_ref.getparent().getparent().getparent().getparent().getchildren()[0].tag == '{http://autosar.org/schema/r4.0}SHORT-NAME':
+                        obj_temp['TEXT'] = '/' + elem_ref.getparent().getparent().getparent().getparent().getchildren()[0].text + '/' + elem_ref.getparent().getparent().getchildren()[0].text + "/" + elem_ref.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text
+                    else:
+                        obj_temp['TEXT'] = '/' + elem_ref.getparent().getparent().getchildren()[0].text + "/" + elem_ref.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text
                     types_refs.append(obj_temp)
                 temp = root.findall(".//{http://autosar.org/schema/r4.0}ECU-ABSTRACTION-SW-COMPONENT-TYPE")
                 for elem_ref in temp:
                     obj_temp = {}
                     obj_temp['TYPE'] = 'ECU-ABSTRACTION-SW-COMPONENT-TYPE'
-                    obj_temp['TEXT'] = '/' + elem_ref.getparent().getparent().getchildren()[0].text + "/" + elem_ref.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text
+                    if elem_ref.getparent().getparent().getparent().getparent().getchildren()[0].tag == '{http://autosar.org/schema/r4.0}SHORT-NAME':
+                        obj_temp['TEXT'] = '/' + elem_ref.getparent().getparent().getparent().getparent().getchildren()[0].text + '/' + elem_ref.getparent().getparent().getchildren()[0].text + "/" + elem_ref.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text
+                    else:
+                        obj_temp['TEXT'] = '/' + elem_ref.getparent().getparent().getchildren()[0].text + "/" + elem_ref.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text
                     types_refs.append(obj_temp)
                 temp = root.findall(".//{http://autosar.org/schema/r4.0}NV-BLOCK-SW-COMPONENT-TYPE")
                 for elem_ref in temp:
                     obj_temp = {}
                     obj_temp['TYPE'] = 'NV-BLOCK-SW-COMPONENT-TYPE'
-                    obj_temp['TEXT'] = '/' + elem_ref.getparent().getparent().getchildren()[0].text + "/" + elem_ref.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text
+                    if elem_ref.getparent().getparent().getparent().getparent().getchildren()[0].tag == '{http://autosar.org/schema/r4.0}SHORT-NAME':
+                        obj_temp['TEXT'] = '/' + elem_ref.getparent().getparent().getparent().getparent().getchildren()[0].text + '/' + elem_ref.getparent().getparent().getchildren()[0].text + "/" + elem_ref.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text
+                    else:
+                        obj_temp['TEXT'] = '/' + elem_ref.getparent().getparent().getchildren()[0].text + "/" + elem_ref.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text
                     types_refs.append(obj_temp)
                 temp = root.findall(".//{http://autosar.org/schema/r4.0}PARAMETER-SW-COMPONENT-TYPE")
                 for elem_ref in temp:
                     obj_temp = {}
                     obj_temp['TYPE'] = 'PARAMETER-SW-COMPONENT-TYPE'
-                    obj_temp['TEXT'] = '/' + elem_ref.getparent().getparent().getchildren()[0].text + "/" + elem_ref.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text
+                    if elem_ref.getparent().getparent().getparent().getparent().getchildren()[0].tag == '{http://autosar.org/schema/r4.0}SHORT-NAME':
+                        obj_temp['TEXT'] = '/' + elem_ref.getparent().getparent().getparent().getparent().getchildren()[0].text + '/' + elem_ref.getparent().getparent().getchildren()[0].text + "/" + elem_ref.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text
+                    else:
+                        obj_temp['TEXT'] = '/' + elem_ref.getparent().getparent().getchildren()[0].text + "/" + elem_ref.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text
                     types_refs.append(obj_temp)
                 temp = root.findall(".//{http://autosar.org/schema/r4.0}SENSOR-ACTUATOR-SW-COMPONENT-TYPE")
                 for elem_ref in temp:
                     obj_temp = {}
                     obj_temp['TYPE'] = 'SENSOR-ACTUATOR-SW-COMPONENT-TYPE'
-                    obj_temp['TEXT'] = '/' + elem_ref.getparent().getparent().getchildren()[0].text + "/" + elem_ref.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text
+                    if elem_ref.getparent().getparent().getparent().getparent().getchildren()[0].tag == '{http://autosar.org/schema/r4.0}SHORT-NAME':
+                        obj_temp['TEXT'] = '/' + elem_ref.getparent().getparent().getparent().getparent().getchildren()[0].text + '/' + elem_ref.getparent().getparent().getchildren()[0].text + "/" + elem_ref.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text
+                    else:
+                        obj_temp['TEXT'] = '/' + elem_ref.getparent().getparent().getchildren()[0].text + "/" + elem_ref.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text
                     types_refs.append(obj_temp)
                 temp = root.findall(".//{http://autosar.org/schema/r4.0}SERVICE-PROXY-SW-COMPONENT-TYPE")
                 for elem_ref in temp:
                     obj_temp = {}
                     obj_temp['TYPE'] = 'SERVICE-PROXY-SW-COMPONENT-TYPE'
-                    obj_temp['TEXT'] = '/' + elem_ref.getparent().getparent().getchildren()[0].text + "/" + elem_ref.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text
+                    if elem_ref.getparent().getparent().getparent().getparent().getchildren()[0].tag == '{http://autosar.org/schema/r4.0}SHORT-NAME':
+                        obj_temp['TEXT'] = '/' + elem_ref.getparent().getparent().getparent().getparent().getchildren()[0].text + '/' + elem_ref.getparent().getparent().getchildren()[0].text + "/" + elem_ref.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text
+                    else:
+                        obj_temp['TEXT'] = '/' + elem_ref.getparent().getparent().getchildren()[0].text + "/" + elem_ref.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text
                     types_refs.append(obj_temp)
                 temp = root.findall(".//{http://autosar.org/schema/r4.0}SERVICE-SW-COMPONENT-TYPE")
                 for elem_ref in temp:
                     obj_temp = {}
                     obj_temp['TYPE'] = 'SERVICE-SW-COMPONENT-TYPE'
-                    obj_temp['TEXT'] = '/' + elem_ref.getparent().getparent().getchildren()[0].text + "/" + elem_ref.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text
+                    if elem_ref.getparent().getparent().getparent().getparent().getchildren()[0].tag == '{http://autosar.org/schema/r4.0}SHORT-NAME':
+                        obj_temp['TEXT'] = '/' + elem_ref.getparent().getparent().getparent().getparent().getchildren()[0].text + '/' + elem_ref.getparent().getparent().getchildren()[0].text + "/" + elem_ref.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text
+                    else:
+                        obj_temp['TEXT'] = '/' + elem_ref.getparent().getparent().getchildren()[0].text + "/" + elem_ref.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text
                     types_refs.append(obj_temp)
                 temp = root.findall(".//{http://autosar.org/schema/r4.0}SW-COMPONENT-TYPE")
                 for elem_ref in temp:
                     obj_temp = {}
                     obj_temp['TYPE'] = 'SW-COMPONENT-TYPE'
-                    obj_temp['TEXT'] = '/' + elem_ref.getparent().getparent().getchildren()[0].text + "/" + elem_ref.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text
+                    if elem_ref.getparent().getparent().getparent().getparent().getchildren()[0].tag == '{http://autosar.org/schema/r4.0}SHORT-NAME':
+                        obj_temp['TEXT'] = '/' + elem_ref.getparent().getparent().getparent().getparent().getchildren()[0].text + '/' + elem_ref.getparent().getparent().getchildren()[0].text + "/" + elem_ref.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text
+                    else:
+                        obj_temp['TEXT'] = '/' + elem_ref.getparent().getparent().getchildren()[0].text + "/" + elem_ref.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text
                     types_refs.append(obj_temp)
                 # obtain all interface-related data
                 sender_receiver_interface = root.findall(".//{http://autosar.org/schema/r4.0}SENDER-RECEIVER-INTERFACE")
                 for elem in sender_receiver_interface:
                     objElem = {}
                     objElem['PACKAGE'] = elem.getparent().getparent().getchildren()[0].text
+                    objElem['NAME'] = elem.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text
                     objElem['DATA'] = elem
                     arxml_interfaces.append(objElem)
                 client_server_interface = root.findall(".//{http://autosar.org/schema/r4.0}CLIENT-SERVER-INTERFACE")
                 for elem in client_server_interface:
                     objElem = {}
                     objElem['PACKAGE'] = elem.getparent().getparent().getchildren()[0].text
+                    objElem['NAME'] = elem.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text
                     objElem['DATA'] = elem
                     arxml_interfaces.append(objElem)
                 nv_data_interface = root.findall(".//{http://autosar.org/schema/r4.0}NV-DATA-INTERFACE")
                 for elem in nv_data_interface:
                     objElem = {}
                     objElem['PACKAGE'] = elem.getparent().getparent().getchildren()[0].text
+                    objElem['NAME'] = elem.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text
                     objElem['DATA'] = elem
                     arxml_interfaces.append(objElem)
                 parameter_interface = root.findall(".//{http://autosar.org/schema/r4.0}PARAMETER-INTERFACE")
                 for elem in parameter_interface:
                     objElem = {}
                     objElem['PACKAGE'] = elem.getparent().getparent().getchildren()[0].text
+                    objElem['NAME'] = elem.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text
                     objElem['DATA'] = elem
                     arxml_interfaces.append(objElem)
                 mode_switch_interface = root.findall(".//{http://autosar.org/schema/r4.0}MODE-SWITCH-INTERFACE")
                 for elem in mode_switch_interface:
                     objElem = {}
                     objElem['PACKAGE'] = elem.getparent().getparent().getchildren()[0].text
+                    objElem['NAME'] = elem.find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text
                     objElem['DATA'] = elem
                     arxml_interfaces.append(objElem)
                 data_types = root.findall(".//{http://autosar.org/schema/r4.0}IMPLEMENTATION-DATA-TYPE")
@@ -893,6 +973,19 @@ def generate_system(file_list, output_path, system_name, mapping_name, compositi
                     objElem['DATA'] = elem
                     root_software_composition.append(objElem)
         #################################
+        # check consistency between command-line arguments:
+        if system_name and mapping_name:
+            if system_name in mapping_name:
+                pass
+            else:
+                error_no = error_no + 1
+                logger.error('The given system path and the mapping path are not matching!')
+                print('The given system path and the mapping path are not matching!')
+        if mapping_name and not composition_name:
+            error_no = error_no + 1
+            logger.error('The "-mapping" and "-compo" options must be set together')
+            print('The "-mapping" and "-compo" options must be set together!')
+        types_refs = list(remove_aswc(types_refs))
         if error_no != 0:
             print("There is at least one blocking error! Check the generated log.")
             print("\nExecution stopped with: " + str(info_no) + " infos, " + str(warning_no) + " warnings, " + str(error_no) + " errors\n")
@@ -912,12 +1005,14 @@ def generate_system(file_list, output_path, system_name, mapping_name, compositi
         #     if not found:
         #         software_composition.remove(elem)
         #         logger.warning("The <SW-COMPONENT-PROTOTYPE>: " + elem['DATA'].find(".//{http://autosar.org/schema/r4.0}TYPE-TREF").text + " has been deleted because is not existent in arxml files")
+
         # TRS.SYSDESC.GEN.004
         logger.info('=================<SENDER-RECEIVER-TO-SIGNAL-MAPPING> without added signal=================')
+        start = time.time()
         for elem in sender_receiver_signal_mapping[:]:
             found = False
             for elem_signal in system_signals:
-                if elem_signal['PACKAGE'] == elem['DATA'].find('.//{http://autosar.org/schema/r4.0}SYSTEM-SIGNAL-REF').text.split("/")[1]:
+                if elem_signal['PACKAGE'] == elem['DATA'].find('.//{http://autosar.org/schema/r4.0}SYSTEM-SIGNAL-REF').text.split("/")[-2]:
                     if elem_signal['DATA'].find('.//{http://autosar.org/schema/r4.0}SHORT-NAME').text == elem['DATA'].find('.//{http://autosar.org/schema/r4.0}SYSTEM-SIGNAL-REF').text.split("/")[-1]:
                         found = True
                         break
@@ -925,8 +1020,28 @@ def generate_system(file_list, output_path, system_name, mapping_name, compositi
                 sender_receiver_signal_mapping.remove(elem)
                 logger.info('The SENDER-RECEIVER-TO-SIGNAL-MAPPING using the signal' + elem['DATA'].find('.//{http://autosar.org/schema/r4.0}SYSTEM-SIGNAL-REF').text + ' has not beed added because the signal reference is missing')
                 info_no = info_no + 1
-
+        logger.info('=================<SENDER-RECEIVER-TO-SIGNAL-MAPPING> without port=================')
+        for elem in sender_receiver_signal_mapping[:]:
+            found = False
+            for port in provided_ports:
+                if port['ASWC']:
+                    if port['NAME'] == elem['DATA'].find('.//{http://autosar.org/schema/r4.0}CONTEXT-PORT-REF').text.split("/")[-1] and port['ASWC'] == elem['DATA'].find('.//{http://autosar.org/schema/r4.0}CONTEXT-PORT-REF').text.split("/")[-2]:
+                        found = True
+                        break
+            for port in required_ports:
+                if port['ASWC']:
+                    if port['NAME'] == elem['DATA'].find('.//{http://autosar.org/schema/r4.0}CONTEXT-PORT-REF').text.split("/")[-1] and port['ASWC'] == elem['DATA'].find('.//{http://autosar.org/schema/r4.0}CONTEXT-PORT-REF').text.split("/")[-2]:
+                        found = True
+                        break
+            if not found:
+                sender_receiver_signal_mapping.remove(elem)
+                logger.info('The SENDER-RECEIVER-TO-SIGNAL-MAPPING using the port' + elem['DATA'].find('.//{http://autosar.org/schema/r4.0}CONTEXT-PORT-REF').text + ' has not beed added because the referenced port is missing')
+                info_no = info_no + 1
+        end = time.time()
+        elapsed = end - start
+        #logger.info("Period time: " + str(elapsed))
         # merge DIAGNOSTIC-SERVICE-TABLE
+        start = time.time()
         if serviceTable:
             logger.info('=================Unmapped SERVICE-INSTANCE-REF from DIAGNOSTIC-TABLE=================')
             for elem1 in data_map_did:
@@ -937,7 +1052,7 @@ def generate_system(file_list, output_path, system_name, mapping_name, compositi
                                 elem1['DELETE'] = True
                                 elem2['DELETE'] = True
             for elem in data_map_did[:]:
-                if elem['DELETE']:
+                if elem['DELETE'] or elem['MAPPED'] == "UNMAPPED":
                     data_map_did.remove(elem)
             for elem in arxml_diagnostic_data:
                 for elem_map in data_map_did:
@@ -951,6 +1066,9 @@ def generate_system(file_list, output_path, system_name, mapping_name, compositi
                         if elem['INSTANCE'].split('/')[-1] == elem_map['NAME'] and elem['DEST'] == elem_map['TYPE']:
                             if elem_map['MAPPED']:
                                 elem['MAPPED'] = True
+                                break
+                            else:
+                                elem['MAPPED'] = False
                                 break
             for elem_table in diagnostic_tables:
                 for elem in elem_table['SERVICE']:
@@ -981,104 +1099,52 @@ def generate_system(file_list, output_path, system_name, mapping_name, compositi
                                 print('Cannot merge  ' + obj_temp['NAME'] + ' because of incompatible data')
                                 error_no = error_no + 1
                 final_diagnostic_tables.append(obj_temp)
-        final_diagnostic_tables = dupli_diag(final_diagnostic_tables)
-
+        final_diagnostic_tables = list(dupli_diag(final_diagnostic_tables))
+        end = time.time()
+        elapsed = end - start
+        #logger.info("Period time: " + str(elapsed))
         # TRS.SYSDESC.GEN.002
+        start = time.time()
         if modularity:
-            for elem1 in interfaces:
-                for elem2 in interfaces:
-                    if interfaces.index(elem1) != interfaces.index(elem2):
-                        if elem1['DATA'].find("{http://autosar.org/schema/r4.0}SHORT-NAME").text == elem2['DATA'].find("{http://autosar.org/schema/r4.0}SHORT-NAME").text:
-                            vers1 = elem1['DATA'].find(".//{http://autosar.org/schema/r4.0}REVISION-LABEL").text.split(".")
-                            vers2 = elem2['DATA'].find(".//{http://autosar.org/schema/r4.0}REVISION-LABEL").text.split(".")
-                            if float(vers1[0]) > float(vers2[0]):
-                                elem2['KEEP'] = False
-                            elif float(vers1[0]) < float(vers2[0]):
-                                elem1['KEEP'] = False
-                            elif float(vers1[0]) == float(vers2[0]):
-                                elem1['KEEP'] = True
-                                elem2['KEEP'] = False
-            for elem in interfaces:
-                if elem['KEEP']:
-                    final_interfaces.append(elem)
-            interfaces = []
-            logger.info('=================Interfaces without PPorts/PRPorts=================')
-            for interface in final_interfaces:
-                found = False
-                for port in provided_ports:
-                    if "PP_"+interface['DATA'].find('.//{http://autosar.org/schema/r4.0}SHORT-NAME').text == port or "PRP_"+interface['DATA'].find('.//{http://autosar.org/schema/r4.0}SHORT-NAME').text == port:
-                        found = True
-                        break
-                if not found:
-                    logger.info("The interface " + interface['DATA'].find('.//{http://autosar.org/schema/r4.0}SHORT-NAME').text + " doesn't have an PPort or PRPort")
-                    info_no = info_no + 1
-            for interface in arxml_interfaces:
-                found = False
-                for port in provided_ports:
-                    if "PP_"+interface['DATA'].find('.//{http://autosar.org/schema/r4.0}SHORT-NAME').text == port or "PRP_"+interface['DATA'].find('.//{http://autosar.org/schema/r4.0}SHORT-NAME').text == port:
-                        found = True
-                        break
-                if not found:
-                    logger.info("The interface " + interface['DATA'].find('.//{http://autosar.org/schema/r4.0}SHORT-NAME').text + " doesn't have an PPort or PRPort")
-                    info_no = info_no + 1
-            for elem1 in types:
-                for elem2 in types:
-                    if types.index(elem1) != types.index(elem2):
-                        if elem1['DATA'].find("{http://autosar.org/schema/r4.0}SHORT-NAME").text == elem2['DATA'].find("{http://autosar.org/schema/r4.0}SHORT-NAME").text:
-                            vers1 = elem1['DATA'].find(".//{http://autosar.org/schema/r4.0}REVISION-LABEL").text.split(".")
-                            vers2 = elem2['DATA'].find(".//{http://autosar.org/schema/r4.0}REVISION-LABEL").text.split(".")
-                            if float(vers1[0]) > float(vers2[0]):
-                                elem2['KEEP'] = False
-                            elif float(vers1[0]) < float(vers2[0]):
-                                elem1['KEEP'] = False
-                            elif float(vers1[0]) == float(vers2[0]):
-                                elem1['KEEP'] = True
-                                elem2['KEEP'] = False
-            for elem in types:
-                if elem['KEEP']:
-                    final_types.append(elem)
-            types = []
-            for elem1 in data_constr:
-                for elem2 in data_constr:
-                    if data_constr.index(elem1) != data_constr.index(elem2):
-                        if elem1['DATA'].find("{http://autosar.org/schema/r4.0}SHORT-NAME").text == elem2['DATA'].find("{http://autosar.org/schema/r4.0}SHORT-NAME").text:
-                            vers1 = elem1['DATA'].find(".//{http://autosar.org/schema/r4.0}REVISION-LABEL").text.split(".")
-                            vers2 = elem2['DATA'].find(".//{http://autosar.org/schema/r4.0}REVISION-LABEL").text.split(".")
-                            if float(vers1[0]) > float(vers2[0]):
-                                elem2['KEEP'] = False
-                            elif float(vers1[0]) < float(vers2[0]):
-                                elem1['KEEP'] = False
-                            elif float(vers1[0]) == float(vers2[0]):
-                                elem1['KEEP'] = True
-                                elem2['KEEP'] = False
-            for elem in data_constr:
-                if elem['KEEP']:
-                    final_data_constr.append(elem)
-            data_constr = []
+            final_interfaces = list(check_version(interfaces))
+            final_types = list(check_version(types))
+            final_data_constr = list(check_version(data_constr))
             compu_methods = list(remove_duplicates(compu_methods))
+            #print("finish step 4")
             for elem_dico in final_interfaces[:]:
                 for elem_arxml in arxml_interfaces:
                     if elem_dico['DATA'].find("{http://autosar.org/schema/r4.0}SHORT-NAME").text == elem_arxml['DATA'].find("{http://autosar.org/schema/r4.0}SHORT-NAME").text:
                         if elem_dico['PACKAGE'] == elem_arxml['PACKAGE']:
                             final_interfaces.remove(elem_dico)
+                            break
             final_interfaces = sorted(final_interfaces, key=lambda x: x['PACKAGE'])
+            #print("finish step 5")
             for elem_dico in final_types[:]:
                 for elem_arxml in arxml_types:
-                    if elem_dico['DATA'].find("{http://autosar.org/schema/r4.0}SHORT-NAME").text == elem_arxml.find("{http://autosar.org/schema/r4.0}SHORT-NAME").text:
+                    if elem_dico['SHORT-NAME'] == elem_arxml.find("{http://autosar.org/schema/r4.0}SHORT-NAME").text:
                         final_types.remove(elem_dico)
+                        break
+                        #del final_types[final_types.index(elem_dico)]
             final_types = sorted(final_types, key=lambda x: x['PACKAGE'])
+            #print("finish step 6")
             for elem_dico in compu_methods[:]:
                 for elem_arxml in arxml_compu_methods:
                     if elem_dico['DATA'].find("{http://autosar.org/schema/r4.0}SHORT-NAME").text == elem_arxml.find("{http://autosar.org/schema/r4.0}SHORT-NAME").text:
                         compu_methods.remove(elem_dico)
+                        break
             compu_methods = sorted(compu_methods, key=lambda x: x['PACKAGE'])
+            #print("finish step 7")
             for elem_dico in final_data_constr[:]:
                 for elem_arxml in arxml_data_constr:
                     if elem_dico['DATA'].find("{http://autosar.org/schema/r4.0}SHORT-NAME").text == elem_arxml.find("{http://autosar.org/schema/r4.0}SHORT-NAME").text:
                         final_data_constr.remove(elem_dico)
             final_data_constr = sorted(final_data_constr, key=lambda x: x['PACKAGE'])
-
+            #print("finish step 8")
+        end = time.time()
+        elapsed = end - start
+        #logger.info("Period time: " + str(elapsed))
         # TRS.SYSDESC.GEN.003
+        start = time.time()
         software_composition = sorted(software_composition, key=lambda x: x['NAME'])
         final_software_composition = []
         for elem in software_composition[:]:
@@ -1118,7 +1184,11 @@ def generate_system(file_list, output_path, system_name, mapping_name, compositi
                     logger.error('SW-COMPONENT-PROTOTYPE with the short-name ' + elem['DATA'].find('.//{http://autosar.org/schema/r4.0}SHORT-NAME').text + ' cannot be merged')
                     print('SW-COMPONENT-PROTOTYPE with the short-name ' + elem['DATA'].find('.//{http://autosar.org/schema/r4.0}SHORT-NAME').text + ' cannot be merged')
                     error_no = error_no + 1
+        end = time.time()
+        elapsed = end - start
+        #logger.info("Period time: " + str(elapsed))
         # <DATA-MAPPINGS>
+        start = time.time()
         client_server_signal_group_mapping = sorted(client_server_signal_group_mapping, key=lambda x: x['NAME'])
         client_server_signal_mapping = sorted(client_server_signal_mapping, key=lambda x: x['NAME'])
         sender_receiver_composite_element = sorted(sender_receiver_composite_element, key=lambda x: x['NAME'])
@@ -1205,6 +1275,9 @@ def generate_system(file_list, output_path, system_name, mapping_name, compositi
                     print('SWC-TO-IMPL-MAPPING with the short-name ' + elem['DATA'].find('.//{http://autosar.org/schema/r4.0}SHORT-NAME').text + ' cannot be merged')
                     error_no = error_no + 1
         [data_mappings_name.append(elem['NAME']) for elem in final_sw_impl_mapping if elem['NAME'] not in data_mappings_name]
+        end = time.time()
+        elapsed = end - start
+        #logger.info("Period time: " + str(elapsed))
         # <SW-MAPPINGS>
         # check if mappings have to be created
         # for elem in swc_ecu_mapping[:]:
@@ -1217,6 +1290,7 @@ def generate_system(file_list, output_path, system_name, mapping_name, compositi
         #         swc_ecu_mapping.remove(elem)
 
         # concatenate mappings
+        start = time.time()
         swc_ecu_mapping = sorted(swc_ecu_mapping, key=lambda x: x['NAME'])
         final_swc_ecu_mappings = []
         for elem in swc_ecu_mapping[:]:
@@ -1265,11 +1339,24 @@ def generate_system(file_list, output_path, system_name, mapping_name, compositi
                     print('SWC-TO-ECU-MAPPING with the short-name ' + elem['DATA'].find('.//{http://autosar.org/schema/r4.0}SHORT-NAME').text + ' cannot be merged')
                     error_no = error_no + 1
         [data_mappings_name.append(elem['NAME']) for elem in final_swc_ecu_mappings if elem['NAME'] not in data_mappings_name]
+        end = time.time()
+        elapsed = end - start
+        #logger.info("Period time: " + str(elapsed))
         # <FIBEX-ELEMENTS>
+        final_fibex_elements = []
         fibex_elements = sorted(fibex_elements, key=lambda x: x['SYSTEM'])
+        for instance in fibex_elements:
+            elements = instance['DATA'].findall(".//{http://autosar.org/schema/r4.0}FIBEX-ELEMENT-REF-CONDITIONAL")
+            for element in elements:
+                obj_fibex = {}
+                obj_fibex['ROOT'] = instance['ROOT']
+                obj_fibex['SYSTEM'] = instance['SYSTEM']
+                obj_fibex['DATA'] = element
+                final_fibex_elements.append(obj_fibex)
         # <ROOT-SOFTWARE-COMPOSITIONS>
         root_software_composition = sorted(root_software_composition, key=lambda x: x['SYSTEM'])
         final_root_software_composition = []
+        staart = time.time()
         for elem in root_software_composition[:]:
             temp = []
             for elem2 in root_software_composition[:]:
@@ -1307,8 +1394,11 @@ def generate_system(file_list, output_path, system_name, mapping_name, compositi
                     logger.error('ROOT-SW-COMPOSITION-PROTOTYPE with the short-name ' + elem['DATA'].find('.//{http://autosar.org/schema/r4.0}SHORT-NAME').text + ' cannot be merged')
                     print('ROOT-SW-COMPOSITION-PROTOTYPE with the short-name ' + elem['DATA'].find('.//{http://autosar.org/schema/r4.0}SHORT-NAME').text + ' cannot be merged')
                     error_no = error_no + 1
-
+        end = time.time()
+        elapsed = end - start
+        #logger.info("Period time: " + str(elapsed))
         # create arxml file
+        start = time.time()
         rootSystem = etree.Element('AUTOSAR', {attr_qname: 'http://autosar.org/schema/r4.0 AUTOSAR_4-2-2_STRICT_COMPACT.xsd'}, nsmap=NSMAP)
         packages = etree.SubElement(rootSystem, 'AR-PACKAGES')
         package = ""
@@ -1360,7 +1450,7 @@ def generate_system(file_list, output_path, system_name, mapping_name, compositi
                     component = etree.SubElement(packages, 'AR-PACKAGE')
                     short_name = etree.SubElement(component, 'SHORT-NAME').text = elem['ROOT']
                     elements_tag = etree.SubElement(component, 'ELEMENTS')
-                    for elem2 in fibex_elements:
+                    for elem2 in final_fibex_elements:
                         if elem2['ROOT'] == package:
                             temp_fibex.append(elem2)
                     for elem2 in final_root_software_composition:
@@ -1387,12 +1477,13 @@ def generate_system(file_list, output_path, system_name, mapping_name, compositi
                     [system_list.append(elem['SYSTEM']) for elem in final_swc_ecu_mappings if elem['SYSTEM'] not in system_list]
                     [system_list.append(elem['SYSTEM']) for elem in final_sw_impl_mapping if elem['SYSTEM'] not in system_list]
                     for sysname in system_list:
-                        if sysname == system_name:
+                        if sysname == system_name.split('/')[-1]:
                             system_tag = etree.SubElement(elements_tag, 'SYSTEM')
                             short_name_system = etree.SubElement(system_tag, 'SHORT-NAME').text = sysname
+                            fibex_tag = etree.SubElement(system_tag, 'FIBEX-ELEMENTS')
                             for elem_fibex in temp_fibex:
                                 if sysname == elem_fibex['SYSTEM']:
-                                    system_tag.append(elem_fibex['DATA'])
+                                    fibex_tag.append(elem_fibex['DATA'])
                             mappings_tag = etree.SubElement(system_tag, 'MAPPINGS')
                             if mapping_name != "":
                                 for elem3 in data_mappings_name:
@@ -1464,26 +1555,22 @@ def generate_system(file_list, output_path, system_name, mapping_name, compositi
                                         ecu_instance_ref = etree.SubElement(sw_ecu_mapping, 'ECU-INSTANCE-REF')
                                         ecu_instance_ref.attrib['DEST'] = 'ECU-INSTANCE'
                                         ecu_instance_ref.text = '/RootP_NetworkDesc/ECUINSTANCES/VSM'
-                                        # for element in final_swc_ecu_mappings:
-                                        #     if element['NAME'] == elem3 and element['ROOT'] == package and element['SYSTEM'] == sysname:
-                                        #         sw_mappings_tag.append(element['DATA'])
+                                        # generating SwToEcuMapping
+                                        for elem_root in temp_root:
+                                            if sysname == elem_root['SYSTEM']:
+                                                temp_text = '/' + elem_root['ROOT'] + '/' + elem_root['SYSTEM'] + '/' + elem_root['DATA'].find('.//SHORT-NAME').text
+                                                for type_sw in types_refs:
+                                                    compo_iref = etree.SubElement(component_irefs, 'COMPONENT-IREF')
+                                                    context_compo = etree.SubElement(compo_iref, 'CONTEXT-COMPOSITION-REF')
+                                                    context_compo.attrib['DEST'] = 'ROOT-SW-COMPOSITION-PROTOTYPE'
+                                                    context_compo.text = temp_text
+                                                    target_compo = etree.SubElement(compo_iref, 'TARGET-COMPONENT-REF')
+                                                    target_compo.attrib['DEST'] = 'SW-COMPONENT-PROTOTYPE'
+                                                    target_compo.text = composition_name + '/Instance_' + type_sw['TEXT'].split('/')[-1]
                             rsc = etree.SubElement(system_tag, 'ROOT-SOFTWARE-COMPOSITIONS')
                             for elem_root in temp_root:
                                 if sysname == elem_root['SYSTEM']:
                                     rsc.append(elem_root['DATA'])
-                            # generating SwToEcuMapping
-                            for elem_root in temp_root:
-                                if sysname == elem_root['SYSTEM']:
-                                    temp_text = '/' + elem_root['ROOT'] + '/' + elem_root['SYSTEM'] + '/' + elem_root['DATA'].find('.//SHORT-NAME').text
-                                    for type_sw in types_refs:
-                                        compo_iref = etree.SubElement(component_irefs, 'COMPONENT-IREF')
-                                        context_compo = etree.SubElement(compo_iref, 'CONTEXT-COMPOSITION-REF')
-                                        context_compo.attrib['DEST'] = 'ROOT-SW-COMPOSITION-PROTOTYPE'
-                                        context_compo.text = temp_text
-                                        target_compo = etree.SubElement(compo_iref, 'TARGET-COMPONENT-REF')
-                                        target_compo.attrib['DEST'] = 'SW-COMPONENT-PROTOTYPE'
-                                        target_compo.text = composition_name + '/Instance_' + type_sw['TEXT'].split('/')[-1]
-
                             version = etree.SubElement(system_tag, 'SYSTEM-VERSION').text = "4.0.3"
         package = ""
         if serviceTable:
@@ -1555,14 +1642,16 @@ def generate_system(file_list, output_path, system_name, mapping_name, compositi
             composition_sw_tag = etree.SubElement(elements_tag, 'COMPOSITION-SW-COMPONENT-TYPE')
             short_name_compo = etree.SubElement(composition_sw_tag, 'SHORT-NAME').text = composition_name.split('/')[-1]
             components_tag = etree.SubElement(composition_sw_tag, 'COMPONENTS')
-            for type in types_refs:
+            for type_sw in types_refs:
                 sw_component_prototype = etree.SubElement(components_tag, 'SW-COMPONENT-PROTOTYPE')
                 short_name_instance = etree.SubElement(sw_component_prototype, 'SHORT-NAME')
-                short_name_instance.text = 'Instance_' + type['TEXT'].split('/')[-1]
+                short_name_instance.text = 'Instance_' + type_sw['TEXT'].split('/')[-1]
                 type_tref = etree.SubElement(sw_component_prototype, 'TYPE-TREF')
-                type_tref.attrib['DEST'] = type['TYPE']
-                type_tref.text = type['TEXT']
-
+                type_tref.attrib['DEST'] = type_sw['TYPE']
+                type_tref.text = type_sw['TEXT']
+        end = time.time()
+        elapsed = end - start
+        #logger.info("Period time: " + str(elapsed))
         pretty_xml = new_prettify(rootSystem)
         output = etree.ElementTree(etree.fromstring(pretty_xml))
         if os.path.isdir(output_path):
@@ -1740,7 +1829,7 @@ def main():
                             generate_system(entry_list, output_arxml, system_name, mapping_name, composition_name, modularity, serviceTable, logger)
                 else:
                     path, file = os.path.split(output_arxml)
-                    logger = set_logger(path)
+                    logger = set_logger(path, file)
                     if modularity:
                         generation = check_compatibility(entry_list, output_arxml, disableCheck, logger)
                     if generation:
@@ -1755,6 +1844,30 @@ def check_xml_wellformed(file):
     parser.setContentHandler(ContentHandler())
     parser.parse(file)
 
+
+def check_version(given_list):
+    check_list = set()
+    return_list = []
+    for elem in given_list:
+        if elem['SHORT-NAME'] not in check_list:
+            check_list.add(elem['SHORT-NAME'])
+            return_list.append(elem)
+        else:
+            version = ""
+            for elemList in return_list:
+                if elem['SHORT-NAME'] == elemList['SHORT-NAME']:
+                    if elem['VERSION'] != elemList['VERSION']:
+                        vers1 = elem['VERSION'].split(".")
+                        vers2 = elemList['VERSION'].split(".")
+                        if float(vers1[0]) > float(vers2[0]):
+                            elemList['VERSION'] = elem['VERSION']
+                            elemList['DATA'] = elem['DATA']
+    return return_list
+    # found = set()
+    # for item in list_to_be_checked:
+    #     if item['NAME'] not in found:
+    #         yield item
+    #         found.add(item['NAME'])
 
 if __name__ == "__main__":
     main()

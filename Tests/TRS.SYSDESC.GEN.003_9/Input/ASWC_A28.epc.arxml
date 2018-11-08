@@ -1,0 +1,1481 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 autosar_4-2-1.xsd">
+    <AR-PACKAGES>
+        <AR-PACKAGE>
+            <SHORT-NAME>RootP_DiagDesc</SHORT-NAME>
+            <ELEMENTS>
+                <DIAGNOSTIC-CONTRIBUTION-SET UUID="48bfee14-2807-1253-c502-cd197358b92d">
+                    <SHORT-NAME>DiagContributionSet</SHORT-NAME>
+                    <CATEGORY>DIAGNOSTICS_ECU_EXTRACT</CATEGORY>
+                    <ELEMENTS>
+                        <!-- 16 reférences de type DID -->
+                        <!-- DID_DispoEtatMenuPrgPem : ReadOnly -->
+                        <DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                            <DIAGNOSTIC-COMMON-ELEMENT-REF DEST="DIAGNOSTIC-DATA-IDENTIFIER">/RootP_DiagDesc/DID_DispoEtatMenuPrgPem</DIAGNOSTIC-COMMON-ELEMENT-REF>
+                        </DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                        <DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                            <DIAGNOSTIC-COMMON-ELEMENT-REF DEST="DIAGNOSTIC-READ-DATA-BY-IDENTIFIER">/RootP_DcmDesc/DID_DispoEtatMenuPrgPem_Read</DIAGNOSTIC-COMMON-ELEMENT-REF>
+                        </DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                        <!-- DID_DispoEtatMenuReserveZEV : ReadOnly -->
+                        <DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                            <DIAGNOSTIC-COMMON-ELEMENT-REF DEST="DIAGNOSTIC-DATA-IDENTIFIER">/RootP_DiagDesc/DID_DispoEtatMenuReserveZEV</DIAGNOSTIC-COMMON-ELEMENT-REF>
+                        </DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                        <DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                            <DIAGNOSTIC-COMMON-ELEMENT-REF DEST="DIAGNOSTIC-READ-DATA-BY-IDENTIFIER">/RootP_DcmDesc/DID_DispoEtatMenuReserveZEV_Read</DIAGNOSTIC-COMMON-ELEMENT-REF>
+                        </DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                        <!-- DID_DispoMenuInfoXVV : ReadOnly -->
+                        <DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                            <DIAGNOSTIC-COMMON-ELEMENT-REF DEST="DIAGNOSTIC-DATA-IDENTIFIER">/RootP_DiagDesc/DID_DispoMenuInfoXVV</DIAGNOSTIC-COMMON-ELEMENT-REF>
+                        </DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                        <DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                            <DIAGNOSTIC-COMMON-ELEMENT-REF DEST="DIAGNOSTIC-READ-DATA-BY-IDENTIFIER">/RootP_DcmDesc/DID_DispoMenuInfoXVV_Read</DIAGNOSTIC-COMMON-ELEMENT-REF>
+                        </DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                        <!-- DID_DIURNES_VALEUR_DEFAUT : ReadWrite -->
+                        <DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                            <DIAGNOSTIC-COMMON-ELEMENT-REF DEST="DIAGNOSTIC-DATA-IDENTIFIER">/RootP_DiagDesc/DID_DIURNES_VALEUR_DEFAUT</DIAGNOSTIC-COMMON-ELEMENT-REF>
+                        </DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                        <DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                            <DIAGNOSTIC-COMMON-ELEMENT-REF DEST="DIAGNOSTIC-READ-DATA-BY-IDENTIFIER">/RootP_DcmDesc/DID_DIURNES_VALEUR_DEFAUT_Read</DIAGNOSTIC-COMMON-ELEMENT-REF>
+                        </DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                        <DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                            <DIAGNOSTIC-COMMON-ELEMENT-REF DEST="DIAGNOSTIC-WRITE-DATA-BY-IDENTIFIER">/RootP_DcmDesc/DID_DIURNES_VALEUR_DEFAUT_Write</DIAGNOSTIC-COMMON-ELEMENT-REF>
+                        </DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                        <!-- DID_EtatFctMenuParam : ReadOnly -->
+                        <DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                            <DIAGNOSTIC-COMMON-ELEMENT-REF DEST="DIAGNOSTIC-DATA-IDENTIFIER">/RootP_DiagDesc/DID_EtatFctMenuParam</DIAGNOSTIC-COMMON-ELEMENT-REF>
+                        </DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                        <DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                            <DIAGNOSTIC-COMMON-ELEMENT-REF DEST="DIAGNOSTIC-READ-DATA-BY-IDENTIFIER">/RootP_DcmDesc/DID_EtatFctMenuParam_Read</DIAGNOSTIC-COMMON-ELEMENT-REF>
+                        </DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                        <!-- DID_EtatMenuInfoParamDispo : ReadOnly -->
+                        <DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                            <DIAGNOSTIC-COMMON-ELEMENT-REF DEST="DIAGNOSTIC-DATA-IDENTIFIER">/RootP_DiagDesc/DID_EtatMenuInfoParamDispo</DIAGNOSTIC-COMMON-ELEMENT-REF>
+                        </DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                        <DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                            <DIAGNOSTIC-COMMON-ELEMENT-REF DEST="DIAGNOSTIC-READ-DATA-BY-IDENTIFIER">/RootP_DcmDesc/DID_EtatMenuInfoParamDispo_Read</DIAGNOSTIC-COMMON-ELEMENT-REF>
+                        </DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                        <!-- DID_EtatMenuInfoUniteLangueDispo : ReadOnly -->
+                        <DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                            <DIAGNOSTIC-COMMON-ELEMENT-REF DEST="DIAGNOSTIC-DATA-IDENTIFIER">/RootP_DiagDesc/DID_EtatMenuInfoUniteLangueDispo</DIAGNOSTIC-COMMON-ELEMENT-REF>
+                        </DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                        <DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                            <DIAGNOSTIC-COMMON-ELEMENT-REF DEST="DIAGNOSTIC-READ-DATA-BY-IDENTIFIER">/RootP_DcmDesc/DID_EtatMenuInfoUniteLangueDispo_Read</DIAGNOSTIC-COMMON-ELEMENT-REF>
+                        </DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                        <!-- DID_EtatMenuPrgMem : ReadWrite -->
+                        <DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                            <DIAGNOSTIC-COMMON-ELEMENT-REF DEST="DIAGNOSTIC-DATA-IDENTIFIER">/RootP_DiagDesc/DID_EtatMenuPrgMem</DIAGNOSTIC-COMMON-ELEMENT-REF>
+                        </DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                        <DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                            <DIAGNOSTIC-COMMON-ELEMENT-REF DEST="DIAGNOSTIC-READ-DATA-BY-IDENTIFIER">/RootP_DcmDesc/DID_EtatMenuPrgMem_Read</DIAGNOSTIC-COMMON-ELEMENT-REF>
+                        </DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                        <DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                            <DIAGNOSTIC-COMMON-ELEMENT-REF DEST="DIAGNOSTIC-WRITE-DATA-BY-IDENTIFIER">/RootP_DcmDesc/DID_EtatMenuPrgMem_Write</DIAGNOSTIC-COMMON-ELEMENT-REF>
+                        </DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                        <!-- DID_EtatMenuReserveZEV : ReadOnly -->
+                        <DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                            <DIAGNOSTIC-COMMON-ELEMENT-REF DEST="DIAGNOSTIC-DATA-IDENTIFIER">/RootP_DiagDesc/DID_EtatMenuReserveZEV</DIAGNOSTIC-COMMON-ELEMENT-REF>
+                        </DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                        <DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                            <DIAGNOSTIC-COMMON-ELEMENT-REF DEST="DIAGNOSTIC-READ-DATA-BY-IDENTIFIER">/RootP_DcmDesc/DID_EtatMenuReserveZEV_Read</DIAGNOSTIC-COMMON-ELEMENT-REF>
+                        </DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                        <!-- DID_EtatMenuUnitesLangue : ReadOnly -->
+                        <DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                            <DIAGNOSTIC-COMMON-ELEMENT-REF DEST="DIAGNOSTIC-DATA-IDENTIFIER">/RootP_DiagDesc/DID_EtatMenuUnitesLangue</DIAGNOSTIC-COMMON-ELEMENT-REF>
+                        </DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                        <DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                            <DIAGNOSTIC-COMMON-ELEMENT-REF DEST="DIAGNOSTIC-READ-DATA-BY-IDENTIFIER">/RootP_DcmDesc/DID_EtatMenuUnitesLangue_Read</DIAGNOSTIC-COMMON-ELEMENT-REF>
+                        </DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                        <!-- DID_EtatReglageButeesXVV : ReadOnly -->
+                        <DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                            <DIAGNOSTIC-COMMON-ELEMENT-REF DEST="DIAGNOSTIC-DATA-IDENTIFIER">/RootP_DiagDesc/DID_EtatReglageButeesXVV</DIAGNOSTIC-COMMON-ELEMENT-REF>
+                        </DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                        <DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                            <DIAGNOSTIC-COMMON-ELEMENT-REF DEST="DIAGNOSTIC-READ-DATA-BY-IDENTIFIER">/RootP_DcmDesc/DID_EtatReglageButeesXVV_Read</DIAGNOSTIC-COMMON-ELEMENT-REF>
+                        </DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                        <!-- DID_INIT_FARC : ReadWrite -->
+                        <DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                            <DIAGNOSTIC-COMMON-ELEMENT-REF DEST="DIAGNOSTIC-DATA-IDENTIFIER">/RootP_DiagDesc/DID_INIT_FARC</DIAGNOSTIC-COMMON-ELEMENT-REF>
+                        </DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                        <DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                            <DIAGNOSTIC-COMMON-ELEMENT-REF DEST="DIAGNOSTIC-READ-DATA-BY-IDENTIFIER">/RootP_DcmDesc/DID_INIT_FARC_Read</DIAGNOSTIC-COMMON-ELEMENT-REF>
+                        </DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                        <DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                            <DIAGNOSTIC-COMMON-ELEMENT-REF DEST="DIAGNOSTIC-WRITE-DATA-BY-IDENTIFIER">/RootP_DcmDesc/DID_INIT_FARC_Write</DIAGNOSTIC-COMMON-ELEMENT-REF>
+                        </DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                        <!-- DID_INIT_PRESENCE_ARC : ReadWrite -->
+                        <DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                            <DIAGNOSTIC-COMMON-ELEMENT-REF DEST="DIAGNOSTIC-DATA-IDENTIFIER">/RootP_DiagDesc/DID_INIT_PRESENCE_ARC</DIAGNOSTIC-COMMON-ELEMENT-REF>
+                        </DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                        <DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                            <DIAGNOSTIC-COMMON-ELEMENT-REF DEST="DIAGNOSTIC-READ-DATA-BY-IDENTIFIER">/RootP_DcmDesc/DID_INIT_PRESENCE_ARC_Read</DIAGNOSTIC-COMMON-ELEMENT-REF>
+                        </DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                        <DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                            <DIAGNOSTIC-COMMON-ELEMENT-REF DEST="DIAGNOSTIC-WRITE-DATA-BY-IDENTIFIER">/RootP_DcmDesc/DID_INIT_PRESENCE_ARC_Write</DIAGNOSTIC-COMMON-ELEMENT-REF>
+                        </DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                        <!-- DID_INIT_SENS_ARC_NIV : ReadWrite -->
+                        <DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                            <DIAGNOSTIC-COMMON-ELEMENT-REF DEST="DIAGNOSTIC-DATA-IDENTIFIER">/RootP_DiagDesc/DID_INIT_SENS_ARC_NIV</DIAGNOSTIC-COMMON-ELEMENT-REF>
+                        </DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                        <DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                            <DIAGNOSTIC-COMMON-ELEMENT-REF DEST="DIAGNOSTIC-READ-DATA-BY-IDENTIFIER">/RootP_DcmDesc/DID_INIT_SENS_ARC_NIV_Read</DIAGNOSTIC-COMMON-ELEMENT-REF>
+                        </DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                        <DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                            <DIAGNOSTIC-COMMON-ELEMENT-REF DEST="DIAGNOSTIC-WRITE-DATA-BY-IDENTIFIER">/RootP_DcmDesc/DID_INIT_SENS_ARC_NIV_Write</DIAGNOSTIC-COMMON-ELEMENT-REF>
+                        </DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                        <!-- DID_TYPE_MENU_PERSO : ReadWrite -->
+                        <DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                            <DIAGNOSTIC-COMMON-ELEMENT-REF DEST="DIAGNOSTIC-DATA-IDENTIFIER">/RootP_DiagDesc/DID_TYPE_MENU_PERSO</DIAGNOSTIC-COMMON-ELEMENT-REF>
+                        </DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                        <DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                            <DIAGNOSTIC-COMMON-ELEMENT-REF DEST="DIAGNOSTIC-READ-DATA-BY-IDENTIFIER">/RootP_DcmDesc/DID_TYPE_MENU_PERSO_Read</DIAGNOSTIC-COMMON-ELEMENT-REF>
+                        </DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                        <DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                            <DIAGNOSTIC-COMMON-ELEMENT-REF DEST="DIAGNOSTIC-WRITE-DATA-BY-IDENTIFIER">/RootP_DcmDesc/DID_TYPE_MENU_PERSO_Write</DIAGNOSTIC-COMMON-ELEMENT-REF>
+                        </DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                        <!-- DID_VitLVVDeMenuPerso : ReadOnly -->
+                        <DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                            <DIAGNOSTIC-COMMON-ELEMENT-REF DEST="DIAGNOSTIC-DATA-IDENTIFIER">/RootP_DiagDesc/DID_VitLVVDeMenuPerso</DIAGNOSTIC-COMMON-ELEMENT-REF>
+                        </DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                        <DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                            <DIAGNOSTIC-COMMON-ELEMENT-REF DEST="DIAGNOSTIC-READ-DATA-BY-IDENTIFIER">/RootP_DcmDesc/DID_VitLVVDeMenuPerso_Read</DIAGNOSTIC-COMMON-ELEMENT-REF>
+                        </DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL>
+                    </ELEMENTS>
+                </DIAGNOSTIC-CONTRIBUTION-SET>
+                <!-- 16 Interfaces de type DID -->
+                <DIAGNOSTIC-DATA-IDENTIFIER UUID="0ba573e6-cf2b-5570-9dd8-e4b397d29b80">
+                    <SHORT-NAME>DID_DispoEtatMenuPrgPem</SHORT-NAME>
+                    <ID>55562</ID>
+                    <DATA-ELEMENTS>
+                        <DIAGNOSTIC-PARAMETER>
+                            <BIT-OFFSET>0</BIT-OFFSET>
+                            <DATA-ELEMENTS>
+                                <DIAGNOSTIC-DATA-ELEMENT UUID="c9033cc5-bb32-b433-97a3-7c865c12e4d3">
+                                    <SHORT-NAME>dde_DispoEtatMenuPrgPem</SHORT-NAME>
+                                    <ARRAY-SIZE-SEMANTICS>FIXED-SIZE</ARRAY-SIZE-SEMANTICS>
+                                    <MAX-NUMBER-OF-ELEMENTS>1</MAX-NUMBER-OF-ELEMENTS>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tLOG</IMPLEMENTATION-DATA-TYPE-REF>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                </DIAGNOSTIC-DATA-ELEMENT>
+                            </DATA-ELEMENTS>
+                        </DIAGNOSTIC-PARAMETER>
+                    </DATA-ELEMENTS>
+                </DIAGNOSTIC-DATA-IDENTIFIER>
+                <DIAGNOSTIC-DATA-IDENTIFIER UUID="a1017517-308f-0167-727b-3dc28c87fc8a">
+                    <SHORT-NAME>DID_DispoEtatMenuReserveZEV</SHORT-NAME>
+                    <ID>55564</ID>
+                    <DATA-ELEMENTS>
+                        <DIAGNOSTIC-PARAMETER>
+                            <BIT-OFFSET>0</BIT-OFFSET>
+                            <DATA-ELEMENTS>
+                                <DIAGNOSTIC-DATA-ELEMENT UUID="77f09a37-01a6-da20-64e4-2da60aca3fab">
+                                    <SHORT-NAME>dde_DispoEtatMenuReserveZEV</SHORT-NAME>
+                                    <ARRAY-SIZE-SEMANTICS>FIXED-SIZE</ARRAY-SIZE-SEMANTICS>
+                                    <MAX-NUMBER-OF-ELEMENTS>1</MAX-NUMBER-OF-ELEMENTS>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tLOG</IMPLEMENTATION-DATA-TYPE-REF>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                </DIAGNOSTIC-DATA-ELEMENT>
+                            </DATA-ELEMENTS>
+                        </DIAGNOSTIC-PARAMETER>
+                    </DATA-ELEMENTS>
+                </DIAGNOSTIC-DATA-IDENTIFIER>
+                <DIAGNOSTIC-DATA-IDENTIFIER UUID="8f7dcdcb-c449-b354-83f3-6b9bd752c0ac">
+                    <SHORT-NAME>DID_DispoMenuInfoXVV</SHORT-NAME>
+                    <ID>55517</ID>
+                    <DATA-ELEMENTS>
+                        <DIAGNOSTIC-PARAMETER>
+                            <BIT-OFFSET>0</BIT-OFFSET>
+                            <DATA-ELEMENTS>
+                                <DIAGNOSTIC-DATA-ELEMENT UUID="762eecf5-d9eb-5b71-93fa-134582c50d06">
+                                    <SHORT-NAME>dde_EtatMenuInfoXVVDispo</SHORT-NAME>
+                                    <ARRAY-SIZE-SEMANTICS>FIXED-SIZE</ARRAY-SIZE-SEMANTICS>
+                                    <MAX-NUMBER-OF-ELEMENTS>1</MAX-NUMBER-OF-ELEMENTS>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tLOG</IMPLEMENTATION-DATA-TYPE-REF>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                </DIAGNOSTIC-DATA-ELEMENT>
+                            </DATA-ELEMENTS>
+                        </DIAGNOSTIC-PARAMETER>
+                    </DATA-ELEMENTS>
+                </DIAGNOSTIC-DATA-IDENTIFIER>
+                <DIAGNOSTIC-DATA-IDENTIFIER UUID="8d945e8f-87ab-f5f8-4feb-b5346cb913fc">
+                    <SHORT-NAME>DID_DIURNES_VALEUR_DEFAUT</SHORT-NAME>
+                    <ID>9004</ID>
+                    <DATA-ELEMENTS>
+                        <DIAGNOSTIC-PARAMETER>
+                            <BIT-OFFSET>0</BIT-OFFSET>
+                            <DATA-ELEMENTS>
+                                <DIAGNOSTIC-DATA-ELEMENT UUID="81ffbdaf-a25b-68f5-0d6a-175685b0b5ed">
+                                    <SHORT-NAME>dde_CFG_INIT_ECL_FEUX_DIURNES</SHORT-NAME>
+                                    <ARRAY-SIZE-SEMANTICS>FIXED-SIZE</ARRAY-SIZE-SEMANTICS>
+                                    <MAX-NUMBER-OF-ELEMENTS>1</MAX-NUMBER-OF-ELEMENTS>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tLOG</IMPLEMENTATION-DATA-TYPE-REF>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                </DIAGNOSTIC-DATA-ELEMENT>
+                            </DATA-ELEMENTS>
+                        </DIAGNOSTIC-PARAMETER>
+                    </DATA-ELEMENTS>
+                </DIAGNOSTIC-DATA-IDENTIFIER>
+                <DIAGNOSTIC-DATA-IDENTIFIER UUID="dfba2b64-c01d-968a-d89f-09ebc793d6c1">
+                    <SHORT-NAME>DID_EtatFctMenuParam</SHORT-NAME>
+                    <ID>55516</ID>
+                    <DATA-ELEMENTS>
+                        <DIAGNOSTIC-PARAMETER>
+                            <BIT-OFFSET>0</BIT-OFFSET>
+                            <DATA-ELEMENTS>
+                                <DIAGNOSTIC-DATA-ELEMENT UUID="7b8cd278-befd-8d4a-bbec-6eeb4994565b">
+                                    <SHORT-NAME>dde_EtatMenuAccueilCond</SHORT-NAME>
+                                    <ARRAY-SIZE-SEMANTICS>FIXED-SIZE</ARRAY-SIZE-SEMANTICS>
+                                    <MAX-NUMBER-OF-ELEMENTS>1</MAX-NUMBER-OF-ELEMENTS>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tLOG</IMPLEMENTATION-DATA-TYPE-REF>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                </DIAGNOSTIC-DATA-ELEMENT>
+                            </DATA-ELEMENTS>
+                        </DIAGNOSTIC-PARAMETER>
+                        <DIAGNOSTIC-PARAMETER>
+                            <BIT-OFFSET>0</BIT-OFFSET>
+                            <DATA-ELEMENTS>
+                                <DIAGNOSTIC-DATA-ELEMENT UUID="887c107f-fe67-6ee1-1a50-24cdb736b829">
+                                    <SHORT-NAME>dde_EtatMenuARCSensNiv</SHORT-NAME>
+                                    <ARRAY-SIZE-SEMANTICS>FIXED-SIZE</ARRAY-SIZE-SEMANTICS>
+                                    <MAX-NUMBER-OF-ELEMENTS>1</MAX-NUMBER-OF-ELEMENTS>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tBILOG</IMPLEMENTATION-DATA-TYPE-REF>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                </DIAGNOSTIC-DATA-ELEMENT>
+                            </DATA-ELEMENTS>
+                        </DIAGNOSTIC-PARAMETER>
+                        <DIAGNOSTIC-PARAMETER>
+                            <BIT-OFFSET>0</BIT-OFFSET>
+                            <DATA-ELEMENTS>
+                                <DIAGNOSTIC-DATA-ELEMENT UUID="32958609-19b3-04a1-387b-9cb0d113f9ae">
+                                    <SHORT-NAME>dde_EtatMenuEclAccomp</SHORT-NAME>
+                                    <ARRAY-SIZE-SEMANTICS>FIXED-SIZE</ARRAY-SIZE-SEMANTICS>
+                                    <MAX-NUMBER-OF-ELEMENTS>1</MAX-NUMBER-OF-ELEMENTS>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tLOG</IMPLEMENTATION-DATA-TYPE-REF>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                </DIAGNOSTIC-DATA-ELEMENT>
+                            </DATA-ELEMENTS>
+                        </DIAGNOSTIC-PARAMETER>
+                        <DIAGNOSTIC-PARAMETER>
+                            <BIT-OFFSET>0</BIT-OFFSET>
+                            <DATA-ELEMENTS>
+                                <DIAGNOSTIC-DATA-ELEMENT UUID="702a86f1-cfd8-bf78-90dd-3d4a975df73a">
+                                    <SHORT-NAME>dde_EtatMenuEclAccompTempo</SHORT-NAME>
+                                    <ARRAY-SIZE-SEMANTICS>FIXED-SIZE</ARRAY-SIZE-SEMANTICS>
+                                    <MAX-NUMBER-OF-ELEMENTS>1</MAX-NUMBER-OF-ELEMENTS>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tBILOG</IMPLEMENTATION-DATA-TYPE-REF>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                </DIAGNOSTIC-DATA-ELEMENT>
+                            </DATA-ELEMENTS>
+                        </DIAGNOSTIC-PARAMETER>
+                        <DIAGNOSTIC-PARAMETER>
+                            <BIT-OFFSET>0</BIT-OFFSET>
+                            <DATA-ELEMENTS>
+                                <DIAGNOSTIC-DATA-ELEMENT UUID="fe308d7f-9c01-6455-f0e6-0fa239e80e2a">
+                                    <SHORT-NAME>dde_EtatMenuEclAdapt</SHORT-NAME>
+                                    <ARRAY-SIZE-SEMANTICS>FIXED-SIZE</ARRAY-SIZE-SEMANTICS>
+                                    <MAX-NUMBER-OF-ELEMENTS>1</MAX-NUMBER-OF-ELEMENTS>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tLOG</IMPLEMENTATION-DATA-TYPE-REF>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                </DIAGNOSTIC-DATA-ELEMENT>
+                            </DATA-ELEMENTS>
+                        </DIAGNOSTIC-PARAMETER>
+                        <DIAGNOSTIC-PARAMETER>
+                            <BIT-OFFSET>0</BIT-OFFSET>
+                            <DATA-ELEMENTS>
+                                <DIAGNOSTIC-DATA-ELEMENT UUID="f54b1b30-c86b-89ca-347b-e43d04fce60e">
+                                    <SHORT-NAME>dde_EtatMenuEclAmbi</SHORT-NAME>
+                                    <ARRAY-SIZE-SEMANTICS>FIXED-SIZE</ARRAY-SIZE-SEMANTICS>
+                                    <MAX-NUMBER-OF-ELEMENTS>1</MAX-NUMBER-OF-ELEMENTS>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tLOG</IMPLEMENTATION-DATA-TYPE-REF>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                </DIAGNOSTIC-DATA-ELEMENT>
+                            </DATA-ELEMENTS>
+                        </DIAGNOSTIC-PARAMETER>
+                        <DIAGNOSTIC-PARAMETER>
+                            <BIT-OFFSET>0</BIT-OFFSET>
+                            <DATA-ELEMENTS>
+                                <DIAGNOSTIC-DATA-ELEMENT UUID="60edaa87-7744-9345-5708-c0f7d88cd299">
+                                    <SHORT-NAME>dde_EtatMenuEclAmbiNiv</SHORT-NAME>
+                                    <ARRAY-SIZE-SEMANTICS>FIXED-SIZE</ARRAY-SIZE-SEMANTICS>
+                                    <MAX-NUMBER-OF-ELEMENTS>1</MAX-NUMBER-OF-ELEMENTS>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tBYTE</IMPLEMENTATION-DATA-TYPE-REF>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                </DIAGNOSTIC-DATA-ELEMENT>
+                            </DATA-ELEMENTS>
+                        </DIAGNOSTIC-PARAMETER>
+                        <DIAGNOSTIC-PARAMETER>
+                            <BIT-OFFSET>0</BIT-OFFSET>
+                            <DATA-ELEMENTS>
+                                <DIAGNOSTIC-DATA-ELEMENT UUID="84f75b11-04c5-c961-6e4f-1a99b3f28ecb">
+                                    <SHORT-NAME>dde_EtatMenuEclAuto</SHORT-NAME>
+                                    <ARRAY-SIZE-SEMANTICS>FIXED-SIZE</ARRAY-SIZE-SEMANTICS>
+                                    <MAX-NUMBER-OF-ELEMENTS>1</MAX-NUMBER-OF-ELEMENTS>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tLOG</IMPLEMENTATION-DATA-TYPE-REF>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                </DIAGNOSTIC-DATA-ELEMENT>
+                            </DATA-ELEMENTS>
+                        </DIAGNOSTIC-PARAMETER>
+                        <DIAGNOSTIC-PARAMETER>
+                            <BIT-OFFSET>0</BIT-OFFSET>
+                            <DATA-ELEMENTS>
+                                <DIAGNOSTIC-DATA-ELEMENT UUID="19b8ef02-fdc5-e3d9-c562-392c97dbaf15">
+                                    <SHORT-NAME>dde_EtatMenuEclAutoroute</SHORT-NAME>
+                                    <ARRAY-SIZE-SEMANTICS>FIXED-SIZE</ARRAY-SIZE-SEMANTICS>
+                                    <MAX-NUMBER-OF-ELEMENTS>1</MAX-NUMBER-OF-ELEMENTS>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tLOG</IMPLEMENTATION-DATA-TYPE-REF>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                </DIAGNOSTIC-DATA-ELEMENT>
+                            </DATA-ELEMENTS>
+                        </DIAGNOSTIC-PARAMETER>
+                        <DIAGNOSTIC-PARAMETER>
+                            <BIT-OFFSET>0</BIT-OFFSET>
+                            <DATA-ELEMENTS>
+                                <DIAGNOSTIC-DATA-ELEMENT UUID="296098be-efb4-c5e7-e428-2b49ad34fdc3">
+                                    <SHORT-NAME>dde_EtatMenuEclDeconda</SHORT-NAME>
+                                    <ARRAY-SIZE-SEMANTICS>FIXED-SIZE</ARRAY-SIZE-SEMANTICS>
+                                    <MAX-NUMBER-OF-ELEMENTS>1</MAX-NUMBER-OF-ELEMENTS>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tLOG</IMPLEMENTATION-DATA-TYPE-REF>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                </DIAGNOSTIC-DATA-ELEMENT>
+                            </DATA-ELEMENTS>
+                        </DIAGNOSTIC-PARAMETER>
+                        <DIAGNOSTIC-PARAMETER>
+                            <BIT-OFFSET>0</BIT-OFFSET>
+                            <DATA-ELEMENTS>
+                                <DIAGNOSTIC-DATA-ELEMENT UUID="aa50c83f-3f5c-fddf-43be-bd1fe1f0a11f">
+                                    <SHORT-NAME>dde_EtatMenuEclDecondaTempo</SHORT-NAME>
+                                    <ARRAY-SIZE-SEMANTICS>FIXED-SIZE</ARRAY-SIZE-SEMANTICS>
+                                    <MAX-NUMBER-OF-ELEMENTS>1</MAX-NUMBER-OF-ELEMENTS>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tBILOG</IMPLEMENTATION-DATA-TYPE-REF>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                </DIAGNOSTIC-DATA-ELEMENT>
+                            </DATA-ELEMENTS>
+                        </DIAGNOSTIC-PARAMETER>
+                        <DIAGNOSTIC-PARAMETER>
+                            <BIT-OFFSET>0</BIT-OFFSET>
+                            <DATA-ELEMENTS>
+                                <DIAGNOSTIC-DATA-ELEMENT UUID="06f53b46-afae-9289-0c5e-465b85a08176">
+                                    <SHORT-NAME>dde_EtatMenuEssuiVitMar</SHORT-NAME>
+                                    <ARRAY-SIZE-SEMANTICS>FIXED-SIZE</ARRAY-SIZE-SEMANTICS>
+                                    <MAX-NUMBER-OF-ELEMENTS>1</MAX-NUMBER-OF-ELEMENTS>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tLOG</IMPLEMENTATION-DATA-TYPE-REF>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                </DIAGNOSTIC-DATA-ELEMENT>
+                            </DATA-ELEMENTS>
+                        </DIAGNOSTIC-PARAMETER>
+                        <DIAGNOSTIC-PARAMETER>
+                            <BIT-OFFSET>0</BIT-OFFSET>
+                            <DATA-ELEMENTS>
+                                <DIAGNOSTIC-DATA-ELEMENT UUID="0387ccfc-5819-4b33-4c43-f6151e642a45">
+                                    <SHORT-NAME>dde_EtatMenuFARC</SHORT-NAME>
+                                    <ARRAY-SIZE-SEMANTICS>FIXED-SIZE</ARRAY-SIZE-SEMANTICS>
+                                    <MAX-NUMBER-OF-ELEMENTS>1</MAX-NUMBER-OF-ELEMENTS>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tLOG</IMPLEMENTATION-DATA-TYPE-REF>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                </DIAGNOSTIC-DATA-ELEMENT>
+                            </DATA-ELEMENTS>
+                        </DIAGNOSTIC-PARAMETER>
+                        <DIAGNOSTIC-PARAMETER>
+                            <BIT-OFFSET>0</BIT-OFFSET>
+                            <DATA-ELEMENTS>
+                                <DIAGNOSTIC-DATA-ELEMENT UUID="856a7907-1562-8422-c075-353ada43c7b2">
+                                    <SHORT-NAME>dde_EtatMenuFeuxDiurne</SHORT-NAME>
+                                    <ARRAY-SIZE-SEMANTICS>FIXED-SIZE</ARRAY-SIZE-SEMANTICS>
+                                    <MAX-NUMBER-OF-ELEMENTS>1</MAX-NUMBER-OF-ELEMENTS>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tLOG</IMPLEMENTATION-DATA-TYPE-REF>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                </DIAGNOSTIC-DATA-ELEMENT>
+                            </DATA-ELEMENTS>
+                        </DIAGNOSTIC-PARAMETER>
+                        <DIAGNOSTIC-PARAMETER>
+                            <BIT-OFFSET>0</BIT-OFFSET>
+                            <DATA-ELEMENTS>
+                                <DIAGNOSTIC-DATA-ELEMENT UUID="0977ea5a-59c3-38e6-c703-a04e2356228b">
+                                    <SHORT-NAME>dde_EtatMenuFSEAuto</SHORT-NAME>
+                                    <ARRAY-SIZE-SEMANTICS>FIXED-SIZE</ARRAY-SIZE-SEMANTICS>
+                                    <MAX-NUMBER-OF-ELEMENTS>1</MAX-NUMBER-OF-ELEMENTS>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tLOG</IMPLEMENTATION-DATA-TYPE-REF>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                </DIAGNOSTIC-DATA-ELEMENT>
+                            </DATA-ELEMENTS>
+                        </DIAGNOSTIC-PARAMETER>
+                        <DIAGNOSTIC-PARAMETER>
+                            <BIT-OFFSET>0</BIT-OFFSET>
+                            <DATA-ELEMENTS>
+                                <DIAGNOSTIC-DATA-ELEMENT UUID="0481c50c-0a8d-a64e-66f3-06f3463b7fd4">
+                                    <SHORT-NAME>dde_EtatMenuMotoVolAr</SHORT-NAME>
+                                    <ARRAY-SIZE-SEMANTICS>FIXED-SIZE</ARRAY-SIZE-SEMANTICS>
+                                    <MAX-NUMBER-OF-ELEMENTS>1</MAX-NUMBER-OF-ELEMENTS>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tLOG</IMPLEMENTATION-DATA-TYPE-REF>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                </DIAGNOSTIC-DATA-ELEMENT>
+                            </DATA-ELEMENTS>
+                        </DIAGNOSTIC-PARAMETER>
+                        <DIAGNOSTIC-PARAMETER>
+                            <BIT-OFFSET>0</BIT-OFFSET>
+                            <DATA-ELEMENTS>
+                                <DIAGNOSTIC-DATA-ELEMENT UUID="e0fab64c-7c47-a4a9-fc27-02e9260b920c">
+                                    <SHORT-NAME>dde_EtatMenuPresenceARC</SHORT-NAME>
+                                    <ARRAY-SIZE-SEMANTICS>FIXED-SIZE</ARRAY-SIZE-SEMANTICS>
+                                    <MAX-NUMBER-OF-ELEMENTS>1</MAX-NUMBER-OF-ELEMENTS>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tLOG</IMPLEMENTATION-DATA-TYPE-REF>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                </DIAGNOSTIC-DATA-ELEMENT>
+                            </DATA-ELEMENTS>
+                        </DIAGNOSTIC-PARAMETER>
+                        <DIAGNOSTIC-PARAMETER>
+                            <BIT-OFFSET>0</BIT-OFFSET>
+                            <DATA-ELEMENTS>
+                                <DIAGNOSTIC-DATA-ELEMENT UUID="954318a6-6eb7-25f2-7c02-7a080fa839b7">
+                                    <SHORT-NAME>dde_EtatMenuSelecArriere</SHORT-NAME>
+                                    <ARRAY-SIZE-SEMANTICS>FIXED-SIZE</ARRAY-SIZE-SEMANTICS>
+                                    <MAX-NUMBER-OF-ELEMENTS>1</MAX-NUMBER-OF-ELEMENTS>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tLOG</IMPLEMENTATION-DATA-TYPE-REF>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                </DIAGNOSTIC-DATA-ELEMENT>
+                            </DATA-ELEMENTS>
+                        </DIAGNOSTIC-PARAMETER>
+                        <DIAGNOSTIC-PARAMETER>
+                            <BIT-OFFSET>0</BIT-OFFSET>
+                            <DATA-ELEMENTS>
+                                <DIAGNOSTIC-DATA-ELEMENT UUID="7b8a0e11-36d4-b206-88e5-8fac24e8016f">
+                                    <SHORT-NAME>dde_EtatMenuSelecCabine</SHORT-NAME>
+                                    <ARRAY-SIZE-SEMANTICS>FIXED-SIZE</ARRAY-SIZE-SEMANTICS>
+                                    <MAX-NUMBER-OF-ELEMENTS>1</MAX-NUMBER-OF-ELEMENTS>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tLOG</IMPLEMENTATION-DATA-TYPE-REF>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                </DIAGNOSTIC-DATA-ELEMENT>
+                            </DATA-ELEMENTS>
+                        </DIAGNOSTIC-PARAMETER>
+                        <DIAGNOSTIC-PARAMETER>
+                            <BIT-OFFSET>0</BIT-OFFSET>
+                            <DATA-ELEMENTS>
+                                <DIAGNOSTIC-DATA-ELEMENT UUID="4fbacb40-e550-ae76-0e45-3a61cfaf58a0">
+                                    <SHORT-NAME>dde_EtatMenuSelecOuvPlip</SHORT-NAME>
+                                    <ARRAY-SIZE-SEMANTICS>FIXED-SIZE</ARRAY-SIZE-SEMANTICS>
+                                    <MAX-NUMBER-OF-ELEMENTS>1</MAX-NUMBER-OF-ELEMENTS>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tLOG</IMPLEMENTATION-DATA-TYPE-REF>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                </DIAGNOSTIC-DATA-ELEMENT>
+                            </DATA-ELEMENTS>
+                        </DIAGNOSTIC-PARAMETER>
+                        <DIAGNOSTIC-PARAMETER>
+                            <BIT-OFFSET>0</BIT-OFFSET>
+                            <DATA-ELEMENTS>
+                                <DIAGNOSTIC-DATA-ELEMENT UUID="03aa8ea6-766b-a638-c5dc-f49459f10943">
+                                    <SHORT-NAME>dde_EtatMenuSonPoly</SHORT-NAME>
+                                    <ARRAY-SIZE-SEMANTICS>FIXED-SIZE</ARRAY-SIZE-SEMANTICS>
+                                    <MAX-NUMBER-OF-ELEMENTS>1</MAX-NUMBER-OF-ELEMENTS>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tBILOG</IMPLEMENTATION-DATA-TYPE-REF>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                </DIAGNOSTIC-DATA-ELEMENT>
+                            </DATA-ELEMENTS>
+                        </DIAGNOSTIC-PARAMETER>
+                        <DIAGNOSTIC-PARAMETER>
+                            <BIT-OFFSET>0</BIT-OFFSET>
+                            <DATA-ELEMENTS>
+                                <DIAGNOSTIC-DATA-ELEMENT UUID="0d6b5146-cb9a-b227-f826-c0790792478f">
+                                    <SHORT-NAME>dde_EtatMenuStatusAAS</SHORT-NAME>
+                                    <ARRAY-SIZE-SEMANTICS>FIXED-SIZE</ARRAY-SIZE-SEMANTICS>
+                                    <MAX-NUMBER-OF-ELEMENTS>1</MAX-NUMBER-OF-ELEMENTS>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tLOG</IMPLEMENTATION-DATA-TYPE-REF>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                </DIAGNOSTIC-DATA-ELEMENT>
+                            </DATA-ELEMENTS>
+                        </DIAGNOSTIC-PARAMETER>
+                        <DIAGNOSTIC-PARAMETER>
+                            <BIT-OFFSET>0</BIT-OFFSET>
+                            <DATA-ELEMENTS>
+                                <DIAGNOSTIC-DATA-ELEMENT UUID="b5760fb2-9480-26a0-8869-51d4a24140ab">
+                                    <SHORT-NAME>dde_EtatMenuStatusSAM</SHORT-NAME>
+                                    <ARRAY-SIZE-SEMANTICS>FIXED-SIZE</ARRAY-SIZE-SEMANTICS>
+                                    <MAX-NUMBER-OF-ELEMENTS>1</MAX-NUMBER-OF-ELEMENTS>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tLOG</IMPLEMENTATION-DATA-TYPE-REF>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                </DIAGNOSTIC-DATA-ELEMENT>
+                            </DATA-ELEMENTS>
+                        </DIAGNOSTIC-PARAMETER>
+                        <DIAGNOSTIC-PARAMETER>
+                            <BIT-OFFSET>0</BIT-OFFSET>
+                            <DATA-ELEMENTS>
+                                <DIAGNOSTIC-DATA-ELEMENT UUID="cff169ca-bb7f-724e-e425-28516692e923">
+                                    <SHORT-NAME>dde_EtatMenuTCFG</SHORT-NAME>
+                                    <ARRAY-SIZE-SEMANTICS>FIXED-SIZE</ARRAY-SIZE-SEMANTICS>
+                                    <MAX-NUMBER-OF-ELEMENTS>1</MAX-NUMBER-OF-ELEMENTS>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tBYTE</IMPLEMENTATION-DATA-TYPE-REF>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                </DIAGNOSTIC-DATA-ELEMENT>
+                            </DATA-ELEMENTS>
+                        </DIAGNOSTIC-PARAMETER>
+                    </DATA-ELEMENTS>
+                </DIAGNOSTIC-DATA-IDENTIFIER>
+                <DIAGNOSTIC-DATA-IDENTIFIER UUID="aa5219bb-0a74-2de5-ee59-b61774a33d5c">
+                    <SHORT-NAME>DID_EtatMenuInfoParamDispo</SHORT-NAME>
+                    <ID>55515</ID>
+                    <DATA-ELEMENTS>
+                        <DIAGNOSTIC-PARAMETER>
+                            <BIT-OFFSET>0</BIT-OFFSET>
+                            <DATA-ELEMENTS>
+                                <DIAGNOSTIC-DATA-ELEMENT UUID="ed349031-e276-d9e8-f694-f5c27d5ffc1e">
+                                    <SHORT-NAME>dde_EtatMenuInfoParamDispo</SHORT-NAME>
+                                    <ARRAY-SIZE-SEMANTICS>FIXED-SIZE</ARRAY-SIZE-SEMANTICS>
+                                    <MAX-NUMBER-OF-ELEMENTS>1</MAX-NUMBER-OF-ELEMENTS>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tLOG</IMPLEMENTATION-DATA-TYPE-REF>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                </DIAGNOSTIC-DATA-ELEMENT>
+                            </DATA-ELEMENTS>
+                        </DIAGNOSTIC-PARAMETER>
+                    </DATA-ELEMENTS>
+                </DIAGNOSTIC-DATA-IDENTIFIER>
+                <DIAGNOSTIC-DATA-IDENTIFIER UUID="41133d9b-684f-379d-9e52-57db9e472bf3">
+                    <SHORT-NAME>DID_EtatMenuInfoUniteLangueDispo</SHORT-NAME>
+                    <ID>55519</ID>
+                    <DATA-ELEMENTS>
+                        <DIAGNOSTIC-PARAMETER>
+                            <BIT-OFFSET>0</BIT-OFFSET>
+                            <DATA-ELEMENTS>
+                                <DIAGNOSTIC-DATA-ELEMENT UUID="0e5815d6-c645-c86f-4af0-26959cfe11cc">
+                                    <SHORT-NAME>dde_EtatMenuInfoUniteLangueDispo</SHORT-NAME>
+                                    <ARRAY-SIZE-SEMANTICS>FIXED-SIZE</ARRAY-SIZE-SEMANTICS>
+                                    <MAX-NUMBER-OF-ELEMENTS>1</MAX-NUMBER-OF-ELEMENTS>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tLOG</IMPLEMENTATION-DATA-TYPE-REF>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                </DIAGNOSTIC-DATA-ELEMENT>
+                            </DATA-ELEMENTS>
+                        </DIAGNOSTIC-PARAMETER>
+                    </DATA-ELEMENTS>
+                </DIAGNOSTIC-DATA-IDENTIFIER>
+                <DIAGNOSTIC-DATA-IDENTIFIER UUID="b6774dde-c69f-8117-5707-abe047c705f6">
+                    <SHORT-NAME>DID_EtatMenuPrgMem</SHORT-NAME>
+                    <ID>55561</ID>
+                    <DATA-ELEMENTS>
+                        <DIAGNOSTIC-PARAMETER>
+                            <BIT-OFFSET>0</BIT-OFFSET>
+                            <DATA-ELEMENTS>
+                                <DIAGNOSTIC-DATA-ELEMENT UUID="de4bf0da-5d76-8b3d-2dab-fabe9a005cad">
+                                    <SHORT-NAME>dde_DmdMenuSelPrgDi</SHORT-NAME>
+                                    <ARRAY-SIZE-SEMANTICS>FIXED-SIZE</ARRAY-SIZE-SEMANTICS>
+                                    <MAX-NUMBER-OF-ELEMENTS>1</MAX-NUMBER-OF-ELEMENTS>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tLOG</IMPLEMENTATION-DATA-TYPE-REF>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                </DIAGNOSTIC-DATA-ELEMENT>
+                            </DATA-ELEMENTS>
+                        </DIAGNOSTIC-PARAMETER>
+                        <DIAGNOSTIC-PARAMETER>
+                            <BIT-OFFSET>0</BIT-OFFSET>
+                            <DATA-ELEMENTS>
+                                <DIAGNOSTIC-DATA-ELEMENT UUID="e0745f99-1ca5-9126-cda3-6673b7534617">
+                                    <SHORT-NAME>dde_DmdMenuSelPrgJe</SHORT-NAME>
+                                    <ARRAY-SIZE-SEMANTICS>FIXED-SIZE</ARRAY-SIZE-SEMANTICS>
+                                    <MAX-NUMBER-OF-ELEMENTS>1</MAX-NUMBER-OF-ELEMENTS>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tLOG</IMPLEMENTATION-DATA-TYPE-REF>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                </DIAGNOSTIC-DATA-ELEMENT>
+                            </DATA-ELEMENTS>
+                        </DIAGNOSTIC-PARAMETER>
+                        <DIAGNOSTIC-PARAMETER>
+                            <BIT-OFFSET>0</BIT-OFFSET>
+                            <DATA-ELEMENTS>
+                                <DIAGNOSTIC-DATA-ELEMENT UUID="451991c2-02da-fbc9-2f17-814d179bbb50">
+                                    <SHORT-NAME>dde_DmdMenuSelPrgLu</SHORT-NAME>
+                                    <ARRAY-SIZE-SEMANTICS>FIXED-SIZE</ARRAY-SIZE-SEMANTICS>
+                                    <MAX-NUMBER-OF-ELEMENTS>1</MAX-NUMBER-OF-ELEMENTS>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tLOG</IMPLEMENTATION-DATA-TYPE-REF>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                </DIAGNOSTIC-DATA-ELEMENT>
+                            </DATA-ELEMENTS>
+                        </DIAGNOSTIC-PARAMETER>
+                        <DIAGNOSTIC-PARAMETER>
+                            <BIT-OFFSET>0</BIT-OFFSET>
+                            <DATA-ELEMENTS>
+                                <DIAGNOSTIC-DATA-ELEMENT UUID="772f0caf-b965-237f-dffb-52853b991204">
+                                    <SHORT-NAME>dde_DmdMenuSelPrgMa</SHORT-NAME>
+                                    <ARRAY-SIZE-SEMANTICS>FIXED-SIZE</ARRAY-SIZE-SEMANTICS>
+                                    <MAX-NUMBER-OF-ELEMENTS>1</MAX-NUMBER-OF-ELEMENTS>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tLOG</IMPLEMENTATION-DATA-TYPE-REF>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                </DIAGNOSTIC-DATA-ELEMENT>
+                            </DATA-ELEMENTS>
+                        </DIAGNOSTIC-PARAMETER>
+                        <DIAGNOSTIC-PARAMETER>
+                            <BIT-OFFSET>0</BIT-OFFSET>
+                            <DATA-ELEMENTS>
+                                <DIAGNOSTIC-DATA-ELEMENT UUID="4a1a106b-94e7-b580-b50f-cfb7059c3aeb">
+                                    <SHORT-NAME>dde_DmdMenuSelPrgMe</SHORT-NAME>
+                                    <ARRAY-SIZE-SEMANTICS>FIXED-SIZE</ARRAY-SIZE-SEMANTICS>
+                                    <MAX-NUMBER-OF-ELEMENTS>1</MAX-NUMBER-OF-ELEMENTS>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tLOG</IMPLEMENTATION-DATA-TYPE-REF>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                </DIAGNOSTIC-DATA-ELEMENT>
+                            </DATA-ELEMENTS>
+                        </DIAGNOSTIC-PARAMETER>
+                        <DIAGNOSTIC-PARAMETER>
+                            <BIT-OFFSET>0</BIT-OFFSET>
+                            <DATA-ELEMENTS>
+                                <DIAGNOSTIC-DATA-ELEMENT UUID="760bf8a9-3736-6749-e1b9-77321087ac1f">
+                                    <SHORT-NAME>dde_DmdMenuSelPrgSa</SHORT-NAME>
+                                    <ARRAY-SIZE-SEMANTICS>FIXED-SIZE</ARRAY-SIZE-SEMANTICS>
+                                    <MAX-NUMBER-OF-ELEMENTS>1</MAX-NUMBER-OF-ELEMENTS>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tLOG</IMPLEMENTATION-DATA-TYPE-REF>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                </DIAGNOSTIC-DATA-ELEMENT>
+                            </DATA-ELEMENTS>
+                        </DIAGNOSTIC-PARAMETER>
+                        <DIAGNOSTIC-PARAMETER>
+                            <BIT-OFFSET>0</BIT-OFFSET>
+                            <DATA-ELEMENTS>
+                                <DIAGNOSTIC-DATA-ELEMENT UUID="37d468ae-e683-8244-5f2b-35d76db9532c">
+                                    <SHORT-NAME>dde_DmdMenuSelPrgVe</SHORT-NAME>
+                                    <ARRAY-SIZE-SEMANTICS>FIXED-SIZE</ARRAY-SIZE-SEMANTICS>
+                                    <MAX-NUMBER-OF-ELEMENTS>1</MAX-NUMBER-OF-ELEMENTS>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tLOG</IMPLEMENTATION-DATA-TYPE-REF>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                </DIAGNOSTIC-DATA-ELEMENT>
+                            </DATA-ELEMENTS>
+                        </DIAGNOSTIC-PARAMETER>
+                    </DATA-ELEMENTS>
+                </DIAGNOSTIC-DATA-IDENTIFIER>
+                <DIAGNOSTIC-DATA-IDENTIFIER UUID="20a02faa-794e-5a98-820a-b556adc12a7e">
+                    <SHORT-NAME>DID_EtatMenuReserveZEV</SHORT-NAME>
+                    <ID>55563</ID>
+                    <DATA-ELEMENTS>
+                        <DIAGNOSTIC-PARAMETER>
+                            <BIT-OFFSET>0</BIT-OFFSET>
+                            <DATA-ELEMENTS>
+                                <DIAGNOSTIC-DATA-ELEMENT UUID="086deb5e-1ab5-5626-487f-a44509742f53">
+                                    <SHORT-NAME>dde_EtatMenuReserveZEV</SHORT-NAME>
+                                    <ARRAY-SIZE-SEMANTICS>FIXED-SIZE</ARRAY-SIZE-SEMANTICS>
+                                    <MAX-NUMBER-OF-ELEMENTS>1</MAX-NUMBER-OF-ELEMENTS>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tLOG</IMPLEMENTATION-DATA-TYPE-REF>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                </DIAGNOSTIC-DATA-ELEMENT>
+                            </DATA-ELEMENTS>
+                        </DIAGNOSTIC-PARAMETER>
+                    </DATA-ELEMENTS>
+                </DIAGNOSTIC-DATA-IDENTIFIER>
+                <DIAGNOSTIC-DATA-IDENTIFIER UUID="4a6d2679-a450-2fe5-bf71-78ddc49cefab">
+                    <SHORT-NAME>DID_EtatMenuUnitesLangue</SHORT-NAME>
+                    <ID>55520</ID>
+                    <DATA-ELEMENTS>
+                        <DIAGNOSTIC-PARAMETER>
+                            <BIT-OFFSET>0</BIT-OFFSET>
+                            <DATA-ELEMENTS>
+                                <DIAGNOSTIC-DATA-ELEMENT UUID="e2ceea32-3243-540e-aea5-e276a143f951">
+                                    <SHORT-NAME>dde_EtatMenuLangueVehicule</SHORT-NAME>
+                                    <ARRAY-SIZE-SEMANTICS>FIXED-SIZE</ARRAY-SIZE-SEMANTICS>
+                                    <MAX-NUMBER-OF-ELEMENTS>1</MAX-NUMBER-OF-ELEMENTS>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tBYTE</IMPLEMENTATION-DATA-TYPE-REF>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                </DIAGNOSTIC-DATA-ELEMENT>
+                            </DATA-ELEMENTS>
+                        </DIAGNOSTIC-PARAMETER>
+                        <DIAGNOSTIC-PARAMETER>
+                            <BIT-OFFSET>0</BIT-OFFSET>
+                            <DATA-ELEMENTS>
+                                <DIAGNOSTIC-DATA-ELEMENT UUID="6f807b8d-e179-824b-747c-bd244a47cc5c">
+                                    <SHORT-NAME>dde_EtatMenuUniteConso</SHORT-NAME>
+                                    <ARRAY-SIZE-SEMANTICS>FIXED-SIZE</ARRAY-SIZE-SEMANTICS>
+                                    <MAX-NUMBER-OF-ELEMENTS>1</MAX-NUMBER-OF-ELEMENTS>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tLOG</IMPLEMENTATION-DATA-TYPE-REF>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                </DIAGNOSTIC-DATA-ELEMENT>
+                            </DATA-ELEMENTS>
+                        </DIAGNOSTIC-PARAMETER>
+                        <DIAGNOSTIC-PARAMETER>
+                            <BIT-OFFSET>0</BIT-OFFSET>
+                            <DATA-ELEMENTS>
+                                <DIAGNOSTIC-DATA-ELEMENT UUID="5813b5ef-191e-6b62-d08d-8035adc39056">
+                                    <SHORT-NAME>dde_EtatMenuUniteDistance</SHORT-NAME>
+                                    <ARRAY-SIZE-SEMANTICS>FIXED-SIZE</ARRAY-SIZE-SEMANTICS>
+                                    <MAX-NUMBER-OF-ELEMENTS>1</MAX-NUMBER-OF-ELEMENTS>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tLOG</IMPLEMENTATION-DATA-TYPE-REF>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                </DIAGNOSTIC-DATA-ELEMENT>
+                            </DATA-ELEMENTS>
+                        </DIAGNOSTIC-PARAMETER>
+                        <DIAGNOSTIC-PARAMETER>
+                            <BIT-OFFSET>0</BIT-OFFSET>
+                            <DATA-ELEMENTS>
+                                <DIAGNOSTIC-DATA-ELEMENT UUID="f89f81fd-71e2-48cb-9d6a-775b0a37611a">
+                                    <SHORT-NAME>dde_EtatMenuUniteTemperature</SHORT-NAME>
+                                    <ARRAY-SIZE-SEMANTICS>FIXED-SIZE</ARRAY-SIZE-SEMANTICS>
+                                    <MAX-NUMBER-OF-ELEMENTS>1</MAX-NUMBER-OF-ELEMENTS>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tLOG</IMPLEMENTATION-DATA-TYPE-REF>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                </DIAGNOSTIC-DATA-ELEMENT>
+                            </DATA-ELEMENTS>
+                        </DIAGNOSTIC-PARAMETER>
+                        <DIAGNOSTIC-PARAMETER>
+                            <BIT-OFFSET>0</BIT-OFFSET>
+                            <DATA-ELEMENTS>
+                                <DIAGNOSTIC-DATA-ELEMENT UUID="6868146c-d360-137c-4d73-7f99f9b3df19">
+                                    <SHORT-NAME>dde_EtatMenuUniteVolume</SHORT-NAME>
+                                    <ARRAY-SIZE-SEMANTICS>FIXED-SIZE</ARRAY-SIZE-SEMANTICS>
+                                    <MAX-NUMBER-OF-ELEMENTS>1</MAX-NUMBER-OF-ELEMENTS>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tLOG</IMPLEMENTATION-DATA-TYPE-REF>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                </DIAGNOSTIC-DATA-ELEMENT>
+                            </DATA-ELEMENTS>
+                        </DIAGNOSTIC-PARAMETER>
+                    </DATA-ELEMENTS>
+                </DIAGNOSTIC-DATA-IDENTIFIER>
+                <DIAGNOSTIC-DATA-IDENTIFIER UUID="56969113-0ed9-4016-b898-7cea032736f8">
+                    <SHORT-NAME>DID_EtatReglageButeesXVV</SHORT-NAME>
+                    <ID>55518</ID>
+                    <DATA-ELEMENTS>
+                        <DIAGNOSTIC-PARAMETER>
+                            <BIT-OFFSET>0</BIT-OFFSET>
+                            <DATA-ELEMENTS>
+                                <DIAGNOSTIC-DATA-ELEMENT UUID="ed196ec2-69c7-03e3-8108-628b8033e4b8">
+                                    <SHORT-NAME>dde_EtatMenuActButee1XVV</SHORT-NAME>
+                                    <ARRAY-SIZE-SEMANTICS>FIXED-SIZE</ARRAY-SIZE-SEMANTICS>
+                                    <MAX-NUMBER-OF-ELEMENTS>1</MAX-NUMBER-OF-ELEMENTS>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tLOG</IMPLEMENTATION-DATA-TYPE-REF>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                </DIAGNOSTIC-DATA-ELEMENT>
+                            </DATA-ELEMENTS>
+                        </DIAGNOSTIC-PARAMETER>
+                        <DIAGNOSTIC-PARAMETER>
+                            <BIT-OFFSET>0</BIT-OFFSET>
+                            <DATA-ELEMENTS>
+                                <DIAGNOSTIC-DATA-ELEMENT UUID="9afd1fc9-6491-1e59-1e80-e12e6c316d0f">
+                                    <SHORT-NAME>dde_EtatMenuActButee2XVV</SHORT-NAME>
+                                    <ARRAY-SIZE-SEMANTICS>FIXED-SIZE</ARRAY-SIZE-SEMANTICS>
+                                    <MAX-NUMBER-OF-ELEMENTS>1</MAX-NUMBER-OF-ELEMENTS>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tLOG</IMPLEMENTATION-DATA-TYPE-REF>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                </DIAGNOSTIC-DATA-ELEMENT>
+                            </DATA-ELEMENTS>
+                        </DIAGNOSTIC-PARAMETER>
+                        <DIAGNOSTIC-PARAMETER>
+                            <BIT-OFFSET>0</BIT-OFFSET>
+                            <DATA-ELEMENTS>
+                                <DIAGNOSTIC-DATA-ELEMENT UUID="c75b4555-1348-cddb-a771-c8915ffddd7c">
+                                    <SHORT-NAME>dde_EtatMenuActButee3XVV</SHORT-NAME>
+                                    <ARRAY-SIZE-SEMANTICS>FIXED-SIZE</ARRAY-SIZE-SEMANTICS>
+                                    <MAX-NUMBER-OF-ELEMENTS>1</MAX-NUMBER-OF-ELEMENTS>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tLOG</IMPLEMENTATION-DATA-TYPE-REF>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                </DIAGNOSTIC-DATA-ELEMENT>
+                            </DATA-ELEMENTS>
+                        </DIAGNOSTIC-PARAMETER>
+                        <DIAGNOSTIC-PARAMETER>
+                            <BIT-OFFSET>0</BIT-OFFSET>
+                            <DATA-ELEMENTS>
+                                <DIAGNOSTIC-DATA-ELEMENT UUID="2c9152c2-9f5f-9c0b-161e-3a19826bd6cb">
+                                    <SHORT-NAME>dde_EtatMenuActButee4XVV</SHORT-NAME>
+                                    <ARRAY-SIZE-SEMANTICS>FIXED-SIZE</ARRAY-SIZE-SEMANTICS>
+                                    <MAX-NUMBER-OF-ELEMENTS>1</MAX-NUMBER-OF-ELEMENTS>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tLOG</IMPLEMENTATION-DATA-TYPE-REF>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                </DIAGNOSTIC-DATA-ELEMENT>
+                            </DATA-ELEMENTS>
+                        </DIAGNOSTIC-PARAMETER>
+                        <DIAGNOSTIC-PARAMETER>
+                            <BIT-OFFSET>0</BIT-OFFSET>
+                            <DATA-ELEMENTS>
+                                <DIAGNOSTIC-DATA-ELEMENT UUID="d56dee77-c4d9-3bd9-969d-8d542e96bdf8">
+                                    <SHORT-NAME>dde_EtatMenuActButee5XVV</SHORT-NAME>
+                                    <ARRAY-SIZE-SEMANTICS>FIXED-SIZE</ARRAY-SIZE-SEMANTICS>
+                                    <MAX-NUMBER-OF-ELEMENTS>1</MAX-NUMBER-OF-ELEMENTS>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tLOG</IMPLEMENTATION-DATA-TYPE-REF>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                </DIAGNOSTIC-DATA-ELEMENT>
+                            </DATA-ELEMENTS>
+                        </DIAGNOSTIC-PARAMETER>
+                        <DIAGNOSTIC-PARAMETER>
+                            <BIT-OFFSET>0</BIT-OFFSET>
+                            <DATA-ELEMENTS>
+                                <DIAGNOSTIC-DATA-ELEMENT UUID="d46fcd3c-77b0-0228-ed0a-5ec5f15689dc">
+                                    <SHORT-NAME>dde_EtatMenuActButeeGenXVV</SHORT-NAME>
+                                    <ARRAY-SIZE-SEMANTICS>FIXED-SIZE</ARRAY-SIZE-SEMANTICS>
+                                    <MAX-NUMBER-OF-ELEMENTS>1</MAX-NUMBER-OF-ELEMENTS>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tLOG</IMPLEMENTATION-DATA-TYPE-REF>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                </DIAGNOSTIC-DATA-ELEMENT>
+                            </DATA-ELEMENTS>
+                        </DIAGNOSTIC-PARAMETER>
+                        <DIAGNOSTIC-PARAMETER>
+                            <BIT-OFFSET>0</BIT-OFFSET>
+                            <DATA-ELEMENTS>
+                                <DIAGNOSTIC-DATA-ELEMENT UUID="05e1a3a6-d311-3bc9-cc0a-86f5f5f14313">
+                                    <SHORT-NAME>dde_EtatMenuVitesse1XVV</SHORT-NAME>
+                                    <ARRAY-SIZE-SEMANTICS>FIXED-SIZE</ARRAY-SIZE-SEMANTICS>
+                                    <MAX-NUMBER-OF-ELEMENTS>1</MAX-NUMBER-OF-ELEMENTS>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tBYTE</IMPLEMENTATION-DATA-TYPE-REF>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                </DIAGNOSTIC-DATA-ELEMENT>
+                            </DATA-ELEMENTS>
+                        </DIAGNOSTIC-PARAMETER>
+                        <DIAGNOSTIC-PARAMETER>
+                            <BIT-OFFSET>0</BIT-OFFSET>
+                            <DATA-ELEMENTS>
+                                <DIAGNOSTIC-DATA-ELEMENT UUID="73897733-ce27-7338-a2b3-10dbda531379">
+                                    <SHORT-NAME>dde_EtatMenuVitesse2XVV</SHORT-NAME>
+                                    <ARRAY-SIZE-SEMANTICS>FIXED-SIZE</ARRAY-SIZE-SEMANTICS>
+                                    <MAX-NUMBER-OF-ELEMENTS>1</MAX-NUMBER-OF-ELEMENTS>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tBYTE</IMPLEMENTATION-DATA-TYPE-REF>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                </DIAGNOSTIC-DATA-ELEMENT>
+                            </DATA-ELEMENTS>
+                        </DIAGNOSTIC-PARAMETER>
+                        <DIAGNOSTIC-PARAMETER>
+                            <BIT-OFFSET>0</BIT-OFFSET>
+                            <DATA-ELEMENTS>
+                                <DIAGNOSTIC-DATA-ELEMENT UUID="ab7da73d-dc33-61bf-877b-03579bb5a067">
+                                    <SHORT-NAME>dde_EtatMenuVitesse3XVV</SHORT-NAME>
+                                    <ARRAY-SIZE-SEMANTICS>FIXED-SIZE</ARRAY-SIZE-SEMANTICS>
+                                    <MAX-NUMBER-OF-ELEMENTS>1</MAX-NUMBER-OF-ELEMENTS>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tBYTE</IMPLEMENTATION-DATA-TYPE-REF>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                </DIAGNOSTIC-DATA-ELEMENT>
+                            </DATA-ELEMENTS>
+                        </DIAGNOSTIC-PARAMETER>
+                        <DIAGNOSTIC-PARAMETER>
+                            <BIT-OFFSET>0</BIT-OFFSET>
+                            <DATA-ELEMENTS>
+                                <DIAGNOSTIC-DATA-ELEMENT UUID="f7944488-11b1-cd94-ccd8-38f1fb426dd0">
+                                    <SHORT-NAME>dde_EtatMenuVitesse4XVV</SHORT-NAME>
+                                    <ARRAY-SIZE-SEMANTICS>FIXED-SIZE</ARRAY-SIZE-SEMANTICS>
+                                    <MAX-NUMBER-OF-ELEMENTS>1</MAX-NUMBER-OF-ELEMENTS>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tBYTE</IMPLEMENTATION-DATA-TYPE-REF>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                </DIAGNOSTIC-DATA-ELEMENT>
+                            </DATA-ELEMENTS>
+                        </DIAGNOSTIC-PARAMETER>
+                        <DIAGNOSTIC-PARAMETER>
+                            <BIT-OFFSET>0</BIT-OFFSET>
+                            <DATA-ELEMENTS>
+                                <DIAGNOSTIC-DATA-ELEMENT UUID="d1b034c9-7bb4-f4a5-45f1-11feca9b58dd">
+                                    <SHORT-NAME>dde_EtatMenuVitesse5XVV</SHORT-NAME>
+                                    <ARRAY-SIZE-SEMANTICS>FIXED-SIZE</ARRAY-SIZE-SEMANTICS>
+                                    <MAX-NUMBER-OF-ELEMENTS>1</MAX-NUMBER-OF-ELEMENTS>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tBYTE</IMPLEMENTATION-DATA-TYPE-REF>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                </DIAGNOSTIC-DATA-ELEMENT>
+                            </DATA-ELEMENTS>
+                        </DIAGNOSTIC-PARAMETER>
+                    </DATA-ELEMENTS>
+                </DIAGNOSTIC-DATA-IDENTIFIER>
+                <DIAGNOSTIC-DATA-IDENTIFIER UUID="4c025ca2-00cb-4345-2577-27d5369235f9">
+                    <SHORT-NAME>DID_INIT_FARC</SHORT-NAME>
+                    <ID>9204</ID>
+                    <DATA-ELEMENTS>
+                        <DIAGNOSTIC-PARAMETER>
+                            <BIT-OFFSET>0</BIT-OFFSET>
+                            <DATA-ELEMENTS>
+                                <DIAGNOSTIC-DATA-ELEMENT UUID="4c03949a-bd14-4f33-aa82-9d5c3d9cd135">
+                                    <SHORT-NAME>dde_CFG_INIT_FARC</SHORT-NAME>
+                                    <ARRAY-SIZE-SEMANTICS>FIXED-SIZE</ARRAY-SIZE-SEMANTICS>
+                                    <MAX-NUMBER-OF-ELEMENTS>1</MAX-NUMBER-OF-ELEMENTS>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tLOG</IMPLEMENTATION-DATA-TYPE-REF>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                </DIAGNOSTIC-DATA-ELEMENT>
+                            </DATA-ELEMENTS>
+                        </DIAGNOSTIC-PARAMETER>
+                    </DATA-ELEMENTS>
+                </DIAGNOSTIC-DATA-IDENTIFIER>
+                <DIAGNOSTIC-DATA-IDENTIFIER UUID="e758e8cc-5621-2b9e-2620-1c145e8d1713">
+                    <SHORT-NAME>DID_INIT_PRESENCE_ARC</SHORT-NAME>
+                    <ID>9202</ID>
+                    <DATA-ELEMENTS>
+                        <DIAGNOSTIC-PARAMETER>
+                            <BIT-OFFSET>0</BIT-OFFSET>
+                            <DATA-ELEMENTS>
+                                <DIAGNOSTIC-DATA-ELEMENT UUID="65fcd864-b3c7-0ae7-eb92-561f515d2562">
+                                    <SHORT-NAME>dde_CFG_INIT_PRESENCE_ARC</SHORT-NAME>
+                                    <ARRAY-SIZE-SEMANTICS>FIXED-SIZE</ARRAY-SIZE-SEMANTICS>
+                                    <MAX-NUMBER-OF-ELEMENTS>1</MAX-NUMBER-OF-ELEMENTS>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tLOG</IMPLEMENTATION-DATA-TYPE-REF>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                </DIAGNOSTIC-DATA-ELEMENT>
+                            </DATA-ELEMENTS>
+                        </DIAGNOSTIC-PARAMETER>
+                    </DATA-ELEMENTS>
+                </DIAGNOSTIC-DATA-IDENTIFIER>
+                <DIAGNOSTIC-DATA-IDENTIFIER UUID="cb957e1a-53e0-002f-6493-c8809d8cb013">
+                    <SHORT-NAME>DID_INIT_SENS_ARC_NIV</SHORT-NAME>
+                    <ID>9203</ID>
+                    <DATA-ELEMENTS>
+                        <DIAGNOSTIC-PARAMETER>
+                            <BIT-OFFSET>0</BIT-OFFSET>
+                            <DATA-ELEMENTS>
+                                <DIAGNOSTIC-DATA-ELEMENT UUID="089fa116-e8c9-54ac-65ea-d5f04c75d58d">
+                                    <SHORT-NAME>dde_CFG_INIT_SENS_ARC_NIV</SHORT-NAME>
+                                    <ARRAY-SIZE-SEMANTICS>FIXED-SIZE</ARRAY-SIZE-SEMANTICS>
+                                    <MAX-NUMBER-OF-ELEMENTS>1</MAX-NUMBER-OF-ELEMENTS>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/t_CFG_INIT_SENS_ARC_NIV</IMPLEMENTATION-DATA-TYPE-REF>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                </DIAGNOSTIC-DATA-ELEMENT>
+                            </DATA-ELEMENTS>
+                        </DIAGNOSTIC-PARAMETER>
+                    </DATA-ELEMENTS>
+                </DIAGNOSTIC-DATA-IDENTIFIER>
+                <DIAGNOSTIC-DATA-IDENTIFIER UUID="fe2055a8-8ebf-828a-97f8-a54ddd4bb0cf">
+                    <SHORT-NAME>DID_TYPE_MENU_PERSO</SHORT-NAME>
+                    <ID>8994</ID>
+                    <DATA-ELEMENTS>
+                        <DIAGNOSTIC-PARAMETER>
+                            <BIT-OFFSET>0</BIT-OFFSET>
+                            <DATA-ELEMENTS>
+                                <DIAGNOSTIC-DATA-ELEMENT UUID="43ab98f4-2619-8e06-a1fb-be27f409054d">
+                                    <SHORT-NAME>dde_CFG_PRESENCE_MENU_PERSO</SHORT-NAME>
+                                    <ARRAY-SIZE-SEMANTICS>FIXED-SIZE</ARRAY-SIZE-SEMANTICS>
+                                    <MAX-NUMBER-OF-ELEMENTS>1</MAX-NUMBER-OF-ELEMENTS>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tBYTE</IMPLEMENTATION-DATA-TYPE-REF>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                </DIAGNOSTIC-DATA-ELEMENT>
+                            </DATA-ELEMENTS>
+                        </DIAGNOSTIC-PARAMETER>
+                    </DATA-ELEMENTS>
+                </DIAGNOSTIC-DATA-IDENTIFIER>
+                <DIAGNOSTIC-DATA-IDENTIFIER UUID="16905ce9-1453-bec0-bd5d-546e3a2b2c14">
+                    <SHORT-NAME>DID_VitLVVDeMenuPerso</SHORT-NAME>
+                    <ID>55552</ID>
+                    <DATA-ELEMENTS>
+                        <DIAGNOSTIC-PARAMETER>
+                            <BIT-OFFSET>0</BIT-OFFSET>
+                            <DATA-ELEMENTS>
+                                <DIAGNOSTIC-DATA-ELEMENT UUID="5b27e7c4-8632-dea4-09a8-d83d5ca8f418">
+                                    <SHORT-NAME>dde_EtatMenuVitLvv1</SHORT-NAME>
+                                    <ARRAY-SIZE-SEMANTICS>FIXED-SIZE</ARRAY-SIZE-SEMANTICS>
+                                    <MAX-NUMBER-OF-ELEMENTS>1</MAX-NUMBER-OF-ELEMENTS>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tBYTE</IMPLEMENTATION-DATA-TYPE-REF>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                </DIAGNOSTIC-DATA-ELEMENT>
+                            </DATA-ELEMENTS>
+                        </DIAGNOSTIC-PARAMETER>
+                        <DIAGNOSTIC-PARAMETER>
+                            <BIT-OFFSET>0</BIT-OFFSET>
+                            <DATA-ELEMENTS>
+                                <DIAGNOSTIC-DATA-ELEMENT UUID="bb1a07f1-7432-6b54-4ff5-50096f6b4fef">
+                                    <SHORT-NAME>dde_EtatMenuVitLvv2</SHORT-NAME>
+                                    <ARRAY-SIZE-SEMANTICS>FIXED-SIZE</ARRAY-SIZE-SEMANTICS>
+                                    <MAX-NUMBER-OF-ELEMENTS>1</MAX-NUMBER-OF-ELEMENTS>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tBYTE</IMPLEMENTATION-DATA-TYPE-REF>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                </DIAGNOSTIC-DATA-ELEMENT>
+                            </DATA-ELEMENTS>
+                        </DIAGNOSTIC-PARAMETER>
+                        <DIAGNOSTIC-PARAMETER>
+                            <BIT-OFFSET>0</BIT-OFFSET>
+                            <DATA-ELEMENTS>
+                                <DIAGNOSTIC-DATA-ELEMENT UUID="f5a37a1f-7cb5-9a22-623a-24af1c7c83be">
+                                    <SHORT-NAME>dde_EtatMenuVitLvv3</SHORT-NAME>
+                                    <ARRAY-SIZE-SEMANTICS>FIXED-SIZE</ARRAY-SIZE-SEMANTICS>
+                                    <MAX-NUMBER-OF-ELEMENTS>1</MAX-NUMBER-OF-ELEMENTS>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tBYTE</IMPLEMENTATION-DATA-TYPE-REF>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                </DIAGNOSTIC-DATA-ELEMENT>
+                            </DATA-ELEMENTS>
+                        </DIAGNOSTIC-PARAMETER>
+                        <DIAGNOSTIC-PARAMETER>
+                            <BIT-OFFSET>0</BIT-OFFSET>
+                            <DATA-ELEMENTS>
+                                <DIAGNOSTIC-DATA-ELEMENT UUID="f064045f-9bea-4c17-9b03-3911cf344c4c">
+                                    <SHORT-NAME>dde_EtatMenuVitLvv4</SHORT-NAME>
+                                    <ARRAY-SIZE-SEMANTICS>FIXED-SIZE</ARRAY-SIZE-SEMANTICS>
+                                    <MAX-NUMBER-OF-ELEMENTS>1</MAX-NUMBER-OF-ELEMENTS>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tBYTE</IMPLEMENTATION-DATA-TYPE-REF>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                </DIAGNOSTIC-DATA-ELEMENT>
+                            </DATA-ELEMENTS>
+                        </DIAGNOSTIC-PARAMETER>
+                        <DIAGNOSTIC-PARAMETER>
+                            <BIT-OFFSET>0</BIT-OFFSET>
+                            <DATA-ELEMENTS>
+                                <DIAGNOSTIC-DATA-ELEMENT UUID="7b0ebde3-7c1b-a9d2-472b-a7df1344d14a">
+                                    <SHORT-NAME>dde_EtatMenuVitLvv5</SHORT-NAME>
+                                    <ARRAY-SIZE-SEMANTICS>FIXED-SIZE</ARRAY-SIZE-SEMANTICS>
+                                    <MAX-NUMBER-OF-ELEMENTS>1</MAX-NUMBER-OF-ELEMENTS>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tBYTE</IMPLEMENTATION-DATA-TYPE-REF>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                </DIAGNOSTIC-DATA-ELEMENT>
+                            </DATA-ELEMENTS>
+                        </DIAGNOSTIC-PARAMETER>
+                        <DIAGNOSTIC-PARAMETER>
+                            <BIT-OFFSET>0</BIT-OFFSET>
+                            <DATA-ELEMENTS>
+                                <DIAGNOSTIC-DATA-ELEMENT UUID="dbe6e6bf-5dba-642f-f8aa-e1d450e2414e">
+                                    <SHORT-NAME>dde_EtatMenuVitLvv6</SHORT-NAME>
+                                    <ARRAY-SIZE-SEMANTICS>FIXED-SIZE</ARRAY-SIZE-SEMANTICS>
+                                    <MAX-NUMBER-OF-ELEMENTS>1</MAX-NUMBER-OF-ELEMENTS>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Pack_sw_Types/tBYTE</IMPLEMENTATION-DATA-TYPE-REF>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                </DIAGNOSTIC-DATA-ELEMENT>
+                            </DATA-ELEMENTS>
+                        </DIAGNOSTIC-PARAMETER>
+                    </DATA-ELEMENTS>
+                </DIAGNOSTIC-DATA-IDENTIFIER>
+            </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE>
+            <SHORT-NAME>RootP_DcmDesc</SHORT-NAME>
+            <ELEMENTS>
+                <DIAGNOSTIC-SERVICE-TABLE>
+                    <SHORT-NAME>VSM_ServicesTable</SHORT-NAME>
+                    <DIAGNOSTIC-CONNECTIONS>
+                        <DIAGNOSTIC-CONNECTION-REF-CONDITIONAL>
+                            <DIAGNOSTIC-CONNECTION-REF DEST="DIAGNOSTIC-CONNECTION">ToBeDone</DIAGNOSTIC-CONNECTION-REF>
+                        </DIAGNOSTIC-CONNECTION-REF-CONDITIONAL>
+                    </DIAGNOSTIC-CONNECTIONS>
+                    <ECU-INSTANCE-REF DEST="ECU-INSTANCE">/RootP_NetworkDesc/ECUINSTANCES/VSM</ECU-INSTANCE-REF>
+                    <PROTOCOL-KIND>DCM_UDS_ON_CAN</PROTOCOL-KIND>
+                    <SERVICE-INSTANCE-REFS>
+                        <SERVICE-INSTANCE-REF DEST="DIAGNOSTIC-READ-DATA-BY-IDENTIFIER">/RootP_DcmDesc/DID_DispoEtatMenuPrgPem_Read</SERVICE-INSTANCE-REF>
+                        <SERVICE-INSTANCE-REF DEST="DIAGNOSTIC-READ-DATA-BY-IDENTIFIER">/RootP_DcmDesc/DID_DispoEtatMenuReserveZEV_Read</SERVICE-INSTANCE-REF>
+                        <SERVICE-INSTANCE-REF DEST="DIAGNOSTIC-READ-DATA-BY-IDENTIFIER">/RootP_DcmDesc/DID_DispoMenuInfoXVV_Read</SERVICE-INSTANCE-REF>
+                        <SERVICE-INSTANCE-REF DEST="DIAGNOSTIC-READ-DATA-BY-IDENTIFIER">/RootP_DcmDesc/DID_DIURNES_VALEUR_DEFAUT_Read</SERVICE-INSTANCE-REF>
+                        <SERVICE-INSTANCE-REF DEST="DIAGNOSTIC-WRITE-DATA-BY-IDENTIFIER">/RootP_DcmDesc/DID_DIURNES_VALEUR_DEFAUT_Write</SERVICE-INSTANCE-REF>
+                        <SERVICE-INSTANCE-REF DEST="DIAGNOSTIC-READ-DATA-BY-IDENTIFIER">/RootP_DcmDesc/DID_EtatFctMenuParam_Read</SERVICE-INSTANCE-REF>
+                        <SERVICE-INSTANCE-REF DEST="DIAGNOSTIC-READ-DATA-BY-IDENTIFIER">/RootP_DcmDesc/DID_EtatMenuInfoParamDispo_Read</SERVICE-INSTANCE-REF>
+                        <SERVICE-INSTANCE-REF DEST="DIAGNOSTIC-READ-DATA-BY-IDENTIFIER">/RootP_DcmDesc/DID_EtatMenuInfoUniteLangueDispo_Read</SERVICE-INSTANCE-REF>
+                        <SERVICE-INSTANCE-REF DEST="DIAGNOSTIC-READ-DATA-BY-IDENTIFIER">/RootP_DcmDesc/DID_EtatMenuPrgMem_Read</SERVICE-INSTANCE-REF>
+                        <SERVICE-INSTANCE-REF DEST="DIAGNOSTIC-WRITE-DATA-BY-IDENTIFIER">/RootP_DcmDesc/DID_EtatMenuPrgMem_Write</SERVICE-INSTANCE-REF>
+                        <SERVICE-INSTANCE-REF DEST="DIAGNOSTIC-READ-DATA-BY-IDENTIFIER">/RootP_DcmDesc/DID_EtatMenuReserveZEV_Read</SERVICE-INSTANCE-REF>
+                        <SERVICE-INSTANCE-REF DEST="DIAGNOSTIC-READ-DATA-BY-IDENTIFIER">/RootP_DcmDesc/DID_EtatMenuUnitesLangue_Read</SERVICE-INSTANCE-REF>
+                        <SERVICE-INSTANCE-REF DEST="DIAGNOSTIC-READ-DATA-BY-IDENTIFIER">/RootP_DcmDesc/DID_EtatReglageButeesXVV_Read</SERVICE-INSTANCE-REF>
+                        <SERVICE-INSTANCE-REF DEST="DIAGNOSTIC-READ-DATA-BY-IDENTIFIER">/RootP_DcmDesc/DID_INIT_FARC_Read</SERVICE-INSTANCE-REF>
+                        <SERVICE-INSTANCE-REF DEST="DIAGNOSTIC-WRITE-DATA-BY-IDENTIFIER">/RootP_DcmDesc/DID_INIT_FARC_Write</SERVICE-INSTANCE-REF>
+                        <SERVICE-INSTANCE-REF DEST="DIAGNOSTIC-READ-DATA-BY-IDENTIFIER">/RootP_DcmDesc/DID_INIT_PRESENCE_ARC_Read</SERVICE-INSTANCE-REF>
+                        <SERVICE-INSTANCE-REF DEST="DIAGNOSTIC-WRITE-DATA-BY-IDENTIFIER">/RootP_DcmDesc/DID_INIT_PRESENCE_ARC_Write</SERVICE-INSTANCE-REF>
+                        <SERVICE-INSTANCE-REF DEST="DIAGNOSTIC-READ-DATA-BY-IDENTIFIER">/RootP_DcmDesc/DID_INIT_SENS_ARC_NIV_Read</SERVICE-INSTANCE-REF>
+                        <SERVICE-INSTANCE-REF DEST="DIAGNOSTIC-WRITE-DATA-BY-IDENTIFIER">/RootP_DcmDesc/DID_INIT_SENS_ARC_NIV_Write</SERVICE-INSTANCE-REF>
+                        <SERVICE-INSTANCE-REF DEST="DIAGNOSTIC-READ-DATA-BY-IDENTIFIER">/RootP_DcmDesc/DID_TYPE_MENU_PERSO_Read</SERVICE-INSTANCE-REF>
+                        <SERVICE-INSTANCE-REF DEST="DIAGNOSTIC-WRITE-DATA-BY-IDENTIFIER">/RootP_DcmDesc/DID_TYPE_MENU_PERSO_Write</SERVICE-INSTANCE-REF>
+                        <SERVICE-INSTANCE-REF DEST="DIAGNOSTIC-READ-DATA-BY-IDENTIFIER">/RootP_DcmDesc/DID_VitLVVDeMenuPerso_Read</SERVICE-INSTANCE-REF>
+                    </SERVICE-INSTANCE-REFS>
+                </DIAGNOSTIC-SERVICE-TABLE>
+                <DIAGNOSTIC-READ-DATA-BY-IDENTIFIER>
+                    <SHORT-NAME>DID_DispoEtatMenuPrgPem_Read</SHORT-NAME>
+                    <DATA-IDENTIFIER-REF DEST="DIAGNOSTIC-DATA-IDENTIFIER">/RootP_DiagDesc/DID_DispoEtatMenuPrgPem</DATA-IDENTIFIER-REF>
+                    <READ-CLASS-REF DEST="DIAGNOSTIC-READ-DATA-BY-IDENTIFIER-CLASS">/RootP_DcmDesc/ReadDataByIdentifierClass</READ-CLASS-REF>
+                </DIAGNOSTIC-READ-DATA-BY-IDENTIFIER>
+                <DIAGNOSTIC-READ-DATA-BY-IDENTIFIER>
+                    <SHORT-NAME>DID_DispoEtatMenuReserveZEV_Read</SHORT-NAME>
+                    <DATA-IDENTIFIER-REF DEST="DIAGNOSTIC-DATA-IDENTIFIER">/RootP_DiagDesc/DID_DispoEtatMenuReserveZEV</DATA-IDENTIFIER-REF>
+                    <READ-CLASS-REF DEST="DIAGNOSTIC-READ-DATA-BY-IDENTIFIER-CLASS">/RootP_DcmDesc/ReadDataByIdentifierClass</READ-CLASS-REF>
+                </DIAGNOSTIC-READ-DATA-BY-IDENTIFIER>
+                <DIAGNOSTIC-READ-DATA-BY-IDENTIFIER>
+                    <SHORT-NAME>DID_DispoMenuInfoXVV_Read</SHORT-NAME>
+                    <DATA-IDENTIFIER-REF DEST="DIAGNOSTIC-DATA-IDENTIFIER">/RootP_DiagDesc/DID_DispoMenuInfoXVV</DATA-IDENTIFIER-REF>
+                    <READ-CLASS-REF DEST="DIAGNOSTIC-READ-DATA-BY-IDENTIFIER-CLASS">/RootP_DcmDesc/ReadDataByIdentifierClass</READ-CLASS-REF>
+                </DIAGNOSTIC-READ-DATA-BY-IDENTIFIER>
+                <DIAGNOSTIC-READ-DATA-BY-IDENTIFIER>
+                    <SHORT-NAME>DID_DIURNES_VALEUR_DEFAUT_Read</SHORT-NAME>
+                    <DATA-IDENTIFIER-REF DEST="DIAGNOSTIC-DATA-IDENTIFIER">/RootP_DiagDesc/DID_DIURNES_VALEUR_DEFAUT</DATA-IDENTIFIER-REF>
+                    <READ-CLASS-REF DEST="DIAGNOSTIC-READ-DATA-BY-IDENTIFIER-CLASS">/RootP_DcmDesc/ReadDataByIdentifierClass</READ-CLASS-REF>
+                </DIAGNOSTIC-READ-DATA-BY-IDENTIFIER>
+                <DIAGNOSTIC-WRITE-DATA-BY-IDENTIFIER>
+                    <SHORT-NAME>DID_DIURNES_VALEUR_DEFAUT_Write</SHORT-NAME>
+                    <DATA-IDENTIFIER-REF DEST="DIAGNOSTIC-DATA-IDENTIFIER">/RootP_DiagDesc/DID_DIURNES_VALEUR_DEFAUT</DATA-IDENTIFIER-REF>
+                    <WRITE-CLASS-REF DEST="DIAGNOSTIC-WRITE-DATA-BY-IDENTIFIER-CLASS">/RootP_DcmDesc/WriteDataByIdentifierClass</WRITE-CLASS-REF>
+                </DIAGNOSTIC-WRITE-DATA-BY-IDENTIFIER>
+                <DIAGNOSTIC-READ-DATA-BY-IDENTIFIER>
+                    <SHORT-NAME>DID_EtatFctMenuParam_Read</SHORT-NAME>
+                    <DATA-IDENTIFIER-REF DEST="DIAGNOSTIC-DATA-IDENTIFIER">/RootP_DiagDesc/DID_EtatFctMenuParam</DATA-IDENTIFIER-REF>
+                    <READ-CLASS-REF DEST="DIAGNOSTIC-READ-DATA-BY-IDENTIFIER-CLASS">/RootP_DcmDesc/ReadDataByIdentifierClass</READ-CLASS-REF>
+                </DIAGNOSTIC-READ-DATA-BY-IDENTIFIER>
+                <DIAGNOSTIC-READ-DATA-BY-IDENTIFIER>
+                    <SHORT-NAME>DID_EtatMenuInfoParamDispo_Read</SHORT-NAME>
+                    <DATA-IDENTIFIER-REF DEST="DIAGNOSTIC-DATA-IDENTIFIER">/RootP_DiagDesc/DID_EtatMenuInfoParamDispo</DATA-IDENTIFIER-REF>
+                    <READ-CLASS-REF DEST="DIAGNOSTIC-READ-DATA-BY-IDENTIFIER-CLASS">/RootP_DcmDesc/ReadDataByIdentifierClass</READ-CLASS-REF>
+                </DIAGNOSTIC-READ-DATA-BY-IDENTIFIER>
+                <DIAGNOSTIC-READ-DATA-BY-IDENTIFIER>
+                    <SHORT-NAME>DID_EtatMenuInfoUniteLangueDispo_Read</SHORT-NAME>
+                    <DATA-IDENTIFIER-REF DEST="DIAGNOSTIC-DATA-IDENTIFIER">/RootP_DiagDesc/DID_EtatMenuInfoUniteLangueDispo</DATA-IDENTIFIER-REF>
+                    <READ-CLASS-REF DEST="DIAGNOSTIC-READ-DATA-BY-IDENTIFIER-CLASS">/RootP_DcmDesc/ReadDataByIdentifierClass</READ-CLASS-REF>
+                </DIAGNOSTIC-READ-DATA-BY-IDENTIFIER>
+                <DIAGNOSTIC-READ-DATA-BY-IDENTIFIER>
+                    <SHORT-NAME>DID_EtatMenuPrgMem_Read</SHORT-NAME>
+                    <DATA-IDENTIFIER-REF DEST="DIAGNOSTIC-DATA-IDENTIFIER">/RootP_DiagDesc/DID_EtatMenuPrgMem</DATA-IDENTIFIER-REF>
+                    <READ-CLASS-REF DEST="DIAGNOSTIC-READ-DATA-BY-IDENTIFIER-CLASS">/RootP_DcmDesc/ReadDataByIdentifierClass</READ-CLASS-REF>
+                </DIAGNOSTIC-READ-DATA-BY-IDENTIFIER>
+                <DIAGNOSTIC-WRITE-DATA-BY-IDENTIFIER>
+                    <SHORT-NAME>DID_EtatMenuPrgMem_Write</SHORT-NAME>
+                    <DATA-IDENTIFIER-REF DEST="DIAGNOSTIC-DATA-IDENTIFIER">/RootP_DiagDesc/DID_EtatMenuPrgMem</DATA-IDENTIFIER-REF>
+                    <WRITE-CLASS-REF DEST="DIAGNOSTIC-WRITE-DATA-BY-IDENTIFIER-CLASS">/RootP_DcmDesc/WriteDataByIdentifierClass</WRITE-CLASS-REF>
+                </DIAGNOSTIC-WRITE-DATA-BY-IDENTIFIER>
+                <DIAGNOSTIC-READ-DATA-BY-IDENTIFIER>
+                    <SHORT-NAME>DID_EtatMenuReserveZEV_Read</SHORT-NAME>
+                    <DATA-IDENTIFIER-REF DEST="DIAGNOSTIC-DATA-IDENTIFIER">/RootP_DiagDesc/DID_EtatMenuReserveZEV</DATA-IDENTIFIER-REF>
+                    <READ-CLASS-REF DEST="DIAGNOSTIC-READ-DATA-BY-IDENTIFIER-CLASS">/RootP_DcmDesc/ReadDataByIdentifierClass</READ-CLASS-REF>
+                </DIAGNOSTIC-READ-DATA-BY-IDENTIFIER>
+                <DIAGNOSTIC-READ-DATA-BY-IDENTIFIER>
+                    <SHORT-NAME>DID_EtatMenuUnitesLangue_Read</SHORT-NAME>
+                    <DATA-IDENTIFIER-REF DEST="DIAGNOSTIC-DATA-IDENTIFIER">/RootP_DiagDesc/DID_EtatMenuUnitesLangue</DATA-IDENTIFIER-REF>
+                    <READ-CLASS-REF DEST="DIAGNOSTIC-READ-DATA-BY-IDENTIFIER-CLASS">/RootP_DcmDesc/ReadDataByIdentifierClass</READ-CLASS-REF>
+                </DIAGNOSTIC-READ-DATA-BY-IDENTIFIER>
+                <DIAGNOSTIC-READ-DATA-BY-IDENTIFIER>
+                    <SHORT-NAME>DID_EtatReglageButeesXVV_Read</SHORT-NAME>
+                    <DATA-IDENTIFIER-REF DEST="DIAGNOSTIC-DATA-IDENTIFIER">/RootP_DiagDesc/DID_EtatReglageButeesXVV</DATA-IDENTIFIER-REF>
+                    <READ-CLASS-REF DEST="DIAGNOSTIC-READ-DATA-BY-IDENTIFIER-CLASS">/RootP_DcmDesc/ReadDataByIdentifierClass</READ-CLASS-REF>
+                </DIAGNOSTIC-READ-DATA-BY-IDENTIFIER>
+                <DIAGNOSTIC-READ-DATA-BY-IDENTIFIER>
+                    <SHORT-NAME>DID_INIT_FARC_Read</SHORT-NAME>
+                    <DATA-IDENTIFIER-REF DEST="DIAGNOSTIC-DATA-IDENTIFIER">/RootP_DiagDesc/DID_INIT_FARC</DATA-IDENTIFIER-REF>
+                    <READ-CLASS-REF DEST="DIAGNOSTIC-READ-DATA-BY-IDENTIFIER-CLASS">/RootP_DcmDesc/ReadDataByIdentifierClass</READ-CLASS-REF>
+                </DIAGNOSTIC-READ-DATA-BY-IDENTIFIER>
+                <DIAGNOSTIC-WRITE-DATA-BY-IDENTIFIER>
+                    <SHORT-NAME>DID_INIT_FARC_Write</SHORT-NAME>
+                    <DATA-IDENTIFIER-REF DEST="DIAGNOSTIC-DATA-IDENTIFIER">/RootP_DiagDesc/DID_INIT_FARC</DATA-IDENTIFIER-REF>
+                    <WRITE-CLASS-REF DEST="DIAGNOSTIC-WRITE-DATA-BY-IDENTIFIER-CLASS">/RootP_DcmDesc/WriteDataByIdentifierClass</WRITE-CLASS-REF>
+                </DIAGNOSTIC-WRITE-DATA-BY-IDENTIFIER>
+                <DIAGNOSTIC-READ-DATA-BY-IDENTIFIER>
+                    <SHORT-NAME>DID_INIT_PRESENCE_ARC_Read</SHORT-NAME>
+                    <DATA-IDENTIFIER-REF DEST="DIAGNOSTIC-DATA-IDENTIFIER">/RootP_DiagDesc/DID_INIT_PRESENCE_ARC</DATA-IDENTIFIER-REF>
+                    <READ-CLASS-REF DEST="DIAGNOSTIC-READ-DATA-BY-IDENTIFIER-CLASS">/RootP_DcmDesc/ReadDataByIdentifierClass</READ-CLASS-REF>
+                </DIAGNOSTIC-READ-DATA-BY-IDENTIFIER>
+                <DIAGNOSTIC-WRITE-DATA-BY-IDENTIFIER>
+                    <SHORT-NAME>DID_INIT_PRESENCE_ARC_Write</SHORT-NAME>
+                    <DATA-IDENTIFIER-REF DEST="DIAGNOSTIC-DATA-IDENTIFIER">/RootP_DiagDesc/DID_INIT_PRESENCE_ARC</DATA-IDENTIFIER-REF>
+                    <WRITE-CLASS-REF DEST="DIAGNOSTIC-WRITE-DATA-BY-IDENTIFIER-CLASS">/RootP_DcmDesc/WriteDataByIdentifierClass</WRITE-CLASS-REF>
+                </DIAGNOSTIC-WRITE-DATA-BY-IDENTIFIER>
+                <DIAGNOSTIC-READ-DATA-BY-IDENTIFIER>
+                    <SHORT-NAME>DID_INIT_SENS_ARC_NIV_Read</SHORT-NAME>
+                    <DATA-IDENTIFIER-REF DEST="DIAGNOSTIC-DATA-IDENTIFIER">/RootP_DiagDesc/DID_INIT_SENS_ARC_NIV</DATA-IDENTIFIER-REF>
+                    <READ-CLASS-REF DEST="DIAGNOSTIC-READ-DATA-BY-IDENTIFIER-CLASS">/RootP_DcmDesc/ReadDataByIdentifierClass</READ-CLASS-REF>
+                </DIAGNOSTIC-READ-DATA-BY-IDENTIFIER>
+                <DIAGNOSTIC-WRITE-DATA-BY-IDENTIFIER>
+                    <SHORT-NAME>DID_INIT_SENS_ARC_NIV_Write</SHORT-NAME>
+                    <DATA-IDENTIFIER-REF DEST="DIAGNOSTIC-DATA-IDENTIFIER">/RootP_DiagDesc/DID_INIT_SENS_ARC_NIV</DATA-IDENTIFIER-REF>
+                    <WRITE-CLASS-REF DEST="DIAGNOSTIC-WRITE-DATA-BY-IDENTIFIER-CLASS">/RootP_DcmDesc/WriteDataByIdentifierClass</WRITE-CLASS-REF>
+                </DIAGNOSTIC-WRITE-DATA-BY-IDENTIFIER>
+                <DIAGNOSTIC-READ-DATA-BY-IDENTIFIER>
+                    <SHORT-NAME>DID_TYPE_MENU_PERSO_Read</SHORT-NAME>
+                    <DATA-IDENTIFIER-REF DEST="DIAGNOSTIC-DATA-IDENTIFIER">/RootP_DiagDesc/DID_TYPE_MENU_PERSO</DATA-IDENTIFIER-REF>
+                    <READ-CLASS-REF DEST="DIAGNOSTIC-READ-DATA-BY-IDENTIFIER-CLASS">/RootP_DcmDesc/ReadDataByIdentifierClass</READ-CLASS-REF>
+                </DIAGNOSTIC-READ-DATA-BY-IDENTIFIER>
+                <DIAGNOSTIC-WRITE-DATA-BY-IDENTIFIER>
+                    <SHORT-NAME>DID_TYPE_MENU_PERSO_Write</SHORT-NAME>
+                    <DATA-IDENTIFIER-REF DEST="DIAGNOSTIC-DATA-IDENTIFIER">/RootP_DiagDesc/DID_TYPE_MENU_PERSO</DATA-IDENTIFIER-REF>
+                    <WRITE-CLASS-REF DEST="DIAGNOSTIC-WRITE-DATA-BY-IDENTIFIER-CLASS">/RootP_DcmDesc/WriteDataByIdentifierClass</WRITE-CLASS-REF>
+                </DIAGNOSTIC-WRITE-DATA-BY-IDENTIFIER>
+                <DIAGNOSTIC-READ-DATA-BY-IDENTIFIER>
+                    <SHORT-NAME>DID_VitLVVDeMenuPerso_Read</SHORT-NAME>
+                    <DATA-IDENTIFIER-REF DEST="DIAGNOSTIC-DATA-IDENTIFIER">/RootP_DiagDesc/DID_VitLVVDeMenuPerso</DATA-IDENTIFIER-REF>
+                    <READ-CLASS-REF DEST="DIAGNOSTIC-READ-DATA-BY-IDENTIFIER-CLASS">/RootP_DcmDesc/ReadDataByIdentifierClass</READ-CLASS-REF>
+                </DIAGNOSTIC-READ-DATA-BY-IDENTIFIER>
+            </ELEMENTS>
+        </AR-PACKAGE>
+    </AR-PACKAGES>
+</AUTOSAR>

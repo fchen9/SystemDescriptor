@@ -429,6 +429,12 @@ class SystemDescriptor(unittest.TestCase):
         os.system('SystemDescriptor.py -in ' + head + '\\Tests\\TRS.DIAGNOSTIC.MERGE.5\Input -out ' + head + '\\Tests\\TRS.DIAGNOSTIC.MERGE.5\Output -service_table')
         self.assertTrue(FileCompare.areSame(head+'\\Tests\\TRS.DIAGNOSTIC.MERGE.5\\SystemGenerated.arxml', head+'\\Tests\\TRS.DIAGNOSTIC.MERGE.5\\Output\\SystemGenerated.arxml'))
 
+    def test_TRS_DIAGNOSTIC_MERGE_06(self):
+        current_path = os.path.realpath(__file__)
+        head, tail = ntpath.split(current_path)
+        os.system('SystemDescriptor.py -in ' + head + '\\Tests\\TRS.DIAGNOSTIC.MERGE.6\\Input -out ' + head + '\\Tests\\TRS.DIAGNOSTIC.MERGE.6\\Output -service_table')
+        self.assertTrue(FileCompare.areSame(head+'\\Tests\\TRS.DIAGNOSTIC.MERGE.6\\SystemGenerated.arxml', head+'\\Tests\\TRS.DIAGNOSTIC.MERGE.6\\Output\\SystemGenerated.arxml'))
+
 
 suite = unittest.TestLoader().loadTestsFromTestCase(SystemDescriptor)
 unittest.TextTestRunner(verbosity=2).run(suite)
