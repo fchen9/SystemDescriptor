@@ -2,7 +2,7 @@ import argparse
 import logging
 import os
 import sys
-from lxml import etree
+from lxml import etree, objectify
 from xml.sax import make_parser
 from xml.sax.handler import ContentHandler
 from xml.dom.minidom import parseString
@@ -87,7 +87,8 @@ def check_compatibility(file_list, output_path, disableCheck, logger):
                     logger.error(' The file ' + file + ' is not well-formed: ' + str(e))
                     print(' The file ' + file + ' is not well-formed: ' + str(e))
                     error_no = error_no + 1
-                tree = etree.parse(file)
+                parser = etree.XMLParser(remove_comments=True)
+                tree = objectify.parse(file, parser=parser)
                 root = tree.getroot()
                 sender_receiver_interface = root.findall(".//{http://autosar.org/schema/r4.0}SENDER-RECEIVER-INTERFACE")
                 client_server_interface = root.findall(".//{http://autosar.org/schema/r4.0}CLIENT-SERVER-INTERFACE")
@@ -296,7 +297,8 @@ def generate_system(file_list, output_path, system_name, mapping_name, compositi
                     logger.error('The file: ' + file + ' is not well-formed: ' + str(e))
                     print('The file: ' + file + ' is not well-formed: ' + str(e))
                     error_no = error_no + 1
-                tree = etree.parse(file)
+                parser = etree.XMLParser(remove_comments=True)
+                tree = objectify.parse(file, parser=parser)
                 root = tree.getroot()
                 data_map = root.findall(".//DATA-MAP-DID")
                 for elem in data_map:
@@ -312,7 +314,8 @@ def generate_system(file_list, output_path, system_name, mapping_name, compositi
                     objElem['REF'] = elem.find(".//DIAGNOSTIC-ROUTINE-REF").text
                     routine_inhibition.append(objElem)
             if file.endswith('.dico'):
-                tree = etree.parse(file)
+                parser = etree.XMLParser(remove_comments=True)
+                tree = objectify.parse(file, parser=parser)
                 root = tree.getroot()
                 pports = root.findall(".//{http://autosar.org/schema/r4.0}P-PORT-PROTOTYPE")
                 prports = root.findall(".//{http://autosar.org/schema/r4.0}PR-PORT-PROTOTYPE")
@@ -575,6 +578,7 @@ def generate_system(file_list, output_path, system_name, mapping_name, compositi
                     objElem = {}
                     objElem['ROOT'] = elem.getparent().getparent().getparent().getparent().getchildren()[0].text
                     objElem['NAME'] = elem.getparent().getparent().getchildren()[0].text
+                    objElem['SOURCE'] = 'DICO'
                     objElem['DATA'] = elem
                     software_composition.append(objElem)
                 # fibex_elements
@@ -610,7 +614,8 @@ def generate_system(file_list, output_path, system_name, mapping_name, compositi
                     logger.error('The file: ' + file + ' is not well-formed: ' + str(e))
                     print('The file: ' + file + ' is not well-formed: ' + str(e))
                     error_no = error_no + 1
-                tree = etree.parse(file)
+                parser = etree.XMLParser(remove_comments=True)
+                tree = objectify.parse(file, parser=parser)
                 root = tree.getroot()
                 pports = root.findall(".//{http://autosar.org/schema/r4.0}P-PORT-PROTOTYPE")
                 prports = root.findall(".//{http://autosar.org/schema/r4.0}PR-PORT-PROTOTYPE")
@@ -954,6 +959,7 @@ def generate_system(file_list, output_path, system_name, mapping_name, compositi
                     objElem = {}
                     objElem['ROOT'] = elem.getparent().getparent().getparent().getparent().getchildren()[0].text
                     objElem['NAME'] = elem.getparent().getparent().getchildren()[0].text
+                    objElem['SOURCE'] = 'ARXML'
                     objElem['DATA'] = elem
                     software_composition.append(objElem)
                 # fibex_elements
@@ -994,17 +1000,6 @@ def generate_system(file_list, output_path, system_name, mapping_name, compositi
             except OSError:
                 pass
             sys.exit(1)
-        # keep SW-COMPONENT-PROTOTYPE only if their reference exists
-        # ref_software_composition = software_composition[:]
-        # for elem in software_composition[:]:
-        #     found = False
-        #     for type in types_refs:
-        #         if type in elem['DATA'].find(".//{http://autosar.org/schema/r4.0}TYPE-TREF").text:
-        #             found = True
-        #             break
-        #     if not found:
-        #         software_composition.remove(elem)
-        #         logger.warning("The <SW-COMPONENT-PROTOTYPE>: " + elem['DATA'].find(".//{http://autosar.org/schema/r4.0}TYPE-TREF").text + " has been deleted because is not existent in arxml files")
 
         # TRS.SYSDESC.GEN.004
         logger.info('=================<SENDER-RECEIVER-TO-SIGNAL-MAPPING> without added signal=================')
@@ -1139,10 +1134,7 @@ def generate_system(file_list, output_path, system_name, mapping_name, compositi
                     if elem_dico['DATA'].find("{http://autosar.org/schema/r4.0}SHORT-NAME").text == elem_arxml.find("{http://autosar.org/schema/r4.0}SHORT-NAME").text:
                         final_data_constr.remove(elem_dico)
             final_data_constr = sorted(final_data_constr, key=lambda x: x['PACKAGE'])
-            #print("finish step 8")
-        end = time.time()
-        elapsed = end - start
-        #logger.info("Period time: " + str(elapsed))
+
         # TRS.SYSDESC.GEN.003
         start = time.time()
         software_composition = sorted(software_composition, key=lambda x: x['NAME'])
@@ -1161,6 +1153,7 @@ def generate_system(file_list, output_path, system_name, mapping_name, compositi
                 objElem = {}
                 objElem['ROOT'] = elem['ROOT']
                 objElem['NAME'] = elem['NAME']
+                objElem['SOURCE'] = elem['SOURCE']
                 objElem['DATA'] = elem['DATA']
                 final_software_composition.append(objElem)
             else:
@@ -1173,6 +1166,7 @@ def generate_system(file_list, output_path, system_name, mapping_name, compositi
                     objElem = {}
                     objElem['ROOT'] = elem['ROOT']
                     objElem['NAME'] = elem['NAME']
+                    objElem['SOURCE'] = elem['SOURCE']
                     element = etree.Element('SW-COMPONENT-PROTOTYPE', nsmap=NSMAP)
                     short_name = etree.SubElement(element, 'SHORT-NAME').text = elem['DATA'].find('.//{http://autosar.org/schema/r4.0}SHORT-NAME').text
                     software_composition_tref = etree.SubElement(element, 'TYPE-TREF')
@@ -1184,11 +1178,19 @@ def generate_system(file_list, output_path, system_name, mapping_name, compositi
                     logger.error('SW-COMPONENT-PROTOTYPE with the short-name ' + elem['DATA'].find('.//{http://autosar.org/schema/r4.0}SHORT-NAME').text + ' cannot be merged')
                     print('SW-COMPONENT-PROTOTYPE with the short-name ' + elem['DATA'].find('.//{http://autosar.org/schema/r4.0}SHORT-NAME').text + ' cannot be merged')
                     error_no = error_no + 1
-        end = time.time()
-        elapsed = end - start
-        #logger.info("Period time: " + str(elapsed))
+        ref_final_software_composition = []
+        for element in final_software_composition:
+            ref_list = element['DATA'].findall('.//{http://autosar.org/schema/r4.0}TYPE-TREF')
+            name_list = element['DATA'].findall('.//{http://autosar.org/schema/r4.0}SHORT-NAME')
+            for ref in ref_list:
+                objElem = {}
+                objElem['ROOT'] = element['ROOT']
+                objElem['NAME'] = element['NAME']
+                objElem['SOURCE'] = element['SOURCE']
+                objElem['REF'] = ref.text
+                objElem['INSTANCE'] = name_list[ref_list.index(ref)].text
+                ref_final_software_composition.append(objElem)
         # <DATA-MAPPINGS>
-        start = time.time()
         client_server_signal_group_mapping = sorted(client_server_signal_group_mapping, key=lambda x: x['NAME'])
         client_server_signal_mapping = sorted(client_server_signal_mapping, key=lambda x: x['NAME'])
         sender_receiver_composite_element = sorted(sender_receiver_composite_element, key=lambda x: x['NAME'])
@@ -1275,23 +1277,14 @@ def generate_system(file_list, output_path, system_name, mapping_name, compositi
                     print('SWC-TO-IMPL-MAPPING with the short-name ' + elem['DATA'].find('.//{http://autosar.org/schema/r4.0}SHORT-NAME').text + ' cannot be merged')
                     error_no = error_no + 1
         [data_mappings_name.append(elem['NAME']) for elem in final_sw_impl_mapping if elem['NAME'] not in data_mappings_name]
-        end = time.time()
-        elapsed = end - start
-        #logger.info("Period time: " + str(elapsed))
-        # <SW-MAPPINGS>
-        # check if mappings have to be created
-        # for elem in swc_ecu_mapping[:]:
-        #     found = False
-        #     for swc in ref_software_composition:
-        #         if elem['DATA'].find(".//{http://autosar.org/schema/r4.0}TARGET-COMPONENT-REF").text == '/'+swc['ROOT']+'/'+swc['NAME']+'/'+swc['DATA'].find(".//{http://autosar.org/schema/r4.0}SHORT-NAME").text:
-        #             found = True
-        #             break
-        #     if not found:
-        #         swc_ecu_mapping.remove(elem)
 
         # concatenate mappings
-        start = time.time()
-        swc_ecu_mapping = sorted(swc_ecu_mapping, key=lambda x: x['NAME'])
+        #ignore all mappings that points to "Instance_Compo_VSM"
+        # for elem in swc_ecu_mapping[:]:
+        #     target_compo = elem['DATA'].find('.//{http://autosar.org/schema/r4.0}TARGET-COMPONENT-REF').text
+        #     if composition_name in target_compo and "Instance_" + composition_name.split('/')[-1] in target_compo:
+        #         swc_ecu_mapping.remove(elem)
+        # swc_ecu_mapping = sorted(swc_ecu_mapping, key=lambda x: x['NAME'])
         final_swc_ecu_mappings = []
         for elem in swc_ecu_mapping[:]:
             temp = []
@@ -1339,9 +1332,7 @@ def generate_system(file_list, output_path, system_name, mapping_name, compositi
                     print('SWC-TO-ECU-MAPPING with the short-name ' + elem['DATA'].find('.//{http://autosar.org/schema/r4.0}SHORT-NAME').text + ' cannot be merged')
                     error_no = error_no + 1
         [data_mappings_name.append(elem['NAME']) for elem in final_swc_ecu_mappings if elem['NAME'] not in data_mappings_name]
-        end = time.time()
-        elapsed = end - start
-        #logger.info("Period time: " + str(elapsed))
+
         # <FIBEX-ELEMENTS>
         final_fibex_elements = []
         fibex_elements = sorted(fibex_elements, key=lambda x: x['SYSTEM'])
@@ -1560,13 +1551,22 @@ def generate_system(file_list, output_path, system_name, mapping_name, compositi
                                             if sysname == elem_root['SYSTEM']:
                                                 temp_text = '/' + elem_root['ROOT'] + '/' + elem_root['SYSTEM'] + '/' + elem_root['DATA'].find('.//SHORT-NAME').text
                                                 for type_sw in types_refs:
+                                                    if type_sw['TEXT'].split('/')[-1] == 'Compo_VSM':
+                                                        continue
                                                     compo_iref = etree.SubElement(component_irefs, 'COMPONENT-IREF')
                                                     context_compo = etree.SubElement(compo_iref, 'CONTEXT-COMPOSITION-REF')
                                                     context_compo.attrib['DEST'] = 'ROOT-SW-COMPOSITION-PROTOTYPE'
                                                     context_compo.text = temp_text
                                                     target_compo = etree.SubElement(compo_iref, 'TARGET-COMPONENT-REF')
                                                     target_compo.attrib['DEST'] = 'SW-COMPONENT-PROTOTYPE'
-                                                    target_compo.text = composition_name + '/Instance_' + type_sw['TEXT'].split('/')[-1]
+                                                    for reference in ref_final_software_composition:
+                                                        found = False
+                                                        if type_sw['TEXT'] == reference['REF'] and reference['SOURCE'] == 'ARXML':
+                                                            target_compo.text = '/' + reference['ROOT'] + '/' + reference['NAME'] + '/' + reference['INSTANCE']
+                                                            found = True
+                                                            break
+                                                        if not found:
+                                                            target_compo.text = composition_name + '/Instance_' + type_sw['TEXT'].split('/')[-1]
                             rsc = etree.SubElement(system_tag, 'ROOT-SOFTWARE-COMPOSITIONS')
                             for elem_root in temp_root:
                                 if sysname == elem_root['SYSTEM']:
@@ -1616,26 +1616,6 @@ def generate_system(file_list, output_path, system_name, mapping_name, compositi
                         service_instance_ref.attrib['DEST'] = elem3['DEST']
                         service_instance_ref.text = elem3['INSTANCE']
         if composition_name != "":
-            # old way, when it was merged and not generated
-            # for elem in final_software_composition:
-            #     if package != elem['ROOT']:
-            #         temp = []
-            #         package = elem['ROOT']
-            #         component = etree.SubElement(packages, 'AR-PACKAGE')
-            #         short_name = etree.SubElement(component, 'SHORT-NAME').text = elem['ROOT']
-            #         elements_tag = etree.SubElement(component, 'ELEMENTS')
-            #         for elem2 in final_software_composition:
-            #             if elem2['ROOT'] == package:
-            #                 temp.append(elem2)
-            #         temp = sorted(temp, key=lambda x: x['NAME'])
-            #         compo = composition_name
-            #         composition_sw_tag = etree.SubElement(elements_tag, 'COMPOSITION-SW-COMPONENT-TYPE')
-            #         short_name_compo = etree.SubElement(composition_sw_tag, 'SHORT-NAME').text = composition_name
-            #         components_tag = etree.SubElement(composition_sw_tag, 'COMPONENTS')
-            #         for element in temp:
-            #             if compo == element['NAME']:
-            #                 components_tag.append(element['DATA'])
-            # new way, for COMPO generation
             component = etree.SubElement(packages, 'AR-PACKAGE')
             short_name = etree.SubElement(component, 'SHORT-NAME').text = composition_name.split('/')[-2]
             elements_tag = etree.SubElement(component, 'ELEMENTS')
@@ -1643,15 +1623,22 @@ def generate_system(file_list, output_path, system_name, mapping_name, compositi
             short_name_compo = etree.SubElement(composition_sw_tag, 'SHORT-NAME').text = composition_name.split('/')[-1]
             components_tag = etree.SubElement(composition_sw_tag, 'COMPONENTS')
             for type_sw in types_refs:
+                existent = False
+                if type_sw['TEXT'] == composition_name:
+                    continue
+                for element in ref_final_software_composition:
+                    #if ('Instance_' + type_sw['TEXT'].split('/')[-1] == element['INSTANCE']) and (composition_name == '/' + element['ROOT'] + '/' + element['NAME']) and element['SOURCE'] == 'ARXML':
+                    if type_sw['TEXT'] == element['REF'] and element['SOURCE'] == 'ARXML':
+                        existent = True
+                        break
+                if existent:
+                    continue
                 sw_component_prototype = etree.SubElement(components_tag, 'SW-COMPONENT-PROTOTYPE')
                 short_name_instance = etree.SubElement(sw_component_prototype, 'SHORT-NAME')
                 short_name_instance.text = 'Instance_' + type_sw['TEXT'].split('/')[-1]
                 type_tref = etree.SubElement(sw_component_prototype, 'TYPE-TREF')
                 type_tref.attrib['DEST'] = type_sw['TYPE']
                 type_tref.text = type_sw['TEXT']
-        end = time.time()
-        elapsed = end - start
-        #logger.info("Period time: " + str(elapsed))
         pretty_xml = new_prettify(rootSystem)
         output = etree.ElementTree(etree.fromstring(pretty_xml))
         if os.path.isdir(output_path):
