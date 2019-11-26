@@ -76,7 +76,6 @@ def check_compatibility(file_list, output_path, disableCheck, logger):
     types = []
     logger.info('=================Parsing information=================')
     try:
-        start = time.time()
         for file in file_list:
             if file.endswith('.dico'):
                 try:
@@ -213,8 +212,6 @@ def check_compatibility(file_list, output_path, disableCheck, logger):
                                 print('The type: '+types[index1]['SHORT-NAME']+' has different versions:'+types[index1]['VERSION']+' and '+types[index2]['VERSION'])
                                 error_no = error_no + 1
                                 error_found = True
-        end = time.time()
-        elapsed = end - start
         #logger.info("Period time: " + str(elapsed))
         if error_found:
             print("There is at least one blocking error! Check the generated log.")
@@ -343,7 +340,6 @@ def generate_system(file_list, output_path, system_name, mapping_name, compositi
                         objCon['CONNECTION'] = connection.text
                         connection_list.append(objCon)
                     objDiag['CONN'] = connection_list
-                    # objDiag['DATA'] = elem
                     service_list = []
                     instances = elem.findall(".//{http://autosar.org/schema/r4.0}SERVICE-INSTANCE-REF")
                     for instance in instances:
@@ -1003,7 +999,6 @@ def generate_system(file_list, output_path, system_name, mapping_name, compositi
 
         # TRS.SYSDESC.GEN.004
         logger.info('=================<SENDER-RECEIVER-TO-SIGNAL-MAPPING> without added signal=================')
-        start = time.time()
         for elem in sender_receiver_signal_mapping[:]:
             found = False
             for elem_signal in system_signals:
@@ -1032,11 +1027,8 @@ def generate_system(file_list, output_path, system_name, mapping_name, compositi
                 sender_receiver_signal_mapping.remove(elem)
                 logger.info('The SENDER-RECEIVER-TO-SIGNAL-MAPPING using the port' + elem['DATA'].find('.//{http://autosar.org/schema/r4.0}CONTEXT-PORT-REF').text + ' has not beed added because the referenced port is missing')
                 info_no = info_no + 1
-        end = time.time()
-        elapsed = end - start
-        #logger.info("Period time: " + str(elapsed))
+
         # merge DIAGNOSTIC-SERVICE-TABLE
-        start = time.time()
         if serviceTable:
             logger.info('=================Unmapped SERVICE-INSTANCE-REF from DIAGNOSTIC-TABLE=================')
             for elem1 in data_map_did:
@@ -1095,17 +1087,13 @@ def generate_system(file_list, output_path, system_name, mapping_name, compositi
                                 error_no = error_no + 1
                 final_diagnostic_tables.append(obj_temp)
         final_diagnostic_tables = list(dupli_diag(final_diagnostic_tables))
-        end = time.time()
-        elapsed = end - start
-        #logger.info("Period time: " + str(elapsed))
+
         # TRS.SYSDESC.GEN.002
-        start = time.time()
         if modularity:
             final_interfaces = list(check_version(interfaces))
             final_types = list(check_version(types))
             final_data_constr = list(check_version(data_constr))
             compu_methods = list(remove_duplicates(compu_methods))
-            #print("finish step 4")
             for elem_dico in final_interfaces[:]:
                 for elem_arxml in arxml_interfaces:
                     if elem_dico['DATA'].find("{http://autosar.org/schema/r4.0}SHORT-NAME").text == elem_arxml['DATA'].find("{http://autosar.org/schema/r4.0}SHORT-NAME").text:
@@ -1113,22 +1101,18 @@ def generate_system(file_list, output_path, system_name, mapping_name, compositi
                             final_interfaces.remove(elem_dico)
                             break
             final_interfaces = sorted(final_interfaces, key=lambda x: x['PACKAGE'])
-            #print("finish step 5")
             for elem_dico in final_types[:]:
                 for elem_arxml in arxml_types:
                     if elem_dico['SHORT-NAME'] == elem_arxml.find("{http://autosar.org/schema/r4.0}SHORT-NAME").text:
                         final_types.remove(elem_dico)
                         break
-                        #del final_types[final_types.index(elem_dico)]
             final_types = sorted(final_types, key=lambda x: x['PACKAGE'])
-            #print("finish step 6")
             for elem_dico in compu_methods[:]:
                 for elem_arxml in arxml_compu_methods:
                     if elem_dico['DATA'].find("{http://autosar.org/schema/r4.0}SHORT-NAME").text == elem_arxml.find("{http://autosar.org/schema/r4.0}SHORT-NAME").text:
                         compu_methods.remove(elem_dico)
                         break
             compu_methods = sorted(compu_methods, key=lambda x: x['PACKAGE'])
-            #print("finish step 7")
             for elem_dico in final_data_constr[:]:
                 for elem_arxml in arxml_data_constr:
                     if elem_dico['DATA'].find("{http://autosar.org/schema/r4.0}SHORT-NAME").text == elem_arxml.find("{http://autosar.org/schema/r4.0}SHORT-NAME").text:
@@ -1136,7 +1120,7 @@ def generate_system(file_list, output_path, system_name, mapping_name, compositi
             final_data_constr = sorted(final_data_constr, key=lambda x: x['PACKAGE'])
 
         # TRS.SYSDESC.GEN.003
-        start = time.time()
+
         software_composition = sorted(software_composition, key=lambda x: x['NAME'])
         final_software_composition = []
         for elem in software_composition[:]:
@@ -1190,6 +1174,7 @@ def generate_system(file_list, output_path, system_name, mapping_name, compositi
                 objElem['REF'] = ref.text
                 objElem['INSTANCE'] = name_list[ref_list.index(ref)].text
                 ref_final_software_composition.append(objElem)
+
         # <DATA-MAPPINGS>
         client_server_signal_group_mapping = sorted(client_server_signal_group_mapping, key=lambda x: x['NAME'])
         client_server_signal_mapping = sorted(client_server_signal_mapping, key=lambda x: x['NAME'])
@@ -1203,9 +1188,11 @@ def generate_system(file_list, output_path, system_name, mapping_name, compositi
         [data_mappings_name.append(elem['NAME']) for elem in sender_receiver_signal_group_mapping if elem['NAME'] not in data_mappings_name]
         [data_mappings_name.append(elem['NAME']) for elem in sender_receiver_signal_mapping if elem['NAME'] not in data_mappings_name]
         [data_mappings_name.append(elem['NAME']) for elem in trigger_signal_mapping if elem['NAME'] not in data_mappings_name]
+
         # <ECU-RESOURCE-MAPPINGS>
         ecu_mapping = sorted(ecu_mapping, key=lambda x: x['NAME'])
         [data_mappings_name.append(elem['NAME']) for elem in ecu_mapping if elem['NAME'] not in data_mappings_name]
+
         # <MAPPING-CONSTRAINTS>
         component_clustering = sorted(component_clustering, key=lambda x: x['NAME'])
         component_separation = sorted(component_separation, key=lambda x: x['NAME'])
@@ -1213,12 +1200,15 @@ def generate_system(file_list, output_path, system_name, mapping_name, compositi
         [data_mappings_name.append(elem['NAME']) for elem in component_clustering if elem['NAME'] not in data_mappings_name]
         [data_mappings_name.append(elem['NAME']) for elem in component_separation if elem['NAME'] not in data_mappings_name]
         [data_mappings_name.append(elem['NAME']) for elem in sw_ecu_mapping_constraint if elem['NAME'] not in data_mappings_name]
+
         # <PNC-MAPPINGS>
         pnc_mapping = sorted(pnc_mapping, key=lambda x: x['NAME'])
         [data_mappings_name.append(elem['NAME']) for elem in pnc_mapping if elem['NAME'] not in data_mappings_name]
+
         # <RESOURCE-ESTIMATIONS>
         ecu_resource_estimation = sorted(ecu_resource_estimation, key=lambda x: x['NAME'])
         [data_mappings_name.append(elem['NAME']) for elem in ecu_resource_estimation if elem['NAME'] not in data_mappings_name]
+
         # <SIGNAL-PATH-CONSTRAINTS>
         common_signal_path = sorted(common_signal_path, key=lambda x: x['NAME'])
         forbidden_signal_path = sorted(forbidden_signal_path, key=lambda x: x['NAME'])
@@ -1228,6 +1218,7 @@ def generate_system(file_list, output_path, system_name, mapping_name, compositi
         [data_mappings_name.append(elem['NAME']) for elem in forbidden_signal_path if elem['NAME'] not in data_mappings_name]
         [data_mappings_name.append(elem['NAME']) for elem in permissible_signal_path if elem['NAME'] not in data_mappings_name]
         [data_mappings_name.append(elem['NAME']) for elem in separate_signal_path if elem['NAME'] not in data_mappings_name]
+
         # <SW-IMPL-MAPPINGS>
         sw_impl_mappings = sorted(sw_impl_mappings, key=lambda x: x['NAME'])
         final_sw_impl_mapping = []
@@ -1279,12 +1270,6 @@ def generate_system(file_list, output_path, system_name, mapping_name, compositi
         [data_mappings_name.append(elem['NAME']) for elem in final_sw_impl_mapping if elem['NAME'] not in data_mappings_name]
 
         # concatenate mappings
-        #ignore all mappings that points to "Instance_Compo_VSM"
-        # for elem in swc_ecu_mapping[:]:
-        #     target_compo = elem['DATA'].find('.//{http://autosar.org/schema/r4.0}TARGET-COMPONENT-REF').text
-        #     if composition_name in target_compo and "Instance_" + composition_name.split('/')[-1] in target_compo:
-        #         swc_ecu_mapping.remove(elem)
-        # swc_ecu_mapping = sorted(swc_ecu_mapping, key=lambda x: x['NAME'])
         final_swc_ecu_mappings = []
         for elem in swc_ecu_mapping[:]:
             temp = []
@@ -1344,6 +1329,7 @@ def generate_system(file_list, output_path, system_name, mapping_name, compositi
                 obj_fibex['SYSTEM'] = instance['SYSTEM']
                 obj_fibex['DATA'] = element
                 final_fibex_elements.append(obj_fibex)
+
         # <ROOT-SOFTWARE-COMPOSITIONS>
         root_software_composition = sorted(root_software_composition, key=lambda x: x['SYSTEM'])
         final_root_software_composition = []
@@ -1385,9 +1371,7 @@ def generate_system(file_list, output_path, system_name, mapping_name, compositi
                     logger.error('ROOT-SW-COMPOSITION-PROTOTYPE with the short-name ' + elem['DATA'].find('.//{http://autosar.org/schema/r4.0}SHORT-NAME').text + ' cannot be merged')
                     print('ROOT-SW-COMPOSITION-PROTOTYPE with the short-name ' + elem['DATA'].find('.//{http://autosar.org/schema/r4.0}SHORT-NAME').text + ' cannot be merged')
                     error_no = error_no + 1
-        end = time.time()
-        elapsed = end - start
-        #logger.info("Period time: " + str(elapsed))
+
         # create arxml file
         start = time.time()
         rootSystem = etree.Element('AUTOSAR', {attr_qname: 'http://autosar.org/schema/r4.0 AUTOSAR_4-2-2_STRICT_COMPACT.xsd'}, nsmap=NSMAP)
@@ -1840,7 +1824,6 @@ def check_version(given_list):
             check_list.add(elem['SHORT-NAME'])
             return_list.append(elem)
         else:
-            version = ""
             for elemList in return_list:
                 if elem['SHORT-NAME'] == elemList['SHORT-NAME']:
                     if elem['VERSION'] != elemList['VERSION']:
@@ -1850,11 +1833,6 @@ def check_version(given_list):
                             elemList['VERSION'] = elem['VERSION']
                             elemList['DATA'] = elem['DATA']
     return return_list
-    # found = set()
-    # for item in list_to_be_checked:
-    #     if item['NAME'] not in found:
-    #         yield item
-    #         found.add(item['NAME'])
 
 if __name__ == "__main__":
     main()
